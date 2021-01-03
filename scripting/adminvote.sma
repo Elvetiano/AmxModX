@@ -268,6 +268,9 @@ public cmdVoteMap(id, level, cid)
 	{
 		read_argv(i, g_optionName[g_validMaps], 31)
 		
+		if (contain(g_optionName[g_validMaps], "..") != -1)
+			continue
+		
 		if (is_map_valid(g_optionName[g_validMaps]))
 			g_validMaps++
 	}
