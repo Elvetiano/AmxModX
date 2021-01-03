@@ -172,7 +172,7 @@ public plugin_init()
 	pcvar = create_cvar("afk_slayinform_time", "5", FCVAR_NONE, "Time in seconds after which client gets information for how long is AFk and SLAY", .has_min = true, .min_val = 0.0)
 	bind_pcvar_float(pcvar, SlayInformTime)
 	
-	pcvar = create_cvar("afk_slay_time", "15", FCVAR_NONE, "Time in seconds that every clients can be AFK before being slayed^nSet this cvar to 0 to disable this feature", .has_min = true, .min_val = 0.0)
+	pcvar = create_cvar("afk_slay_time", "30", FCVAR_NONE, "Time in seconds that every clients can be AFK before being slayed^nSet this cvar to 0 to disable this feature", .has_min = true, .min_val = 0.0)
 	bind_pcvar_float(pcvar, SlayTime)
 
 	pcvar = create_cvar("afk_kick_time", "0", FCVAR_NONE, "Time in seconds that every clients can be AFK before being kicked^nSet this cvar to 0 to disable this feature", .has_min = true, .min_val = 0.0)

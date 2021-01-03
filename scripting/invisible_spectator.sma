@@ -593,6 +593,7 @@ public func_afk_check(taskid){
 						g_iAFKTime[id]++
 					}
 				}
+				/*
 
 				// Determine last activity
 				else{
@@ -607,7 +608,7 @@ public func_afk_check(taskid){
 					else{
 						g_iAFKTime[id] = floatround((get_gametime() - fLastActivity) / FREQ_AFK_CHECK)
 					}
-				}
+				}*/
 
 				// Spec switch g_iSpecTransfer
 				if (g_iSpecTransfer == 1 && (g_invisible[id][0] == 0))
