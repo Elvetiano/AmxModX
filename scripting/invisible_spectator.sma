@@ -545,7 +545,6 @@ public event_round_end(){
 	g_iAFKCheck = 0
 }
 
-
 public func_afk_check(taskid){
 	if (g_iAFKCheck){
 		// Check all players
