@@ -24,8 +24,8 @@
 #define ACCESS ADMIN_BAN
 
 #define TASK_AFK_CHECK 		142500
-#define FREQ_AFK_CHECK 		15.0
-#define MAX_WARN 		3
+#define FREQ_AFK_CHECK 		1.0
+#define MAX_WARN 		5
 
 
 enum {
@@ -76,15 +76,30 @@ public plugin_init() {
 	register_dictionary("admin_spec_transfer.txt")
 	register_logevent("event_round_end", 2, "0=World triggered", "1=Round_End")
 	register_logevent("event_round_start", 2, "0=World triggered", "1=Round_Start")
-	// Support der alten Menüs
+	// Support of the old menus
 	register_clcmd("jointeam", "cmd_jointeam") // new menu
 	register_menucmd(register_menuid("Team_Select", 1), 511, "cmd_jointeam") // old menu
 	register_clcmd("joinclass", "cmd_joinclass") // new menu
 	register_menucmd(register_menuid("Terrorist_Select", 1), 511, "cmd_joinclass") // old menu
 	register_menucmd(register_menuid("CT_Select", 1), 511, "cmd_joinclass") // old menu
 	CVAR_afk_check = register_cvar("afk_check", "1")
-	CVAR_afk_transfer_time = register_cvar("afk_transfer_time", "5")
-	CVAR_afk_Spec = register_cvar("afk_Spec", "1")   //transfer on/off
+	CVAR_afk_transfer_time = register_cvar("afk_transfer_time", "60")
+	//CVAR_afk_Spec = register_cvar("afk_Spec", "1")   //transfer on/off
+	
+	
+	
+	
+	CVAR_afk_Spec = create_cvar("afk_Spec", "1", FCVAR_NONE, "(0|1) - If admin is AFK will be transfered to inv.spectator", .has_min = true, .min_val = 0.0, .has_max = true, .max_val = 1.0)
+	//CVAR_afk_transfer_time = create_cvar("afk_transfer_time", "6", FCVAR_NONE, "(0|1) - If admin is AFK will be transfered to inv.spectator", .has_min = true, .min_val = 6.0, .has_max = true, .max_val = 100.0)
+	
+	
+	
+	
+	
+	
+	
+	
+	AutoExecConfig(true)
 }
 
 
@@ -430,13 +445,13 @@ public plugin_cfg(){
 
 public client_connect(id){
 
-	// Spieler als Spectator entmarkieren
+	// Deselect player as Spectator
 	g_bSpec[id] = false
 
-	// Positionen zurücksetzen
+	// Reset positions
 	g_vOrigin[id] = {0, 0, 0}
 
-	// Counter zurücksetzen
+	// Counter reset
 	g_iAFKTime[id] = 0
 	g_iWarn[id] = 0
 }
@@ -454,36 +469,36 @@ public client_disconnected(id)
 
 public event_round_start(){
 
-	// AFK Check eingeschaltet
+	// AFK check switched on
 	g_iAFKCheck = get_pcvar_num(CVAR_afk_check)
 	
 	if (g_iAFKCheck)
 	{
-		// Spawn-Positionen aktualisieren
+		// Update spawn positions
 		new iPlayers[32], pNum
 		get_players(iPlayers, pNum, "a")
 		for (new p = 0; p < pNum; p++)
 		{
 			get_user_origin(iPlayers[p], g_vOrigin[iPlayers[p]])
 		}
-		// Loop anlegen falls nicht vorhanden
+		// Create loop if not available
 		if (!task_exists(TASK_AFK_CHECK)) set_task(FREQ_AFK_CHECK, "func_afk_check", TASK_AFK_CHECK, _, _, "b")
-		// Kick und Transferzeiten festlegen
+		// Set kick and transfer times
 		if (get_pcvar_num(CVAR_afk_transfer_time) < 6) set_pcvar_num(CVAR_afk_transfer_time, 6)
 		g_iSpecTransfer = get_pcvar_num(CVAR_afk_Spec)
 		g_iTransferTime = get_pcvar_num(CVAR_afk_transfer_time)
 	}
-	// AFK Check ausgeschaltet
+	// AFK check switched off
 	else
 	{
-		// Loop löschen falls vorhanden
+		// Delete loop if available
 		if (task_exists(TASK_AFK_CHECK)) remove_task(TASK_AFK_CHECK)
 	}
 }
 
 public cmd_jointeam(id){
 
-	// Spieler als Spectator markieren, sonst kann man den Kick umgehen, indem man keiner Klasse joined.
+	// Mark player as spectator, otherwise you can avoid the kick by not joining a class.
 	g_bSpec[id] = true
 	
 	new teams = get_user_team(id)
@@ -501,13 +516,13 @@ public cmd_jointeam(id){
 
 public cmd_joinclass(id){
 
-	// Spieler als Spectator entmarkieren
+	// Deselect player as Spectator
 	g_bSpec[id] = false
 
-	// Positionen zurücksetzen
+	// Reset positions
 	g_vOrigin[id] = {0, 0, 0}
 
-	// Counter zurücksetzen
+	// Reset counter
 	g_iAFKTime[id] = 0
 	g_iWarn[id] = 0
 	
@@ -526,30 +541,30 @@ public cmd_joinclass(id){
 
 public event_round_end(){
 
-	// Check darf nicht durchgeführt werden
+	// Check must not be carried out
 	g_iAFKCheck = 0
 }
 
 
 public func_afk_check(taskid){
 	if (g_iAFKCheck){
-		// Alle Spieler überprüfen
+		// Check all players
 		for (new id = 1; id <= g_iMaxPlayers; id++){
 
-			// Bots nicht überprüfen
+			// Bots don't check
 			if (is_user_bot(id)) continue
 			
 			
-			// AFK Funktionen für Specs
+			// AFK functions for specs
 			if (is_user_connected(id) && !is_user_hltv(id)){
 				
 				if ((_:cs_get_user_team(id) == _:CS_TEAM_SPECTATOR || _:cs_get_user_team(id) == _:CS_TEAM_UNASSIGNED || g_bSpec[id]) && (g_invisible[id][0] == 0))
 				{
 
-					// Counter erhöhen
+					// Increase counter
 					g_iAFKTime[id]++
 
-					// Spec-Kick
+					// Spec-Kick reconverted to invisible spec
 					if (g_iAFKTime[id] >= g_iTransferTime - MAX_WARN){
 						if (access(id, ACCESS))
 						{
@@ -560,10 +575,10 @@ public func_afk_check(taskid){
 				}
 			}
 
-			// AFK Funktionen für lebende Spieler
+			// AFK functions for live players
 			if (is_user_alive(id)){
 
-				// Positionen überprüfen
+				// Check positions
 				if (g_iAFKCheck == 1){
 					new vOrigin[3]
 					get_user_origin(id, vOrigin)
@@ -580,7 +595,7 @@ public func_afk_check(taskid){
 					}
 				}
 
-				// Letzte Aktivität ermitteln
+				// Determine last activity
 				else{
 					new Float:fLastActivity
 					fLastActivity = cs_get_user_lastactivity(id)
@@ -595,10 +610,10 @@ public func_afk_check(taskid){
 					}
 				}
 
-				// Spec-Switch g_iSpecTransfer
+				// Spec switch g_iSpecTransfer
 				if (g_iSpecTransfer == 1 && (g_invisible[id][0] == 0))
 				{
-					if (g_iAFKTime[id] >= g_iTransferTime - MAX_WARN) 
+					if (g_iAFKTime[id] >= g_iTransferTime - MAX_WARN) //6-3 = 3s = 1 loop /15 s (FREQ_AFK_CHECK) = 3+15 = 18s loop = (g_iWarn[id] < MAX_WARN = 3) 3 * 18
 					{
 						if (access(id, ACCESS))
 						{
@@ -616,19 +631,19 @@ public func_afk_check(taskid){
 
 public func_transfer_player(id){
 
-	// Warnung anzeigen, wenn nicht schon max-mal verwarnt
+	// Show warning, if not already warned max times
 	if (g_iWarn[id] < MAX_WARN){
 	//	client_print(id, print_chat, "[ OFFICIAL ] %L", LANG_PLAYER, "AFK_TRANSFER_WARN", floatround(FREQ_AFK_CHECK) * (MAX_WARN - g_iWarn[id]))
 		g_iWarn[id]++
 		return
 	}
 
-	// Eigentlich sollte die Bombe schon transferiert worden sein
+	// Actually, the bomb should already have been transferred
 	if (pev(id, pev_weapons) & (1 << CSW_C4)){
 		engclient_cmd(id, "drop", "weapon_c4")
 	}
 
-	// Spieler tranferieren
+	// Transfer player
 	if (is_user_alive(id)) user_silentkill(id)
 	
 	/*if (_:cs_get_user_team(id) == CS_TEAM_SPECTATOR || _:cs_get_user_team(id) == CS_TEAM_UNASSIGNED)
@@ -652,14 +667,14 @@ public func_transfer_player(id){
 	client_cmd(id, "amx_spectate")
 
 
-	// Positionen zurücksetzen
+	// Reset positions
 	g_vOrigin[id] = {0, 0, 0}
 
-	// Counter zurücksetzen
+	// Counter Reset
 	g_iAFKTime[id] = 0
 	g_iWarn[id] = 0
 
-	// Nachrichten anzeigen
+	// View messages
 	new szName[32]
 	get_user_name(id, szName, 31)
 	new players[ 32 ], index, num, i
