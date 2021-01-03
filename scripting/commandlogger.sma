@@ -155,7 +155,7 @@ public plugin_init() {
 	pcvar = create_cvar(CVAR_FILTER, "1", FCVAR_NONE, "(0|1) - (default, use filter, this only logs the command lines that contain phrases which you must register first, this is case insensitive)", .has_min = true, .min_val = 0.0, .has_max = true, .max_val = 1.0)
 	bind_pcvar_num(pcvar, CvarFilter)	
 	
-	pcvar = create_cvar(CVAR_CUSTOMLOGFILE, "customfilepath.log", FCVAR_NONE, "Custom filepath to create log")
+	pcvar = create_cvar(CVAR_CUSTOMLOGFILE, "customfilepath.log", FCVAR_NONE, "Custom filepath to create log, default: /cstrike/addons/amxmodx/logs/")
 	bind_pcvar_string(pcvar, customfile, charsmax(customfile))
 
 	//register_srvcmd("0cl", "client_command") (used to test from server console, you don't need it)
