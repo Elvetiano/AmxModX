@@ -47,12 +47,15 @@
 #include <amxmodx>
 #include <amxmisc>
 
-#define MAXCMDS				64 // If you need to register more tahn 64 cmds for the filter, increase this number accordingly, then recompile.
+#define MAXCMDS				512 // If you need to register more tahn 64 cmds for the filter, increase this number accordingly, then recompile.
 #define CMDSIZE 			63
 #define BUFFERSIZE			511
 #define CVAR_CUSTOMLOGFILE	"commandlogger_filepath"
 #define CVAR_LOGSETTING		"commandlogger_logto"
 #define CVAR_FILTER			"commandlogger_filter"
+
+
+#define EXEC_TIME 5.0
 
 new g_reggedCmdsNum = 0
 new g_reggedCmds[MAXCMDS][CMDSIZE + 1]
@@ -60,6 +63,7 @@ new g_cmdLine[BUFFERSIZE + 1]
 new CvarLogSettings
 new CvarFilter
 new customfile[128]
+new szLine[128];
 
 public client_command(id) {
 	read_argv(0, g_cmdLine, 511)
@@ -143,11 +147,7 @@ public regfn(id, level, cid) {
 
 public plugin_init() {
 	register_plugin(PLUGINNAME, VERSION, AUTHOR)
-
-	//register_cvar(CVAR_CUSTOMLOGFILE, "customfilepath.log")
-	//register_cvar(CVAR_LOGSETTING, "0")
-	//register_cvar(CVAR_FILTER, "1")
-	
+	ReadExecFiles();	
 	
 	new pcvar = create_cvar(CVAR_LOGSETTING, "0", FCVAR_NONE, "(0|1|2) - 0 (default, logs to AMXx logs), 1 (logs to HL logs), 2 (logs to custom file)", .has_min = true, .min_val = 0.0, .has_max = true, .max_val = 2.0)
 	bind_pcvar_num(pcvar, CvarLogSettings)
@@ -161,5 +161,39 @@ public plugin_init() {
 	//register_srvcmd("0cl", "client_command") (used to test from server console, you don't need it)
 
 	register_srvcmd("commandlogger_register", "regfn", -1, "<cmd> - registers cmd to log use of it by clients")
+	register_concmd("amx_cmreload", "cm_reload", ADMIN_BAN, "-- reloads the configuration file")
+	
+	set_task(EXEC_TIME, "CmdExec", _, _, _, "b");
+	
 	AutoExecConfig(true);
 }
+
+
+ReadExecFiles() {
+	new szDirectory[128], iLen; 
+	get_configsdir(szDirectory, charsmax(szDirectory)); 
+	add(szDirectory, charsmax(szDirectory), "/plugins/plugin-commandlogger.cfg"); 
+	
+	new size = file_size(szDirectory, 1);
+
+	
+	for(new i = 0 ; i < size ; i++) 
+		read_file(szDirectory, i, szLine, charsmax(szLine), iLen); 
+}	
+	
+public cm_reload(id, iLevel, iCid)
+{
+	if(!cmd_access(id, iLevel, iCid, 1))
+	{
+		return PLUGIN_HANDLED
+	}
+	CmdExec();
+	console_print(id, "[Command-Logger] Config reloaded successfully!")
+	return PLUGIN_CONTINUE
+}
+
+public CmdExec()
+{
+	server_cmd("exec %s", szLine);
+}
+
