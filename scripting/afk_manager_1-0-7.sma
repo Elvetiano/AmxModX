@@ -595,14 +595,14 @@ public afk_manager_loop(ent)
 
 							get_user_name(player, player_name, charsmax(player_name))
 
-							if ( ColoredMessages )
+							/*if ( ColoredMessages )
 							{
 								client_print_color(0, player, "%L", LANG_PLAYER, "COLORED_AFK_SLAYED", player_name)
 							}
 							else
 							{
 								client_print(0, print_chat, "%L", LANG_PLAYER, "AFK_SLAYED", player_name)
-							}
+							}*/
 							
 							if ( is_player_alive )
 							{
