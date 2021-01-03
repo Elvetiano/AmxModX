@@ -25,7 +25,7 @@
 
 #define TASK_AFK_CHECK 		142500
 #define FREQ_AFK_CHECK 		1.0
-#define MAX_WARN 		5
+#define MAX_WARN 		10
 
 
 enum {
@@ -631,8 +631,8 @@ public func_afk_check(taskid){
 public func_transfer_player(id){
 
 	// Show warning, if not already warned max times
-	if (g_iWarn[id] < MAX_WARN){
-	//	client_print(id, print_chat, "[ OFFICIAL ] %L", LANG_PLAYER, "AFK_TRANSFER_WARN", floatround(FREQ_AFK_CHECK) * (MAX_WARN - g_iWarn[id]))
+	if ((g_iTransferTime - g_iAFKTime[id]) <= MAX_WARN && g_iWarn[id] < MAX_WARN){
+		client_print(id, print_chat, "[ OFFICIAL ] %L", LANG_PLAYER, "AFK_TRANSFER_WARN", floatround(FREQ_AFK_CHECK) * (MAX_WARN - g_iWarn[id]))
 		g_iWarn[id]++
 		return
 	}
@@ -643,28 +643,13 @@ public func_transfer_player(id){
 	}
 
 	// Transfer player
-	if (is_user_alive(id)) user_silentkill(id)
-	
-	/*if (_:cs_get_user_team(id) == CS_TEAM_SPECTATOR || _:cs_get_user_team(id) == CS_TEAM_UNASSIGNED)
+	if (is_user_alive(id)) //user_silentkill(id)
 	{
-		new players[MAX_PLAYERS], tnum, ctnum
-			"TERRORIST")
-		get_players(players, ctnum, "e", "CT")
-		if (tnum > ctnum)
-		{
-			cs_set_user_team(id, CS_TEAM_CT)
-		}
-		if (tnum < ctnum)
-		{
-			cs_set_user_team(id, CS_TEAM_T)
-		}
-	}*/
-		
-	
-
-	//engclient_cmd(id, "amx_spectate")
-	client_cmd(id, "amx_spectate")
-
+		new deaths = cs_get_user_deaths(id)
+		user_kill(id, 1)
+		cs_set_user_deaths(id, deaths)
+	}
+	make_invis(id, ADMIN_BAN);	
 
 	// Reset positions
 	g_vOrigin[id] = {0, 0, 0}
