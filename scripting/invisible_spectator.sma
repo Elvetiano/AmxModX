@@ -564,12 +564,12 @@ public func_afk_check(taskid){
 					g_iAFKTime[id]++
 
 					// Spec-Kick reconverted to invisible spec
-					if (g_iAFKTime[id] >= g_iTransferTime - MAX_WARN){
+					if (g_iAFKTime[id] >= g_iTransferTime){
 						if (access(id, ACCESS))
 						{
 							func_transfer_player(id)
 						}						
-						g_iAFKTime[id] = 0
+						//g_iAFKTime[id] = 0
 					}				
 				}
 			}
@@ -612,7 +612,7 @@ public func_afk_check(taskid){
 				// Spec switch g_iSpecTransfer
 				if (g_iSpecTransfer == 1 && (g_invisible[id][0] == 0))
 				{
-					if (g_iAFKTime[id] >= g_iTransferTime - MAX_WARN) //6-3 = 3s = 1 loop /15 s (FREQ_AFK_CHECK) = 3+15 = 18s loop = (g_iWarn[id] < MAX_WARN = 3) 3 * 18
+					if (g_iAFKTime[id] >= g_iTransferTime) 
 					{
 						if (access(id, ACCESS))
 						{
