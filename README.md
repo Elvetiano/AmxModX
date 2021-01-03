@@ -4,6 +4,15 @@
  
  Plugin List:
  
- * Afk_manager
- * nightmod
- * invisible_spectator
+
+  * adminvote.amxx
+  * advanced_bans.amxx
+  * advanced_gag.amxx
+  * afk_manager_1-0-7.amxx
+  * commandlogger.amxx
+  * invisible_spectator.amxx
+  * nightmod.amxx
+  * vip_clasic_9.0-c.amxx
+  * 2VIP4.5.5.amxx
+  * admin_super_gag.amxx
+  * admincmd.amxx
