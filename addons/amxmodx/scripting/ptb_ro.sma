@@ -40,7 +40,7 @@
 #include <amxmodx>
 #include <amxmisc>
 #include <cstrike>
-
+#include <fakemeta>
 
 // If you want to see transfers with HLSW in the chat uncomment the below row
 #define SHOW_IN_HLSW
@@ -57,7 +57,16 @@
 #define CTS			2
 #define AUTO_TEAM 		5
 
-new const PTB_VERSION[] = "1.8b2"
+
+#define PDATA_SAFE 2
+#define OFFSET_CSTEAMS 114
+#define OFFSET_MODELINDEX 491 // Orangutanz
+
+new const DEFAULT_MODELINDEX_T[] = "models/player/terror/terror.mdl"
+new const DEFAULT_MODELINDEX_CT[] = "models/player/urban/urban.mdl"
+
+
+new const PTB_VERSION[] = "1.9"
 
 // Uncomment to activate log debug messages.
 //#define PTB_DEBUG
@@ -163,9 +172,9 @@ public plugin_init(){
 	register_event("TextMsg","game_restart","a","1=4","2&#Game_C","2&#Game_w") // Game restart
 	register_concmd("amx_ptb","admin_ptb",ACCESS_PTB,"- arata optiunile PTB")
 	
-	new configsDir[64]
-	get_configsdir(configsDir, 63)
-	server_cmd("exec %s/ptb.cfg", configsDir) // Execute main configuration file
+	//new configsDir[64]
+	//get_configsdir(configsDir, 63)
+	//server_cmd("exec %s/ptb.cfg", configsDir) // Execute main configuration file
 
 	//New auto-channeling system in amxmodx 1.70
 	g_MyMsgSync = CreateHudSyncObj()
@@ -178,7 +187,9 @@ public plugin_init(){
 		clientVGUIMenu[i][0] = '0'
 		clientVGUIMenu[i][1] = 0
 	}
-
+	
+	AutoExecConfig(true)
+	
 	return PLUGIN_CONTINUE
 }
 
@@ -234,11 +245,97 @@ transferPlayer(id){
 	new name[32]
 	get_user_name(id,name,31)
 	
-	if(cs_get_user_defuse(id))
-     cs_set_user_defuse(id, 0);
 	
-	cs_set_user_team(id, (playerTeam[id]==TS) ? 2 : 1)
-	cs_reset_user_model(id)
+	//1 = ts 
+	//2 = ct
+	
+	new prevModel[32]
+	cs_get_user_model(id, prevModel, charsmax(prevModel))
+	new prevTeam[33],updatedTeam[33];
+	
+	prevTeam[id] = get_user_team(id);
+	
+	if(cs_get_user_defuse(id)){
+		cs_set_user_defuse(id, 0);
+	}
+	
+	//cs_set_user_team(id, (playerTeam[id]==TS) ? 2 : 1)
+	
+	if (playerTeam[id]==TS)
+	{
+		cs_set_user_team(id, 2, 0, false);		
+	}
+	if (playerTeam[id]==CTS)
+	{
+		cs_set_user_team(id, 1, 0, false);	
+	}
+	
+	dllfunc(DLLFunc_ClientUserInfoChanged, id, engfunc(EngFunc_GetInfoKeyBuffer, id))
+	
+	if (pev_valid(id) != PDATA_SAFE)
+		return;
+	
+	switch (fm_cs_get_user_team(id))
+	{
+		case CS_TEAM_T:
+		{
+			set_pdata_int(id, OFFSET_MODELINDEX, engfunc(EngFunc_ModelIndex, DEFAULT_MODELINDEX_T))
+		}
+		case CS_TEAM_CT:
+		{
+			set_pdata_int(id, OFFSET_MODELINDEX, engfunc(EngFunc_ModelIndex, DEFAULT_MODELINDEX_CT))
+		}
+	}
+	
+	
+	updatedTeam[id] = get_user_team(id);
+	
+	if (updatedTeam[id] == prevTeam[id])
+	{
+		if( is_user_alive(id) )
+		{
+			new teams = get_user_team(id)
+			new frags = get_user_frags ( id )
+			new deaths = get_user_deaths ( id )
+			//client_print(id, print_console, "You have to be dead first to be an invisible spectator !")
+			//return PLUGIN_HANDLED
+			user_silentkill(id)
+			message_begin( MSG_ONE, get_user_msgid("ScoreAttrib"), _, id ) 
+			write_byte( id ) 
+			write_byte( 1 )  // 0 - nothing, 1 - dead, 2 - bomb 
+			message_end()
+		
+			message_begin(MSG_ALL, get_user_msgid("ScoreInfo"), _, id )
+			write_byte( id ) 
+			write_short(frags) 
+			write_short(deaths) 
+			write_short(0) 
+			write_short(teams) 
+			message_end() 
+			
+			set_pev(id, pev_deadflag, DEAD_RESPAWNABLE);
+			dllfunc(DLLFunc_Think, id);
+		}
+		else
+		{
+			dllfunc(DLLFunc_Spawn, id);	
+		}		
+	}
+	
+	//cs_reset_user_model(id);
+	
+	//cs_set_user_model(index, const model[], bool:update_index = false);
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 	// This must be done here or lastroundswithed will not be registered
 	lastRoundSwitched[id] = roundCounter
@@ -427,9 +524,11 @@ doSwitch() {
 	new Float:myScore, toLoser, toWinner
 	new winner = 0
 	new loser = 0
-	for (new w = 0; w < validTargetCounts[winnerTeam]; ++w) {
+	for (new w = 0; w < validTargetCounts[winnerTeam]; ++w) 
+	{
 		toLoser = sortedValidTargets[winnerTeam][w]
-		for (new l = 0; l < validTargetCounts[loserTeam]; ++l) {
+		for (new l = 0; l < validTargetCounts[loserTeam]; ++l) 
+		{
 			toWinner = sortedValidTargets[loserTeam][l]
 			myScore = floatabs(score(winnerTeam, toWinner, toLoser) - score(loserTeam, toLoser, toWinner))
 			if (myScore < closestScore) {
@@ -935,7 +1034,8 @@ public team_join() {
 }
 
 // Can happen at begin of round or team select
-public team_assign() {
+public team_assign() 
+{
 	new arg[2], team
 	new i = read_data(1)
 	read_data(2,arg,1)
@@ -948,6 +1048,7 @@ public team_assign() {
 	teamCounts[playerTeam[i]]-- // Unregister from old team
 	teamCounts[team]++ // Increase ammount in new team
 	playerTeam[i] = team // Assign to new
+	
 }
 
 public game_restart(){
@@ -1321,4 +1422,13 @@ public client_disconnected(id) {
 	}
 
 	return PLUGIN_CONTINUE
+}
+
+
+stock CsTeams:fm_cs_get_user_team(id)
+{
+	if (pev_valid(id) != PDATA_SAFE)
+		return CS_TEAM_UNASSIGNED;
+	
+	return CsTeams:get_pdata_int(id, OFFSET_CSTEAMS);
 }
