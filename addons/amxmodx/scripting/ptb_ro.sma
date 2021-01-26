@@ -146,6 +146,7 @@ new lastTeamBalanceCheck[32]
 
 //New auto-channeling system in amxmodx 1.70
 new g_MyMsgSync
+new configsDir[64]
 
 public plugin_init(){
 	register_plugin("Team Balancer",PTB_VERSION,"Ptahhotep")
@@ -173,7 +174,7 @@ public plugin_init(){
 	register_concmd("amx_ptb","admin_ptb",ACCESS_PTB,"- arata optiunile PTB")
 	
 	//new configsDir[64]
-	//get_configsdir(configsDir, 63)
+	get_configsdir(configsDir, 63)
 	//server_cmd("exec %s/ptb.cfg", configsDir) // Execute main configuration file
 
 	//New auto-channeling system in amxmodx 1.70
@@ -188,9 +189,114 @@ public plugin_init(){
 		clientVGUIMenu[i][1] = 0
 	}
 	
-	AutoExecConfig(true)
+	AutoExecConfig(true);	
 	
-	return PLUGIN_CONTINUE
+	//return PLUGIN_CONTINUE
+}
+
+
+public plugin_cfg()
+{
+	new Configwrited = 0
+	new pluginfilename[256]
+	format( pluginfilename, 255, "%s/plugins/plugin-ptb_ro.cfg", configsDir )	
+	if (file_exists(pluginfilename) > 0)
+	{
+		new pFile;
+		new sz = file_size(pluginfilename, 1);		
+		for (new i; i < sz; i++)
+		{// i(postincrement) = number of current reading line;
+			new text[512];			
+			new ln;			
+			read_file(pluginfilename, i, text, sizeof (text), ln);
+			if (!ln || (text[0] == ';') || (text[0] == '/')) // line as comment or empty;
+			{
+				continue;
+			}
+			new param1[32];
+			new param2[32];
+			new param3[32];
+			
+			parse(text, param1, sizeof (param1), param2, sizeof (param2), param3, sizeof (param3));
+			if (containi(param1, "limitafter") != -1 || containi(param2, "limitafter") != -1  || containi(param3, "limitafter") != -1)
+			{
+				Configwrited = 1
+				//log_amx("PTB: Configwrited FOUND MATCH:  %s , %s", param1,param2)
+				break;
+			}
+			//log_amx("PTB: param1 is:  %s ",param1)
+			//log_amx("PTB: param2 is:  %s ",param2)
+		}
+		pFile = fopen(pluginfilename, "at");
+		if(pFile)
+		{
+			if (Configwrited != 1)
+			{
+				fputs(pFile," ^n");
+				fputs(pFile," ^n");
+				fputs(pFile, "// team selection control^n");
+				fputs(pFile,"amx_ptb limitjoin    on 	// set limits on team joining^n");
+				fputs(pFile,"amx_ptb limitafter   0		// number of rounds after which teams limiting begins^n");
+				fputs(pFile,"amx_ptb limitmin     0		// number of minimum players on map for team limiting^n");
+				fputs(pFile,"amx_ptb maxsize      16	// maximum team size per team^n");
+				fputs(pFile,"amx_ptb maxdiff      4		// maximum team size difference^n");
+				fputs(pFile,"amx_ptb autorounds   3		// number of first rounds into match, which allow autojoin only^n");
+				fputs(pFile,"amx_ptb wtjauto      3		// wtj tries needed to become autojoined^n");
+				fputs(pFile,"amx_ptb wtjkick      5		// wtj tries needed to become kicked^n");
+				fputs(pFile,"amx_ptb kick         off	// kick for wtj counts^n");
+				fputs(pFile,"amx_ptb savewtj      on 	// save wtjs to wtj.log^n");
+				fputs(pFile," ^n");
+				fputs(pFile,"// team balancing actions^n");
+				fputs(pFile,"amx_ptb switch       on	// switch/transfer players^n");
+				fputs(pFile,"amx_ptb switchafter  0		// number of rounds after which switching begins^n");
+				fputs(pFile,"amx_ptb switchmin    3		// number of minimum players on map for switching^n");
+				fputs(pFile,"amx_ptb switchfreq   1		// relative next possible switch round^n");
+				fputs(pFile,"amx_ptb playerfreq   3		// relative next possible switch round for player^n");
+				fputs(pFile,"amx_ptb forceswitch  3		// number of tries after which PTB switches alive, if neccessary^n");
+				fputs(pFile,"amx_ptb deadonly     on 	// switch dead only^n");
+				fputs(pFile," ^n");
+				fputs(pFile,"// messages (good to have on when debugging if you use statsx dont have them on)^n");
+				fputs(pFile,"amx_ptb tellwtj      off 	// tell about wtj tries^n");
+				fputs(pFile,"amx_ptb announce     on	// announce team status at beginning of round^n");
+				fputs(pFile,"amx_ptb sayok        on	// announce team status, if teams are alright^n");
+				fputs(pFile,"amx_ptb typesay      on	// use HUD messages^n");
+				fputs(pFile," ^n");
+				fputs(pFile,"// team strength limits^n");
+				fputs(pFile,"amx_ptb maxstreak    2		// max. allowed team win streak^n");
+				fputs(pFile,"amx_ptb maxscore     2		// max. allowed team score difference^n");
+				fputs(pFile,"amx_ptb minrating    1.5	// minimum critical team rating^n");
+				fputs(pFile,"amx_ptb maxrating    2.0	// maximum critical team rating^n");
+				fputs(pFile,"amx_ptb superrating  3.0	// super critical team rating^n");
+				fputs(pFile,"amx_ptb maxincidents 50	// maximum kills + deaths before the score is divided by PTB_SCALEDOWN^n");
+				fputs(pFile,"amx_ptb scaledown    2		// divisor for kills and deaths, when PTB_MAXINCIDENTS is reached^n");
+			}
+		}
+		else
+		{
+			log_amx("PTB: pFile failed to open: %s ",pluginfilename)
+			fclose(pFile);
+			return;
+		}
+		fclose(pFile)
+	}else
+	{
+		set_task(2.0, "call_function")
+	}
+}
+
+public call_function()
+{
+	new status = callfunc_begin("plugin_cfg");
+	new bool:Failed = true;
+	switch(status)
+	{
+		case 1: Failed = false;
+		case 0: log_amx("Run time error!");
+		case -2: log_amx("%s Function not found!", "plugin_cfg");
+		case -1: log_amx("%s Plugin not found!", "Team Balancer");
+	}
+	if(Failed)	return;
+	callfunc_end();
 }
 
 
@@ -1304,7 +1410,35 @@ public admin_ptb(id,level,cid) {
 	// PTB_SCALEDOWN
 	if ( (lastcmd =  equal(cmd, "scaledown")) && arglen )	PTB_SCALEDOWN = check_param_num(arg,1)
 	if ( status || lastcmd ) 	console_print(id,"PTB: (coborari) Factorul integrat pentru scorul jucatorului este: %d.", PTB_SCALEDOWN)
-
+	
+	
+	if (equal(cmd, "cfg_reload"))
+	{		
+		new filename[256]
+		format( filename, 255, "%s/plugins/plugin-ptb_ro.cfg", configsDir )			
+		
+		if (file_exists(filename) > 0)
+		{
+			server_cmd("exec %s", filename) // Execute AutoCreated configuration file
+			console_print(id,"PTB: Reloaded config:  %s", filename)			
+		}
+		else
+		{
+			new filename2[256]
+			format( filename2, 255, "%s/ptb.cfg", configsDir )	
+			
+			if (file_exists(filename2) > 0)
+			{
+				server_cmd("exec %s", filename2) // Execute main configuration file	
+				console_print(id,"PTB: Reloaded config:  %s", filename2)				
+			}else
+			{
+				console_print(id,"PTB: Cant find config file")	
+			}
+		}		
+	}	
+	
+	
 	// misc
 	if ( status ) {
 		console_print(id,"PTB: ---------- Misc ----------")
@@ -1312,8 +1446,9 @@ public admin_ptb(id,level,cid) {
 		console_print(id,"PTB: Pentru a vedea sau schimba o optiune, scrie ^"amx_ptb <optiune> <on|off|1/0>^".")
 		console_print(id,"PTB: Pentru a vedea o lista detaliata la comenzi scrie ^"amx_ptb help^" sau ^"amx_ptb list^".")
 		console_print(id,"PTB: Pentru statistici PTB scrie: ^"amx_ptb^".")
+		console_print(id,"PTB: Pentru a reincarca FTP config PTB scrie: ^"amx_ptb cfg_reload^".")
 	}
-
+	
 	return PLUGIN_HANDLED
 }
 
