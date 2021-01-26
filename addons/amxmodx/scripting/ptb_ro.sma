@@ -375,8 +375,11 @@ transferPlayer(id){
 	{
 		cs_set_user_team(id, 1, 0, false);	
 	}
+
 	
 	dllfunc(DLLFunc_ClientUserInfoChanged, id, engfunc(EngFunc_GetInfoKeyBuffer, id))
+	
+	fm_user_spawn(id);
 	
 	if (pev_valid(id) != PDATA_SAFE)
 		return;
@@ -1566,4 +1569,18 @@ stock CsTeams:fm_cs_get_user_team(id)
 		return CS_TEAM_UNASSIGNED;
 	
 	return CsTeams:get_pdata_int(id, OFFSET_CSTEAMS);
+}
+
+stock fm_user_spawn(id)
+{
+ if(!(1 <= id <= global_get(glb_maxClients)))
+  return;
+ 
+ if(!is_user_alive(id))
+ {
+  set_pev(id, pev_deadflag, DEAD_RESPAWNABLE);
+  dllfunc(DLLFunc_Think, id);
+ }
+ else
+  dllfunc(DLLFunc_Spawn, id);
 }
