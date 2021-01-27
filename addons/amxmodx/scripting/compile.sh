@@ -36,6 +36,7 @@ case $OS in
   *) ;;
 esac
 
+
 for f in *; do mv "$f" `echo $f | tr ' ' '_'`; done
 
 for sourcefile in *.sma
