@@ -51,6 +51,7 @@ echo
 echo
 cp compiled/* ../plugins/
 read -t 2 -p "Job Done - Press ENTER = main menu"
+rm temp.txt
 echo
 }
 
@@ -109,13 +110,13 @@ REFRESH(){ after=$((i+1)); before=$((i-1))
         2) S=M2;SC;if [[ $cur == "" ]];then R;exit 0;fi;;
  esac;POS;done
 
-echo
-echo
+#echo
+#echo
 #read -t 1 -p "Press Q to close" >> temp.txt
-echo " " >> temp.txt
-echo "Press Q to close" >> temp.txt
-less temp.txt
-rm temp.txt
-sleep 5
-kill $$
+#echo " " >> temp.txt
+#echo "Press Q to close" >> temp.txt
+#less temp.txt
+#rm temp.txt
+#sleep 5
+#kill $$
 
