@@ -468,7 +468,8 @@ new const g_plugins_Stop[][] = {
 	"crx_chatmanager_toggle",
 	"crx_chatmanager",
 	"ultimate_chat",
-	"statsx_shell"
+	"statsx_shell",
+	"statsx"
 }
 public crx_chatmanagercheck(id)
 {
@@ -517,7 +518,8 @@ public crx_ungag(id)
 		"crx_chatmanager_toggle",
 		"crx_chatmanager",
 		"ultimate_chat",
-		"statsx_shell"
+		"statsx_shell",
+		"statsx"
 	}
 	for (new i = 0; i < sizeof g_plugins_Stop - 1; i++) 
 	{
