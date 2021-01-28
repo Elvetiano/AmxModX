@@ -1,5 +1,0 @@
-L 01/13/2021 - 13:17:11: Start of error session.
-L 01/13/2021 - 13:17:11: Info (map "de_dust2") (file "addons/amxmodx/logs/error_20210113.log")
-L 01/13/2021 - 13:17:11: [FAKEMETA] Invalid entity 6 (no private data)
-L 01/13/2021 - 13:17:11: [AMXX] Run time error 10 (plugin "chooseteam.amxx") (native "get_pdata_int") - debug not enabled!
-L 01/13/2021 - 13:17:11: [AMXX] To enable debug mode, add "debug" after the plugin name in plugins.ini (without quotes).

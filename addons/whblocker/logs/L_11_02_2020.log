@@ -1,4 +1,0 @@
-L 02/11/2020 - 20:19:12: Log file started (file 'cstrike/addons/whblocker/logs/L_11_02_2020.log') (dir 'cstrike') (mod 'Counter-Strike 1.6') (version '1.5.696')
-L 02/11/2020 - 20:19:12: Success: Configuration executed.
-L 02/11/2020 - 20:19:12: Success: Build ReHLDS version defined Linux '2117' (cstrike)
-L 02/11/2020 - 20:19:13: Changelevel Server (map 'de_dust2') (maxplayers '10') (use 'gpGlobals->maxClients')
