@@ -1,0 +1,36 @@
+[en]
+AFK_TRANSFER_WARN = You have %i seconds to start playing or you will be transferred to the spectators.
+AFK_TRANSFER_PLAYER = Admin ^"%s^" was transferred to the spectators for being AFK.
+[de]
+AFK_TRANSFER_WARN = Du hast noch %i Sekunden Zeit um zu spielen oder du wirst zu den Spectator verschoben.
+AFK_TRANSFER_PLAYER = Admin ^"%s^" wurde zu den Spectator verschoben, weil er AFK war.
+[es]
+AFK_TRANSFER_WARN = Tienes %i segundos para comenzar a jugar o seras transferido a los espectadores.
+AFK_TRANSFER_PLAYER = Admin ^"%s^" fue transferido a los espectadores por estar AFK.
+[tr]
+AFK_TRANSFER_WARN = %i saniyen var oynamak icin, yoksa sehircilere dahil edileceksin!
+AFK_TRANSFER_PLAYER = ^"%s^" sehircilere dahil edildi!
+[pl]
+AFK_TRANSFER_WARN = Masz %i sekund zeby zaczac grac albo zostaniesz przeniesiony do obserwatorow.
+AFK_TRANSFER_PLAYER = Admin ^"%s^" was transfered to the spectators for being AFK.
+[ro]
+AFK_TRANSFER_WARN = Ai %i secunde sa te misti sau vei fi transferat la spectatori.
+AFK_TRANSFER_PLAYER = Admin ^"%s^" a fost transferat la spectatori pentru ca a fost AFK.
+[sv]
+AFK_TRANSFER_WARN = Du har %i sekunder att r'o'ra pa dig annars blir du 'o'verskickad till spectator.
+AFK_TRANSFER_PLAYER = ^"%s^" blev 'o'verf'o'rd till spectator f'o'r att han/hon var AFK.
+[bg]
+AFK_TRANSFER_WARN = Imate %i sekundi da zapochnete da igraete ili shte budete transferiran kum nablyudatelite.
+AFK_TRANSFER_PLAYER = Admin ^"%s^" beshe transferiran kum nablyudatelite, zashtoto e AFK.
+[ru]
+AFK_TRANSFER_WARN = У тебя %i секнд до того, как ты будешь перемещен за наблюдателей.
+AFK_TRANSFER_PLAYER = Admin ^"%s^" был перемещен за наблюдателей. Причина: AFK.
+[lt]
+AFK_TRANSFER_WARN = Jeigu per %i sekundziu nepradesite zaisti, busite perkeltas i stebetojus.
+AFK_TRANSFER_PLAYER = Admin ^"%s^" perkeltas i stebetojus nes buvo AFK.
+[nl]
+AFK_TRANSFER_WARN = Je hebt %i seconden om te gaan spelen of anders word je overgezet naar de spectators.
+AFK_TRANSFER_PLAYER = Admin ^"%s^" is over gezet naar de spectators omdat hij AFK is.
+[sk]
+AFK_TRANSFER_WARN = Mas %i sekund aby si zacal hrat, inak budes presmerovany do spec.
+AFK_TRANSFER_PLAYER = Admin ^"%s^" bol presmerovany do spectate, pretoze je AFK.

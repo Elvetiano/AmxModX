@@ -1,0 +1,1238 @@
+L 01/12/2021 - 00:06:48: [high_ping_kicker.amxx] Highpingkick: "pichi<9191><STEAM_1:0:1422118801>" was kicked due highping (Average Ping "328")
+L 01/12/2021 - 00:13:39: [admincmd.amxx] Ban: "®     # .::OFFICIAL.INDUNGI.RO<0><><>" ban and kick "GYERE_SANYI:GYEREEEEEEEEE<9196><STEAM_1:0:1874996773><>" (minutes "0") (reason "NoSpread")
+L 01/12/2021 - 00:14:33: [high_ping_kicker.amxx] Highpingkick: "isaac<9200><STEAM_1:0:1974094856>" was kicked due highping (Average Ping "426")
+L 01/12/2021 - 00:15:41: [high_ping_kicker.amxx] Highpingkick: "isaac<9203><STEAM_1:0:1974094856>" was kicked due highping (Average Ping "309")
+L 01/12/2021 - 00:20:17: [admincmd.amxx] Cmd: "®     # .::OFFICIAL.INDUNGI.RO<0><><>" changelevel "de_dust2"
+L 01/12/2021 - 00:20:17: [high_ping_kicker.amxx] Highpingkick: "[DS]Nom3er[5]<9211><STEAM_1:0:976568062>" was kicked due highping (Average Ping "302")
+L 01/12/2021 - 00:20:22: -------- Mapchange to de_dust2 --------
+L 01/12/2021 - 00:20:22: [admin.amxx] Login: "Osiris<9089><STEAM_0:1:14001491><>" became an admin (account "Osiris") (access "bcdefhijkmnopqrst") (address "86.25.36.194")
+L 01/12/2021 - 00:20:31: [admincmd.amxx] Cmd: "®     # .::OFFICIAL.INDUNGI.RO<0><><>" set cvar (name "amx_vipgold_everyone") (value "1")
+L 01/12/2021 - 00:20:31: [admincmd.amxx] Cmd: "®     # .::OFFICIAL.INDUNGI.RO<0><><>" set cvar (name "sv_timeout") (value "999")
+L 01/12/2021 - 00:20:31: [admincmd.amxx] Cmd: "®     # .::OFFICIAL.INDUNGI.RO<0><><>" set cvar (name "sv_unlag") (value "1")
+L 01/12/2021 - 00:20:31: [admincmd.amxx] Cmd: "®     # .::OFFICIAL.INDUNGI.RO<0><><>" set cvar (name "sv_maxunlag") (value "1.5")
+L 01/12/2021 - 00:20:31: [admincmd.amxx] Cmd: "®     # .::OFFICIAL.INDUNGI.RO<0><><>" set cvar (name "mp_autokick") (value "0")
+L 01/12/2021 - 00:20:31: [admincmd.amxx] Cmd: "®     # .::OFFICIAL.INDUNGI.RO<0><><>" set cvar (name "mp_autoteambalance") (value "0")
+L 01/12/2021 - 00:20:31: [admincmd.amxx] Cmd: "®     # .::OFFICIAL.INDUNGI.RO<0><><>" set cvar (name "mp_timelimit") (value "0")
+L 01/12/2021 - 00:30:38: [high_ping_kicker.amxx] Highpingkick: "HPA<9229><STEAM_1:0:1832770820>" was kicked due highping (Average Ping "401")
+L 01/12/2021 - 00:35:34: [high_ping_kicker.amxx] Highpingkick: "[DS]Nom3er[5]<9237><STEAM_1:0:2137742384>" was kicked due highping (Average Ping "315")
+L 01/12/2021 - 00:42:47: [high_ping_kicker.amxx] Highpingkick: "CachoLaBala23<<<9249><STEAM_1:0:1669182586>" was kicked due highping (Average Ping "543")
+L 01/12/2021 - 00:45:06: [high_ping_kicker.amxx] Highpingkick: "B15<9251><STEAM_1:0:1549730122>" was kicked due highping (Average Ping "301")
+L 01/12/2021 - 01:13:31: [admincmd.amxx] Cmd: "®     # .::OFFICIAL.INDUNGI.RO<0><><>" changelevel "de_dust2"
+L 01/12/2021 - 01:13:36: -------- Mapchange to de_dust2 --------
+L 01/12/2021 - 01:13:46: [admincmd.amxx] Cmd: "®     # .::OFFICIAL.INDUNGI.RO<0><><>" set cvar (name "amx_vipgold_everyone") (value "1")
+L 01/12/2021 - 01:13:46: [admincmd.amxx] Cmd: "®     # .::OFFICIAL.INDUNGI.RO<0><><>" set cvar (name "sv_timeout") (value "999")
+L 01/12/2021 - 01:13:46: [admincmd.amxx] Cmd: "®     # .::OFFICIAL.INDUNGI.RO<0><><>" set cvar (name "sv_unlag") (value "1")
+L 01/12/2021 - 01:13:46: [admincmd.amxx] Cmd: "®     # .::OFFICIAL.INDUNGI.RO<0><><>" set cvar (name "sv_maxunlag") (value "1.5")
+L 01/12/2021 - 01:13:46: [admincmd.amxx] Cmd: "®     # .::OFFICIAL.INDUNGI.RO<0><><>" set cvar (name "mp_autokick") (value "0")
+L 01/12/2021 - 01:13:46: [admincmd.amxx] Cmd: "®     # .::OFFICIAL.INDUNGI.RO<0><><>" set cvar (name "mp_autoteambalance") (value "0")
+L 01/12/2021 - 01:13:46: [admincmd.amxx] Cmd: "®     # .::OFFICIAL.INDUNGI.RO<0><><>" set cvar (name "mp_timelimit") (value "0")
+L 01/12/2021 - 01:16:08: [high_ping_kicker.amxx] Highpingkick: "[DS]Nom3er[2]<9283><STEAM_1:0:1583285852>" was kicked due highping (Average Ping "314")
+L 01/12/2021 - 01:29:25: [high_ping_kicker.amxx] Highpingkick: "erick<9296><STEAM_1:0:1540822697>" was kicked due highping (Average Ping "306")
+L 01/12/2021 - 02:15:23: [high_ping_kicker.amxx] Highpingkick: "vqm333<9336><STEAM_1:0:511016290>" was kicked due highping (Average Ping "333")
+L 01/12/2021 - 02:15:46: [admincmd.amxx] Cmd: "®     # .::OFFICIAL.INDUNGI.RO<0><><>" changelevel "de_dust2"
+L 01/12/2021 - 02:15:51: -------- Mapchange to de_dust2 --------
+L 01/12/2021 - 02:16:00: [admincmd.amxx] Cmd: "®     # .::OFFICIAL.INDUNGI.RO<0><><>" set cvar (name "amx_vipgold_everyone") (value "1")
+L 01/12/2021 - 02:16:00: [admincmd.amxx] Cmd: "®     # .::OFFICIAL.INDUNGI.RO<0><><>" set cvar (name "sv_timeout") (value "999")
+L 01/12/2021 - 02:16:00: [admincmd.amxx] Cmd: "®     # .::OFFICIAL.INDUNGI.RO<0><><>" set cvar (name "sv_unlag") (value "1")
+L 01/12/2021 - 02:16:00: [admincmd.amxx] Cmd: "®     # .::OFFICIAL.INDUNGI.RO<0><><>" set cvar (name "sv_maxunlag") (value "1.5")
+L 01/12/2021 - 02:16:00: [admincmd.amxx] Cmd: "®     # .::OFFICIAL.INDUNGI.RO<0><><>" set cvar (name "mp_autokick") (value "0")
+L 01/12/2021 - 02:16:00: [admincmd.amxx] Cmd: "®     # .::OFFICIAL.INDUNGI.RO<0><><>" set cvar (name "mp_autoteambalance") (value "0")
+L 01/12/2021 - 02:16:00: [admincmd.amxx] Cmd: "®     # .::OFFICIAL.INDUNGI.RO<0><><>" set cvar (name "mp_timelimit") (value "0")
+L 01/12/2021 - 02:16:31: [high_ping_kicker.amxx] Highpingkick: "vqm333<9344><STEAM_1:0:511016290>" was kicked due highping (Average Ping "715")
+L 01/12/2021 - 02:17:12: [high_ping_kicker.amxx] Highpingkick: "vqm333<9345><STEAM_1:0:511016290>" was kicked due highping (Average Ping "306")
+L 01/12/2021 - 03:00:02: [high_ping_kicker.amxx] Highpingkick: "Pressao Sniper<9368><STEAM_1:0:1346398836>" was kicked due highping (Average Ping "432")
+L 01/12/2021 - 03:22:49: [high_ping_kicker.amxx] Highpingkick: "13.CS<9383><STEAM_1:0:380204599>" was kicked due highping (Average Ping "315")
+L 01/12/2021 - 04:07:10: [admincmd.amxx] Cmd: "®     # .::OFFICIAL.INDUNGI.RO<0><><>" changelevel "de_dust2"
+L 01/12/2021 - 04:07:16: -------- Mapchange to de_dust2 --------
+L 01/12/2021 - 04:07:25: [admincmd.amxx] Cmd: "®     # .::OFFICIAL.INDUNGI.RO<0><><>" set cvar (name "amx_vipgold_everyone") (value "1")
+L 01/12/2021 - 04:07:25: [admincmd.amxx] Cmd: "®     # .::OFFICIAL.INDUNGI.RO<0><><>" set cvar (name "sv_timeout") (value "999")
+L 01/12/2021 - 04:07:25: [admincmd.amxx] Cmd: "®     # .::OFFICIAL.INDUNGI.RO<0><><>" set cvar (name "sv_unlag") (value "1")
+L 01/12/2021 - 04:07:25: [admincmd.amxx] Cmd: "®     # .::OFFICIAL.INDUNGI.RO<0><><>" set cvar (name "sv_maxunlag") (value "1.5")
+L 01/12/2021 - 04:07:25: [admincmd.amxx] Cmd: "®     # .::OFFICIAL.INDUNGI.RO<0><><>" set cvar (name "mp_autokick") (value "0")
+L 01/12/2021 - 04:07:25: [admincmd.amxx] Cmd: "®     # .::OFFICIAL.INDUNGI.RO<0><><>" set cvar (name "mp_autoteambalance") (value "0")
+L 01/12/2021 - 04:07:25: [admincmd.amxx] Cmd: "®     # .::OFFICIAL.INDUNGI.RO<0><><>" set cvar (name "mp_timelimit") (value "0")
+L 01/12/2021 - 04:57:13: [high_ping_kicker.amxx] Highpingkick: "CSO^.^CSBLACKDEVIL^.^CoM[3]<9406><STEAM_1:0:1681605581>" was kicked due highping (Average Ping "445")
+L 01/12/2021 - 04:57:58: [high_ping_kicker.amxx] Highpingkick: "CSO^.^CSBLACKDEVIL^.^CoM[3]<9407><STEAM_1:0:1681605581>" was kicked due highping (Average Ping "324")
+L 01/12/2021 - 06:42:15: [high_ping_kicker.amxx] Highpingkick: "Totistun<9425><STEAM_1:0:1019133918>" was kicked due highping (Average Ping "351")
+L 01/12/2021 - 06:42:46: [high_ping_kicker.amxx] Highpingkick: "Totistun<9426><STEAM_1:0:1019133918>" was kicked due highping (Average Ping "311")
+L 01/12/2021 - 06:44:06: [high_ping_kicker.amxx] Highpingkick: "Totistun<9427><STEAM_1:0:1019133918>" was kicked due highping (Average Ping "346")
+L 01/12/2021 - 07:48:40: [high_ping_kicker.amxx] Highpingkick: "<Warrior> Player<9435><STEAM_1:0:730081560>" was kicked due highping (Average Ping "1098")
+L 01/12/2021 - 08:05:51: [high_ping_kicker.amxx] Highpingkick: "<Warrior> Player<9442><STEAM_1:0:54862359>" was kicked due highping (Average Ping "465")
+L 01/12/2021 - 08:25:08: [high_ping_kicker.amxx] Highpingkick: "TOMB<9459><STEAM_1:0:1021544148>" was kicked due highping (Average Ping "308")
+L 01/12/2021 - 08:28:51: [high_ping_kicker.amxx] Highpingkick: "Serbian Ultras PaintBall Player<9460><STEAM_1:0:2137371164>" was kicked due highping (Average Ping "624")
+L 01/12/2021 - 09:02:40: [high_ping_kicker.amxx] Highpingkick: "(1)<Warrior> Player<9486><STEAM_1:0:2029232140>" was kicked due highping (Average Ping "322")
+L 01/12/2021 - 09:03:08: [high_ping_kicker.amxx] Highpingkick: "(1)<Warrior> Player<9487><STEAM_1:0:2029232140>" was kicked due highping (Average Ping "328")
+L 01/12/2021 - 09:06:13: [admincmd.amxx] Ban: "®     # .::OFFICIAL.INDUNGI.RO<0><><>" ban and kick "eee<9489><STEAM_1:0:1952987478><>" (minutes "0") (reason "NoSpread")
+L 01/12/2021 - 09:31:35: [admincmd.amxx] Cmd: "®     # .::OFFICIAL.INDUNGI.RO<0><><>" changelevel "de_dust2"
+L 01/12/2021 - 09:31:40: -------- Mapchange to de_dust2 --------
+L 01/12/2021 - 09:31:50: [admincmd.amxx] Cmd: "®     # .::OFFICIAL.INDUNGI.RO<0><><>" set cvar (name "amx_vipgold_everyone") (value "1")
+L 01/12/2021 - 09:31:50: [admincmd.amxx] Cmd: "®     # .::OFFICIAL.INDUNGI.RO<0><><>" set cvar (name "sv_timeout") (value "999")
+L 01/12/2021 - 09:31:50: [admincmd.amxx] Cmd: "®     # .::OFFICIAL.INDUNGI.RO<0><><>" set cvar (name "sv_unlag") (value "1")
+L 01/12/2021 - 09:31:50: [admincmd.amxx] Cmd: "®     # .::OFFICIAL.INDUNGI.RO<0><><>" set cvar (name "sv_maxunlag") (value "1.5")
+L 01/12/2021 - 09:31:50: [admincmd.amxx] Cmd: "®     # .::OFFICIAL.INDUNGI.RO<0><><>" set cvar (name "mp_autokick") (value "0")
+L 01/12/2021 - 09:31:50: [admincmd.amxx] Cmd: "®     # .::OFFICIAL.INDUNGI.RO<0><><>" set cvar (name "mp_autoteambalance") (value "0")
+L 01/12/2021 - 09:31:50: [admincmd.amxx] Cmd: "®     # .::OFFICIAL.INDUNGI.RO<0><><>" set cvar (name "mp_timelimit") (value "0")
+L 01/12/2021 - 09:47:38: [admin.amxx] Login: "SeBaN*<9533><STEAM_0:1:14774290><>" became an admin (account "SeBaN*") (access "bcdefhijkmnopqrst") (address "176.243.147.31")
+L 01/12/2021 - 09:47:41: [admin.amxx] Login: "SeBaN*<9534><STEAM_0:1:14774290><>" became an admin (account "SeBaN*") (access "bcdefhijkmnopqrst") (address "176.243.147.31")
+L 01/12/2021 - 09:55:07: [high_ping_kicker.amxx] Highpingkick: "narcos<9547><STEAM_1:0:1319510193>" was kicked due highping (Average Ping "328")
+L 01/12/2021 - 10:01:57: [admin.amxx] Login: "SeBaN*<9559><STEAM_0:1:14774290><>" became an admin (account "SeBaN*") (access "bcdefhijkmnopqrst") (address "151.19.75.49")
+L 01/12/2021 - 10:02:00: [admin.amxx] Login: "SeBaN*<9560><STEAM_0:1:14774290><>" became an admin (account "SeBaN*") (access "bcdefhijkmnopqrst") (address "151.19.75.49")
+L 01/12/2021 - 10:05:44: [adminchat.amxx] Chat: "iulu[TGV]<9539><STEAM_0:0:551146960><>" chat "te uiti pe bagheera asta putin?"
+L 01/12/2021 - 10:06:05: [adminchat.amxx] Chat: "iulu[TGV]<9539><STEAM_0:0:551146960><>" chat "nu ia flash"
+L 01/12/2021 - 10:10:17: [adminchat.amxx] Chat: "iulu[TGV]<9539><STEAM_0:0:551146960><>" chat " asta mereu tragand  , fai ss"
+L 01/12/2021 - 10:10:33: [adminchat.amxx] Chat: "iulu[TGV]<9539><STEAM_0:0:551146960><>" chat " vad ca are steam si el"
+L 01/12/2021 - 10:35:10: [admincmd.amxx] Cmd: "®     # .::OFFICIAL.INDUNGI.RO<0><><>" changelevel "de_dust2"
+L 01/12/2021 - 10:35:15: -------- Mapchange to de_dust2 --------
+L 01/12/2021 - 10:35:24: [admincmd.amxx] Cmd: "®     # .::OFFICIAL.INDUNGI.RO<0><><>" set cvar (name "amx_vipgold_everyone") (value "1")
+L 01/12/2021 - 10:35:24: [admincmd.amxx] Cmd: "®     # .::OFFICIAL.INDUNGI.RO<0><><>" set cvar (name "sv_timeout") (value "999")
+L 01/12/2021 - 10:35:24: [admincmd.amxx] Cmd: "®     # .::OFFICIAL.INDUNGI.RO<0><><>" set cvar (name "sv_unlag") (value "1")
+L 01/12/2021 - 10:35:24: [admincmd.amxx] Cmd: "®     # .::OFFICIAL.INDUNGI.RO<0><><>" set cvar (name "sv_maxunlag") (value "1.5")
+L 01/12/2021 - 10:35:24: [admincmd.amxx] Cmd: "®     # .::OFFICIAL.INDUNGI.RO<0><><>" set cvar (name "mp_autokick") (value "0")
+L 01/12/2021 - 10:35:24: [admincmd.amxx] Cmd: "®     # .::OFFICIAL.INDUNGI.RO<0><><>" set cvar (name "mp_autoteambalance") (value "0")
+L 01/12/2021 - 10:35:24: [admincmd.amxx] Cmd: "®     # .::OFFICIAL.INDUNGI.RO<0><><>" set cvar (name "mp_timelimit") (value "0")
+L 01/12/2021 - 10:40:50: [high_ping_kicker.amxx] Highpingkick: "LOSPIBESSSSSSSSSSSSSSSSSSSSSSSS<9605><STEAM_1:0:872174054>" was kicked due highping (Average Ping "304")
+L 01/12/2021 - 10:47:04: [high_ping_kicker.amxx] Highpingkick: "LOSPIBESSSSSSSSSSSSSSSSSSSSSSSS<9619><STEAM_1:0:872174054>" was kicked due highping (Average Ping "319")
+L 01/12/2021 - 10:47:35: [high_ping_kicker.amxx] Highpingkick: "LOSPIBESSSSSSSSSSSSSSSSSSSSSSSS<9621><STEAM_1:0:872174054>" was kicked due highping (Average Ping "555")
+L 01/12/2021 - 10:48:09: [high_ping_kicker.amxx] Highpingkick: "LOSPIBESSSSSSSSSSSSSSSSSSSSSSSS<9622><STEAM_1:0:872174054>" was kicked due highping (Average Ping "911")
+L 01/12/2021 - 11:00:00: [nightmod.amxx] [:::OFFICIAL:::] Este ora !t11:00 serverul trece pe setarile de zi. Multumim
+L 01/12/2021 - 11:00:19: [admincmd.amxx] Cmd: "®     # .::OFFICIAL.INDUNGI.RO<0><><>" changelevel "de_dust2"
+L 01/12/2021 - 11:00:25: -------- Mapchange to de_dust2 --------
+L 01/12/2021 - 11:00:34: [admincmd.amxx] Cmd: "®     # .::OFFICIAL.INDUNGI.RO<0><><>" set cvar (name "amx_vipgold_everyone") (value "0")
+L 01/12/2021 - 11:00:34: [admincmd.amxx] Cmd: "®     # .::OFFICIAL.INDUNGI.RO<0><><>" set cvar (name "amx_vipfree_everyone") (value "0")
+L 01/12/2021 - 11:00:34: [admincmd.amxx] Cmd: "®     # .::OFFICIAL.INDUNGI.RO<0><><>" set cvar (name "sv_timeout") (value "300")
+L 01/12/2021 - 11:00:34: [admincmd.amxx] Cmd: "®     # .::OFFICIAL.INDUNGI.RO<0><><>" set cvar (name "sv_unlag") (value "1")
+L 01/12/2021 - 11:00:34: [admincmd.amxx] Cmd: "®     # .::OFFICIAL.INDUNGI.RO<0><><>" set cvar (name "sv_maxunlag") (value "1.5")
+L 01/12/2021 - 11:00:34: [admincmd.amxx] Cmd: "®     # .::OFFICIAL.INDUNGI.RO<0><><>" set cvar (name "mp_autokick") (value "0")
+L 01/12/2021 - 11:00:34: [admincmd.amxx] Cmd: "®     # .::OFFICIAL.INDUNGI.RO<0><><>" set cvar (name "mp_autoteambalance") (value "0")
+L 01/12/2021 - 11:00:34: [admincmd.amxx] Cmd: "®     # .::OFFICIAL.INDUNGI.RO<0><><>" set cvar (name "mp_timelimit") (value "25")
+L 01/12/2021 - 11:01:43: [high_ping_kicker.amxx] Highpingkick: "<Warrior> Sherab<9639><STEAM_1:0:1182556712>" was kicked due highping (Average Ping "459")
+L 01/12/2021 - 11:03:47: [high_ping_kicker.amxx] Highpingkick: "(1)<Warrior> Player<9608><STEAM_1:0:1002217483>" was kicked due highping (Average Ping "303")
+L 01/12/2021 - 11:08:52: [admincmd.amxx] Ban: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" ban and kick "pentagona<9647><STEAM_1:0:618746081><>" (minutes "0") (reason "NoSpread")
+L 01/12/2021 - 11:19:45: [admin.amxx] Login: "SeBaN*<9669><STEAM_0:1:14774290><>" became an admin (account "SeBaN*") (access "bcdefhijkmnopqrst") (address "151.19.75.49")
+L 01/12/2021 - 11:20:59: [high_ping_kicker.amxx] Highpingkick: "Uzb<9672><STEAM_1:0:700746883>" was kicked due highping (Average Ping "311")
+L 01/12/2021 - 11:34:16: [plmenu_ab_base.amxx] Cmd: "SeBaN*<9669><STEAM_0:1:14774290><>" transfer "> Cosa Nostra ____/<9676><STEAM_1:0:26952040><>" (team "TERRORIST")
+L 01/12/2021 - 11:34:53: [plmenu_ab_base.amxx] Cmd: "SeBaN*<9669><STEAM_0:1:14774290><>" transfer "> Cosa Nostra ____/<9676><STEAM_1:0:26952040><>" (team "TERRORIST")
+L 01/12/2021 - 11:41:24: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" changelevel "de_dust2"
+L 01/12/2021 - 11:41:29: -------- Mapchange to de_dust2 --------
+L 01/12/2021 - 11:41:30: [admin.amxx] Login: "SeBaN*<9669><STEAM_0:1:14774290><>" became an admin (account "SeBaN*") (access "bcdefhijkmnopqrst") (address "151.19.75.49")
+L 01/12/2021 - 11:41:39: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "amx_vipgold_everyone") (value "0")
+L 01/12/2021 - 11:41:39: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "amx_vipfree_everyone") (value "0")
+L 01/12/2021 - 11:41:39: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "sv_timeout") (value "300")
+L 01/12/2021 - 11:41:39: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "sv_unlag") (value "1")
+L 01/12/2021 - 11:41:39: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "sv_maxunlag") (value "1.5")
+L 01/12/2021 - 11:41:39: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "mp_autokick") (value "0")
+L 01/12/2021 - 11:41:39: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "mp_autoteambalance") (value "0")
+L 01/12/2021 - 11:41:39: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "mp_timelimit") (value "25")
+L 01/12/2021 - 11:41:58: [plmenu_ab_base.amxx] Cmd: "SeBaN*<9669><STEAM_0:1:14774290><>" transfer "> Cosa Nostra ____/<9676><STEAM_1:0:26952040><>" (team "TERRORIST")
+L 01/12/2021 - 11:42:33: [high_ping_kicker.amxx] Highpingkick: "<Warrior> Player<9702><STEAM_1:0:566331351>" was kicked due highping (Average Ping "324")
+L 01/12/2021 - 11:52:16: [plmenu_ab_base.amxx] Cmd: "SeBaN*<9669><STEAM_0:1:14774290><>" transfer "> Cosa Nostra ____/<9714><STEAM_1:0:26952040><>" (team "TERRORIST")
+L 01/12/2021 - 11:53:28: [high_ping_kicker.amxx] Highpingkick: "(1)<Warrior> Player<9705><STEAM_1:0:566331351>" was kicked due highping (Average Ping "301")
+L 01/12/2021 - 11:59:05: [high_ping_kicker.amxx] Highpingkick: "dejvidstupid<9731><STEAM_1:0:273406279>" was kicked due highping (Average Ping "351")
+L 01/12/2021 - 12:06:26: [admin.amxx] Login: "DaN'EllA<9740><STEAM_0:0:43925123><>" became an admin (account "DaN'EllA") (access "bcdefghijkmnopqrstu") (address "79.113.190.121")
+L 01/12/2021 - 12:06:29: [admin.amxx] Login: "DaN'EllA<9741><STEAM_0:0:43925123><>" became an admin (account "DaN'EllA") (access "bcdefghijkmnopqrstu") (address "79.113.190.121")
+L 01/12/2021 - 12:06:51: [adminchat.amxx] Chat: "DaN'EllA<9741><STEAM_0:0:43925123><>" chat "Buna"
+L 01/12/2021 - 12:07:05: [adminchat.amxx] Chat: "SeBaN*<9669><STEAM_0:1:14774290><>" chat " BUNA dANA"
+L 01/12/2021 - 12:07:21: [adminchat.amxx] Chat: "DaN'EllA<9741><STEAM_0:0:43925123><>" chat "cam putini"
+L 01/12/2021 - 12:08:33: [adminchat.amxx] Chat: "SeBaN*<9669><STEAM_0:1:14774290><>" chat " fiert poe afk :)"
+L 01/12/2021 - 12:08:41: [adminchat.amxx] Chat: "DaN'EllA<9741><STEAM_0:0:43925123><>" chat "vad"
+L 01/12/2021 - 12:09:04: [high_ping_kicker.amxx] Highpingkick: "tonimontana<9735><STEAM_1:0:1698892253>" was kicked due highping (Average Ping "301")
+L 01/12/2021 - 12:09:06: [adminchat.amxx] Chat: "SeBaN*<9669><STEAM_0:1:14774290><>" chat " ma dat tedro"
+L 01/12/2021 - 12:09:15: [adminchat.amxx] Chat: "SeBaN*<9669><STEAM_0:1:14774290><>" chat " tero :))"
+L 01/12/2021 - 12:09:18: [adminchat.amxx] Chat: "DaN'EllA<9741><STEAM_0:0:43925123><>" chat ":))"
+L 01/12/2021 - 12:09:22: [adminchat.amxx] Chat: "SeBaN*<9669><STEAM_0:1:14774290><>" chat " in baza la voi :))"
+L 01/12/2021 - 12:11:42: [adminchat.amxx] Chat: "SeBaN*<9669><STEAM_0:1:14774290><>" chat " tot nu merge ADDBA"
+L 01/12/2021 - 12:11:46: [adminchat.amxx] Chat: "SeBaN*<9669><STEAM_0:1:14774290><>" chat " ADDBAN"
+L 01/12/2021 - 12:12:00: [adminchat.amxx] Chat: "DaN'EllA<9741><STEAM_0:0:43925123><>" chat "da ban pe ip ia vezi"
+L 01/12/2021 - 12:12:27: [adminchat.amxx] Chat: "SeBaN*<9669><STEAM_0:1:14774290><>" chat " era unu hipopotamu a stat spect chipurile da wg ..."
+L 01/12/2021 - 12:12:32: [adminchat.amxx] Chat: "SeBaN*<9669><STEAM_0:1:14774290><>" chat " dar a iesit"
+L 01/12/2021 - 12:12:42: [adminchat.amxx] Chat: "DaN'EllA<9741><STEAM_0:0:43925123><>" chat "lasa-l asa"
+L 01/12/2021 - 12:13:01: [adminchat.amxx] Chat: "SeBaN*<9669><STEAM_0:1:14774290><>" chat "da dar nu il iert"
+L 01/12/2021 - 12:13:14: [adminchat.amxx] Chat: "DaN'EllA<9741><STEAM_0:0:43925123><>" chat "sa ii faci si un demo sa il ai"
+L 01/12/2021 - 12:14:52: [adminchat.amxx] Chat: "DaN'EllA<9741><STEAM_0:0:43925123><>" chat "na ma na"
+L 01/12/2021 - 12:15:34: [adminchat.amxx] Chat: "DaN'EllA<9741><STEAM_0:0:43925123><>" chat "asta cred ca are wall"
+L 01/12/2021 - 12:15:40: [adminchat.amxx] Chat: "SeBaN*<9669><STEAM_0:1:14774290><>" chat " care ?"
+L 01/12/2021 - 12:15:40: [adminchat.amxx] Chat: "DaN'EllA<9741><STEAM_0:0:43925123><>" chat "ficker"
+L 01/12/2021 - 12:15:46: [adminchat.amxx] Chat: "DaN'EllA<9741><STEAM_0:0:43925123><>" chat "na la el"
+L 01/12/2021 - 12:15:49: [adminchat.amxx] Chat: "SeBaN*<9669><STEAM_0:1:14774290><>" chat " il ard"
+L 01/12/2021 - 12:16:29: [adminchat.amxx] Chat: "SeBaN*<9669><STEAM_0:1:14774290><>" chat " strici tu demo :)"
+L 01/12/2021 - 12:16:34: [adminchat.amxx] Chat: "DaN'EllA<9741><STEAM_0:0:43925123><>" chat ":)"
+L 01/12/2021 - 12:17:53: [adminchat.amxx] Chat: "SeBaN*<9669><STEAM_0:1:14774290><>" chat " IN BAZA"
+L 01/12/2021 - 12:18:20: [adminchat.amxx] Chat: "SeBaN*<9669><STEAM_0:1:14774290><>" chat " NU PREA PARFE AIBA"
+L 01/12/2021 - 12:19:12: [adminchat.amxx] Chat: "DaN'EllA<9741><STEAM_0:0:43925123><>" chat "ok"
+L 01/12/2021 - 12:19:16: [adminchat.amxx] Chat: "DaN'EllA<9741><STEAM_0:0:43925123><>" chat "mi s- o fi parut"
+L 01/12/2021 - 12:19:18: [adminchat.amxx] Chat: "SeBaN*<9669><STEAM_0:1:14774290><>" chat "MAI STAU O RUNDA"
+L 01/12/2021 - 12:19:31: [adminchat.amxx] Chat: "SeBaN*<9669><STEAM_0:1:14774290><>" chat " POT SA GRESESC SI EU "
+L 01/12/2021 - 12:19:36: [adminchat.amxx] Chat: "SeBaN*<9669><STEAM_0:1:14774290><>" chat " DACA E TE UITI SI TU"
+L 01/12/2021 - 12:20:07: [adminchat.amxx] Chat: "DaN'EllA<9741><STEAM_0:0:43925123><>" chat "las ca mai arunci eu un ochi daca e"
+L 01/12/2021 - 12:21:00: [adminchat.amxx] Chat: "SeBaN*<9669><STEAM_0:1:14774290><>" chat " mama inca sunt in top :))"
+L 01/12/2021 - 12:21:04: [adminchat.amxx] Chat: "DaN'EllA<9741><STEAM_0:0:43925123><>" chat "si eu "
+L 01/12/2021 - 12:21:12: [adminchat.amxx] Chat: "DaN'EllA<9741><STEAM_0:0:43925123><>" chat ":)) m-a luat osiris totusi"
+L 01/12/2021 - 12:21:19: [adminchat.amxx] Chat: "SeBaN*<9669><STEAM_0:1:14774290><>" chat " la cum joaca astia ai nostrii e staniu :)))"
+L 01/12/2021 - 12:21:25: [adminchat.amxx] Chat: "DaN'EllA<9741><STEAM_0:0:43925123><>" chat "da da"
+L 01/12/2021 - 12:21:35: [adminchat.amxx] Chat: "SeBaN*<9669><STEAM_0:1:14774290><>" chat " noi avem multa cantitate :)))"
+L 01/12/2021 - 12:21:42: [adminchat.amxx] Chat: "DaN'EllA<9741><STEAM_0:0:43925123><>" chat "da:))"
+L 01/12/2021 - 12:23:19: [adminchat.amxx] Chat: "DaN'EllA<9741><STEAM_0:0:43925123><>" chat "faliment"
+L 01/12/2021 - 12:23:30: [adminchat.amxx] Chat: "DaN'EllA<9741><STEAM_0:0:43925123><>" chat "a vandut echipa si a luat-o de la capat"
+L 01/12/2021 - 12:23:44: [adminchat.amxx] Chat: "SeBaN*<9669><STEAM_0:1:14774290><>" chat " rachita era bun manager"
+L 01/12/2021 - 12:23:54: [adminchat.amxx] Chat: "DaN'EllA<9741><STEAM_0:0:43925123><>" chat "pai na..."
+L 01/12/2021 - 12:24:04: [adminchat.amxx] Chat: "DaN'EllA<9741><STEAM_0:0:43925123><>" chat "ma duceam peste tot cu echipa:))"
+L 01/12/2021 - 12:24:11: [adminchat.amxx] Chat: "SeBaN*<9669><STEAM_0:1:14774290><>" chat " pe bune ?"
+L 01/12/2021 - 12:24:17: [adminchat.amxx] Chat: "DaN'EllA<9741><STEAM_0:0:43925123><>" chat "da da"
+L 01/12/2021 - 12:24:20: [adminchat.amxx] Chat: "SeBaN*<9669><STEAM_0:1:14774290><>" chat " :*"
+L 01/12/2021 - 12:24:43: [adminchat.amxx] Chat: "DaN'EllA<9741><STEAM_0:0:43925123><>" chat "a fost frumos cand au luat cupa"
+L 01/12/2021 - 12:24:49: [adminchat.amxx] Chat: "DaN'EllA<9741><STEAM_0:0:43925123><>" chat "dupa s-a rupt filmul"
+L 01/12/2021 - 12:26:23: [admin.amxx] Login: "SeBaN*<9782><STEAM_0:1:14774290><>" became an admin (account "SeBaN*") (access "bcdefhijkmnopqrst") (address "151.19.75.49")
+L 01/12/2021 - 12:26:29: [admincmd.amxx] Ban: "DaN'EllA<9741><STEAM_0:0:43925123><>" ban and kick "Nicole<9780><STEAM_1:0:2122190213><>" (minutes "0") (reason "reclama")
+L 01/12/2021 - 12:26:48: [adminchat.amxx] Chat: "SeBaN*<9782><STEAM_0:1:14774290><>" chat " deci esti Microbista :*"
+L 01/12/2021 - 12:27:08: [adminchat.amxx] Chat: "DaN'EllA<9741><STEAM_0:0:43925123><>" chat "am fost"
+L 01/12/2021 - 12:27:17: [adminchat.amxx] Chat: "SeBaN*<9782><STEAM_0:1:14774290><>" chat " don asta e suspect"
+L 01/12/2021 - 12:27:24: [adminchat.amxx] Chat: "DaN'EllA<9741><STEAM_0:0:43925123><>" chat "il cunosc pe budescu, barboianu si ologu"
+L 01/12/2021 - 12:27:34: [adminchat.amxx] Chat: "SeBaN*<9782><STEAM_0:1:14774290><>" chat " brava"
+L 01/12/2021 - 12:28:49: [plmenu_ab_base.amxx] Kick: "SeBaN*<9782><STEAM_0:1:14774290><>" kick "BRAIN DAMAGE | Player<9733><STEAM_1:0:1912751359><>"
+L 01/12/2021 - 12:29:39: [adminchat.amxx] Chat: "SeBaN*<9782><STEAM_0:1:14774290><>" chat " ASTAUSOR USOR AADUNA FRAGURI"
+L 01/12/2021 - 12:29:45: [adminchat.amxx] Chat: "SeBaN*<9782><STEAM_0:1:14774290><>" chat "AMICUL TAU :)))"
+L 01/12/2021 - 12:29:48: [adminchat.amxx] Chat: "DaN'EllA<9741><STEAM_0:0:43925123><>" chat "da da"
+L 01/12/2021 - 12:30:13: [adminchat.amxx] Chat: "SeBaN*<9782><STEAM_0:1:14774290><>" chat " dar parca asta are oleak de wall arham"
+L 01/12/2021 - 12:30:28: [adminchat.amxx] Chat: "DaN'EllA<9741><STEAM_0:0:43925123><>" chat "ma uit imediat"
+L 01/12/2021 - 12:30:51: [adminchat.amxx] Chat: "SeBaN*<9782><STEAM_0:1:14774290><>" chat " in poze imi  mege"
+L 01/12/2021 - 12:30:54: [adminchat.amxx] Chat: "SeBaN*<9782><STEAM_0:1:14774290><>" chat " merge"
+L 01/12/2021 - 12:31:01: [adminchat.amxx] Chat: "SeBaN*<9782><STEAM_0:1:14774290><>" chat " pana acu mergea binisor ...4"
+L 01/12/2021 - 12:32:45: [adminchat.amxx] Chat: "SeBaN*<9782><STEAM_0:1:14774290><>" chat "ptiu "
+L 01/12/2021 - 12:32:49: [admin_super_gag.amxx] Gag: "DaN'EllA<#9741><STEAM_0:0:43925123><79.113.190.121>" gagged "SINIR TANIMAM<#9791><STEAM_1:0:817864529><81.214.211.74>" <a> for <400s> (reason: "Unspecified")
+L 01/12/2021 - 12:34:30: [adminchat.amxx] Chat: "SeBaN*<9782><STEAM_0:1:14774290><>" chat " na si la vali :"
+L 01/12/2021 - 12:34:42: [adminchat.amxx] Chat: "DaN'EllA<9741><STEAM_0:0:43925123><>" chat "asta nu a luat gag?"
+L 01/12/2021 - 12:34:49: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" changelevel "de_dust2"
+L 01/12/2021 - 12:34:54: -------- Mapchange to de_dust2 --------
+L 01/12/2021 - 12:34:54: [admin.amxx] Login: "DaN'EllA<9741><STEAM_0:0:43925123><>" became an admin (account "DaN'EllA") (access "bcdefghijkmnopqrstu") (address "79.113.190.121")
+L 01/12/2021 - 12:34:54: [admin.amxx] Login: "SeBaN*<9782><STEAM_0:1:14774290><>" became an admin (account "SeBaN*") (access "bcdefhijkmnopqrst") (address "151.19.75.49")
+L 01/12/2021 - 12:35:03: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "amx_vipgold_everyone") (value "0")
+L 01/12/2021 - 12:35:03: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "amx_vipfree_everyone") (value "0")
+L 01/12/2021 - 12:35:03: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "sv_timeout") (value "300")
+L 01/12/2021 - 12:35:03: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "sv_unlag") (value "1")
+L 01/12/2021 - 12:35:03: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "sv_maxunlag") (value "1.5")
+L 01/12/2021 - 12:35:03: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "mp_autokick") (value "0")
+L 01/12/2021 - 12:35:03: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "mp_autoteambalance") (value "0")
+L 01/12/2021 - 12:35:03: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "mp_timelimit") (value "25")
+L 01/12/2021 - 12:35:11: [adminchat.amxx] Chat: "DaN'EllA<9741><STEAM_0:0:43925123><>" chat "pai si cum naiba vorbea"
+L 01/12/2021 - 12:35:20: [adminchat.amxx] Chat: "SeBaN*<9782><STEAM_0:1:14774290><>" chat " cred ca a dat retry"
+L 01/12/2021 - 12:35:45: [adminchat.amxx] Chat: "SeBaN*<9782><STEAM_0:1:14774290><>" chat " ia dai iar"
+L 01/12/2021 - 12:35:49: [admin_super_gag.amxx] Gag: "DaN'EllA<#9741><STEAM_0:0:43925123><79.113.190.121>" gagged "SINIR TANIMAM<#9791><STEAM_1:0:817864529><81.214.211.74>" <a> for <400s> (reason: "Unspecified")
+L 01/12/2021 - 12:36:58: [adminchat.amxx] Chat: "DaN'EllA<9741><STEAM_0:0:43925123><>" chat "na"
+L 01/12/2021 - 12:37:16: [adminchat.amxx] Chat: "SeBaN*<9782><STEAM_0:1:14774290><>" chat " cred ca nu e bun pluginu"
+L 01/12/2021 - 12:37:35: [adminchat.amxx] Chat: "SeBaN*<9782><STEAM_0:1:14774290><>" chat " ni ce lag am"
+L 01/12/2021 - 12:38:12: [adminchat.amxx] Chat: "DaN'EllA<9741><STEAM_0:0:43925123><>" chat "vali s-a activat?:))"
+L 01/12/2021 - 12:38:20: [adminchat.amxx] Chat: "SeBaN*<9782><STEAM_0:1:14774290><>" chat " pai am zis mai inainte"
+L 01/12/2021 - 12:38:29: [adminchat.amxx] Chat: "SeBaN*<9782><STEAM_0:1:14774290><>" chat " cred ca da"
+L 01/12/2021 - 12:39:37: [admincmd.amxx] Kick: "DaN'EllA<9741><STEAM_0:0:43925123><>" kick "SINIR TANIMAM<9791><STEAM_1:0:817864529><>" (reason "")
+L 01/12/2021 - 12:42:29: [adminchat.amxx] Chat: "DaN'EllA<9741><STEAM_0:0:43925123><>" chat "eeee"
+L 01/12/2021 - 12:48:13: [adminchat.amxx] Chat: "DaN'EllA<9741><STEAM_0:0:43925123><>" chat "nu-mi dau seama la vali..."
+L 01/12/2021 - 12:48:32: [adminchat.amxx] Chat: "SeBaN*<9782><STEAM_0:1:14774290><>" chat " cere un wg"
+L 01/12/2021 - 12:48:43: [adminchat.amxx] Chat: "SeBaN*<9782><STEAM_0:1:14774290><>" chat " vedem ce zice"
+L 01/12/2021 - 12:49:37: [adminchat.amxx] Chat: "DaN'EllA<9741><STEAM_0:0:43925123><>" chat "nu pare"
+L 01/12/2021 - 12:50:54: [adminchat.amxx] Chat: "DaN'EllA<9741><STEAM_0:0:43925123><>" chat "balerina"
+L 01/12/2021 - 12:51:05: [adminchat.amxx] Chat: "SeBaN*<9782><STEAM_0:1:14774290><>" chat " :))))"
+L 01/12/2021 - 12:51:51: [adminchat.amxx] Chat: "DaN'EllA<9741><STEAM_0:0:43925123><>" chat "sa nu vii la afk"
+L 01/12/2021 - 12:51:54: [adminchat.amxx] Chat: "DaN'EllA<9741><STEAM_0:0:43925123><>" chat "next"
+L 01/12/2021 - 12:51:56: [adminchat.amxx] Chat: "DaN'EllA<9741><STEAM_0:0:43925123><>" chat ":))"
+L 01/12/2021 - 12:51:58: [adminchat.amxx] Chat: "SeBaN*<9782><STEAM_0:1:14774290><>" chat " ok"
+L 01/12/2021 - 12:53:40: [adminchat.amxx] Chat: "SeBaN*<9782><STEAM_0:1:14774290><>" chat " nu am mai avut oleak de rabdare :)"
+L 01/12/2021 - 12:53:44: [adminchat.amxx] Chat: "DaN'EllA<9741><STEAM_0:0:43925123><>" chat ":))"
+L 01/12/2021 - 12:54:01: [admin.amxx] Login: "blioshele<9853><STEAM_0:0:572269300><>" became an admin (account "blioshele") (access "bcdefghijkmnopqrstu") (address "93.55.101.31")
+L 01/12/2021 - 12:54:03: [admin.amxx] Login: "blioshele<9854><STEAM_0:0:572269300><>" became an admin (account "blioshele") (access "bcdefghijkmnopqrstu") (address "93.55.101.31")
+L 01/12/2021 - 12:54:05: [adminchat.amxx] Chat: "Sara<9850><STEAM_1:0:1646479289><>" chat "juSt."
+L 01/12/2021 - 12:54:24: [adminchat.amxx] Chat: "Sara<9850><STEAM_1:0:1646479289><>" chat "juSt."
+L 01/12/2021 - 12:54:43: [adminchat.amxx] Chat: "DaN'EllA<9741><STEAM_0:0:43925123><>" chat "demo on"
+L 01/12/2021 - 12:54:56: [adminchat.amxx] Chat: "Sara<9850><STEAM_1:0:1646479289><>" chat "juSt."
+L 01/12/2021 - 12:55:06: [adminchat.amxx] Chat: "Sara<9850><STEAM_1:0:1646479289><>" chat "juSt."
+L 01/12/2021 - 12:55:19: [admincmd.amxx] Ban: "DaN'EllA<9741><STEAM_0:0:43925123><>" ban and kick "juSt.<9806><STEAM_1:0:1715478086><>" (minutes "0") (reason "wall")
+L 01/12/2021 - 12:57:12: [admincmd.amxx] Cmd: "DaN'EllA<9741><STEAM_0:0:43925123><>" set cvar (name "mp_timelimit") (value "0")
+L 01/12/2021 - 12:58:05: [adminchat.amxx] Chat: "DaN'EllA<9741><STEAM_0:0:43925123><>" chat "asta e andreea varianta engleza:))"
+L 01/12/2021 - 12:58:10: [adminchat.amxx] Chat: "SeBaN*<9782><STEAM_0:1:14774290><>" chat " :)))"
+L 01/12/2021 - 13:00:42: [adminchat.amxx] Chat: "DaN'EllA<9741><STEAM_0:0:43925123><>" chat "asta cam da hs"
+L 01/12/2021 - 13:01:09: [adminchat.amxx] Chat: "SeBaN*<9782><STEAM_0:1:14774290><>" chat " ?"
+L 01/12/2021 - 13:01:17: [adminchat.amxx] Chat: "DaN'EllA<9741><STEAM_0:0:43925123><>" chat "sara"
+L 01/12/2021 - 13:01:24: [adminchat.amxx] Chat: "SeBaN*<9782><STEAM_0:1:14774290><>" chat " mie mi sa parut wall"
+L 01/12/2021 - 13:01:31: [adminchat.amxx] Chat: "SeBaN*<9782><STEAM_0:1:14774290><>" chat " ACU VRE 3 RUNDE"
+L 01/12/2021 - 13:02:56: [adminchat.amxx] Chat: "DaN'EllA<9741><STEAM_0:0:43925123><>" chat "hmm"
+L 01/12/2021 - 13:03:00: [adminchat.amxx] Chat: "SeBaN*<9782><STEAM_0:1:14774290><>" chat " :))"
+L 01/12/2021 - 13:03:16: [adminchat.amxx] Chat: "SeBaN*<9782><STEAM_0:1:14774290><>" chat " ni"
+L 01/12/2021 - 13:03:19: [adminchat.amxx] Chat: "DaN'EllA<9741><STEAM_0:0:43925123><>" chat "i-aute la ea"
+L 01/12/2021 - 13:03:32: [adminchat.amxx] Chat: "SeBaN*<9782><STEAM_0:1:14774290><>" chat " e straineza ?"
+L 01/12/2021 - 13:03:36: [adminchat.amxx] Chat: "DaN'EllA<9741><STEAM_0:0:43925123><>" chat "da"
+L 01/12/2021 - 13:04:15: [admincmd.amxx] Ban: "DaN'EllA<9741><STEAM_0:0:43925123><>" ban and kick "Sara<9850><STEAM_1:0:1646479289><>" (minutes "0") (reason "wall")
+L 01/12/2021 - 13:04:28: [adminchat.amxx] Chat: "SeBaN*<9782><STEAM_0:1:14774290><>" chat " g g:D"
+L 01/12/2021 - 13:04:41: [adminchat.amxx] Chat: "DaN'EllA<9741><STEAM_0:0:43925123><>" chat "ms"
+L 01/12/2021 - 13:06:22: [adminchat.amxx] Chat: "DaN'EllA<9741><STEAM_0:0:43925123><>" chat "doamne sebane"
+L 01/12/2021 - 13:06:33: [adminchat.amxx] Chat: "SeBaN*<9782><STEAM_0:1:14774290><>" chat " :*"
+L 01/12/2021 - 13:06:45: [adminchat.amxx] Chat: "DaN'EllA<9741><STEAM_0:0:43925123><>" chat "ti-ai gresit cariera"
+L 01/12/2021 - 13:07:05: [adminchat.amxx] Chat: "SeBaN*<9782><STEAM_0:1:14774290><>" chat " assasin trebuia .."
+L 01/12/2021 - 13:07:09: [adminchat.amxx] Chat: "DaN'EllA<9741><STEAM_0:0:43925123><>" chat "balerina"
+L 01/12/2021 - 13:07:12: [admin.amxx] Login: "oarba_dupa_tine<9874><STEAM_0:1:111439526><>" became an admin (account "oarba_dupa_tine") (access "abcdefghijklmnopqrstuvx") (address "86.122.114.129")
+L 01/12/2021 - 13:07:15: [admin.amxx] Login: "oarba_dupa_tine<9875><STEAM_0:1:111439526><>" became an admin (account "oarba_dupa_tine") (access "abcdefghijklmnopqrstuvx") (address "86.122.114.129")
+L 01/12/2021 - 13:08:12: [adminchat.amxx] Chat: "DaN'EllA<9741><STEAM_0:0:43925123><>" chat "Buna"
+L 01/12/2021 - 13:08:23: [adminchat.amxx] Chat: "DaN'EllA<9741><STEAM_0:0:43925123><>" chat ":))"
+L 01/12/2021 - 13:08:50: [adminchat.amxx] Chat: "SeBaN*<9782><STEAM_0:1:14774290><>" chat " CE ZICE SEFU 4"
+L 01/12/2021 - 13:08:59: [adminchat.amxx] Chat: "SeBaN*<9782><STEAM_0:1:14774290><>" chat " TOATE BUNE ?"
+L 01/12/2021 - 13:09:03: [adminchat.amxx] Chat: "oarba_dupa_tine<9875><STEAM_0:1:111439526><>" chat "da"
+L 01/12/2021 - 13:09:08: [adminchat.amxx] Chat: "oarba_dupa_tine<9875><STEAM_0:1:111439526><>" chat "putin obosity"
+L 01/12/2021 - 13:09:18: [adminchat.amxx] Chat: "SeBaN*<9782><STEAM_0:1:14774290><>" chat " ai fost de noapte ?"
+L 01/12/2021 - 13:09:24: [adminchat.amxx] Chat: "oarba_dupa_tine<9875><STEAM_0:1:111439526><>" chat "da"
+L 01/12/2021 - 13:10:00: [adminchat.amxx] Chat: "SeBaN*<9782><STEAM_0:1:14774290><>" chat " azi il batem pe OARBA CA IL USTURA OCHII :)"
+L 01/12/2021 - 13:10:33: [adminchat.amxx] Chat: "DaN'EllA<9741><STEAM_0:0:43925123><>" chat "nu cred, e cel mai bun"
+L 01/12/2021 - 13:10:58: [adminchat.amxx] Chat: "DaN'EllA<9741><STEAM_0:0:43925123><>" chat "1 lauda = 10 lei boss da?"
+L 01/12/2021 - 13:12:44: [high_ping_kicker.amxx] Highpingkick: "paulos soilemetzidis<9891><STEAM_1:0:1660069538>" was kicked due highping (Average Ping "586")
+L 01/12/2021 - 13:14:53: [adminchat.amxx] Chat: "SeBaN*<9782><STEAM_0:1:14774290><>" chat " MA SUNAT CONTABILA ACU "
+L 01/12/2021 - 13:15:10: [adminchat.amxx] Chat: "SeBaN*<9782><STEAM_0:1:14774290><>" chat "MAINE TRE SA FAC IAR VIZITA MEDICALA ..."
+L 01/12/2021 - 13:15:33: [adminchat.amxx] Chat: "DaN'EllA<9741><STEAM_0:0:43925123><>" chat "poate e bine"
+L 01/12/2021 - 13:15:41: [admincmd.amxx] Cmd: "SeBaN*<9782><STEAM_0:1:14774290><>" change nick to "Marghioala" "zm.leaguecs.ro [3]<9892><STEAM_1:0:422855187><>"
+L 01/12/2021 - 13:15:53: [adminchat.amxx] Chat: "SeBaN*<9782><STEAM_0:1:14774290><>" chat " sa speram ca m au disperat"
+L 01/12/2021 - 13:16:10: [adminchat.amxx] Chat: "SeBaN*<9782><STEAM_0:1:14774290><>" chat " am un  An si 3 luni de cand stau fara munca ..."
+L 01/12/2021 - 13:16:17: [adminchat.amxx] Chat: "DaN'EllA<9741><STEAM_0:0:43925123><>" chat "pff"
+L 01/12/2021 - 13:16:17: [adminchat.amxx] Chat: "SeBaN*<9782><STEAM_0:1:14774290><>" chat " din cauza asta :|"
+L 01/12/2021 - 13:20:43: [adminchat.amxx] Chat: "oarba_dupa_tine<9875><STEAM_0:1:111439526><>" chat "am inceput bine"
+L 01/12/2021 - 13:20:46: [adminchat.amxx] Chat: "oarba_dupa_tine<9875><STEAM_0:1:111439526><>" chat ":@"
+L 01/12/2021 - 13:21:05: [adminchat.amxx] Chat: "SeBaN*<9782><STEAM_0:1:14774290><>" chat " sfarsitul Conteaza :)))w"
+L 01/12/2021 - 13:21:10: [adminchat.amxx] Chat: "DaN'EllA<9741><STEAM_0:0:43925123><>" chat "te-am laudat eu si de aceea"
+L 01/12/2021 - 13:21:23: [adminchat.amxx] Chat: "oarba_dupa_tine<9875><STEAM_0:1:111439526><>" chat "da da"
+L 01/12/2021 - 13:22:18: [adminchat.amxx] Chat: "oarba_dupa_tine<9875><STEAM_0:1:111439526><>" chat "are wall"
+L 01/12/2021 - 13:22:27: [adminchat.amxx] Chat: "oarba_dupa_tine<9875><STEAM_0:1:111439526><>" chat "tarro"
+L 01/12/2021 - 13:22:46: [adminchat.amxx] Chat: "DaN'EllA<9741><STEAM_0:0:43925123><>" chat "ma uit eu"
+L 01/12/2021 - 13:23:09: [adminchat.amxx] Chat: "oarba_dupa_tine<9875><STEAM_0:1:111439526><>" chat "ms"
+L 01/12/2021 - 13:23:55: [adminchat.amxx] Chat: "SeBaN*<9782><STEAM_0:1:14774290><>" chat " boss unde te tunzi ?"
+L 01/12/2021 - 13:23:58: [adminchat.amxx] Chat: "oarba_dupa_tine<9875><STEAM_0:1:111439526><>" chat "tre sa-ti fac cs-ul azi "
+L 01/12/2021 - 13:24:03: [adminchat.amxx] Chat: "DaN'EllA<9741><STEAM_0:0:43925123><>" chat "da"
+L 01/12/2021 - 13:24:03: [adminchat.amxx] Chat: "oarba_dupa_tine<9875><STEAM_0:1:111439526><>" chat "eu?"
+L 01/12/2021 - 13:24:10: [adminchat.amxx] Chat: "SeBaN*<9782><STEAM_0:1:14774290><>" chat " ca vreau sa scurtez o pereche de blugi :)))"
+L 01/12/2021 - 13:24:15: [adminchat.amxx] Chat: "SeBaN*<9782><STEAM_0:1:14774290><>" chat " da tu :))"
+L 01/12/2021 - 13:24:25: [adminchat.amxx] Chat: "oarba_dupa_tine<9875><STEAM_0:1:111439526><>" chat "gluma de pe fb?"
+L 01/12/2021 - 13:24:30: [adminchat.amxx] Chat: "SeBaN*<9782><STEAM_0:1:14774290><>" chat " da ... "
+L 01/12/2021 - 13:24:40: [adminchat.amxx] Chat: "SeBaN*<9782><STEAM_0:1:14774290><>" chat " dar faina poza ta de la profil"
+L 01/12/2021 - 13:24:45: [adminchat.amxx] Chat: "oarba_dupa_tine<9875><STEAM_0:1:111439526><>" chat "o stiu de mult"
+L 01/12/2021 - 13:25:03: [admincmd.amxx] Ban: "DaN'EllA<9741><STEAM_0:0:43925123><>" ban and kick "tarro<9886><STEAM_1:0:175676046><>" (minutes "0") (reason "wall")
+L 01/12/2021 - 13:25:11: [adminchat.amxx] Chat: "SeBaN*<9782><STEAM_0:1:14774290><>" chat " si eu dar mi a venit in cap cand am vazut poza ta  de  la steam"
+L 01/12/2021 - 13:26:39: [adminchat.amxx] Chat: "DaN'EllA<9741><STEAM_0:0:43925123><>" chat "brb tigara"
+L 01/12/2021 - 13:33:29: [adminchat.amxx] Chat: "oarba_dupa_tine<9875><STEAM_0:1:111439526><>" chat "de ce dracu oi avea eu ping peste 50?"
+L 01/12/2021 - 13:33:48: [adminchat.amxx] Chat: "SeBaN*<9782><STEAM_0:1:14774290><>" chat "la 50 plangi ? :L))\"
+L 01/12/2021 - 13:33:50: [adminchat.amxx] Chat: "oarba_dupa_tine<9875><STEAM_0:1:111439526><>" chat "ciudat"
+L 01/12/2021 - 13:33:58: [adminchat.amxx] Chat: "oarba_dupa_tine<9875><STEAM_0:1:111439526><>" chat "eu aveam 30.."
+L 01/12/2021 - 13:33:58: [admin.amxx] Login: "fyzt1C<9928><STEAM_0:0:156675117><>" became an admin (account "fyzt1C") (access "bcdefhijm") (address "93.71.202.85")
+L 01/12/2021 - 13:34:14: [adminchat.amxx] Chat: "SeBaN*<9782><STEAM_0:1:14774290><>" chat " poate vre un update .."
+L 01/12/2021 - 13:34:38: [adminchat.amxx] Chat: "fyzt1C<9928><STEAM_0:0:156675117><>" tsay "re all"
+L 01/12/2021 - 13:34:43: [adminchat.amxx] Chat: "fyzt1C<9928><STEAM_0:0:156675117><>" chat " sal all"
+L 01/12/2021 - 13:34:44: [adminchat.amxx] Chat: "oarba_dupa_tine<9875><STEAM_0:1:111439526><>" chat "rwe"
+L 01/12/2021 - 13:37:06: [adminchat.amxx] Chat: "fyzt1C<9928><STEAM_0:0:156675117><>" tsay "last RR"
+L 01/12/2021 - 13:37:50: [adminchat.amxx] Chat: "SeBaN*<9782><STEAM_0:1:14774290><>" chat " cred ca sunt probleme cu PTB ul si cu Gag ul "
+L 01/12/2021 - 13:38:01: [adminchat.amxx] Chat: "fyzt1C<9928><STEAM_0:0:156675117><>" chat " cu gagul da"
+L 01/12/2021 - 13:38:02: [adminchat.amxx] Chat: "SeBaN*<9782><STEAM_0:1:14774290><>" chat " si addba"
+L 01/12/2021 - 13:38:07: [adminchat.amxx] Chat: "SeBaN*<9782><STEAM_0:1:14774290><>" chat " addban"
+L 01/12/2021 - 13:38:18: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" changelevel "de_dust2"
+L 01/12/2021 - 13:38:23: -------- Mapchange to de_dust2 --------
+L 01/12/2021 - 13:38:24: [admin.amxx] Login: "oarba_dupa_tine<9875><STEAM_0:1:111439526><>" became an admin (account "oarba_dupa_tine") (access "abcdefghijklmnopqrstuvx") (address "86.122.114.129")
+L 01/12/2021 - 13:38:24: [admin.amxx] Login: "fyzt1C<9928><STEAM_0:0:156675117><>" became an admin (account "fyzt1C") (access "bcdefhijm") (address "93.71.202.85")
+L 01/12/2021 - 13:38:24: [admin.amxx] Login: "SeBaN*<9782><STEAM_0:1:14774290><>" became an admin (account "SeBaN*") (access "bcdefhijkmnopqrst") (address "151.19.75.49")
+L 01/12/2021 - 13:38:24: [admin.amxx] Login: "SeBaN*<9782><STEAM_0:1:14774290><>" became an admin (account "SeBaN*") (access "bcdefhijkmnopqrst") (address "151.19.75.49")
+L 01/12/2021 - 13:38:33: [adminchat.amxx] Chat: "SeBaN*<9782><STEAM_0:1:14774290><>" chat " da si ptb te muta cand esti in joc ?"
+L 01/12/2021 - 13:38:33: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "amx_vipgold_everyone") (value "0")
+L 01/12/2021 - 13:38:33: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "amx_vipfree_everyone") (value "0")
+L 01/12/2021 - 13:38:33: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "sv_timeout") (value "300")
+L 01/12/2021 - 13:38:33: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "sv_unlag") (value "1")
+L 01/12/2021 - 13:38:33: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "sv_maxunlag") (value "1.5")
+L 01/12/2021 - 13:38:33: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "mp_autokick") (value "0")
+L 01/12/2021 - 13:38:33: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "mp_autoteambalance") (value "0")
+L 01/12/2021 - 13:38:33: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "mp_timelimit") (value "25")
+L 01/12/2021 - 13:48:26: [high_ping_kicker.amxx] Highpingkick: "spune mi david<9918><STEAM_1:0:829145221>" was kicked due highping (Average Ping "301")
+L 01/12/2021 - 13:54:44: [admincmd.amxx] Cmd: "SeBaN*<9782><STEAM_0:1:14774290><>" change nick to "Marghioala" "RESPAWN~SLADERS.RO [6]<9955><STEAM_1:0:1405034629><>"
+L 01/12/2021 - 14:00:59: [high_ping_kicker.amxx] Highpingkick: "MARKUS<9988><STEAM_1:0:154603557>" was kicked due highping (Average Ping "319")
+L 01/12/2021 - 14:02:51: [adminchat.amxx] Chat: "(1)SeBaN*<9997><STEAM_0:4:187819671><>" chat " E CINEVA ON"
+L 01/12/2021 - 14:03:01: [admincmd.amxx] Ban: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" ban and kick "Henry<9995><STEAM_1:0:1855138122><>" (minutes "0") (reason "Aim")
+L 01/12/2021 - 14:03:03: [adminchat.amxx] Chat: "(1)SeBaN*<9997><STEAM_0:4:187819671><>" chat " ?"
+L 01/12/2021 - 14:03:35: -------- Mapchange to cs_italy --------
+L 01/12/2021 - 14:03:36: [admin.amxx] Login: "oarba_dupa_tine<9875><STEAM_0:1:111439526><>" became an admin (account "oarba_dupa_tine") (access "abcdefghijklmnopqrstuvx") (address "86.122.114.129")
+L 01/12/2021 - 14:03:38: [admin.amxx] Login: "oarba_dupa_tine<10000><STEAM_0:1:111439526><>" became an admin (account "oarba_dupa_tine") (access "abcdefghijklmnopqrstuvx") (address "86.122.114.129")
+L 01/12/2021 - 14:03:45: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "amx_vipgold_everyone") (value "0")
+L 01/12/2021 - 14:03:45: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "amx_vipfree_everyone") (value "0")
+L 01/12/2021 - 14:03:45: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "sv_timeout") (value "300")
+L 01/12/2021 - 14:03:45: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "sv_unlag") (value "1")
+L 01/12/2021 - 14:03:45: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "sv_maxunlag") (value "1.5")
+L 01/12/2021 - 14:03:45: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "mp_autokick") (value "0")
+L 01/12/2021 - 14:03:45: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "mp_autoteambalance") (value "0")
+L 01/12/2021 - 14:03:45: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "mp_timelimit") (value "25")
+L 01/12/2021 - 14:04:03: [admin.amxx] Login: "ALEX<10014><STEAM_1:0:1488429010><>" kicked due to invalid password (account "Alex") (address "37.255.2.15")
+L 01/12/2021 - 14:06:26: [admincmd.amxx] Ban: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" ban and kick "hp<9993><STEAM_1:0:187721260><>" (minutes "0") (reason "NoSpread")
+L 01/12/2021 - 14:06:39: [high_ping_kicker.amxx] Highpingkick: "gaben<10003><STEAM_1:0:1521712610>" was kicked due highping (Average Ping "302")
+L 01/12/2021 - 14:11:09: [admin.amxx] Login: "SeBaN*<10027><STEAM_0:1:14774290><>" became an admin (account "SeBaN*") (access "bcdefhijkmnopqrst") (address "151.47.63.191")
+L 01/12/2021 - 14:11:24: [adminchat.amxx] Chat: "craciunitz<10022><STEAM_0:1:74552633><>" chat "yoseftamer1 are aim"
+L 01/12/2021 - 14:11:28: [admincmd.amxx] Ban: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" ban and kick "yoseftamer1@<10021><STEAM_1:0:174556684><>" (minutes "0") (reason "NoSpread")
+L 01/12/2021 - 14:12:03: [adminchat.amxx] Chat: "SeBaN*<10027><STEAM_0:1:14774290><>" tsay "last"
+L 01/12/2021 - 14:12:34: [mapsmenu.amxx] Cmd: "SeBaN*<10027><STEAM_0:1:14774290><>" changelevel "de_dust2"
+L 01/12/2021 - 14:12:37: -------- Mapchange to de_dust2 --------
+L 01/12/2021 - 14:12:37: [admin.amxx] Login: "oarba_dupa_tine<10000><STEAM_0:1:111439526><>" became an admin (account "oarba_dupa_tine") (access "abcdefghijklmnopqrstuvx") (address "86.122.114.129")
+L 01/12/2021 - 14:12:37: [admin.amxx] Login: "SeBaN*<10027><STEAM_0:1:14774290><>" became an admin (account "SeBaN*") (access "bcdefhijkmnopqrst") (address "151.47.63.191")
+L 01/12/2021 - 14:12:46: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "amx_vipgold_everyone") (value "0")
+L 01/12/2021 - 14:12:46: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "amx_vipfree_everyone") (value "0")
+L 01/12/2021 - 14:12:46: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "sv_timeout") (value "300")
+L 01/12/2021 - 14:12:46: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "sv_unlag") (value "1")
+L 01/12/2021 - 14:12:46: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "sv_maxunlag") (value "1.5")
+L 01/12/2021 - 14:12:46: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "mp_autokick") (value "0")
+L 01/12/2021 - 14:12:46: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "mp_autoteambalance") (value "0")
+L 01/12/2021 - 14:12:46: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "mp_timelimit") (value "25")
+L 01/12/2021 - 14:17:03: [high_ping_kicker.amxx] Highpingkick: "Gogu<10045><STEAM_1:0:1601211104>" was kicked due highping (Average Ping "306")
+L 01/12/2021 - 14:22:09: [high_ping_kicker.amxx] Highpingkick: "unnamed<10060><STEAM_1:0:1188348969>" was kicked due highping (Average Ping "345")
+L 01/12/2021 - 14:24:47: [admin_super_gag.amxx] Gag: "SeBaN*<#10027><STEAM_0:1:14774290><151.47.63.191>" gagged "iranian<#10026><STEAM_1:0:1176939969><89.43.89.61>" <abcd> for <1200s> (reason: "Unspecified")
+L 01/12/2021 - 14:33:32: [adminchat.amxx] Chat: "x impossible`<10076><STEAM_0:1:468172680><>" chat "iranian ?"
+L 01/12/2021 - 14:41:19: [adminchat.amxx] Chat: "Reddington<10088><STEAM_1:0:720028567><>" chat " cristian wall"
+L 01/12/2021 - 14:49:54: [admincmd.amxx] Ban: "oarba_dupa_tine<10000><STEAM_0:1:111439526><>" ban and kick "Aya Brea<10107><STEAM_3:0:1525417321><>" (minutes "0") (reason "rec")
+L 01/12/2021 - 14:51:17: [high_ping_kicker.amxx] Highpingkick: "(1)<Warrior> Player<10116><STEAM_1:0:165050577>" was kicked due highping (Average Ping "327")
+L 01/12/2021 - 14:58:38: [admin.amxx] Login: "oarba_dupa_tine<10135><STEAM_0:1:111439526><>" became an admin (account "oarba_dupa_tine") (access "abcdefghijklmnopqrstuvx") (address "86.122.114.129")
+L 01/12/2021 - 14:58:40: [admin.amxx] Login: "oarba_dupa_tine<10136><STEAM_0:1:111439526><>" became an admin (account "oarba_dupa_tine") (access "abcdefghijklmnopqrstuvx") (address "86.122.114.129")
+L 01/12/2021 - 15:02:36: [admin.amxx] Login: "DaN'EllA<10146><STEAM_0:0:43925123><>" became an admin (account "DaN'EllA") (access "bcdefghijkmnopqrstu") (address "79.113.190.121")
+L 01/12/2021 - 15:02:38: [admin.amxx] Login: "DaN'EllA<10147><STEAM_0:0:43925123><>" became an admin (account "DaN'EllA") (access "bcdefghijkmnopqrstu") (address "79.113.190.121")
+L 01/12/2021 - 15:05:33: [adminchat.amxx] Chat: "Viromet<10103><STEAM_1:0:1558405597><>" chat "crisitan"
+L 01/12/2021 - 15:05:39: [adminchat.amxx] Chat: "Viromet<10103><STEAM_1:0:1558405597><>" chat "cristian"
+L 01/12/2021 - 15:08:33: [admin.amxx] Login: "SeBaN*<10171><STEAM_0:1:14774290><>" became an admin (account "SeBaN*") (access "bcdefhijkmnopqrst") (address "151.47.63.191")
+L 01/12/2021 - 15:09:25: [adminchat.amxx] Chat: "SeBaN*<10171><STEAM_0:1:14774290><>" chat " da chiar ca are"
+L 01/12/2021 - 15:09:31: [admincmd.amxx] Ban: "oarba_dupa_tine<10136><STEAM_0:1:111439526><>" ban and kick "SwatED_ED<10151><STEAM_1:0:1653724280><>" (minutes "0") (reason "wall")
+L 01/12/2021 - 15:10:22: [admin.amxx] Login: "fyzt1C<10173><STEAM_0:0:156675117><>" became an admin (account "fyzt1C") (access "bcdefhijm") (address "93.71.202.85")
+L 01/12/2021 - 15:10:44: [adminchat.amxx] Chat: "fyzt1C<10173><STEAM_0:0:156675117><>" chat " re all"
+L 01/12/2021 - 15:10:51: [adminchat.amxx] Chat: "SeBaN*<10171><STEAM_0:1:14774290><>" chat " "))"
+L 01/12/2021 - 15:12:10: [adminchat.amxx] Chat: "fyzt1C<10173><STEAM_0:0:156675117><>" chat " da m un vot?"
+L 01/12/2021 - 15:13:57: [adminchat.amxx] Chat: "fyzt1C<10173><STEAM_0:0:156675117><>" tsay "last RR"
+L 01/12/2021 - 15:15:38: [adminchat.amxx] Chat: "fyzt1C<10173><STEAM_0:0:156675117><>" tsay "far armeeeeee"
+L 01/12/2021 - 15:16:15: [adminchat.amxx] Chat: "fyzt1C<10173><STEAM_0:0:156675117><>" chat " sebane"
+L 01/12/2021 - 15:16:25: [adminchat.amxx] Chat: "SeBaN*<10171><STEAM_0:1:14774290><>" chat "# ?"
+L 01/12/2021 - 15:16:29: [adminchat.amxx] Chat: "fyzt1C<10173><STEAM_0:0:156675117><>" chat " god asta are ceva?"
+L 01/12/2021 - 15:16:39: [adminchat.amxx] Chat: "SeBaN*<10171><STEAM_0:1:14774290><>" chat " nush ma uit acu"
+L 01/12/2021 - 15:17:40: [adminchat.amxx] Chat: "fyzt1C<10173><STEAM_0:0:156675117><>" chat " are?"
+L 01/12/2021 - 15:17:47: [adminchat.amxx] Chat: "fyzt1C<10173><STEAM_0:0:156675117><>" chat " lasa ca ma uit eu"
+L 01/12/2021 - 15:17:53: [adminchat.amxx] Chat: "SeBaN*<10171><STEAM_0:1:14774290><>" chat " pai nici nu am apucat bsa vad ca a crapat repede :))"
+L 01/12/2021 - 15:18:07: [adminchat.amxx] Chat: "fyzt1C<10173><STEAM_0:0:156675117><>" chat " ma uit eu"
+L 01/12/2021 - 15:18:11: [adminchat.amxx] Chat: "SeBaN*<10171><STEAM_0:1:14774290><>" chat " ok"
+L 01/12/2021 - 15:18:11: [adminchat.amxx] Chat: "fyzt1C<10173><STEAM_0:0:156675117><>" chat " ca prea da cap"
+L 01/12/2021 - 15:19:32: [adminchat.amxx] Chat: "fyzt1C<10173><STEAM_0:0:156675117><>" chat " creca are si wal"
+L 01/12/2021 - 15:19:36: [adminchat.amxx] Chat: "Cristian !<10096><STEAM_0:0:535844><>" chat " m-a stiut a 2 a oara VC GOD ala"
+L 01/12/2021 - 15:20:38: [admincmd.amxx] Ban: "fyzt1C<10173><STEAM_0:0:156675117><>" ban and kick "KIL.     .LER<10191><STEAM_1:0:521440107><>" (minutes "0") (reason "reclama")
+L 01/12/2021 - 15:22:04: [admincmd.amxx] Cmd: "fyzt1C<10173><STEAM_0:0:156675117><>" change nick to "fan.fyztyC" "www.magyar-szerver.hu<10199><STEAM_1:0:1461406220><>"
+L 01/12/2021 - 15:22:19: [adminchat.amxx] Chat: "oarba_dupa_tine<10136><STEAM_0:1:111439526><>" chat "ita alina"
+L 01/12/2021 - 15:22:30: [adminchat.amxx] Chat: "fyzt1C<10173><STEAM_0:0:156675117><>" chat " ce?"
+L 01/12/2021 - 15:22:30: [adminchat.amxx] Chat: "SeBaN*<10171><STEAM_0:1:14774290><>" chat " :)))\"
+L 01/12/2021 - 15:22:35: [adminchat.amxx] Chat: "SeBaN*<10171><STEAM_0:1:14774290><>" chat " are wall"
+L 01/12/2021 - 15:22:36: [adminchat.amxx] Chat: "oarba_dupa_tine<10136><STEAM_0:1:111439526><>" chat "18-1"
+L 01/12/2021 - 15:22:44: [adminchat.amxx] Chat: "SeBaN*<10171><STEAM_0:1:14774290><>" chat " sa moara gibilan"
+L 01/12/2021 - 15:22:49: [adminchat.amxx] Chat: "fyzt1C<10173><STEAM_0:0:156675117><>" chat " pai bate ,a afk"
+L 01/12/2021 - 15:23:41: [admincmd.amxx] Ban: "fyzt1C<10173><STEAM_0:0:156675117><>" ban and kick "vC | GOD<10161><STEAM_0:0:26987351><>" (minutes "0") (reason "wall")
+L 01/12/2021 - 15:24:06: [adminchat.amxx] Chat: "fyzt1C<10173><STEAM_0:0:156675117><>" chat " acu ma uit si ep asta"
+L 01/12/2021 - 15:24:10: [adminchat.amxx] Chat: "fyzt1C<10173><STEAM_0:0:156675117><>" chat " are si ea cred"
+L 01/12/2021 - 15:25:24: [admincmd.amxx] Cmd: "SeBaN*<10171><STEAM_0:1:14774290><>" change nick to "gutza" "87.98.168.18<10204><STEAM_1:0:126690562><>"
+L 01/12/2021 - 15:25:34: [adminchat.amxx] Chat: "fyzt1C<10173><STEAM_0:0:156675117><>" chat " nu ma ijaoca acu cu wall _)))"
+L 01/12/2021 - 15:26:11: [adminchat.amxx] Chat: "fyzt1C<10173><STEAM_0:0:156675117><>" chat " hai ca next are ban"
+L 01/12/2021 - 15:28:01: [adminchat.amxx] Chat: "fyzt1C<10173><STEAM_0:0:156675117><>" tsay "alina fa u ntest wg"
+L 01/12/2021 - 15:28:06: [adminchat.amxx] Chat: "fyzt1C<10173><STEAM_0:0:156675117><>" tsay "alina test wg"
+L 01/12/2021 - 15:28:55: [plmenu_ab_base.amxx] Cmd: "fyzt1C<10173><STEAM_0:0:156675117><>" transfer "fyzt1C<10173><STEAM_0:0:156675117><>" (team "CT")
+L 01/12/2021 - 15:29:04: [high_ping_kicker.amxx] Highpingkick: "cucolafu<10220><STEAM_1:0:1309285331>" was kicked due highping (Average Ping "321")
+L 01/12/2021 - 15:29:58: [high_ping_kicker.amxx] Highpingkick: "cucolafu<10223><STEAM_1:0:1309285331>" was kicked due highping (Average Ping "301")
+L 01/12/2021 - 15:33:19: [adminchat.amxx] Chat: "DaN'EllA<10147><STEAM_0:0:43925123><>" chat "l-a dat"
+L 01/12/2021 - 15:35:08: [adminchat.amxx] Chat: "SeBaN*<10171><STEAM_0:1:14774290><>" chat " in trecut a avut probleme fata"
+L 01/12/2021 - 15:35:48: [adminchat.amxx] Chat: "DaN'EllA<10147><STEAM_0:0:43925123><>" chat "si acum?"
+L 01/12/2021 - 15:36:38: [adminchat.amxx] Chat: "oarba_dupa_tine<10136><STEAM_0:1:111439526><>" chat "cere-i si lui cristian"
+L 01/12/2021 - 15:36:41: [adminchat.amxx] Chat: "SeBaN*<10171><STEAM_0:1:14774290><>" chat " ARE SI CEVA FG URI DUBIOASE"
+L 01/12/2021 - 15:36:59: [adminchat.amxx] Chat: "fyzt1C<10173><STEAM_0:0:156675117><>" chat " mie nu im i merge"
+L 01/12/2021 - 15:38:45: [adminchat.amxx] Chat: "fyzt1C<10173><STEAM_0:0:156675117><>" chat " mie nu imi merge wg"
+L 01/12/2021 - 15:38:55: [adminchat.amxx] Chat: "fyzt1C<10173><STEAM_0:0:156675117><>" chat " nu stiu ce cacat are pagina "
+L 01/12/2021 - 15:39:16: [adminchat.amxx] Chat: "oarba_dupa_tine<10136><STEAM_0:1:111439526><>" chat "pl m"
+L 01/12/2021 - 15:39:25: [plmenu_ab_base.amxx] Cmd: "fyzt1C<10173><STEAM_0:0:156675117><>" transfer "fyzt1C<10173><STEAM_0:0:156675117><>" (team "CT")
+L 01/12/2021 - 15:42:24: [high_ping_kicker.amxx] Highpingkick: "REVenge<10243><STEAM_1:0:1333853896>" was kicked due highping (Average Ping "303")
+L 01/12/2021 - 15:43:08: [high_ping_kicker.amxx] Highpingkick: "REVenge<10247><STEAM_1:0:1333853896>" was kicked due highping (Average Ping "327")
+L 01/12/2021 - 15:43:33: [adminchat.amxx] Chat: "Cristian !<10096><STEAM_0:0:535844><>" chat " https://www.wargods.ro/wcd/report.php?id=2153775"
+L 01/12/2021 - 15:43:34: [adminchat.amxx] Chat: "Cristian !<10096><STEAM_0:0:535844><>" chat " https://www.wargods.ro/wcd/report.php?id=2153775"
+L 01/12/2021 - 15:43:35: [adminchat.amxx] Chat: "Cristian !<10096><STEAM_0:0:535844><>" chat " https://www.wargods.ro/wcd/report.php?id=2153775"
+L 01/12/2021 - 15:43:35: [adminchat.amxx] Chat: "Cristian !<10096><STEAM_0:0:535844><>" chat " https://www.wargods.ro/wcd/report.php?id=2153775"
+L 01/12/2021 - 15:43:35: [adminchat.amxx] Chat: "Cristian !<10096><STEAM_0:0:535844><>" chat " https://www.wargods.ro/wcd/report.php?id=2153775"
+L 01/12/2021 - 15:44:12: [admin.amxx] Login: "nyty<10255><STEAM_0:1:111762154><>" became an admin (account "nyty") (access "bt") (address "82.78.75.205")
+L 01/12/2021 - 15:44:15: [admin.amxx] Login: "nyty<10256><STEAM_0:1:111762154><>" became an admin (account "nyty") (access "bt") (address "82.78.75.205")
+L 01/12/2021 - 15:45:55: [admincmd.amxx] Kick: "oarba_dupa_tine<10136><STEAM_0:1:111439526><>" kick "nyty<10256><STEAM_0:1:111762154><>" (reason "")
+L 01/12/2021 - 15:46:22: [high_ping_kicker.amxx] Highpingkick: "anii<10258><STEAM_1:0:1808996588>" was kicked due highping (Average Ping "301")
+L 01/12/2021 - 15:47:53: [admincmd.amxx] Cmd: "oarba_dupa_tine<10136><STEAM_0:1:111439526><>" changelevel "de_inferno"
+L 01/12/2021 - 15:47:58: -------- Mapchange to de_inferno --------
+L 01/12/2021 - 15:47:59: [admin.amxx] Login: "oarba_dupa_tine<10136><STEAM_0:1:111439526><>" became an admin (account "oarba_dupa_tine") (access "abcdefghijklmnopqrstuvx") (address "86.122.114.129")
+L 01/12/2021 - 15:47:59: [admin.amxx] Login: "DaN'EllA<10147><STEAM_0:0:43925123><>" became an admin (account "DaN'EllA") (access "bcdefghijkmnopqrstu") (address "79.113.190.121")
+L 01/12/2021 - 15:47:59: [admin.amxx] Login: "fyzt1C<10173><STEAM_0:0:156675117><>" became an admin (account "fyzt1C") (access "bcdefhijm") (address "93.71.202.85")
+L 01/12/2021 - 15:48:01: [admin.amxx] Login: "DaN'EllA<10269><STEAM_0:0:43925123><>" became an admin (account "DaN'EllA") (access "bcdefghijkmnopqrstu") (address "79.113.190.121")
+L 01/12/2021 - 15:48:02: [admin.amxx] Login: "oarba_dupa_tine<10273><STEAM_0:1:111439526><>" became an admin (account "oarba_dupa_tine") (access "abcdefghijklmnopqrstuvx") (address "86.122.114.129")
+L 01/12/2021 - 15:48:08: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "amx_vipgold_everyone") (value "0")
+L 01/12/2021 - 15:48:08: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "amx_vipfree_everyone") (value "0")
+L 01/12/2021 - 15:48:08: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "sv_timeout") (value "300")
+L 01/12/2021 - 15:48:08: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "sv_unlag") (value "1")
+L 01/12/2021 - 15:48:08: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "sv_maxunlag") (value "1.5")
+L 01/12/2021 - 15:48:08: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "mp_autokick") (value "0")
+L 01/12/2021 - 15:48:08: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "mp_autoteambalance") (value "0")
+L 01/12/2021 - 15:48:08: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "mp_timelimit") (value "25")
+L 01/12/2021 - 15:48:50: [admin.amxx] Login: "nyty<10282><STEAM_0:1:111762154><>" became an admin (account "nyty") (access "bt") (address "82.78.75.205")
+L 01/12/2021 - 15:48:53: [admin.amxx] Login: "nyty<10283><STEAM_0:1:111762154><>" became an admin (account "nyty") (access "bt") (address "82.78.75.205")
+L 01/12/2021 - 15:54:26: [high_ping_kicker.amxx] Highpingkick: "nakata<10294><STEAM_1:0:825218375>" was kicked due highping (Average Ping "304")
+L 01/12/2021 - 15:57:55: [adminchat.amxx] Chat: "Cristian !<10271><STEAM_0:0:535844><>" chat " puskai wall"
+L 01/12/2021 - 15:58:12: [adminchat.amxx] Chat: "Cristian !<10271><STEAM_0:0:535844><>" chat " puskai wall"
+L 01/12/2021 - 16:10:38: [admin.amxx] Login: "Osiris<10326><STEAM_0:1:14001491><>" became an admin (account "Osiris") (access "bcdefhijkmnopqrst") (address "86.25.36.194")
+L 01/12/2021 - 16:10:40: [admin.amxx] Login: "Osiris<10327><STEAM_0:1:14001491><>" became an admin (account "Osiris") (access "bcdefhijkmnopqrst") (address "86.25.36.194")
+L 01/12/2021 - 16:13:08: -------- Mapchange to de_chateau --------
+L 01/12/2021 - 16:13:09: [admin.amxx] Login: "Osiris<10327><STEAM_0:1:14001491><>" became an admin (account "Osiris") (access "bcdefhijkmnopqrst") (address "86.25.36.194")
+L 01/12/2021 - 16:13:09: [admin.amxx] Login: "oarba_dupa_tine<10273><STEAM_0:1:111439526><>" became an admin (account "oarba_dupa_tine") (access "abcdefghijklmnopqrstuvx") (address "86.122.114.129")
+L 01/12/2021 - 16:13:09: [admin.amxx] Login: "DaN'EllA<10269><STEAM_0:0:43925123><>" became an admin (account "DaN'EllA") (access "bcdefghijkmnopqrstu") (address "79.113.190.121")
+L 01/12/2021 - 16:13:10: [admin.amxx] Login: "Osiris<10332><STEAM_0:1:14001491><>" became an admin (account "Osiris") (access "bcdefhijkmnopqrst") (address "86.25.36.194")
+L 01/12/2021 - 16:13:11: [admin.amxx] Login: "oarba_dupa_tine<10334><STEAM_0:1:111439526><>" became an admin (account "oarba_dupa_tine") (access "abcdefghijklmnopqrstuvx") (address "86.122.114.129")
+L 01/12/2021 - 16:13:12: [admin.amxx] Login: "DaN'EllA<10338><STEAM_0:0:43925123><>" became an admin (account "DaN'EllA") (access "bcdefghijkmnopqrstu") (address "79.113.190.121")
+L 01/12/2021 - 16:13:18: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "amx_vipgold_everyone") (value "0")
+L 01/12/2021 - 16:13:18: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "amx_vipfree_everyone") (value "0")
+L 01/12/2021 - 16:13:18: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "sv_timeout") (value "300")
+L 01/12/2021 - 16:13:18: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "sv_unlag") (value "1")
+L 01/12/2021 - 16:13:18: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "sv_maxunlag") (value "1.5")
+L 01/12/2021 - 16:13:18: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "mp_autokick") (value "0")
+L 01/12/2021 - 16:13:18: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "mp_autoteambalance") (value "0")
+L 01/12/2021 - 16:13:18: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "mp_timelimit") (value "25")
+L 01/12/2021 - 16:15:17: [adminchat.amxx] Chat: "iulu[TGV]<10340><STEAM_0:0:551146960><>" chat "domnu owner?"
+L 01/12/2021 - 16:16:40: [high_ping_kicker.amxx] Highpingkick: "(1)<Warrior> Player<10344><STEAM_1:0:1716263556>" was kicked due highping (Average Ping "451")
+L 01/12/2021 - 16:17:19: [mapsmenu.amxx] Cmd: "Osiris<10332><STEAM_0:1:14001491><>" changelevel "de_dust2"
+L 01/12/2021 - 16:17:20: [high_ping_kicker.amxx] Highpingkick: "(1)<Warrior> Player<10346><STEAM_1:0:1716263556>" was kicked due highping (Average Ping "399")
+L 01/12/2021 - 16:17:21: -------- Mapchange to de_dust2 --------
+L 01/12/2021 - 16:17:22: [admin.amxx] Login: "Osiris<10332><STEAM_0:1:14001491><>" became an admin (account "Osiris") (access "bcdefhijkmnopqrst") (address "86.25.36.194")
+L 01/12/2021 - 16:17:22: [admin.amxx] Login: "oarba_dupa_tine<10334><STEAM_0:1:111439526><>" became an admin (account "oarba_dupa_tine") (access "abcdefghijklmnopqrstuvx") (address "86.122.114.129")
+L 01/12/2021 - 16:17:22: [admin.amxx] Login: "DaN'EllA<10338><STEAM_0:0:43925123><>" became an admin (account "DaN'EllA") (access "bcdefghijkmnopqrstu") (address "79.113.190.121")
+L 01/12/2021 - 16:17:23: [admin.amxx] Login: "Osiris<10347><STEAM_0:1:14001491><>" became an admin (account "Osiris") (access "bcdefhijkmnopqrst") (address "86.25.36.194")
+L 01/12/2021 - 16:17:31: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "amx_vipgold_everyone") (value "0")
+L 01/12/2021 - 16:17:31: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "amx_vipfree_everyone") (value "0")
+L 01/12/2021 - 16:17:31: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "sv_timeout") (value "300")
+L 01/12/2021 - 16:17:31: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "sv_unlag") (value "1")
+L 01/12/2021 - 16:17:31: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "sv_maxunlag") (value "1.5")
+L 01/12/2021 - 16:17:31: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "mp_autokick") (value "0")
+L 01/12/2021 - 16:17:31: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "mp_autoteambalance") (value "0")
+L 01/12/2021 - 16:17:31: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "mp_timelimit") (value "25")
+L 01/12/2021 - 16:19:15: [admincmd.amxx] Ban: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" ban and kick "razvansmr<10351><STEAM_1:0:509276039><>" (minutes "0") (reason "NoSpread")
+L 01/12/2021 - 16:21:36: [high_ping_kicker.amxx] Highpingkick: "sicario 2000<10372><STEAM_1:0:1559413476>" was kicked due highping (Average Ping "399")
+L 01/12/2021 - 16:22:09: [high_ping_kicker.amxx] Highpingkick: "(2)<Warrior> Player<10374><STEAM_1:0:1659907321>" was kicked due highping (Average Ping "399")
+L 01/12/2021 - 16:22:32: [admin.amxx] Login: "oarba_dupa_tine<10375><STEAM_0:1:111439526><>" became an admin (account "oarba_dupa_tine") (access "abcdefghijklmnopqrstuvx") (address "86.122.114.129")
+L 01/12/2021 - 16:22:32: [admincmd.amxx] Ban: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" ban and kick "Another<10369><STEAM_1:0:1671958709><>" (minutes "0") (reason "Aim")
+L 01/12/2021 - 16:22:33: [admin.amxx] Login: "oarba_dupa_tine<10376><STEAM_0:1:111439526><>" became an admin (account "oarba_dupa_tine") (access "abcdefghijklmnopqrstuvx") (address "86.122.114.129")
+L 01/12/2021 - 16:22:50: [admin.amxx] Login: "oarba_dupa_tine<10376><STEAM_0:1:111439526><>" became an admin (account "oarba_dupa_tine") (access "abcdefghijklmnopqrstuvx") (address "86.122.114.129")
+L 01/12/2021 - 16:24:24: [admin.amxx] Login: "[Rbk]HYDRA7<10385><STEAM_0:0:114833807><>" became an admin (account "[Rbk]HYDRA7") (access "bt") (address "86.126.168.178")
+L 01/12/2021 - 16:25:14: [admin.amxx] Login: "SeBaN*<10387><STEAM_0:1:14774290><>" became an admin (account "SeBaN*") (access "bcdefhijkmnopqrst") (address "151.47.63.191")
+L 01/12/2021 - 16:26:22: [admincmd.amxx] Cmd: "SeBaN*<10387><STEAM_0:1:14774290><>" change nick to "Marghioala" "RESPAWN~SLADERS.RO [9]<10389><STEAM_1:0:1651982970><>"
+L 01/12/2021 - 16:26:52: [admin.amxx] Login: "oarba_dupa_tine<10390><STEAM_0:1:111439526><>" became an admin (account "oarba_dupa_tine") (access "abcdefghijklmnopqrstuvx") (address "86.122.114.129")
+L 01/12/2021 - 16:26:53: [admin.amxx] Login: "oarba_dupa_tine<10391><STEAM_0:1:111439526><>" became an admin (account "oarba_dupa_tine") (access "abcdefghijklmnopqrstuvx") (address "86.122.114.129")
+L 01/12/2021 - 16:27:43: [admin.amxx] Login: "oarba_dupa_tine<10398><STEAM_0:1:111439526><>" became an admin (account "oarba_dupa_tine") (access "abcdefghijklmnopqrstuvx") (address "86.122.114.129")
+L 01/12/2021 - 16:27:44: [admin.amxx] Login: "oarba_dupa_tine<10399><STEAM_0:1:111439526><>" became an admin (account "oarba_dupa_tine") (access "abcdefghijklmnopqrstuvx") (address "86.122.114.129")
+L 01/12/2021 - 16:31:56: [admin.amxx] Login: "DaN'EllA<10422><STEAM_0:0:43925123><>" kicked due to invalid password (account "DaN'EllA") (address "79.113.190.121")
+L 01/12/2021 - 16:32:11: [admin.amxx] Login: "SeBaN*<10387><STEAM_0:1:14774290><>" became an admin (account "SeBaN*") (access "bcdefhijkmnopqrst") (address "151.47.63.191")
+L 01/12/2021 - 16:32:11: [admin.amxx] Login: "[Rbk]HYDRA7<10385><STEAM_0:0:114833807><>" became an admin (account "[Rbk]HYDRA7") (access "bt") (address "86.126.168.178")
+L 01/12/2021 - 16:32:11: [admin.amxx] Login: "oarba_dupa_tine<10399><STEAM_0:1:111439526><>" became an admin (account "oarba_dupa_tine") (access "abcdefghijklmnopqrstuvx") (address "86.122.114.129")
+L 01/12/2021 - 16:32:17: [admin.amxx] Login: "DaN'EllA<10423><STEAM_0:0:43925123><>" kicked due to invalid password (account "DaN'EllA") (address "79.113.190.121")
+L 01/12/2021 - 16:32:36: [admin.amxx] Login: "DaN'EllA<10428><STEAM_0:0:43925123><>" kicked due to invalid password (account "DaN'EllA") (address "79.113.190.121")
+L 01/12/2021 - 16:33:08: [high_ping_kicker.amxx] Highpingkick: "Lost-Souls | Player[20]<10429><STEAM_1:0:1554523758>" was kicked due highping (Average Ping "321")
+L 01/12/2021 - 16:33:58: [admin.amxx] Login: "SeBaN*<10387><STEAM_0:1:14774290><>" became an admin (account "SeBaN*") (access "bcdefhijkmnopqrst") (address "151.47.63.191")
+L 01/12/2021 - 16:33:58: [admin.amxx] Login: "[Rbk]HYDRA7<10385><STEAM_0:0:114833807><>" became an admin (account "[Rbk]HYDRA7") (access "bt") (address "86.126.168.178")
+L 01/12/2021 - 16:33:58: [admin.amxx] Login: "oarba_dupa_tine<10399><STEAM_0:1:111439526><>" became an admin (account "oarba_dupa_tine") (access "abcdefghijklmnopqrstuvx") (address "86.122.114.129")
+L 01/12/2021 - 16:34:03: [admin.amxx] Login: "DaN'EllA<10437><STEAM_0:0:43925123><>" kicked due to invalid password (account "DaN'EllA") (address "79.113.190.121")
+L 01/12/2021 - 16:34:18: [admin.amxx] Login: "DaN'EllA<10439><STEAM_0:0:43925123><>" kicked due to invalid password (account "DaN'EllA") (address "79.113.190.121")
+L 01/12/2021 - 16:34:44: [admin.amxx] Login: "DaN'EllA<10444><STEAM_0:0:43925123><>" kicked due to invalid password (account "DaN'EllA") (address "79.113.190.121")
+L 01/12/2021 - 16:35:12: [adminchat.amxx] Chat: "SeBaN*<10387><STEAM_0:1:14774290><>" chat " CRCIUNTZ ASTA A DAT WG ?"
+L 01/12/2021 - 16:37:10: [admin.amxx] Login: "SeBaN*<10387><STEAM_0:1:14774290><>" became an admin (account "SeBaN*") (access "bcdefhijkmnopqrst") (address "151.47.63.191")
+L 01/12/2021 - 16:37:10: [admin.amxx] Login: "oarba_dupa_tine<10399><STEAM_0:1:111439526><>" became an admin (account "oarba_dupa_tine") (access "abcdefghijklmnopqrstuvx") (address "86.122.114.129")
+L 01/12/2021 - 16:37:54: [admin.amxx] Login: "DaN'EllA<10465><STEAM_0:0:43925123><>" became an admin (account "DaN'EllA") (access "bcdefghijkmnopqrstu") (address "79.113.190.121")
+L 01/12/2021 - 16:37:56: [admin.amxx] Login: "DaN'EllA<10467><STEAM_0:0:43925123><>" became an admin (account "DaN'EllA") (access "bcdefghijkmnopqrstu") (address "79.113.190.121")
+L 01/12/2021 - 16:38:17: [plmenu_ab_base.amxx] Cmd: "SeBaN*<10387><STEAM_0:1:14774290><>" transfer "craciunitz<10412><STEAM_0:1:74552633><>" (team "TERRORIST")
+L 01/12/2021 - 16:38:49: [high_ping_kicker.amxx] Highpingkick: "<Warrior> Player<10470><STEAM_1:0:1549630266>" was kicked due highping (Average Ping "339")
+L 01/12/2021 - 16:40:10: [admin.amxx] Login: "DaN'EllA<10474><STEAM_0:0:43925123><>" became an admin (account "DaN'EllA") (access "bcdefghijkmnopqrstu") (address "79.113.190.121")
+L 01/12/2021 - 16:40:12: [admin.amxx] Login: "DaN'EllA<10475><STEAM_0:0:43925123><>" became an admin (account "DaN'EllA") (access "bcdefghijkmnopqrstu") (address "79.113.190.121")
+L 01/12/2021 - 16:41:14: [admin.amxx] Login: "[Rbk]HYDRA7<10479><STEAM_0:0:114833807><>" became an admin (account "[Rbk]HYDRA7") (access "bt") (address "86.126.168.178")
+L 01/12/2021 - 16:41:40: [high_ping_kicker.amxx] Highpingkick: "<Warrior> Player<10478><STEAM_1:0:1863878829>" was kicked due highping (Average Ping "312")
+L 01/12/2021 - 16:43:36: [adminchat.amxx] Chat: "SeBaN*<10387><STEAM_0:1:14774290><>" chat " dana"
+L 01/12/2021 - 16:45:32: [adminchat.amxx] Chat: "SeBaN*<10387><STEAM_0:1:14774290><>" chat " stii ce e curios"
+L 01/12/2021 - 16:45:39: [adminchat.amxx] Chat: "SeBaN*<10387><STEAM_0:1:14774290><>" chat " daca intri pe wg lui asta"
+L 01/12/2021 - 16:45:46: [adminchat.amxx] Chat: "SeBaN*<10387><STEAM_0:1:14774290><>" chat " nu ai nici o reclama"
+L 01/12/2021 - 16:45:47: [adminchat.amxx] Chat: "oarba_dupa_tine<10399><STEAM_0:1:111439526><>" chat "a?"
+L 01/12/2021 - 16:45:52: [adminchat.amxx] Chat: "SeBaN*<10387><STEAM_0:1:14774290><>" chat " intri direct"
+L 01/12/2021 - 16:45:56: [high_ping_kicker.amxx] Highpingkick: "killer<10496><STEAM_1:0:653759924>" was kicked due highping (Average Ping "370")
+L 01/12/2021 - 16:46:02: [adminchat.amxx] Chat: "SeBaN*<10387><STEAM_0:1:14774290><>" chat " si la cfg"
+L 01/12/2021 - 16:46:08: [adminchat.amxx] Chat: "SeBaN*<10387><STEAM_0:1:14774290><>" chat " fara reclame'"
+L 01/12/2021 - 16:46:18: [adminchat.amxx] Chat: "SeBaN*<10387><STEAM_0:1:14774290><>" chat " nu am mai intalnit pana acu"
+L 01/12/2021 - 16:46:26: [adminchat.amxx] Chat: "oarba_dupa_tine<10399><STEAM_0:1:111439526><>" chat "cine stie"
+L 01/12/2021 - 16:46:38: [adminchat.amxx] Chat: "SeBaN*<10387><STEAM_0:1:14774290><>" chat " se deschide instant"
+L 01/12/2021 - 16:46:51: [adminchat.amxx] Chat: "SeBaN*<10387><STEAM_0:1:14774290><>" chat "parca ar fi fisier din  pc ul meu"
+L 01/12/2021 - 16:48:50: [admincmd.amxx] Cmd: "oarba_dupa_tine<10399><STEAM_0:1:111439526><>" set cvar (name "sv_timeout") (value "30")
+L 01/12/2021 - 16:48:54: [admincmd.amxx] Cmd: "oarba_dupa_tine<10399><STEAM_0:1:111439526><>" set cvar (name "sv_timeout") (value "999")
+L 01/12/2021 - 16:52:31: -------- Mapchange to de_aztec --------
+L 01/12/2021 - 16:52:32: [admin.amxx] Login: "DaN'EllA<10475><STEAM_0:0:43925123><>" became an admin (account "DaN'EllA") (access "bcdefghijkmnopqrstu") (address "79.113.190.121")
+L 01/12/2021 - 16:52:32: [admin.amxx] Login: "oarba_dupa_tine<10399><STEAM_0:1:111439526><>" became an admin (account "oarba_dupa_tine") (access "abcdefghijklmnopqrstuvx") (address "86.122.114.129")
+L 01/12/2021 - 16:52:32: [admin.amxx] Login: "[Rbk]HYDRA7<10479><STEAM_0:0:114833807><>" became an admin (account "[Rbk]HYDRA7") (access "bt") (address "86.126.168.178")
+L 01/12/2021 - 16:52:32: [admin.amxx] Login: "SeBaN*<10387><STEAM_0:1:14774290><>" became an admin (account "SeBaN*") (access "bcdefhijkmnopqrst") (address "151.47.63.191")
+L 01/12/2021 - 16:52:34: [admin.amxx] Login: "DaN'EllA<10521><STEAM_0:0:43925123><>" became an admin (account "DaN'EllA") (access "bcdefghijkmnopqrstu") (address "79.113.190.121")
+L 01/12/2021 - 16:52:35: [admin.amxx] Login: "oarba_dupa_tine<10523><STEAM_0:1:111439526><>" became an admin (account "oarba_dupa_tine") (access "abcdefghijklmnopqrstuvx") (address "86.122.114.129")
+L 01/12/2021 - 16:52:35: [admin.amxx] Login: "SeBaN*<10525><STEAM_0:1:14774290><>" became an admin (account "SeBaN*") (access "bcdefhijkmnopqrst") (address "151.47.63.191")
+L 01/12/2021 - 16:52:41: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "amx_vipgold_everyone") (value "0")
+L 01/12/2021 - 16:52:41: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "amx_vipfree_everyone") (value "0")
+L 01/12/2021 - 16:52:41: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "sv_timeout") (value "300")
+L 01/12/2021 - 16:52:41: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "sv_unlag") (value "1")
+L 01/12/2021 - 16:52:41: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "sv_maxunlag") (value "1.5")
+L 01/12/2021 - 16:52:41: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "mp_autokick") (value "0")
+L 01/12/2021 - 16:52:41: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "mp_autoteambalance") (value "0")
+L 01/12/2021 - 16:52:41: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "mp_timelimit") (value "25")
+L 01/12/2021 - 16:52:50: [adminchat.amxx] Chat: "SeBaN*<10525><STEAM_0:1:14774290><>" chat " LASA M ?"
+L 01/12/2021 - 16:52:53: [adminchat.amxx] Chat: "DaN'EllA<10521><STEAM_0:0:43925123><>" chat "da"
+L 01/12/2021 - 16:56:00: [adminchat.amxx] Chat: "DaN'EllA<10521><STEAM_0:0:43925123><>" chat "e in groapa"
+L 01/12/2021 - 16:56:02: [adminchat.amxx] Chat: "DaN'EllA<10521><STEAM_0:0:43925123><>" chat "inapoi"
+L 01/12/2021 - 16:57:27: [adminchat.amxx] Chat: "DaN'EllA<10521><STEAM_0:0:43925123><>" chat "fuck"
+L 01/12/2021 - 16:57:36: [adminchat.amxx] Chat: "SeBaN*<10525><STEAM_0:1:14774290><>" chat " ban"
+L 01/12/2021 - 17:01:46: [admincmd.amxx] Kick: "DaN'EllA<10521><STEAM_0:0:43925123><>" kick "J I H A D<9954><STEAM_1:0:1411218123><>" (reason "")
+L 01/12/2021 - 17:03:39: [adminchat.amxx] Chat: "DaN'EllA<10521><STEAM_0:0:43925123><>" chat "saracul"
+L 01/12/2021 - 17:03:41: [high_ping_kicker.amxx] Highpingkick: "Fatigo Amigo<10542><STEAM_1:0:1287134769>" was kicked due highping (Average Ping "301")
+L 01/12/2021 - 17:08:57: [adminchat.amxx] Chat: "DaN'EllA<10521><STEAM_0:0:43925123><>" chat "craciunitzul vietii"
+L 01/12/2021 - 17:09:10: [adminchat.amxx] Chat: "SeBaN*<10525><STEAM_0:1:14774290><>" chat " :))))"
+L 01/12/2021 - 17:09:39: [adminchat.amxx] Chat: "SeBaN*<10525><STEAM_0:1:14774290><>" chat " na ma'"
+L 01/12/2021 - 17:09:53: [adminchat.amxx] Chat: "SeBaN*<10525><STEAM_0:1:14774290><>" chat " seductivu vietii "
+L 01/12/2021 - 17:10:00: [adminchat.amxx] Chat: "SeBaN*<10525><STEAM_0:1:14774290><>" chat "# pfff"
+L 01/12/2021 - 17:10:25: [adminchat.amxx] Chat: "SeBaN*<10525><STEAM_0:1:14774290><>" chat " asa slabi sunte ?"
+L 01/12/2021 - 17:10:31: [adminchat.amxx] Chat: "SeBaN*<10525><STEAM_0:1:14774290><>" chat " suntem"
+L 01/12/2021 - 17:10:52: [adminchat.amxx] Chat: "oarba_dupa_tine<10523><STEAM_0:1:111439526><>" chat "fmmm"
+L 01/12/2021 - 17:10:57: [adminchat.amxx] Chat: "SeBaN*<10525><STEAM_0:1:14774290><>" chat " :)))))))"
+L 01/12/2021 - 17:11:02: [adminchat.amxx] Chat: "DaN'EllA<10521><STEAM_0:0:43925123><>" chat "ups"
+L 01/12/2021 - 17:11:48: [mapsmenu.amxx] Vote: "DaN'EllA<10521><STEAM_0:0:43925123><>" vote maps (map#1 "de_barcelona") (map#2 "de_mirage_32") (map#3 "") (map#4 "")
+L 01/12/2021 - 17:12:00: [mapsmenu.amxx] Vote: Voting successful. Map will be changed to de_barcelona
+L 01/12/2021 - 17:12:10: [adminchat.amxx] Chat: "oarba_dupa_tine<10523><STEAM_0:1:111439526><>" chat "ba ce da el"
+L 01/12/2021 - 17:12:10: [adminchat.amxx] Chat: "SeBaN*<10525><STEAM_0:1:14774290><>" chat " am niste injuraturi .. daca incep :|"
+L 01/12/2021 - 17:12:10: [mapsmenu.amxx] Vote: Result refused
+L 01/12/2021 - 17:12:26: [adminchat.amxx] Chat: "oarba_dupa_tine<10523><STEAM_0:1:111439526><>" chat "nu"
+L 01/12/2021 - 17:12:30: [adminchat.amxx] Chat: "SeBaN*<10525><STEAM_0:1:14774290><>" chat " nu"
+L 01/12/2021 - 17:12:44: [adminchat.amxx] Chat: "SeBaN*<10525><STEAM_0:1:14774290><>" chat " azi nu injur dar maine .. :)"
+L 01/12/2021 - 17:12:50: [adminchat.amxx] Chat: "oarba_dupa_tine<10523><STEAM_0:1:111439526><>" chat "da da"
+L 01/12/2021 - 17:13:09: [adminchat.amxx] Chat: "SeBaN*<10525><STEAM_0:1:14774290><>" chat " ce mai face nyty"
+L 01/12/2021 - 17:13:21: [adminchat.amxx] Chat: "DaN'EllA<10521><STEAM_0:0:43925123><>" tsay "LAST"
+L 01/12/2021 - 17:14:22: [admincmd.amxx] Cmd: "DaN'EllA<10521><STEAM_0:0:43925123><>" changelevel "de_barcelona"
+L 01/12/2021 - 17:14:27: -------- Mapchange to de_barcelona --------
+L 01/12/2021 - 17:14:28: [admin.amxx] Login: "oarba_dupa_tine<10523><STEAM_0:1:111439526><>" became an admin (account "oarba_dupa_tine") (access "abcdefghijklmnopqrstuvx") (address "86.122.114.129")
+L 01/12/2021 - 17:14:28: [admin.amxx] Login: "DaN'EllA<10521><STEAM_0:0:43925123><>" became an admin (account "DaN'EllA") (access "bcdefghijkmnopqrstu") (address "79.113.190.121")
+L 01/12/2021 - 17:14:28: [admin.amxx] Login: "SeBaN*<10525><STEAM_0:1:14774290><>" became an admin (account "SeBaN*") (access "bcdefhijkmnopqrst") (address "151.47.63.191")
+L 01/12/2021 - 17:14:30: [admin.amxx] Login: "oarba_dupa_tine<10579><STEAM_0:1:111439526><>" became an admin (account "oarba_dupa_tine") (access "abcdefghijklmnopqrstuvx") (address "86.122.114.129")
+L 01/12/2021 - 17:14:30: [admin.amxx] Login: "DaN'EllA<10580><STEAM_0:0:43925123><>" became an admin (account "DaN'EllA") (access "bcdefghijkmnopqrstu") (address "79.113.190.121")
+L 01/12/2021 - 17:14:32: [admin.amxx] Login: "SeBaN*<10584><STEAM_0:1:14774290><>" became an admin (account "SeBaN*") (access "bcdefhijkmnopqrst") (address "151.47.63.191")
+L 01/12/2021 - 17:14:37: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "amx_vipgold_everyone") (value "0")
+L 01/12/2021 - 17:14:37: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "amx_vipfree_everyone") (value "0")
+L 01/12/2021 - 17:14:37: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "sv_timeout") (value "300")
+L 01/12/2021 - 17:14:37: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "sv_unlag") (value "1")
+L 01/12/2021 - 17:14:37: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "sv_maxunlag") (value "1.5")
+L 01/12/2021 - 17:14:37: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "mp_autokick") (value "0")
+L 01/12/2021 - 17:14:37: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "mp_autoteambalance") (value "0")
+L 01/12/2021 - 17:14:37: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "mp_timelimit") (value "25")
+L 01/12/2021 - 17:16:08: [adminchat.amxx] Chat: "iulu[TGV]<10588><STEAM_0:0:551146960><>" chat " brb"
+L 01/12/2021 - 17:23:53: [plmenu_ab_base.amxx] Ban: "SeBaN*<10584><STEAM_0:1:14774290><>" ban and kick "Ext3zy<10604><STEAM_1:0:1724136708><>" (minutes "5") (reason "wall  ten sale")
+L 01/12/2021 - 17:23:53: [admincmd.amxx] Ban: "SeBaN*<10584><STEAM_0:1:14774290><>" ban and kick "Ext3zy<10604><STEAM_1:0:1724136708><>" (minutes "5") (reason "wall  ten sale")
+L 01/12/2021 - 17:25:53: [high_ping_kicker.amxx] Highpingkick: "Player<10616><STEAM_0:1:572891384>" was kicked due highping (Average Ping "404")
+L 01/12/2021 - 17:26:30: [admincmd.amxx] Cmd: "DaN'EllA<10580><STEAM_0:0:43925123><>" slay "β|4ckSnΘw<10018><STEAM_0:0:191512795><>"
+L 01/12/2021 - 17:26:50: [high_ping_kicker.amxx] Highpingkick: "Player<10622><STEAM_0:1:572891384>" was kicked due highping (Average Ping "386")
+L 01/12/2021 - 17:27:25: [high_ping_kicker.amxx] Highpingkick: "Player<10623><STEAM_0:1:572891384>" was kicked due highping (Average Ping "433")
+L 01/12/2021 - 17:32:59: [adminchat.amxx] Chat: "oarba_dupa_tine<10579><STEAM_0:1:111439526><>" chat "da da"
+L 01/12/2021 - 17:34:42: [admincmd.amxx] Kick: "oarba_dupa_tine<10579><STEAM_0:1:111439526><>" kick "iulu[TGV]<10588><STEAM_0:0:551146960><>" (reason "")
+L 01/12/2021 - 17:35:51: [adminchat.amxx] Chat: "SeBaN*<10584><STEAM_0:1:14774290><>" chat " eu am ban ?"
+L 01/12/2021 - 17:36:01: [adminchat.amxx] Chat: "oarba_dupa_tine<10579><STEAM_0:1:111439526><>" chat "nu tu"
+L 01/12/2021 - 17:36:05: [adminchat.amxx] Chat: "oarba_dupa_tine<10579><STEAM_0:1:111439526><>" chat "iulu ala"
+L 01/12/2021 - 17:36:17: [adminchat.amxx] Chat: "SeBaN*<10584><STEAM_0:1:14774290><>" chat " am crezut ca eu ca am dat ca butu slay"
+L 01/12/2021 - 17:36:40: [adminchat.amxx] Chat: "iulu[TGV]<10635><STEAM_0:0:551146960><>" chat " nu a fost cu rea vointa  , stail inistit mane ca am pe indungi 5 ani"
+L 01/12/2021 - 17:37:48: [adminchat.amxx] Chat: "iulu[TGV]<10635><STEAM_0:0:551146960><>" chat " u pierzi . nu fac reclama"
+L 01/12/2021 - 17:38:51: [admincmd.amxx] Ban: "oarba_dupa_tine<10579><STEAM_0:1:111439526><>" ban and kick "PRO LOKMAN<10639><STEAM_1:0:2126290536><>" (minutes "0") (reason "wall")
+L 01/12/2021 - 17:39:37: -------- Mapchange to as_oilrig --------
+L 01/12/2021 - 17:39:38: [admin.amxx] Login: "DaN'EllA<10580><STEAM_0:0:43925123><>" became an admin (account "DaN'EllA") (access "bcdefghijkmnopqrstu") (address "79.113.190.121")
+L 01/12/2021 - 17:39:38: [admin.amxx] Login: "oarba_dupa_tine<10579><STEAM_0:1:111439526><>" became an admin (account "oarba_dupa_tine") (access "abcdefghijklmnopqrstuvx") (address "86.122.114.129")
+L 01/12/2021 - 17:39:38: [admin.amxx] Login: "SeBaN*<10584><STEAM_0:1:14774290><>" became an admin (account "SeBaN*") (access "bcdefhijkmnopqrst") (address "151.47.63.191")
+L 01/12/2021 - 17:39:40: [admin.amxx] Login: "DaN'EllA<10646><STEAM_0:0:43925123><>" became an admin (account "DaN'EllA") (access "bcdefghijkmnopqrstu") (address "79.113.190.121")
+L 01/12/2021 - 17:39:40: [admin.amxx] Login: "oarba_dupa_tine<10647><STEAM_0:1:111439526><>" became an admin (account "oarba_dupa_tine") (access "abcdefghijklmnopqrstuvx") (address "86.122.114.129")
+L 01/12/2021 - 17:39:41: [admin.amxx] Login: "SeBaN*<10657><STEAM_0:1:14774290><>" became an admin (account "SeBaN*") (access "bcdefhijkmnopqrst") (address "151.47.63.191")
+L 01/12/2021 - 17:39:47: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "amx_vipgold_everyone") (value "0")
+L 01/12/2021 - 17:39:47: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "amx_vipfree_everyone") (value "0")
+L 01/12/2021 - 17:39:47: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "sv_timeout") (value "300")
+L 01/12/2021 - 17:39:47: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "sv_unlag") (value "1")
+L 01/12/2021 - 17:39:47: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "sv_maxunlag") (value "1.5")
+L 01/12/2021 - 17:39:47: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "mp_autokick") (value "0")
+L 01/12/2021 - 17:39:47: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "mp_autoteambalance") (value "0")
+L 01/12/2021 - 17:39:47: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "mp_timelimit") (value "25")
+L 01/12/2021 - 17:39:53: [admincmd.amxx] Cmd: "oarba_dupa_tine<10647><STEAM_0:1:111439526><>" changelevel "de_inferno2se"
+L 01/12/2021 - 17:39:58: -------- Mapchange to de_inferno2se --------
+L 01/12/2021 - 17:39:59: [admin.amxx] Login: "DaN'EllA<10646><STEAM_0:0:43925123><>" became an admin (account "DaN'EllA") (access "bcdefghijkmnopqrstu") (address "79.113.190.121")
+L 01/12/2021 - 17:39:59: [admin.amxx] Login: "oarba_dupa_tine<10647><STEAM_0:1:111439526><>" became an admin (account "oarba_dupa_tine") (access "abcdefghijklmnopqrstuvx") (address "86.122.114.129")
+L 01/12/2021 - 17:39:59: [admin.amxx] Login: "SeBaN*<10657><STEAM_0:1:14774290><>" became an admin (account "SeBaN*") (access "bcdefhijkmnopqrst") (address "151.47.63.191")
+L 01/12/2021 - 17:40:01: [admin.amxx] Login: "DaN'EllA<10662><STEAM_0:0:43925123><>" became an admin (account "DaN'EllA") (access "bcdefghijkmnopqrstu") (address "79.113.190.121")
+L 01/12/2021 - 17:40:01: [admin.amxx] Login: "oarba_dupa_tine<10663><STEAM_0:1:111439526><>" became an admin (account "oarba_dupa_tine") (access "abcdefghijklmnopqrstuvx") (address "86.122.114.129")
+L 01/12/2021 - 17:40:02: [admin.amxx] Login: "SeBaN*<10669><STEAM_0:1:14774290><>" became an admin (account "SeBaN*") (access "bcdefhijkmnopqrst") (address "151.47.63.191")
+L 01/12/2021 - 17:40:08: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "amx_vipgold_everyone") (value "0")
+L 01/12/2021 - 17:40:08: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "amx_vipfree_everyone") (value "0")
+L 01/12/2021 - 17:40:08: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "sv_timeout") (value "300")
+L 01/12/2021 - 17:40:08: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "sv_unlag") (value "1")
+L 01/12/2021 - 17:40:08: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "sv_maxunlag") (value "1.5")
+L 01/12/2021 - 17:40:08: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "mp_autokick") (value "0")
+L 01/12/2021 - 17:40:08: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "mp_autoteambalance") (value "0")
+L 01/12/2021 - 17:40:08: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "mp_timelimit") (value "25")
+L 01/12/2021 - 17:49:24: [admincmd.amxx] Ban: "DaN'EllA<10662><STEAM_0:0:43925123><>" ban and kick "lolvideos<10666><STEAM_1:0:88104853><>" (minutes "0") (reason "wall")
+L 01/12/2021 - 17:49:26: [adminchat.amxx] Chat: "Uraganu £ ss<10665><STEAM_0:1:45750379><>" chat "reddington verifica"
+L 01/12/2021 - 17:52:30: [high_ping_kicker.amxx] Highpingkick: "Mr.Grimm<10703><STEAM_1:0:639786821>" was kicked due highping (Average Ping "310")
+L 01/12/2021 - 17:58:10: [adminchat.amxx] Chat: "oarba_dupa_tine<10663><STEAM_0:1:111439526><>" chat "ce votam?"
+L 01/12/2021 - 17:58:16: [adminchat.amxx] Chat: "DaN'EllA<10662><STEAM_0:0:43925123><>" chat "kabul"
+L 01/12/2021 - 17:58:21: [adminchat.amxx] Chat: "SeBaN*<10669><STEAM_0:1:14774290><>" chat " [ai"
+L 01/12/2021 - 17:58:33: [adminchat.amxx] Chat: "SeBaN*<10669><STEAM_0:1:14774290><>" chat " da si tu nuke cu ceva"
+L 01/12/2021 - 17:58:34: [adminchat.amxx] Chat: "oarba_dupa_tine<10663><STEAM_0:1:111439526><>" chat "cu train?"
+L 01/12/2021 - 17:58:37: [adminchat.amxx] Chat: "SeBaN*<10669><STEAM_0:1:14774290><>" chat " da"
+L 01/12/2021 - 17:59:04: [mapsmenu.amxx] Vote: "oarba_dupa_tine<10663><STEAM_0:1:111439526><>" vote maps (map#1 "de_kabul_32") (map#2 "de_train32") (map#3 "") (map#4 "")
+L 01/12/2021 - 17:59:16: [mapsmenu.amxx] Vote: Voting successful. Map will be changed to de_kabul_32
+L 01/12/2021 - 17:59:26: [mapsmenu.amxx] Vote: Result refused
+L 01/12/2021 - 17:59:57: [adminchat.amxx] Chat: "DaN'EllA<10662><STEAM_0:0:43925123><>" chat "brb "
+L 01/12/2021 - 18:02:39: [adminchat.amxx] Chat: "oarba_dupa_tine<10663><STEAM_0:1:111439526><>" tsay "LAST"
+L 01/12/2021 - 18:03:08: [admincmd.amxx] Cmd: "oarba_dupa_tine<10663><STEAM_0:1:111439526><>" changelevel "de_kabul_32"
+L 01/12/2021 - 18:03:13: -------- Mapchange to de_kabul_32 --------
+L 01/12/2021 - 18:03:14: [admin.amxx] Login: "oarba_dupa_tine<10663><STEAM_0:1:111439526><>" became an admin (account "oarba_dupa_tine") (access "abcdefghijklmnopqrstuvx") (address "86.122.114.129")
+L 01/12/2021 - 18:03:14: [admin.amxx] Login: "DaN'EllA<10662><STEAM_0:0:43925123><>" became an admin (account "DaN'EllA") (access "bcdefghijkmnopqrstu") (address "79.113.190.121")
+L 01/12/2021 - 18:03:16: [admin.amxx] Login: "DaN'EllA<10733><STEAM_0:0:43925123><>" became an admin (account "DaN'EllA") (access "bcdefghijkmnopqrstu") (address "79.113.190.121")
+L 01/12/2021 - 18:03:17: [admin.amxx] Login: "oarba_dupa_tine<10737><STEAM_0:1:111439526><>" became an admin (account "oarba_dupa_tine") (access "abcdefghijklmnopqrstuvx") (address "86.122.114.129")
+L 01/12/2021 - 18:03:23: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "amx_vipgold_everyone") (value "0")
+L 01/12/2021 - 18:03:23: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "amx_vipfree_everyone") (value "0")
+L 01/12/2021 - 18:03:23: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "sv_timeout") (value "300")
+L 01/12/2021 - 18:03:23: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "sv_unlag") (value "1")
+L 01/12/2021 - 18:03:23: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "sv_maxunlag") (value "1.5")
+L 01/12/2021 - 18:03:23: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "mp_autokick") (value "0")
+L 01/12/2021 - 18:03:23: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "mp_autoteambalance") (value "0")
+L 01/12/2021 - 18:03:23: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "mp_timelimit") (value "25")
+L 01/12/2021 - 18:03:40: [adminchat.amxx] Chat: "(1)SeBaN*<10739><STEAM_0:4:640481431><>" chat "# BOSS DA MI KICK PER FAVORE :>))"
+L 01/12/2021 - 18:03:58: [admincmd.amxx] Cmd: "oarba_dupa_tine<10737><STEAM_0:1:111439526><>" set cvar (name "sv_timeout") (value "30")
+L 01/12/2021 - 18:04:02: [admincmd.amxx] Cmd: "oarba_dupa_tine<10737><STEAM_0:1:111439526><>" set cvar (name "sv_timeout") (value "999")
+L 01/12/2021 - 18:04:13: [admin.amxx] Login: "SeBaN*<10752><STEAM_0:1:14774290><>" became an admin (account "SeBaN*") (access "bcdefhijkmnopqrst") (address "151.19.5.229")
+L 01/12/2021 - 18:05:21: [high_ping_kicker.amxx] Highpingkick: "SPK_4_EVER<10642><STEAM_1:0:2111017974>" was kicked due highping (Average Ping "302")
+L 01/12/2021 - 18:06:43: [admin.amxx] Login: "SeBaN*<10752><STEAM_0:1:14774290><>" became an admin (account "SeBaN*") (access "bcdefhijkmnopqrst") (address "151.19.5.229")
+L 01/12/2021 - 18:06:43: [admin.amxx] Login: "DaN'EllA<10733><STEAM_0:0:43925123><>" became an admin (account "DaN'EllA") (access "bcdefghijkmnopqrstu") (address "79.113.190.121")
+L 01/12/2021 - 18:06:43: [admin.amxx] Login: "oarba_dupa_tine<10737><STEAM_0:1:111439526><>" became an admin (account "oarba_dupa_tine") (access "abcdefghijklmnopqrstuvx") (address "86.122.114.129")
+L 01/12/2021 - 18:11:28: [admin.amxx] Login: "DaN'EllA<10778><STEAM_0:0:43925123><>" became an admin (account "DaN'EllA") (access "bcdefghijkmnopqrstu") (address "178.138.34.79")
+L 01/12/2021 - 18:16:09: [high_ping_kicker.amxx] Highpingkick: "nOOB<10792><STEAM_1:0:893783436>" was kicked due highping (Average Ping "316")
+L 01/12/2021 - 18:18:48: [admincmd.amxx] Cmd: "SeBaN*<10752><STEAM_0:1:14774290><>" slay "teo najacee  vs pro a<10795><STEAM_1:0:46742071><>"
+L 01/12/2021 - 18:21:14: [admin.amxx] Login: "TRENd<10813><STEAM_0:1:581740514><>" became an admin (account "TRENd") (access "bcdefij") (address "91.38.122.159")
+L 01/12/2021 - 18:21:16: [admin.amxx] Login: "TRENd<10814><STEAM_0:1:581740514><>" became an admin (account "TRENd") (access "bcdefij") (address "91.38.122.159")
+L 01/12/2021 - 18:22:03: [admincmd.amxx] Kick: "SeBaN*<10752><STEAM_0:1:14774290><>" kick "zm.leaguecs.ro [11]<10818><STEAM_1:0:2102286610><>" (reason "Cotoharla")
+L 01/12/2021 - 18:26:03: [adminchat.amxx] Chat: "SeBaN*<10752><STEAM_0:1:14774290><>" chat " dam vot ?"
+L 01/12/2021 - 18:26:08: [adminchat.amxx] Chat: "DaN'EllA<10778><STEAM_0:0:43925123><>" chat "da"
+L 01/12/2021 - 18:26:12: [mapsmenu.amxx] Vote: "oarba_dupa_tine<10737><STEAM_0:1:111439526><>" vote maps (map#1 "de_dustyaztec") (map#2 "de_nuke_rarea") (map#3 "") (map#4 "")
+L 01/12/2021 - 18:26:24: [adminchat.amxx] Chat: "oarba_dupa_tine<10737><STEAM_0:1:111439526><>" tsay "LASTTT"
+L 01/12/2021 - 18:26:24: [mapsmenu.amxx] Vote: Voting successful. Map will be changed to de_nuke_rarea
+L 01/12/2021 - 18:26:35: [mapsmenu.amxx] Vote: Result refused
+L 01/12/2021 - 18:27:19: [adminchat.amxx] Chat: "oarba_dupa_tine<10737><STEAM_0:1:111439526><>" chat "eu am vazut 2 min\"
+L 01/12/2021 - 18:27:25: [adminchat.amxx] Chat: "SeBaN*<10752><STEAM_0:1:14774290><>" chat " da"
+L 01/12/2021 - 18:27:32: [adminchat.amxx] Chat: "oarba_dupa_tine<10737><STEAM_0:1:111439526><>" chat "ai schimbat tu?"
+L 01/12/2021 - 18:27:39: [adminchat.amxx] Chat: "SeBaN*<10752><STEAM_0:1:14774290><>" chat " am dat eu plus 10 sa avem timp de vot"
+L 01/12/2021 - 18:27:47: [adminchat.amxx] Chat: "SeBaN*<10752><STEAM_0:1:14774290><>" chat " ma gandeam ca da serverul vot"
+L 01/12/2021 - 18:27:53: [adminchat.amxx] Chat: "oarba_dupa_tine<10737><STEAM_0:1:111439526><>" chat "eu sunt rapid"
+L 01/12/2021 - 18:28:03: [adminchat.amxx] Chat: "SeBaN*<10752><STEAM_0:1:14774290><>" chat " pai eu nici nu am apoucat sa votez :))"
+L 01/12/2021 - 18:28:04: [adminchat.amxx] Chat: "oarba_dupa_tine<10737><STEAM_0:1:111439526><>" chat "sv nu mai da vot"
+L 01/12/2021 - 18:32:50: [admincmd.amxx] Cmd: "oarba_dupa_tine<10737><STEAM_0:1:111439526><>" changelevel "de_nuke_rarea"
+L 01/12/2021 - 18:32:56: -------- Mapchange to de_nuke_rarea --------
+L 01/12/2021 - 18:32:56: [admin.amxx] Login: "oarba_dupa_tine<10737><STEAM_0:1:111439526><>" became an admin (account "oarba_dupa_tine") (access "abcdefghijklmnopqrstuvx") (address "86.122.114.129")
+L 01/12/2021 - 18:32:56: [admin.amxx] Login: "DaN'EllA<10778><STEAM_0:0:43925123><>" became an admin (account "DaN'EllA") (access "bcdefghijkmnopqrstu") (address "178.138.34.79")
+L 01/12/2021 - 18:32:58: [admin.amxx] Login: "oarba_dupa_tine<10843><STEAM_0:1:111439526><>" became an admin (account "oarba_dupa_tine") (access "abcdefghijklmnopqrstuvx") (address "86.122.114.129")
+L 01/12/2021 - 18:33:03: [admin.amxx] Login: "DaN'EllA<10851><STEAM_0:0:43925123><>" became an admin (account "DaN'EllA") (access "bcdefghijkmnopqrstu") (address "178.138.34.79")
+L 01/12/2021 - 18:33:05: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "amx_vipgold_everyone") (value "0")
+L 01/12/2021 - 18:33:05: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "amx_vipfree_everyone") (value "0")
+L 01/12/2021 - 18:33:05: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "sv_timeout") (value "300")
+L 01/12/2021 - 18:33:05: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "sv_unlag") (value "1")
+L 01/12/2021 - 18:33:05: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "sv_maxunlag") (value "1.5")
+L 01/12/2021 - 18:33:05: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "mp_autokick") (value "0")
+L 01/12/2021 - 18:33:05: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "mp_autoteambalance") (value "0")
+L 01/12/2021 - 18:33:05: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "mp_timelimit") (value "25")
+L 01/12/2021 - 18:36:06: [admin.amxx] Login: "TRENd<10864><STEAM_0:1:581740514><>" became an admin (account "TRENd") (access "bcdefij") (address "91.38.122.159")
+L 01/12/2021 - 18:36:08: [admin.amxx] Login: "TRENd<10865><STEAM_0:1:581740514><>" became an admin (account "TRENd") (access "bcdefij") (address "91.38.122.159")
+L 01/12/2021 - 18:42:46: [admincmd.amxx] Ban: "oarba_dupa_tine<10843><STEAM_0:1:111439526><>" ban and kick "kavatzopousta<10853><STEAM_1:0:1034967067><>" (minutes "0") (reason "wall")
+L 01/12/2021 - 18:53:54: [mapsmenu.amxx] Vote: "TRENd<10865><STEAM_0:1:581740514><>" vote maps (map#1 "awp_garden") (map#2 "de_mjolby6") (map#3 "") (map#4 "")
+L 01/12/2021 - 18:54:06: [mapsmenu.amxx] Vote: Voting successful. Map will be changed to awp_garden
+L 01/12/2021 - 18:54:16: [mapsmenu.amxx] Vote: Result refused
+L 01/12/2021 - 18:55:14: [adminchat.amxx] Chat: "TRENd<10865><STEAM_0:1:581740514><>" tsay "LAST"
+L 01/12/2021 - 18:56:23: [mapsmenu.amxx] Cmd: "TRENd<10865><STEAM_0:1:581740514><>" changelevel "awp_garden"
+L 01/12/2021 - 18:56:25: -------- Mapchange to awp_garden --------
+L 01/12/2021 - 18:56:26: [admin.amxx] Login: "TRENd<10865><STEAM_0:1:581740514><>" became an admin (account "TRENd") (access "bcdefij") (address "91.38.122.159")
+L 01/12/2021 - 18:56:28: [admin.amxx] Login: "TRENd<10904><STEAM_0:1:581740514><>" became an admin (account "TRENd") (access "bcdefij") (address "91.38.122.159")
+L 01/12/2021 - 18:56:35: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "amx_vipgold_everyone") (value "0")
+L 01/12/2021 - 18:56:35: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "amx_vipfree_everyone") (value "0")
+L 01/12/2021 - 18:56:35: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "sv_timeout") (value "300")
+L 01/12/2021 - 18:56:35: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "sv_unlag") (value "1")
+L 01/12/2021 - 18:56:35: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "sv_maxunlag") (value "1.5")
+L 01/12/2021 - 18:56:35: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "mp_autokick") (value "0")
+L 01/12/2021 - 18:56:35: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "mp_autoteambalance") (value "0")
+L 01/12/2021 - 18:56:35: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "mp_timelimit") (value "25")
+L 01/12/2021 - 18:59:55: [high_ping_kicker.amxx] Highpingkick: "dTEX1<10927><STEAM_1:0:1675267832>" was kicked due highping (Average Ping "384")
+L 01/12/2021 - 18:59:55: [high_ping_kicker.amxx] Highpingkick: "RESPAWN~SLADERS.RO [3]<10925><STEAM_1:0:1036342822>" was kicked due highping (Average Ping "410")
+L 01/12/2021 - 19:00:34: [high_ping_kicker.amxx] Highpingkick: "RESPAWN~SLADERS.RO [3]<10930><STEAM_1:0:1036342822>" was kicked due highping (Average Ping "304")
+L 01/12/2021 - 19:03:54: [admincmd.amxx] Ban: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" ban and kick "NA'VI Ellement<10939><STEAM_1:0:569950318><>" (minutes "0") (reason "Aim")
+L 01/12/2021 - 19:04:32: [high_ping_kicker.amxx] Highpingkick: "CANDENIZ<10943><STEAM_1:0:973108115>" was kicked due highping (Average Ping "306")
+L 01/12/2021 - 19:05:17: [admincmd.amxx] Ban: "TRENd<10904><STEAM_0:1:581740514><>" ban and kick "BRASILANDIA<10952><STEAM_1:0:1157148853><>" (minutes "0") (reason "detec")
+L 01/12/2021 - 19:05:22: [adminchat.amxx] Chat: "Reddington<10907><STEAM_1:0:720028567><>" chat " dam si noi un ban sau sal?"
+L 01/12/2021 - 19:05:35: [adminchat.amxx] Chat: "Reddington<10907><STEAM_1:0:720028567><>" chat " lil wall "
+L 01/12/2021 - 19:05:58: [adminchat.amxx] Chat: "Reddington<10907><STEAM_1:0:720028567><>" chat " si aim "
+L 01/12/2021 - 19:07:17: [admin.amxx] Login: "tralala<10962><STEAM_0:0:444217150><>" became an admin (account "tralala") (access "ab") (address "78.96.80.77")
+L 01/12/2021 - 19:09:04: [adminchat.amxx] Chat: "Reddington<10907><STEAM_1:0:720028567><>" chat " are ba wall"
+L 01/12/2021 - 19:09:24: [high_ping_kicker.amxx] Highpingkick: "salam<10970><STEAM_1:0:1201842954>" was kicked due highping (Average Ping "1135")
+L 01/12/2021 - 19:12:04: [admin.amxx] Login: "tralala<10979><STEAM_0:0:444217150><>" became an admin (account "tralala") (access "ab") (address "5.13.10.38")
+L 01/12/2021 - 19:12:28: [mapsmenu.amxx] Vote: "TRENd<10904><STEAM_0:1:581740514><>" vote maps (map#1 "de_train32") (map#2 "de_westwood") (map#3 "") (map#4 "")
+L 01/12/2021 - 19:12:40: [mapsmenu.amxx] Vote: Voting successful. Map will be changed to de_train32
+L 01/12/2021 - 19:12:50: [mapsmenu.amxx] Vote: Result refused
+L 01/12/2021 - 19:14:06: [admincmd.amxx] Ban: "TRENd<10904><STEAM_0:1:581740514><>" ban and kick "lil (:<10923><STEAM_1:0:1276642335><>" (minutes "0") (reason "wall")
+L 01/12/2021 - 19:14:09: [admin.amxx] Login: "Big Ady<10986><STEAM_0:1:549298427><>" became an admin (account "Big Ady") (access "ab") (address "5.13.41.69")
+L 01/12/2021 - 19:16:11: [adminchat.amxx] Chat: "TRENd<10904><STEAM_0:1:581740514><>" tsay "LAST"
+L 01/12/2021 - 19:17:07: [mapsmenu.amxx] Cmd: "TRENd<10904><STEAM_0:1:581740514><>" changelevel "de_train32"
+L 01/12/2021 - 19:17:09: -------- Mapchange to de_train32 --------
+L 01/12/2021 - 19:17:10: [admin.amxx] Login: "TRENd<10904><STEAM_0:1:581740514><>" became an admin (account "TRENd") (access "bcdefij") (address "91.38.122.159")
+L 01/12/2021 - 19:17:10: [admin.amxx] Login: "tralala<10979><STEAM_0:0:444217150><>" became an admin (account "tralala") (access "ab") (address "5.13.10.38")
+L 01/12/2021 - 19:17:10: [admin.amxx] Login: "Big Ady<10986><STEAM_0:1:549298427><>" became an admin (account "Big Ady") (access "ab") (address "5.13.41.69")
+L 01/12/2021 - 19:17:11: [admin.amxx] Login: "TRENd<10999><STEAM_0:1:581740514><>" became an admin (account "TRENd") (access "bcdefij") (address "91.38.122.159")
+L 01/12/2021 - 19:17:19: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "amx_vipgold_everyone") (value "0")
+L 01/12/2021 - 19:17:19: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "amx_vipfree_everyone") (value "0")
+L 01/12/2021 - 19:17:19: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "sv_timeout") (value "300")
+L 01/12/2021 - 19:17:19: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "sv_unlag") (value "1")
+L 01/12/2021 - 19:17:19: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "sv_maxunlag") (value "1.5")
+L 01/12/2021 - 19:17:19: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "mp_autokick") (value "0")
+L 01/12/2021 - 19:17:19: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "mp_autoteambalance") (value "0")
+L 01/12/2021 - 19:17:19: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "mp_timelimit") (value "25")
+L 01/12/2021 - 19:18:22: [high_ping_kicker.amxx] Highpingkick: "Yakusa<11010><STEAM_1:0:787808286>" was kicked due highping (Average Ping "742")
+L 01/12/2021 - 19:24:08: [admincmd.amxx] Cmd: "TRENd<10999><STEAM_0:1:581740514><>" change nick to "faN-ADY88" "(1)ady88<10998><STEAM_1:0:46742071><>"
+L 01/12/2021 - 19:39:00: [mapsmenu.amxx] Vote: "TRENd<10999><STEAM_0:1:581740514><>" vote maps (map#1 "de_mjolby6") (map#2 "de_westwood") (map#3 "") (map#4 "")
+L 01/12/2021 - 19:39:12: [mapsmenu.amxx] Vote: Voting successful. Map will be changed to de_mjolby6
+L 01/12/2021 - 19:39:22: [mapsmenu.amxx] Vote: Result refused
+L 01/12/2021 - 19:41:06: [mapsmenu.amxx] Cmd: "TRENd<10999><STEAM_0:1:581740514><>" changelevel "de_mjolby6"
+L 01/12/2021 - 19:41:09: -------- Mapchange to de_mjolby6 --------
+L 01/12/2021 - 19:41:09: [admin.amxx] Login: "tralala<10979><STEAM_0:0:444217150><>" became an admin (account "tralala") (access "ab") (address "5.13.10.38")
+L 01/12/2021 - 19:41:09: [admin.amxx] Login: "TRENd<10999><STEAM_0:1:581740514><>" became an admin (account "TRENd") (access "bcdefij") (address "91.38.122.159")
+L 01/12/2021 - 19:41:09: [admin.amxx] Login: "Big Ady<10986><STEAM_0:1:549298427><>" became an admin (account "Big Ady") (access "ab") (address "5.13.41.69")
+L 01/12/2021 - 19:41:11: [admin.amxx] Login: "TRENd<11095><STEAM_0:1:581740514><>" became an admin (account "TRENd") (access "bcdefij") (address "91.38.122.159")
+L 01/12/2021 - 19:41:18: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "amx_vipgold_everyone") (value "0")
+L 01/12/2021 - 19:41:18: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "amx_vipfree_everyone") (value "0")
+L 01/12/2021 - 19:41:18: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "sv_timeout") (value "300")
+L 01/12/2021 - 19:41:18: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "sv_unlag") (value "1")
+L 01/12/2021 - 19:41:18: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "sv_maxunlag") (value "1.5")
+L 01/12/2021 - 19:41:18: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "mp_autokick") (value "0")
+L 01/12/2021 - 19:41:18: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "mp_autoteambalance") (value "0")
+L 01/12/2021 - 19:41:18: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "mp_timelimit") (value "25")
+L 01/12/2021 - 19:41:32: [high_ping_kicker.amxx] Highpingkick: "PKPROHUNTERS<10910><STEAM_1:0:1450327709>" was kicked due highping (Average Ping "314")
+L 01/12/2021 - 19:41:54: [high_ping_kicker.amxx] Highpingkick: "URD_OP<11102><STEAM_1:0:1098773016>" was kicked due highping (Average Ping "330")
+L 01/12/2021 - 19:43:27: [high_ping_kicker.amxx] Highpingkick: "popo<11109><STEAM_1:0:1288465875>" was kicked due highping (Average Ping "351")
+L 01/12/2021 - 19:43:27: [high_ping_kicker.amxx] Highpingkick: "Renato<11112><STEAM_1:0:1541484801>" was kicked due highping (Average Ping "487")
+L 01/12/2021 - 19:48:18: [high_ping_kicker.amxx] Highpingkick: "[DS]Nom3er[3]<11124><STEAM_1:0:1995742887>" was kicked due highping (Average Ping "379")
+L 01/12/2021 - 19:51:17: [high_ping_kicker.amxx] Highpingkick: "El Pechocho<11114><STEAM_1:0:310115678>" was kicked due highping (Average Ping "368")
+L 01/12/2021 - 20:04:40: [high_ping_kicker.amxx] Highpingkick: "RX43<11161><STEAM_1:0:1255555643>" was kicked due highping (Average Ping "301")
+L 01/12/2021 - 20:05:21: [high_ping_kicker.amxx] Highpingkick: "RX43<11173><STEAM_1:0:1255555643>" was kicked due highping (Average Ping "307")
+L 01/12/2021 - 20:06:20: -------- Mapchange to de_cbble --------
+L 01/12/2021 - 20:06:21: [admin.amxx] Login: "tralala<10979><STEAM_0:0:444217150><>" became an admin (account "tralala") (access "ab") (address "5.13.10.38")
+L 01/12/2021 - 20:06:21: [admin.amxx] Login: "Big Ady<10986><STEAM_0:1:549298427><>" became an admin (account "Big Ady") (access "ab") (address "5.13.41.69")
+L 01/12/2021 - 20:06:29: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "amx_vipgold_everyone") (value "0")
+L 01/12/2021 - 20:06:29: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "amx_vipfree_everyone") (value "0")
+L 01/12/2021 - 20:06:29: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "sv_timeout") (value "300")
+L 01/12/2021 - 20:06:29: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "sv_unlag") (value "1")
+L 01/12/2021 - 20:06:29: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "sv_maxunlag") (value "1.5")
+L 01/12/2021 - 20:06:29: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "mp_autokick") (value "0")
+L 01/12/2021 - 20:06:29: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "mp_autoteambalance") (value "0")
+L 01/12/2021 - 20:06:29: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "mp_timelimit") (value "25")
+L 01/12/2021 - 20:06:42: [high_ping_kicker.amxx] Highpingkick: "T''N''T<11188><STEAM_1:0:1151723325>" was kicked due highping (Average Ping "343")
+L 01/12/2021 - 20:06:43: [high_ping_kicker.amxx] Highpingkick: "VIP-ABDOLLH<11187><STEAM_1:0:519153686>" was kicked due highping (Average Ping "339")
+L 01/12/2021 - 20:06:56: [high_ping_kicker.amxx] Highpingkick: "RX43<11190><STEAM_1:0:1255555643>" was kicked due highping (Average Ping "318")
+L 01/12/2021 - 20:13:07: [high_ping_kicker.amxx] Highpingkick: "Arian<11209><STEAM_1:0:128478779>" was kicked due highping (Average Ping "308")
+L 01/12/2021 - 20:16:50: [admin.amxx] Login: "oarba_dupa_tine<11229><STEAM_0:1:111439526><>" became an admin (account "oarba_dupa_tine") (access "abcdefghijklmnopqrstuvx") (address "86.122.114.129")
+L 01/12/2021 - 20:16:52: [admin.amxx] Login: "oarba_dupa_tine<11230><STEAM_0:1:111439526><>" became an admin (account "oarba_dupa_tine") (access "abcdefghijklmnopqrstuvx") (address "86.122.114.129")
+L 01/12/2021 - 20:18:00: [adminchat.amxx] Chat: "oarba_dupa_tine<11230><STEAM_0:1:111439526><>" tsay "Salut baa"
+L 01/12/2021 - 20:18:12: [high_ping_kicker.amxx] Highpingkick: "harrypunk<11137><STEAM_1:0:1112748821>" was kicked due highping (Average Ping "301")
+L 01/12/2021 - 20:23:42: [adminchat.amxx] Chat: "oarba_dupa_tine<11230><STEAM_0:1:111439526><>" tsay "LAST"
+L 01/12/2021 - 20:24:11: [admincmd.amxx] Cmd: "oarba_dupa_tine<11230><STEAM_0:1:111439526><>" changelevel "de_dust2"
+L 01/12/2021 - 20:24:16: -------- Mapchange to de_dust2 --------
+L 01/12/2021 - 20:24:17: [admin.amxx] Login: "oarba_dupa_tine<11230><STEAM_0:1:111439526><>" became an admin (account "oarba_dupa_tine") (access "abcdefghijklmnopqrstuvx") (address "86.122.114.129")
+L 01/12/2021 - 20:24:17: [admin.amxx] Login: "Big Ady<10986><STEAM_0:1:549298427><>" became an admin (account "Big Ady") (access "ab") (address "5.13.41.69")
+L 01/12/2021 - 20:24:17: [admin.amxx] Login: "tralala<10979><STEAM_0:0:444217150><>" became an admin (account "tralala") (access "ab") (address "5.13.10.38")
+L 01/12/2021 - 20:24:19: [admin.amxx] Login: "oarba_dupa_tine<11252><STEAM_0:1:111439526><>" became an admin (account "oarba_dupa_tine") (access "abcdefghijklmnopqrstuvx") (address "86.122.114.129")
+L 01/12/2021 - 20:24:26: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "amx_vipgold_everyone") (value "0")
+L 01/12/2021 - 20:24:26: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "amx_vipfree_everyone") (value "0")
+L 01/12/2021 - 20:24:26: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "sv_timeout") (value "300")
+L 01/12/2021 - 20:24:26: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "sv_unlag") (value "1")
+L 01/12/2021 - 20:24:26: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "sv_maxunlag") (value "1.5")
+L 01/12/2021 - 20:24:26: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "mp_autokick") (value "0")
+L 01/12/2021 - 20:24:26: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "mp_autoteambalance") (value "0")
+L 01/12/2021 - 20:24:26: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "mp_timelimit") (value "25")
+L 01/12/2021 - 20:24:27: [admin.amxx] Login: "tralala<11261><STEAM_0:0:444217150><>" became an admin (account "tralala") (access "ab") (address "5.13.10.38")
+L 01/12/2021 - 20:24:37: [high_ping_kicker.amxx] Highpingkick: "T''N''T<11257><STEAM_1:0:1151723325>" was kicked due highping (Average Ping "375")
+L 01/12/2021 - 20:25:42: [high_ping_kicker.amxx] Highpingkick: "COCOBAAS<11259><STEAM_1:0:645334406>" was kicked due highping (Average Ping "301")
+L 01/12/2021 - 20:26:03: [admin.amxx] Login: "DaN'EllA<11278><STEAM_0:0:43925123><>" became an admin (account "DaN'EllA") (access "bcdefghijkmnopqrstu") (address "79.113.190.121")
+L 01/12/2021 - 20:26:05: [admin.amxx] Login: "DaN'EllA<11279><STEAM_0:0:43925123><>" became an admin (account "DaN'EllA") (access "bcdefghijkmnopqrstu") (address "79.113.190.121")
+L 01/12/2021 - 20:33:37: [admincmd.amxx] Ban: "oarba_dupa_tine<11252><STEAM_0:1:111439526><>" ban and kick "(1)<Warrior> Player<11293><STEAM_1:0:1602966705><>" (minutes "0") (reason "pa")
+L 01/12/2021 - 20:36:36: [admin.amxx] Login: "P0w3RfuL<11316><STEAM_0:1:553526635><>" became an admin (account "P0w3RfuL") (access "b") (address "188.138.131.172")
+L 01/12/2021 - 20:36:37: [admin.amxx] Login: "P0w3RfuL<11317><STEAM_0:1:553526635><>" became an admin (account "P0w3RfuL") (access "b") (address "188.138.131.172")
+L 01/12/2021 - 20:43:35: [high_ping_kicker.amxx] Highpingkick: "franco<11333><STEAM_0:1:572891384>" was kicked due highping (Average Ping "320")
+L 01/12/2021 - 20:47:57: [adminchat.amxx] Chat: "DaN'EllA<11279><STEAM_0:0:43925123><>" chat "ce dam?"
+L 01/12/2021 - 20:48:08: [adminchat.amxx] Chat: "oarba_dupa_tine<11252><STEAM_0:1:111439526><>" chat "train te rog"
+L 01/12/2021 - 20:48:17: [mapsmenu.amxx] Vote: "DaN'EllA<11279><STEAM_0:0:43925123><>" vote maps (map#1 "de_alexandra") (map#2 "de_train32") (map#3 "") (map#4 "")
+L 01/12/2021 - 20:48:29: [mapsmenu.amxx] Vote: Voting successful. Map will be changed to de_train32
+L 01/12/2021 - 20:48:38: [admincmd.amxx] Cmd: "DaN'EllA<11279><STEAM_0:0:43925123><>" set cvar (name "mp_timelimit") (value "0")
+L 01/12/2021 - 20:48:39: [mapsmenu.amxx] Vote: Result refused
+L 01/12/2021 - 20:48:46: [adminchat.amxx] Chat: "DaN'EllA<11279><STEAM_0:0:43925123><>" tsay "LAST"
+L 01/12/2021 - 20:49:34: [admincmd.amxx] Cmd: "DaN'EllA<11279><STEAM_0:0:43925123><>" changelevel "de_train32"
+L 01/12/2021 - 20:49:39: -------- Mapchange to de_train32 --------
+L 01/12/2021 - 20:49:39: [admin.amxx] Login: "tralala<11261><STEAM_0:0:444217150><>" became an admin (account "tralala") (access "ab") (address "5.13.10.38")
+L 01/12/2021 - 20:49:39: [admin.amxx] Login: "Big Ady<10986><STEAM_0:1:549298427><>" became an admin (account "Big Ady") (access "ab") (address "5.13.41.69")
+L 01/12/2021 - 20:49:39: [admin.amxx] Login: "DaN'EllA<11279><STEAM_0:0:43925123><>" became an admin (account "DaN'EllA") (access "bcdefghijkmnopqrstu") (address "79.113.190.121")
+L 01/12/2021 - 20:49:39: [admin.amxx] Login: "oarba_dupa_tine<11252><STEAM_0:1:111439526><>" became an admin (account "oarba_dupa_tine") (access "abcdefghijklmnopqrstuvx") (address "86.122.114.129")
+L 01/12/2021 - 20:49:41: [admin.amxx] Login: "DaN'EllA<11365><STEAM_0:0:43925123><>" became an admin (account "DaN'EllA") (access "bcdefghijkmnopqrstu") (address "79.113.190.121")
+L 01/12/2021 - 20:49:42: [admin.amxx] Login: "oarba_dupa_tine<11366><STEAM_0:1:111439526><>" became an admin (account "oarba_dupa_tine") (access "abcdefghijklmnopqrstuvx") (address "86.122.114.129")
+L 01/12/2021 - 20:49:48: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "amx_vipgold_everyone") (value "0")
+L 01/12/2021 - 20:49:48: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "amx_vipfree_everyone") (value "0")
+L 01/12/2021 - 20:49:48: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "sv_timeout") (value "300")
+L 01/12/2021 - 20:49:48: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "sv_unlag") (value "1")
+L 01/12/2021 - 20:49:48: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "sv_maxunlag") (value "1.5")
+L 01/12/2021 - 20:49:48: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "mp_autokick") (value "0")
+L 01/12/2021 - 20:49:48: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "mp_autoteambalance") (value "0")
+L 01/12/2021 - 20:49:48: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "mp_timelimit") (value "25")
+L 01/12/2021 - 20:49:51: [adminchat.amxx] Chat: "oarba_dupa_tine<11366><STEAM_0:1:111439526><>" chat ":D"
+L 01/12/2021 - 20:50:35: [adminchat.amxx] Chat: "oarba_dupa_tine<11366><STEAM_0:1:111439526><>" chat "bine tu"
+L 01/12/2021 - 20:50:48: [adminchat.amxx] Chat: "oarba_dupa_tine<11366><STEAM_0:1:111439526><>" chat "percutie baga-mi-asssssssssssssss"
+L 01/12/2021 - 20:51:14: [adminchat.amxx] Chat: "DaN'EllA<11365><STEAM_0:0:43925123><>" chat "baga-mi-as"
+L 01/12/2021 - 20:51:21: [adminchat.amxx] Chat: "oarba_dupa_tine<11366><STEAM_0:1:111439526><>" chat "da da"
+L 01/12/2021 - 20:52:06: [admin.amxx] Login: "Catalin<11380><STEAM_1:0:1251418304><>" kicked due to invalid password (account "CaTaLiN") (address "78.96.83.198")
+L 01/12/2021 - 20:52:28: [plmenu_ab_base.amxx] Cmd: "DaN'EllA<11365><STEAM_0:0:43925123><>" transfer "Didi<11361><STEAM_0:1:543981597><>" (team "TERRORIST")
+L 01/12/2021 - 20:52:42: [adminchat.amxx] Chat: "DaN'EllA<11365><STEAM_0:0:43925123><>" chat "astia is clupu"
+L 01/12/2021 - 20:52:45: [adminchat.amxx] Chat: "oarba_dupa_tine<11366><STEAM_0:1:111439526><>" chat "da da"
+L 01/12/2021 - 20:59:24: [adminchat.amxx] Chat: "DaN'EllA<11365><STEAM_0:0:43925123><>" chat "repede a mai mancat:))"
+L 01/12/2021 - 20:59:38: [adminchat.amxx] Chat: "oarba_dupa_tine<11366><STEAM_0:1:111439526><>" chat "pai da..."
+L 01/12/2021 - 20:59:42: [adminchat.amxx] Chat: "oarba_dupa_tine<11366><STEAM_0:1:111439526><>" chat "nu spun ce"
+L 01/12/2021 - 20:59:45: [adminchat.amxx] Chat: "oarba_dupa_tine<11366><STEAM_0:1:111439526><>" chat ":))"
+L 01/12/2021 - 20:59:49: [adminchat.amxx] Chat: "DaN'EllA<11365><STEAM_0:0:43925123><>" chat ":))"
+L 01/12/2021 - 21:00:06: [adminchat.amxx] Chat: "oarba_dupa_tine<11366><STEAM_0:1:111439526><>" chat "garnitza"
+L 01/12/2021 - 21:00:12: [adminchat.amxx] Chat: "DaN'EllA<11365><STEAM_0:0:43925123><>" chat ":))"
+L 01/12/2021 - 21:00:30: [adminchat.amxx] Chat: "DaN'EllA<11365><STEAM_0:0:43925123><>" chat "ce crezi ca face blonda?"
+L 01/12/2021 - 21:00:36: [adminchat.amxx] Chat: "oarba_dupa_tine<11366><STEAM_0:1:111439526><>" chat "a?"
+L 01/12/2021 - 21:00:43: [adminchat.amxx] Chat: "DaN'EllA<11365><STEAM_0:0:43925123><>" chat "imi trimite poze cu ce a mancat ea..."
+L 01/12/2021 - 21:00:51: [adminchat.amxx] Chat: "DaN'EllA<11365><STEAM_0:0:43925123><>" chat "la munte"
+L 01/12/2021 - 21:01:05: [adminchat.amxx] Chat: "DaN'EllA<11365><STEAM_0:0:43925123><>" chat "mi-a facut si filmulet:))"
+L 01/12/2021 - 21:02:58: [adminchat.amxx] Chat: "oarba_dupa_tine<11366><STEAM_0:1:111439526><>" chat "nu vine in seara asta"
+L 01/12/2021 - 21:03:01: [adminchat.amxx] Chat: "oarba_dupa_tine<11366><STEAM_0:1:111439526><>" chat "la cs?"
+L 01/12/2021 - 21:03:03: [adminchat.amxx] Chat: "DaN'EllA<11365><STEAM_0:0:43925123><>" chat "nu"
+L 01/12/2021 - 21:03:07: [adminchat.amxx] Chat: "oarba_dupa_tine<11366><STEAM_0:1:111439526><>" chat "are tranta"
+L 01/12/2021 - 21:03:09: [adminchat.amxx] Chat: "DaN'EllA<11365><STEAM_0:0:43925123><>" chat "vine maine seara"
+L 01/12/2021 - 21:03:10: [adminchat.amxx] Chat: "oarba_dupa_tine<11366><STEAM_0:1:111439526><>" chat ":))"
+L 01/12/2021 - 21:03:14: [adminchat.amxx] Chat: "DaN'EllA<11365><STEAM_0:0:43925123><>" chat "da"
+L 01/12/2021 - 21:10:22: [admincmd.amxx] Cmd: "DaN'EllA<11365><STEAM_0:0:43925123><>" slay "β|4ckSnΘw<10018><STEAM_0:0:191512795><>"
+L 01/12/2021 - 21:13:06: [adminchat.amxx] Chat: "oarba_dupa_tine<11366><STEAM_0:1:111439526><>" tsay "LASTTTTTTTT"
+L 01/12/2021 - 21:13:28: [mapsmenu.amxx] Cmd: "oarba_dupa_tine<11366><STEAM_0:1:111439526><>" changelevel "de_mjolby6"
+L 01/12/2021 - 21:13:30: -------- Mapchange to de_mjolby6 --------
+L 01/12/2021 - 21:13:31: [admin.amxx] Login: "tralala<11261><STEAM_0:0:444217150><>" became an admin (account "tralala") (access "ab") (address "5.13.10.38")
+L 01/12/2021 - 21:13:31: [admin.amxx] Login: "Big Ady<10986><STEAM_0:1:549298427><>" became an admin (account "Big Ady") (access "ab") (address "5.13.41.69")
+L 01/12/2021 - 21:13:31: [admin.amxx] Login: "DaN'EllA<11365><STEAM_0:0:43925123><>" became an admin (account "DaN'EllA") (access "bcdefghijkmnopqrstu") (address "79.113.190.121")
+L 01/12/2021 - 21:13:31: [admin.amxx] Login: "oarba_dupa_tine<11366><STEAM_0:1:111439526><>" became an admin (account "oarba_dupa_tine") (access "abcdefghijklmnopqrstuvx") (address "86.122.114.129")
+L 01/12/2021 - 21:13:33: [admin.amxx] Login: "oarba_dupa_tine<11414><STEAM_0:1:111439526><>" became an admin (account "oarba_dupa_tine") (access "abcdefghijklmnopqrstuvx") (address "86.122.114.129")
+L 01/12/2021 - 21:13:35: [admin.amxx] Login: "DaN'EllA<11420><STEAM_0:0:43925123><>" became an admin (account "DaN'EllA") (access "bcdefghijkmnopqrstu") (address "79.113.190.121")
+L 01/12/2021 - 21:13:40: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "amx_vipgold_everyone") (value "0")
+L 01/12/2021 - 21:13:40: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "amx_vipfree_everyone") (value "0")
+L 01/12/2021 - 21:13:40: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "sv_timeout") (value "300")
+L 01/12/2021 - 21:13:40: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "sv_unlag") (value "1")
+L 01/12/2021 - 21:13:40: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "sv_maxunlag") (value "1.5")
+L 01/12/2021 - 21:13:40: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "mp_autokick") (value "0")
+L 01/12/2021 - 21:13:40: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "mp_autoteambalance") (value "0")
+L 01/12/2021 - 21:13:40: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "mp_timelimit") (value "25")
+L 01/12/2021 - 21:15:03: [adminchat.amxx] Chat: "oarba_dupa_tine<11414><STEAM_0:1:111439526><>" tsay "LAMA DANELA VIP ! SAP"
+L 01/12/2021 - 21:15:11: [adminchat.amxx] Chat: "oarba_dupa_tine<11414><STEAM_0:1:111439526><>" tsay "1SAP"
+L 01/12/2021 - 21:15:17: [adminchat.amxx] Chat: "DaN'EllA<11420><STEAM_0:0:43925123><>" tsay "TF"
+L 01/12/2021 - 21:16:05: [adminchat.amxx] Chat: "DaN'EllA<11420><STEAM_0:0:43925123><>" chat "poate nu a vazut nimeni"
+L 01/12/2021 - 21:16:12: [adminchat.amxx] Chat: "DaN'EllA<11420><STEAM_0:0:43925123><>" chat ":))"
+L 01/12/2021 - 21:16:36: [adminchat.amxx] Chat: "oarba_dupa_tine<11414><STEAM_0:1:111439526><>" csay "Lama Danela = vip 1 saptamana"
+L 01/12/2021 - 21:16:36: [adminchat.amxx] Chat: "oarba_dupa_tine<11414><STEAM_0:1:111439526><>" csay "Lama Danela = vip 1 saptamana"
+L 01/12/2021 - 21:16:36: [adminchat.amxx] Chat: "oarba_dupa_tine<11414><STEAM_0:1:111439526><>" csay "Lama Danela = vip 1 saptamana"
+L 01/12/2021 - 21:16:39: [adminchat.amxx] Chat: "oarba_dupa_tine<11414><STEAM_0:1:111439526><>" csay "Lama Danela = vip 1 saptamana"
+L 01/12/2021 - 21:16:46: [adminchat.amxx] Chat: "oarba_dupa_tine<11414><STEAM_0:1:111439526><>" csay "Lama Danela = vip 1 saptamana"
+L 01/12/2021 - 21:17:53: [adminchat.amxx] Chat: "oarba_dupa_tine<11414><STEAM_0:1:111439526><>" chat "unde esti sa te pazesc :))"
+L 01/12/2021 - 21:21:07: [adminchat.amxx] Chat: "oarba_dupa_tine<11414><STEAM_0:1:111439526><>" csay "Lama Danela = vip 1 saptamana"
+L 01/12/2021 - 21:21:08: [adminchat.amxx] Chat: "oarba_dupa_tine<11414><STEAM_0:1:111439526><>" csay "Lama Danela = vip 1 saptamana"
+L 01/12/2021 - 21:21:13: [adminchat.amxx] Chat: "DaN'EllA<11420><STEAM_0:0:43925123><>" chat "nu vrea sa-mi dea nimeni lama:))"
+L 01/12/2021 - 21:26:17: [adminchat.amxx] Chat: "DaN'EllA<11420><STEAM_0:0:43925123><>" chat "asta imi da lama sa mor"
+L 01/12/2021 - 21:26:26: [adminchat.amxx] Chat: "oarba_dupa_tine<11414><STEAM_0:1:111439526><>" chat "cine?"
+L 01/12/2021 - 21:26:31: [adminchat.amxx] Chat: "DaN'EllA<11420><STEAM_0:0:43925123><>" chat "seductive:))"
+L 01/12/2021 - 21:26:37: [adminchat.amxx] Chat: "oarba_dupa_tine<11414><STEAM_0:1:111439526><>" chat "te omor"
+L 01/12/2021 - 21:29:04: [adminchat.amxx] Chat: "oarba_dupa_tine<11414><STEAM_0:1:111439526><>" csay "Lama Danela = vip 1 saptamana"
+L 01/12/2021 - 21:29:05: [adminchat.amxx] Chat: "oarba_dupa_tine<11414><STEAM_0:1:111439526><>" csay "Lama Danela = vip 1 saptamana"
+L 01/12/2021 - 21:32:28: [admincmd.amxx] Cmd: "DaN'EllA<11420><STEAM_0:0:43925123><>" change nick to "Fortuna" "Cs.Raii.Ro＃Fortuna<11457><STEAM_1:0:445971189><>"
+L 01/12/2021 - 21:32:39: [adminchat.amxx] Chat: "oarba_dupa_tine<11414><STEAM_0:1:111439526><>" chat "ce jucam"
+L 01/12/2021 - 21:32:46: [adminchat.amxx] Chat: "DaN'EllA<11420><STEAM_0:0:43925123><>" chat "dust4ever?"
+L 01/12/2021 - 21:32:49: [adminchat.amxx] Chat: "DaN'EllA<11420><STEAM_0:0:43925123><>" chat "e mare"
+L 01/12/2021 - 21:32:50: [adminchat.amxx] Chat: "oarba_dupa_tine<11414><STEAM_0:1:111439526><>" chat "da daa"
+L 01/12/2021 - 21:33:33: [adminchat.amxx] Chat: "DaN'EllA<11420><STEAM_0:0:43925123><>" chat "dau eu?"
+L 01/12/2021 - 21:33:38: [adminchat.amxx] Chat: "oarba_dupa_tine<11414><STEAM_0:1:111439526><>" chat "da mami"
+L 01/12/2021 - 21:34:12: [adminchat.amxx] Chat: "oarba_dupa_tine<11414><STEAM_0:1:111439526><>" chat "asta era :))"
+L 01/12/2021 - 21:34:15: [mapsmenu.amxx] Vote: "DaN'EllA<11420><STEAM_0:0:43925123><>" vote maps (map#1 "de_dust4ever") (map#2 "de_amr") (map#3 "") (map#4 "")
+L 01/12/2021 - 21:34:21: [adminchat.amxx] Chat: "DaN'EllA<11420><STEAM_0:0:43925123><>" chat "aha"
+L 01/12/2021 - 21:34:24: [adminchat.amxx] Chat: "DaN'EllA<11420><STEAM_0:0:43925123><>" chat ":))"
+L 01/12/2021 - 21:34:27: [mapsmenu.amxx] Vote: Voting successful. Map will be changed to de_dust4ever
+L 01/12/2021 - 21:34:28: [adminchat.amxx] Chat: "oarba_dupa_tine<11414><STEAM_0:1:111439526><>" chat ":P"
+L 01/12/2021 - 21:34:33: [adminchat.amxx] Chat: "DaN'EllA<11420><STEAM_0:0:43925123><>" chat ":*"
+L 01/12/2021 - 21:34:36: [adminchat.amxx] Chat: "oarba_dupa_tine<11414><STEAM_0:1:111439526><>" chat ":*"
+L 01/12/2021 - 21:34:37: [mapsmenu.amxx] Vote: Result refused
+L 01/12/2021 - 21:34:49: [adminchat.amxx] Chat: "oarba_dupa_tine<11414><STEAM_0:1:111439526><>" chat "rar vezi asa ceva :))"
+L 01/12/2021 - 21:34:57: [adminchat.amxx] Chat: "DaN'EllA<11420><STEAM_0:0:43925123><>" chat "cam da"
+L 01/12/2021 - 21:35:03: [adminchat.amxx] Chat: "DaN'EllA<11420><STEAM_0:0:43925123><>" tsay "LAST"
+L 01/12/2021 - 21:36:09: [admin.amxx] Login: "~eU~<11477><STEAM_0:0:50200435><>" became an admin (account "~eU~") (access "b") (address "35.142.8.103")
+L 01/12/2021 - 21:36:10: [admincmd.amxx] Cmd: "DaN'EllA<11420><STEAM_0:0:43925123><>" changelevel "de_dust4ever"
+L 01/12/2021 - 21:36:14: [admin.amxx] Login: "~eU~<11478><STEAM_0:0:50200435><>" became an admin (account "~eU~") (access "b") (address "35.142.8.103")
+L 01/12/2021 - 21:36:15: -------- Mapchange to de_dust4ever --------
+L 01/12/2021 - 21:36:15: [admin.amxx] Login: "oarba_dupa_tine<11414><STEAM_0:1:111439526><>" became an admin (account "oarba_dupa_tine") (access "abcdefghijklmnopqrstuvx") (address "86.122.114.129")
+L 01/12/2021 - 21:36:15: [admin.amxx] Login: "DaN'EllA<11420><STEAM_0:0:43925123><>" became an admin (account "DaN'EllA") (access "bcdefghijkmnopqrstu") (address "79.113.190.121")
+L 01/12/2021 - 21:36:15: [admin.amxx] Login: "~eU~<11478><STEAM_0:0:50200435><>" became an admin (account "~eU~") (access "b") (address "35.142.8.103")
+L 01/12/2021 - 21:36:17: [admin.amxx] Login: "oarba_dupa_tine<11482><STEAM_0:1:111439526><>" became an admin (account "oarba_dupa_tine") (access "abcdefghijklmnopqrstuvx") (address "86.122.114.129")
+L 01/12/2021 - 21:36:19: [admin.amxx] Login: "DaN'EllA<11487><STEAM_0:0:43925123><>" became an admin (account "DaN'EllA") (access "bcdefghijkmnopqrstu") (address "79.113.190.121")
+L 01/12/2021 - 21:36:24: [admin.amxx] Login: "~eU~<11492><STEAM_0:0:50200435><>" became an admin (account "~eU~") (access "b") (address "35.142.8.103")
+L 01/12/2021 - 21:36:24: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "amx_vipgold_everyone") (value "0")
+L 01/12/2021 - 21:36:24: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "amx_vipfree_everyone") (value "0")
+L 01/12/2021 - 21:36:24: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "sv_timeout") (value "300")
+L 01/12/2021 - 21:36:24: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "sv_unlag") (value "1")
+L 01/12/2021 - 21:36:24: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "sv_maxunlag") (value "1.5")
+L 01/12/2021 - 21:36:24: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "mp_autokick") (value "0")
+L 01/12/2021 - 21:36:24: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "mp_autoteambalance") (value "0")
+L 01/12/2021 - 21:36:24: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "mp_timelimit") (value "25")
+L 01/12/2021 - 21:37:05: [adminchat.amxx] Chat: "DaN'EllA<11487><STEAM_0:0:43925123><>" chat "brb putin"
+L 01/12/2021 - 21:37:10: [adminchat.amxx] Chat: "oarba_dupa_tine<11482><STEAM_0:1:111439526><>" chat "ok"
+L 01/12/2021 - 21:37:58: [high_ping_kicker.amxx] Highpingkick: "casino<11499><STEAM_1:0:1612724134>" was kicked due highping (Average Ping "301")
+L 01/12/2021 - 21:39:44: [admincmd.amxx] Cmd: "DaN'EllA<11487><STEAM_0:0:43925123><>" change nick to "Fortuna" "Cs.Raii.Ro＃Fortuna<11496><STEAM_1:0:445971189><>"
+L 01/12/2021 - 21:46:20: [admin.amxx] Login: "ALEXANDRA<11521><STEAM_1:0:1565203734><>" kicked due to invalid password (account "ALexandra") (address "41.107.78.217")
+L 01/12/2021 - 21:51:56: [high_ping_kicker.amxx] Highpingkick: "TALGAT<11530><STEAM_1:0:1088779118>" was kicked due highping (Average Ping "338")
+L 01/12/2021 - 21:56:04: [adminchat.amxx] Chat: "oarba_dupa_tine<11482><STEAM_0:1:111439526><>" chat "STF"
+L 01/12/2021 - 21:56:06: [adminchat.amxx] Chat: "DaN'EllA<11487><STEAM_0:0:43925123><>" chat "Bau"
+L 01/12/2021 - 21:56:11: [adminchat.amxx] Chat: "DaN'EllA<11487><STEAM_0:0:43925123><>" chat "da vreau"
+L 01/12/2021 - 21:56:26: [adminchat.amxx] Chat: "oarba_dupa_tine<11482><STEAM_0:1:111439526><>" chat "HHH  LOGIC"
+L 01/12/2021 - 21:56:41: [adminchat.amxx] Chat: "oarba_dupa_tine<11482><STEAM_0:1:111439526><>" chat "care nu vrea?"
+L 01/12/2021 - 21:56:44: [adminchat.amxx] Chat: "oarba_dupa_tine<11482><STEAM_0:1:111439526><>" chat "=))"
+L 01/12/2021 - 21:56:46: [high_ping_kicker.amxx] Highpingkick: "leon<11539><STEAM_1:0:734204022>" was kicked due highping (Average Ping "452")
+L 01/12/2021 - 21:56:51: [adminchat.amxx] Chat: "DaN'EllA<11487><STEAM_0:0:43925123><>" chat ":))"
+L 01/12/2021 - 21:57:05: [adminchat.amxx] Chat: "oarba_dupa_tine<11482><STEAM_0:1:111439526><>" chat "toate "vrea""
+L 01/12/2021 - 21:57:15: [adminchat.amxx] Chat: "DaN'EllA<11487><STEAM_0:0:43925123><>" chat "ei na"
+L 01/12/2021 - 21:57:52: [adminchat.amxx] Chat: "DaN'EllA<11487><STEAM_0:0:43925123><>" chat "tuscan?"
+L 01/12/2021 - 21:57:56: [adminchat.amxx] Chat: "oarba_dupa_tine<11482><STEAM_0:1:111439526><>" chat "da da"
+L 01/12/2021 - 21:58:20: [mapsmenu.amxx] Vote: "DaN'EllA<11487><STEAM_0:0:43925123><>" vote maps (map#1 "de_tuscan32") (map#2 "de_westwood") (map#3 "") (map#4 "")
+L 01/12/2021 - 21:58:32: [mapsmenu.amxx] Vote: Voting successful. Map will be changed to de_tuscan32
+L 01/12/2021 - 21:58:36: [adminchat.amxx] Chat: "DaN'EllA<11487><STEAM_0:0:43925123><>" tsay "LAST"
+L 01/12/2021 - 21:58:42: [mapsmenu.amxx] Vote: Result refused
+L 01/12/2021 - 21:59:16: [admincmd.amxx] Cmd: "DaN'EllA<11487><STEAM_0:0:43925123><>" changelevel "de_tuscan32"
+L 01/12/2021 - 21:59:21: -------- Mapchange to de_tuscan32 --------
+L 01/12/2021 - 21:59:22: [admin.amxx] Login: "DaN'EllA<11487><STEAM_0:0:43925123><>" became an admin (account "DaN'EllA") (access "bcdefghijkmnopqrstu") (address "79.113.190.121")
+L 01/12/2021 - 21:59:22: [admin.amxx] Login: "oarba_dupa_tine<11482><STEAM_0:1:111439526><>" became an admin (account "oarba_dupa_tine") (access "abcdefghijklmnopqrstuvx") (address "86.122.114.129")
+L 01/12/2021 - 21:59:24: [admin.amxx] Login: "DaN'EllA<11551><STEAM_0:0:43925123><>" became an admin (account "DaN'EllA") (access "bcdefghijkmnopqrstu") (address "79.113.190.121")
+L 01/12/2021 - 21:59:24: [admin.amxx] Login: "oarba_dupa_tine<11553><STEAM_0:1:111439526><>" became an admin (account "oarba_dupa_tine") (access "abcdefghijklmnopqrstuvx") (address "86.122.114.129")
+L 01/12/2021 - 21:59:31: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "amx_vipgold_everyone") (value "0")
+L 01/12/2021 - 21:59:31: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "amx_vipfree_everyone") (value "0")
+L 01/12/2021 - 21:59:31: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "sv_timeout") (value "300")
+L 01/12/2021 - 21:59:31: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "sv_unlag") (value "1")
+L 01/12/2021 - 21:59:31: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "sv_maxunlag") (value "1.5")
+L 01/12/2021 - 21:59:31: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "mp_autokick") (value "0")
+L 01/12/2021 - 21:59:31: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "mp_autoteambalance") (value "0")
+L 01/12/2021 - 21:59:31: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "mp_timelimit") (value "25")
+L 01/12/2021 - 22:00:01: [nightmod.amxx] [:::OFFICIAL:::] Este ora !t22:00 serverul trece pe setarile de noapte.(de_dust2 only)
+L 01/12/2021 - 22:00:10: [adminchat.amxx] Chat: "DaN'EllA<11551><STEAM_0:0:43925123><>" chat " 10 deja?:))"
+L 01/12/2021 - 22:00:32: [adminchat.amxx] Chat: "oarba_dupa_tine<11553><STEAM_0:1:111439526><>" chat "da.."
+L 01/12/2021 - 22:00:46: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" changelevel "de_dust2"
+L 01/12/2021 - 22:00:51: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" changelevel "de_dust2"
+L 01/12/2021 - 22:00:51: -------- Mapchange to de_dust2 --------
+L 01/12/2021 - 22:00:52: [admin.amxx] Login: "DaN'EllA<11551><STEAM_0:0:43925123><>" became an admin (account "DaN'EllA") (access "bcdefghijkmnopqrstu") (address "79.113.190.121")
+L 01/12/2021 - 22:00:52: [admin.amxx] Login: "oarba_dupa_tine<11553><STEAM_0:1:111439526><>" became an admin (account "oarba_dupa_tine") (access "abcdefghijklmnopqrstuvx") (address "86.122.114.129")
+L 01/12/2021 - 22:01:01: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "amx_vipgold_everyone") (value "1")
+L 01/12/2021 - 22:01:01: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "sv_timeout") (value "999")
+L 01/12/2021 - 22:01:01: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "sv_unlag") (value "1")
+L 01/12/2021 - 22:01:01: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "sv_maxunlag") (value "1.5")
+L 01/12/2021 - 22:01:01: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "mp_autokick") (value "0")
+L 01/12/2021 - 22:01:01: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "mp_autoteambalance") (value "0")
+L 01/12/2021 - 22:01:01: [admincmd.amxx] Cmd: "®     #.::OFFICIAL.INDUNGI.RO <0><><>" set cvar (name "mp_timelimit") (value "0")
+L 01/12/2021 - 22:02:42: [admincmd.amxx] Cmd: "oarba_dupa_tine<11553><STEAM_0:1:111439526><>" change nick to "buci-de-fier" "Cs.Raii.Ro＃Fortuna<11577><STEAM_1:0:445971189><>"
+L 01/12/2021 - 22:03:46: [adminchat.amxx] Chat: "oarba_dupa_tine<11553><STEAM_0:1:111439526><>" tsay "Admin freew"
+L 01/12/2021 - 22:05:47: [admincmd.amxx] Cmd: "DaN'EllA<11551><STEAM_0:0:43925123><>" change nick to "OFFICIAL" "145.239.116.25<11587><STEAM_1:0:2102077740><>"
+L 01/12/2021 - 22:09:42: [adminchat.amxx] Chat: "oarba_dupa_tine<11553><STEAM_0:1:111439526><>" chat "ma bate buci de fier.."
+L 01/12/2021 - 22:09:45: [adminchat.amxx] Chat: "oarba_dupa_tine<11553><STEAM_0:1:111439526><>" chat ":@"
+L 01/12/2021 - 22:09:52: [adminchat.amxx] Chat: "DaN'EllA<11551><STEAM_0:0:43925123><>" chat "si pe mine"
+L 01/12/2021 - 22:09:57: [adminchat.amxx] Chat: "oarba_dupa_tine<11553><STEAM_0:1:111439526><>" chat ":))"
+L 01/12/2021 - 22:12:41: [adminchat.amxx] Chat: "oarba_dupa_tine<11553><STEAM_0:1:111439526><>" chat "didi asta e una grasuta"
+L 01/12/2021 - 22:12:43: [adminchat.amxx] Chat: "oarba_dupa_tine<11553><STEAM_0:1:111439526><>" chat ":))"
+L 01/12/2021 - 22:12:51: [adminchat.amxx] Chat: "DaN'EllA<11551><STEAM_0:0:43925123><>" chat "de unde stii nebunule?"
+L 01/12/2021 - 22:12:56: [adminchat.amxx] Chat: "oarba_dupa_tine<11553><STEAM_0:1:111439526><>" chat "eeee"
+L 01/12/2021 - 22:13:04: [adminchat.amxx] Chat: "oarba_dupa_tine<11553><STEAM_0:1:111439526><>" chat "mai stiu si eu"
+L 01/12/2021 - 22:13:09: [adminchat.amxx] Chat: "DaN'EllA<11551><STEAM_0:0:43925123><>" chat "si asta se dadea p-aici zana?"
+L 01/12/2021 - 22:13:11: [adminchat.amxx] Chat: "oarba_dupa_tine<11553><STEAM_0:1:111439526><>" chat "putin "
+L 01/12/2021 - 22:13:35: [adminchat.amxx] Chat: "oarba_dupa_tine<11553><STEAM_0:1:111439526><>" chat "cam asa ceva"
+L 01/12/2021 - 22:13:54: [admincmd.amxx] Kick: "DaN'EllA<11551><STEAM_0:0:43925123><>" kick "TALGAT<11566><STEAM_1:0:1088779118><>" (reason "")
+L 01/12/2021 - 22:13:58: [adminchat.amxx] Chat: "DaN'EllA<11551><STEAM_0:0:43925123><>" chat ":))"
+L 01/12/2021 - 22:14:15: [adminchat.amxx] Chat: "oarba_dupa_tine<11553><STEAM_0:1:111439526><>" chat "iulu asta e cam prost"
+L 01/12/2021 - 22:14:19: [adminchat.amxx] Chat: "oarba_dupa_tine<11553><STEAM_0:1:111439526><>" chat "iti va da add"
+L 01/12/2021 - 22:14:25: [adminchat.amxx] Chat: "oarba_dupa_tine<11553><STEAM_0:1:111439526><>" chat "sunt sigur"
+L 01/12/2021 - 22:14:39: [adminchat.amxx] Chat: "DaN'EllA<11551><STEAM_0:0:43925123><>" chat "daca are bani pe steam"
+L 01/12/2021 - 22:14:41: [adminchat.amxx] Chat: "DaN'EllA<11551><STEAM_0:0:43925123><>" chat ":))"
+L 01/12/2021 - 22:14:46: [adminchat.amxx] Chat: "DaN'EllA<11551><STEAM_0:0:43925123><>" chat "pana acum dadea sigur"
+L 01/12/2021 - 22:15:35: [adminchat.amxx] Chat: "oarba_dupa_tine<11553><STEAM_0:1:111439526><>" chat "zici?"
+L 01/12/2021 - 22:15:41: [adminchat.amxx] Chat: "DaN'EllA<11551><STEAM_0:0:43925123><>" chat "ma gandesc si eu "
+L 01/12/2021 - 22:15:51: [admincmd.amxx] Kick: "DaN'EllA<11551><STEAM_0:0:43925123><>" kick "TALGAT<11618><STEAM_1:0:1088779118><>" (reason "")
+L 01/12/2021 - 22:16:38: [admincmd.amxx] Kick: "DaN'EllA<11551><STEAM_0:0:43925123><>" kick "TALGAT<11619><STEAM_1:0:1088779118><>" (reason "")
+L 01/12/2021 - 22:18:06: [high_ping_kicker.amxx] Highpingkick: "TAYFUN<11627><STEAM_1:0:315920331>" was kicked due highping (Average Ping "346")
+L 01/12/2021 - 22:18:18: [adminchat.amxx] Chat: "DaN'EllA<11551><STEAM_0:0:43925123><>" chat "5 cu 10 sau nu vad bine?"
+L 01/12/2021 - 22:18:33: [adminchat.amxx] Chat: "oarba_dupa_tine<11553><STEAM_0:1:111439526><>" chat "cat?"
+L 01/12/2021 - 22:18:43: [adminchat.amxx] Chat: "DaN'EllA<11551><STEAM_0:0:43925123><>" chat ":))"
+L 01/12/2021 - 22:18:46: [adminchat.amxx] Chat: "oarba_dupa_tine<11553><STEAM_0:1:111439526><>" chat ":)__)_)|"
+L 01/12/2021 - 22:19:08: [adminchat.amxx] Chat: "oarba_dupa_tine<11553><STEAM_0:1:111439526><>" chat "ma tine fata ocupat"
+L 01/12/2021 - 22:19:14: [adminchat.amxx] Chat: "oarba_dupa_tine<11553><STEAM_0:1:111439526><>" chat "desenez rochii"
+L 01/12/2021 - 22:19:18: [adminchat.amxx] Chat: "oarba_dupa_tine<11553><STEAM_0:1:111439526><>" chat ":@@@@@@@"
+L 01/12/2021 - 22:19:21: [adminchat.amxx] Chat: "DaN'EllA<11551><STEAM_0:0:43925123><>" chat ":))))))))"
+L 01/12/2021 - 22:21:06: [adminchat.amxx] Chat: "DaN'EllA<11551><STEAM_0:0:43925123><>" chat "brb"
+L 01/12/2021 - 22:22:44: [adminchat.amxx] Chat: "Didi<11562><STEAM_0:1:543981597><>" chat "oarba cum facem cu adminul??"
+L 01/12/2021 - 22:23:45: [adminchat.amxx] Chat: "Didi<11562><STEAM_0:1:543981597><>" chat "pe steam?"
+L 01/12/2021 - 22:25:36: [adminchat.amxx] Chat: "Cristian !<11614><STEAM_0:0:535844><>" chat " hagrid are wall, e terminat dar are wall"
+L 01/12/2021 - 22:27:00: [admincmd.amxx] Ban: "DaN'EllA<11551><STEAM_0:0:43925123><>" ban and kick "Hagrid<11628><STEAM_1:0:691349411><>" (minutes "0") (reason "wall")
+L 01/12/2021 - 22:27:01: [adminchat.amxx] Chat: "Didi<11562><STEAM_0:1:543981597><>" chat " nu merge sa te bag"
+L 01/12/2021 - 22:27:06: [adminchat.amxx] Chat: "DaN'EllA<11551><STEAM_0:0:43925123><>" chat "ce bine"
+L 01/12/2021 - 22:27:12: [adminchat.amxx] Chat: "oarba_dupa_tine<11553><STEAM_0:1:111439526><>" chat ":))))))))))))"
+L 01/12/2021 - 22:27:23: [adminchat.amxx] Chat: "oarba_dupa_tine<11553><STEAM_0:1:111439526><>" chat "de ce boss"
+L 01/12/2021 - 22:27:40: [adminchat.amxx] Chat: "DaN'EllA<11551><STEAM_0:0:43925123><>" chat "pai?"
+L 01/12/2021 - 22:27:47: [adminchat.amxx] Chat: "oarba_dupa_tine<11553><STEAM_0:1:111439526><>" chat "pai vrea admin"
+L 01/12/2021 - 22:27:59: [adminchat.amxx] Chat: "DaN'EllA<11551><STEAM_0:0:43925123><>" chat "si s-a inventat forum"
+L 01/12/2021 - 22:28:19: [adminchat.amxx] Chat: "oarba_dupa_tine<11553><STEAM_0:1:111439526><>" chat "ok"
+L 01/12/2021 - 22:28:34: [adminchat.amxx] Chat: "DaN'EllA<11551><STEAM_0:0:43925123><>" chat "acum da-i ca tot i-ai zis"
+L 01/12/2021 - 22:30:29: [adminchat.amxx] Chat: "DaN'EllA<11551><STEAM_0:0:43925123><>" chat "m-au mutat pe gold..."
+L 01/12/2021 - 22:30:42: [adminchat.amxx] Chat: "craciunitz<11282><STEAM_0:1:74552633><>" chat "uita-te pe tuga te rog"
+L 01/12/2021 - 22:31:00: [adminchat.amxx] Chat: "craciunitz<11282><STEAM_0:1:74552633><>" chat "cred ca are wall"
+L 01/12/2021 - 22:31:03: [adminchat.amxx] Chat: "oarba_dupa_tine<11553><STEAM_0:1:111439526><>" chat "cn?"
+L 01/12/2021 - 22:31:12: [adminchat.amxx] Chat: "DaN'EllA<11551><STEAM_0:0:43925123><>" chat "ce stiu eu"
+L 01/12/2021 - 22:31:35: [high_ping_kicker.amxx] Highpingkick: "TALGAT<11656><STEAM_1:0:1088779118>" was kicked due highping (Average Ping "376")
+L 01/12/2021 - 22:32:43: [adminchat.amxx] Chat: "iulu[TGV]<11576><STEAM_0:0:551146960><>" chat "brb "
+L 01/12/2021 - 22:33:05: [admincmd.amxx] Ban: "DaN'EllA<11551><STEAM_0:0:43925123><>" ban and kick "TuGa<11641><STEAM_1:0:913376972><>" (minutes "0") (reason "wall")
+L 01/12/2021 - 22:43:57: [adminchat.amxx] Chat: "ES^ | ^seductive^<11621><STEAM_0:1:48916698><>" chat "aim grant"
+L 01/12/2021 - 22:44:08: [adminchat.amxx] Chat: "CaTa<11635><STEAM_0:1:40710018><>" chat " haker ala are aim !"
+L 01/12/2021 - 22:44:19: [adminchat.amxx] Chat: "MAGNLJM BOMBARDIER!<11617><STEAM_1:0:1230869319><>" chat "GRANT THEFT AUTO ARE AIM"
+L 01/12/2021 - 22:44:25: [adminchat.amxx] Chat: "CaTa<11635><STEAM_0:1:40710018><>" chat " si wall :))"
+L 01/12/2021 - 22:44:27: [admincmd.amxx] Ban: "oarba_dupa_tine<11553><STEAM_0:1:111439526><>" ban and kick "GRANT THEFT AUTO V Hacker<11675><STEAM_1:0:1874996773><>" (minutes "0") (reason "aim")
+L 01/12/2021 - 22:49:21: [adminchat.amxx] Chat: "iulu[TGV]<11576><STEAM_0:0:551146960><>" chat " va uitati la mysterious asta"
+L 01/12/2021 - 22:54:55: [admin.amxx] Login: "Osiris<11701><STEAM_0:1:14001491><>" became an admin (account "Osiris") (access "bcdefhijkmnopqrst") (address "86.25.36.194")
+L 01/12/2021 - 22:54:56: [admin.amxx] Login: "Osiris<11702><STEAM_0:1:14001491><>" became an admin (account "Osiris") (access "bcdefhijkmnopqrst") (address "86.25.36.194")
+L 01/12/2021 - 22:55:19: [admincmd.amxx] Kick: "Osiris<11702><STEAM_0:1:14001491><>" kick "Hawkas<11560><STEAM_1:0:1314866272><>" (reason "")
+L 01/12/2021 - 22:55:29: [adminchat.amxx] Chat: "Osiris<11702><STEAM_0:1:14001491><>" chat "hola"
+L 01/12/2021 - 22:55:32: [adminchat.amxx] Chat: "DaN'EllA<11551><STEAM_0:0:43925123><>" chat "Buna"
+L 01/12/2021 - 22:57:10: [admincmd.amxx] Kick: "Osiris<11702><STEAM_0:1:14001491><>" kick "Lost-Souls | Player[3]<11567><STEAM_1:0:1782291213><>" (reason "")
+L 01/12/2021 - 22:58:40: [adminchat.amxx] Chat: "Daa<11662><STEAM_1:0:1942834652><>" chat " Gambit are wall"
+L 01/12/2021 - 23:08:27: [admin.amxx] Login: "oarba_dupa_tine<11553><STEAM_0:1:111439526><>" became an admin (account "oarba_dupa_tine") (access "abcdefghijklmnopqrstuvx") (address "86.122.114.129")
+L 01/12/2021 - 23:08:27: [admin.amxx] Login: "Osiris<11702><STEAM_0:1:14001491><>" became an admin (account "Osiris") (access "bcdefhijkmnopqrst") (address "86.25.36.194")
+L 01/12/2021 - 23:08:27: [admin.amxx] Login: "DaN'EllA<11551><STEAM_0:0:43925123><>" became an admin (account "DaN'EllA") (access "bcdefghijkmnopqrstu") (address "79.113.190.121")
+L 01/12/2021 - 23:10:56: [admin.amxx] Login: "Didi<11562><STEAM_0:1:543981597><>" kicked due to invalid password (account "Didi") (address "94.219.61.166")
+L 01/12/2021 - 23:10:56: [admin.amxx] Login: "oarba_dupa_tine<11553><STEAM_0:1:111439526><>" became an admin (account "oarba_dupa_tine") (access "abcdefghijklmnopqrstuvx") (address "86.122.114.129")
+L 01/12/2021 - 23:10:56: [admin.amxx] Login: "Osiris<11702><STEAM_0:1:14001491><>" became an admin (account "Osiris") (access "bcdefhijkmnopqrst") (address "86.25.36.194")
+L 01/12/2021 - 23:11:35: [high_ping_kicker.amxx] Highpingkick: "<Warrior> Player<11706><STEAM_1:0:709506174>" was kicked due highping (Average Ping "301")
+L 01/12/2021 - 23:12:07: [admin.amxx] Login: "Didi<11731><STEAM_0:1:543981597><>" kicked due to invalid password (account "Didi") (address "94.219.61.166")
+L 01/12/2021 - 23:12:41: [admin.amxx] Login: "Didi<11732><STEAM_0:1:543981597><>" became an admin (account "Didi") (access "bcdefij") (address "94.219.61.166")
+L 01/12/2021 - 23:13:17: [adminchat.amxx] Chat: "oarba_dupa_tine<11553><STEAM_0:1:111439526><>" chat "Bun venit "
+L 01/12/2021 - 23:13:20: [adminchat.amxx] Chat: "oarba_dupa_tine<11553><STEAM_0:1:111439526><>" chat ":)"
+L 01/12/2021 - 23:13:36: [adminchat.amxx] Chat: "Osiris<11702><STEAM_0:1:14001491><>" chat "bine m-ai gasit"
+L 01/12/2021 - 23:13:39: [adminchat.amxx] Chat: "Osiris<11702><STEAM_0:1:14001491><>" chat ":("
+L 01/12/2021 - 23:13:47: [adminchat.amxx] Chat: "oarba_dupa_tine<11553><STEAM_0:1:111439526><>" chat "cu didi vorbeam"
+L 01/12/2021 - 23:14:00: [adminchat.amxx] Chat: "Osiris<11702><STEAM_0:1:14001491><>" chat "esti naspa"
+L 01/12/2021 - 23:15:15: [adminchat.amxx] Chat: "Osiris<11702><STEAM_0:1:14001491><>" chat "hello Didi"
+L 01/12/2021 - 23:16:00: [adminchat.amxx] Chat: "Didi<11732><STEAM_0:1:543981597><>" chat "hello :)"
+L 01/12/2021 - 23:16:09: [adminchat.amxx] Chat: "iulu[TGV]<11576><STEAM_0:0:551146960><>" chat "nb all"
+L 01/12/2021 - 23:17:47: [adminchat.amxx] Chat: "oarba_dupa_tine<11553><STEAM_0:1:111439526><>" chat "osiris?"
+L 01/12/2021 - 23:17:54: [adminchat.amxx] Chat: "Osiris<11702><STEAM_0:1:14001491><>" chat "da"
+L 01/12/2021 - 23:17:56: [adminchat.amxx] Chat: "oarba_dupa_tine<11553><STEAM_0:1:111439526><>" chat "o mai ajuti tu cu ce nu stie"
+L 01/12/2021 - 23:18:01: [adminchat.amxx] Chat: "oarba_dupa_tine<11553><STEAM_0:1:111439526><>" chat "e la inceput"
+L 01/12/2021 - 23:18:11: [adminchat.amxx] Chat: "Osiris<11702><STEAM_0:1:14001491><>" chat "desigur"
+L 01/12/2021 - 23:18:18: [adminchat.amxx] Chat: "Didi<11732><STEAM_0:1:543981597><>" chat "ms ms"
+L 01/12/2021 - 23:18:19: [adminchat.amxx] Chat: "Osiris<11702><STEAM_0:1:14001491><>" chat "Didi, pasul 1: amx_banip oarba"
+L 01/12/2021 - 23:18:22: [adminchat.amxx] Chat: "oarba_dupa_tine<11553><STEAM_0:1:111439526><>" chat "noapte buna"
+L 01/12/2021 - 23:18:29: [adminchat.amxx] Chat: "oarba_dupa_tine<11553><STEAM_0:1:111439526><>" chat ":))"
+L 01/12/2021 - 23:18:31: [adminchat.amxx] Chat: "Didi<11732><STEAM_0:1:543981597><>" chat "noapte buna"
+L 01/12/2021 - 23:18:34: [adminchat.amxx] Chat: "Osiris<11702><STEAM_0:1:14001491><>" chat ":D nb"
+L 01/12/2021 - 23:19:47: [adminchat.amxx] Chat: "Osiris<11702><STEAM_0:1:14001491><>" chat "de unde esti Didi?"
+L 01/12/2021 - 23:20:01: [admincmd.amxx] Cmd: "®     # .::OFFICIAL.INDUNGI.RO<0><><>" changelevel "de_dust2"
+L 01/12/2021 - 23:20:03: [adminchat.amxx] Chat: "Didi<11732><STEAM_0:1:543981597><>" chat "cta dar stau in germania"
+L 01/12/2021 - 23:20:06: -------- Mapchange to de_dust2 --------
+L 01/12/2021 - 23:20:06: [admin.amxx] Login: "Osiris<11702><STEAM_0:1:14001491><>" became an admin (account "Osiris") (access "bcdefhijkmnopqrst") (address "86.25.36.194")
+L 01/12/2021 - 23:20:06: [admin.amxx] Login: "Didi<11732><STEAM_0:1:543981597><>" became an admin (account "Didi") (access "bcdefij") (address "94.219.61.166")
+L 01/12/2021 - 23:20:15: [admincmd.amxx] Cmd: "®     # .::OFFICIAL.INDUNGI.RO<0><><>" set cvar (name "amx_vipgold_everyone") (value "1")
+L 01/12/2021 - 23:20:15: [admincmd.amxx] Cmd: "®     # .::OFFICIAL.INDUNGI.RO<0><><>" set cvar (name "sv_timeout") (value "999")
+L 01/12/2021 - 23:20:15: [admincmd.amxx] Cmd: "®     # .::OFFICIAL.INDUNGI.RO<0><><>" set cvar (name "sv_unlag") (value "1")
+L 01/12/2021 - 23:20:15: [admincmd.amxx] Cmd: "®     # .::OFFICIAL.INDUNGI.RO<0><><>" set cvar (name "sv_maxunlag") (value "1.5")
+L 01/12/2021 - 23:20:15: [admincmd.amxx] Cmd: "®     # .::OFFICIAL.INDUNGI.RO<0><><>" set cvar (name "mp_autokick") (value "0")
+L 01/12/2021 - 23:20:15: [admincmd.amxx] Cmd: "®     # .::OFFICIAL.INDUNGI.RO<0><><>" set cvar (name "mp_autoteambalance") (value "0")
+L 01/12/2021 - 23:20:15: [admincmd.amxx] Cmd: "®     # .::OFFICIAL.INDUNGI.RO<0><><>" set cvar (name "mp_timelimit") (value "0")
+L 01/12/2021 - 23:20:28: [adminchat.amxx] Chat: "Didi<11732><STEAM_0:1:543981597><>" chat "tu?"
+L 01/12/2021 - 23:20:55: [adminchat.amxx] Chat: "Osiris<11702><STEAM_0:1:14001491><>" chat "din Roman, dar stau in UK :D"
+L 01/12/2021 - 23:21:16: [adminchat.amxx] Chat: "Didi<11732><STEAM_0:1:543981597><>" chat "cum e acolo? ca ce se vede la tv nu prea e ok"
+L 01/12/2021 - 23:22:10: [adminchat.amxx] Chat: "Osiris<11702><STEAM_0:1:14001491><>" chat "te descurci asa in mare cu cs-ul, nu?"
+L 01/12/2021 - 23:22:16: [adminchat.amxx] Chat: "Didi<11732><STEAM_0:1:543981597><>" chat "am fost admin acum 10 ani cred"
+L 01/12/2021 - 23:22:26: [adminchat.amxx] Chat: "Didi<11732><STEAM_0:1:543981597><>" chat "de atunci nu am mai jucat :))"
+L 01/12/2021 - 23:22:28: [adminchat.amxx] Chat: "Osiris<11702><STEAM_0:1:14001491><>" chat "atunci e bine"
+L 01/12/2021 - 23:22:39: [adminchat.amxx] Chat: "Didi<11732><STEAM_0:1:543981597><>" chat "dar nu mai tin minte comenzile"
+L 01/12/2021 - 23:23:26: [adminchat.amxx] Chat: "Didi<11732><STEAM_0:1:543981597><>" chat "in baza la ei"
+L 01/12/2021 - 23:23:41: [high_ping_kicker.amxx] Highpingkick: "cpuniu<11750><STEAM_1:0:349605230>" was kicked due highping (Average Ping "302")
+L 01/12/2021 - 23:33:22: [adminchat.amxx] Chat: "Osiris<11702><STEAM_0:1:14001491><>" chat "ai jucat cs asa mai serios inainte?"
+L 01/12/2021 - 23:33:31: [adminchat.amxx] Chat: "Didi<11732><STEAM_0:1:543981597><>" chat "cand eram mica :)))"
+L 01/12/2021 - 23:33:38: [adminchat.amxx] Chat: "Didi<11732><STEAM_0:1:543981597><>" chat "la 17 ani"
+L 01/12/2021 - 23:33:42: [adminchat.amxx] Chat: "Osiris<11702><STEAM_0:1:14001491><>" chat "cum era atunci, cu lanuri sau doar publice"
+L 01/12/2021 - 23:33:47: [adminchat.amxx] Chat: "Didi<11732><STEAM_0:1:543981597><>" chat "rupeam cs-ul"
+L 01/12/2021 - 23:33:54: [adminchat.amxx] Chat: "Osiris<11702><STEAM_0:1:14001491><>" chat ":)"
+L 01/12/2021 - 23:33:57: [adminchat.amxx] Chat: "Didi<11732><STEAM_0:1:543981597><>" chat "erau si publice"
+L 01/12/2021 - 23:34:30: [adminchat.amxx] Chat: "Didi<11732><STEAM_0:1:543981597><>" chat "merg la o tig"
+L 01/12/2021 - 23:34:36: [adminchat.amxx] Chat: "Osiris<11702><STEAM_0:1:14001491><>" chat "k"
+L 01/12/2021 - 23:35:34: [high_ping_kicker.amxx] Highpingkick: "Mohamed<11775><STEAM_1:0:260637466>" was kicked due highping (Average Ping "301")
+L 01/12/2021 - 23:37:48: [high_ping_kicker.amxx] Highpingkick: "Beryl<11725><STEAM_1:0:1019236994>" was kicked due highping (Average Ping "303")
+L 01/12/2021 - 23:41:28: [adminchat.amxx] Chat: "Didi<11732><STEAM_0:1:543981597><>" chat "back"
+L 01/12/2021 - 23:41:33: [adminchat.amxx] Chat: "Osiris<11702><STEAM_0:1:14001491><>" chat "super"
+L 01/12/2021 - 23:41:42: [adminchat.amxx] Chat: "Didi<11732><STEAM_0:1:543981597><>" chat "cand ai timp imi poti scrie si mie din comenzi??"
+L 01/12/2021 - 23:41:52: [adminchat.amxx] Chat: "Osiris<11702><STEAM_0:1:14001491><>" chat "poi"
+L 01/12/2021 - 23:42:06: [adminchat.amxx] Chat: "Didi<11732><STEAM_0:1:543981597><>" chat "pe steam sau aici"
+L 01/12/2021 - 23:42:07: [adminchat.amxx] Chat: "Osiris<11702><STEAM_0:1:14001491><>" chat "amx_kick/ban/slay/slap astea sunt uzuale"
+L 01/12/2021 - 23:42:19: [adminchat.amxx] Chat: "Didi<11732><STEAM_0:1:543981597><>" chat "astea da"
+L 01/12/2021 - 23:42:28: [adminchat.amxx] Chat: "Osiris<11702><STEAM_0:1:14001491><>" chat "apoi ca sa dai vot la harta scrii amx_votemapmenu"
+L 01/12/2021 - 23:42:39: [adminchat.amxx] Chat: "Osiris<11702><STEAM_0:1:14001491><>" chat "si iti apare pe ecran o lista cu hartile"
+L 01/12/2021 - 23:43:01: [adminchat.amxx] Chat: "Osiris<11702><STEAM_0:1:14001491><>" chat "selectezi de acolo2 mape si apoi apesi pe 8 parca, start vot"
+L 01/12/2021 - 23:43:24: [adminchat.amxx] Chat: "Osiris<11702><STEAM_0:1:14001491><>" chat "ca sa schimbi harta, scrii in consola amx_mapmenu"
+L 01/12/2021 - 23:43:37: [adminchat.amxx] Chat: "Osiris<11702><STEAM_0:1:14001491><>" chat "si tot asa iti apare o lista cu hartile si selectezi de acolo"
+L 01/12/2021 - 23:43:39: [adminchat.amxx] Chat: "Didi<11732><STEAM_0:1:543981597><>" chat "da"
+L 01/12/2021 - 23:44:01: [adminchat.amxx] Chat: "Didi<11732><STEAM_0:1:543981597><>" chat "mi le amintesc incet incet"
+L 01/12/2021 - 23:44:12: [adminchat.amxx] Chat: "Osiris<11702><STEAM_0:1:14001491><>" chat "ai sa le gasesti pe parcurs"
+L 01/12/2021 - 23:45:08: [adminchat.amxx] Chat: "Osiris<11702><STEAM_0:1:14001491><>" chat "daca e de dat ban, in primul rand sa faci un demo"
+L 01/12/2021 - 23:45:19: [adminchat.amxx] Chat: "Didi<11732><STEAM_0:1:543981597><>" tsay "si ala cum il faci?"
+L 01/12/2021 - 23:45:21: [adminchat.amxx] Chat: "Osiris<11702><STEAM_0:1:14001491><>" chat "dar deobicei mai sunt si alti admini, asa ca poti cere opinii"
+L 01/12/2021 - 23:45:27: [adminchat.amxx] Chat: "Didi<11732><STEAM_0:1:543981597><>" chat "si ala cum il faci"
+L 01/12/2021 - 23:45:43: [adminchat.amxx] Chat: "Osiris<11702><STEAM_0:1:14001491><>" chat "scrii in consola "recod x""
+L 01/12/2021 - 23:45:51: [adminchat.amxx] Chat: "Osiris<11702><STEAM_0:1:14001491><>" chat "x=numele jucatorului"
+L 01/12/2021 - 23:45:55: [adminchat.amxx] Chat: "Didi<11732><STEAM_0:1:543981597><>" chat "msms\"
+L 01/12/2021 - 23:46:08: [adminchat.amxx] Chat: "Osiris<11702><STEAM_0:1:14001491><>" chat "dar daca mai sunt si alti admini on"
+L 01/12/2021 - 23:46:15: [adminchat.amxx] Chat: "Osiris<11702><STEAM_0:1:14001491><>" chat "Mai bine ceri o parere de la ei"
+L 01/12/2021 - 23:46:21: [adminchat.amxx] Chat: "Didi<11732><STEAM_0:1:543981597><>" chat "da"
+L 01/12/2021 - 23:46:29: [adminchat.amxx] Chat: "Didi<11732><STEAM_0:1:543981597><>" chat "nu o sa ma bag la astea acum"
+L 01/12/2021 - 23:46:36: [adminchat.amxx] Chat: "Osiris<11702><STEAM_0:1:14001491><>" chat "la cei care au aim/wall super evident, la aia le dai ban automat"
+L 01/12/2021 - 23:48:04: [adminchat.amxx] Chat: "bikaz ajm stjupid<11768><STEAM_1:0:394819654><>" chat "smoker wh 100%"
+L 01/12/2021 - 23:48:32: [adminchat.amxx] Chat: "La fugarit iepuri<11752><STEAM_0:0:19781373><>" chat "te uiti careva pe SMoker te rog"
+L 01/12/2021 - 23:48:34: [adminchat.amxx] Chat: "La fugarit iepuri<11752><STEAM_0:0:19781373><>" chat "?"
+L 01/12/2021 - 23:48:39: [adminchat.amxx] Chat: "Didi<11732><STEAM_0:1:543981597><>" chat "si la astia care sunt afk... nu se da kick"
+L 01/12/2021 - 23:48:39: [adminchat.amxx] Chat: "La fugarit iepuri<11752><STEAM_0:0:19781373><>" chat "ms"
+L 01/12/2021 - 23:49:31: [adminchat.amxx] Chat: "Osiris<11702><STEAM_0:1:14001491><>" chat "le dam kick, dar eu prefer sa le dau doar cand e sv plin"
+L 01/12/2021 - 23:49:48: [adminchat.amxx] Chat: "Didi<11732><STEAM_0:1:543981597><>" chat "am inteles"
+L 01/12/2021 - 23:49:48: [adminchat.amxx] Chat: "Osiris<11702><STEAM_0:1:14001491><>" chat "ca sa fie jucatori, chiar daca sunt afk, mai dai un slay ceva"
+L 01/12/2021 - 23:50:02: [adminchat.amxx] Chat: "Osiris<11702><STEAM_0:1:14001491><>" chat "dar daca vezi ca sunt 16v16, poti sa ii mai iei la kick"
+L 01/12/2021 - 23:50:10: [adminchat.amxx] Chat: "Dante<11797><STEAM_0:1:444048646><>" chat " oro.. bikaz are wall.. fa si tu un demo.."
+L 01/12/2021 - 23:51:30: [adminchat.amxx] Chat: "Osiris<11702><STEAM_0:1:14001491><>" chat "cand esti spect, poti apasa W sau S ca sa activezi sau dezactivezi espul"
+L 01/12/2021 - 23:51:39: [adminchat.amxx] Chat: "Osiris<11702><STEAM_0:1:14001491><>" chat "asta de vezi patrate"
+L 01/12/2021 - 23:51:48: [adminchat.amxx] Chat: "Didi<11732><STEAM_0:1:543981597><>" chat "tromaus mi se pare suspect"
+L 01/12/2021 - 23:52:22: [adminchat.amxx] Chat: "Osiris<11702><STEAM_0:1:14001491><>" chat "m-am mai uitat pe ele zilele trecute si da, pare suspect"
+L 01/12/2021 - 23:52:32: [adminchat.amxx] Chat: "bikaz ajm stjupid<11768><STEAM_1:0:394819654><>" chat "admin ?"
+L 01/12/2021 - 23:54:51: [adminchat.amxx] Chat: "Osiris<11702><STEAM_0:1:14001491><>" chat "baga primul ban pls"
+L 01/12/2021 - 23:55:01: [adminchat.amxx] Chat: "Didi<11732><STEAM_0:1:543981597><>" chat "smoker?"
+L 01/12/2021 - 23:55:02: [adminchat.amxx] Chat: "Osiris<11702><STEAM_0:1:14001491><>" chat "amx_ban smoker 0 wall"
+L 01/12/2021 - 23:55:10: [adminchat.amxx] Chat: "Didi<11732><STEAM_0:1:543981597><>" chat "si poza cva?"
+L 01/12/2021 - 23:55:12: [adminchat.amxx] Chat: "Osiris<11702><STEAM_0:1:14001491><>" chat "ne"
+L 01/12/2021 - 23:55:16: [adminchat.amxx] Chat: "Osiris<11702><STEAM_0:1:14001491><>" chat "am eu demo"
+L 01/12/2021 - 23:55:26: [admincmd.amxx] Ban: "Didi<11732><STEAM_0:1:543981597><>" ban and kick "Smoker<11783><STEAM_1:0:711317426><>" (minutes "0") (reason "wall")
+L 01/12/2021 - 23:55:48: [adminchat.amxx] Chat: "Osiris<11702><STEAM_0:1:14001491><>" chat "teoretic trebuie sa iti fac cont pe forum si sa postezi banurile cu dovada"
+L 01/12/2021 - 23:56:01: [adminchat.amxx] Chat: "Osiris<11702><STEAM_0:1:14001491><>" chat "ca sunt care fac reclamatie"
+L 01/12/2021 - 23:56:08: [adminchat.amxx] Chat: "Osiris<11702><STEAM_0:1:14001491><>" chat "dar la asta am eu demo"
+L 01/12/2021 - 23:56:21: [adminchat.amxx] Chat: "Didi<11732><STEAM_0:1:543981597><>" chat "ok"
+L 01/12/2021 - 23:56:30: [adminchat.amxx] Chat: "Osiris<11702><STEAM_0:1:14001491><>" chat "bikaz e urmatoru?"
+L 01/12/2021 - 23:56:36: [adminchat.amxx] Chat: "Didi<11732><STEAM_0:1:543981597><>" chat "am citit in regulament"
+L 01/12/2021 - 23:56:38: [adminchat.amxx] Chat: "Didi<11732><STEAM_0:1:543981597><>" chat "ma uit"
+L 01/12/2021 - 23:56:54: [adminchat.amxx] Chat: "Osiris<11702><STEAM_0:1:14001491><>" chat "poti scrie in consola, Record bikaz"
+L 01/12/2021 - 23:57:02: [adminchat.amxx] Chat: "Osiris<11702><STEAM_0:1:14001491><>" chat "si iti salveaza fisierul"
+L 01/12/2021 - 23:58:09: [adminchat.amxx] Chat: "MAGNLJM BOMBARDIER!<11806><STEAM_1:0:1230869319><>" chat "bikaz ajm cred ca are wall ."
+L 01/12/2021 - 23:58:12: [adminchat.amxx] Chat: "Didi<11732><STEAM_0:1:543981597><>" chat "xenon"
+L 01/12/2021 - 23:58:30: [adminchat.amxx] Chat: "Osiris<11702><STEAM_0:1:14001491><>" chat "ce e cu el?"
+L 01/12/2021 - 23:58:41: [adminchat.amxx] Chat: "Didi<11732><STEAM_0:1:543981597><>" chat "mi se pare ca are cva"
+L 01/12/2021 - 23:58:59: [adminchat.amxx] Chat: "Osiris<11702><STEAM_0:1:14001491><>" chat "si ce zici?"
+L 01/12/2021 - 23:59:06: [adminchat.amxx] Chat: "Didi<11732><STEAM_0:1:543981597><>" chat "am dat record la bikaz"
+L 01/12/2021 - 23:59:19: [adminchat.amxx] Chat: "Osiris<11702><STEAM_0:1:14001491><>" chat "oki"
+L 01/12/2021 - 23:59:28: [adminchat.amxx] Chat: "Didi<11732><STEAM_0:1:543981597><>" chat "a luat 3 deoodata"

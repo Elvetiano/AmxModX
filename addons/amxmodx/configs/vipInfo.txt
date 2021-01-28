@@ -1,0 +1,41 @@
+<html>
+<head>
+<style type="text/css">
+body
+{
+	background-color: #000000;
+	font-family:Verdana;
+}
+</style>
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1257">
+</head>
+
+<font size="1" color="#40FF00"><b><center>Ce avantaje are VIP-ul?</center></b></font><br />
+<font size="1" color="#ffff99">
+<b>
+<LI TYPE=square>Meniul VIP-ului apare din a 3-a runda sau prin comanda /vmenu!</LI><br>
+* <font color=#80FF00>La CT :</font><br>                                                                                                         
+<font color=#99ccff>1. AK47+DEAGLE+SET GRENADE gratis.<br>
+2. M4A1+DEAGLE+SET GRENADE gratis.<br></font>
+<br>
+* <font color=#80FF00>La T :</font><br> 
+<font color=#99ccff>1. AK47+DEAGLE+SET GRENADE gratis.<br>
+2. M4A1+DEAGLE+SET GRENADE gratis.<br></font>
+<br>
+<LI TYPE=square>INFO:</LI><br>
+Incepi runda cu 100 HP / 100 AP / +1000 $ + defuse kit (Only CT)<br>
+Primesti: 5HP, 5AP / kill normal; 10HP, 10AP / hs; 15HP, 15AP / kill cu lama; 20HP, 20AP / hs cu lama<br>
+Primesti: 400 $ / kill normal; 600 $ / hs<br>
+Poti sari de 2 ori.<br> 
+Apari in TAB & HUD ca VIP.<br>
+Ai bullet damage in timp real.<br>
+Ai model de vip.<br>
+Ai parasuta.<br>
+Tastezi <font color=#80FFFF>/vips</font> pentru a vedea <font color=#00FF00>VIP-ii online.</font><br>
+<br>
+<font size="1" color=#FF0000><strong>Pret si contact!</strong></font><br>
+Pret VIP: <font color=#44eafc>5 Euro<br></font>
+Contact: <font color=#44eafc>oarba_28.official@yahoo.com<br></font>
+
+</body>
+</html>

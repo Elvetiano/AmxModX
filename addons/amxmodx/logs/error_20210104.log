@@ -1,0 +1,198 @@
+L 01/04/2021 - 02:54:11: Start of error session.
+L 01/04/2021 - 02:54:11: Info (map "(null)") (file "addons/amxmodx/logs/error_20210104.log")
+L 01/04/2021 - 02:54:11: Error parsing gameconfig file "cstrike/addons/amxmodx/data/gamedata/common.games.txt":
+L 01/04/2021 - 02:54:11: Error 1 on line 0, col 0: Stream failed to open
+L 01/04/2021 - 03:08:27: Start of error session.
+L 01/04/2021 - 03:08:27: Info (map "de_dust2") (file "addons/amxmodx/logs/error_20210104.log")
+L 01/04/2021 - 03:08:27: [AMXX] Plugin file open error (plugin "GPHosting-ReHlds.amxx")
+L 01/04/2021 - 08:38:39: Start of error session.
+L 01/04/2021 - 08:38:39: Info (map "de_dust2") (file "addons/amxmodx/logs/error_20210104.log")
+L 01/04/2021 - 08:38:39: [CSTRIKE] Invalid player 1 (not in-game)
+L 01/04/2021 - 08:38:39: [AMXX] Run time error 10 (plugin "miscstats.amxx") (native "cs_get_user_team") - debug not enabled!
+L 01/04/2021 - 08:38:39: [AMXX] To enable debug mode, add "debug" after the plugin name in plugins.ini (without quotes).
+L 01/04/2021 - 09:54:09: Start of error session.
+L 01/04/2021 - 09:54:09: Info (map "de_dust2") (file "addons/amxmodx/logs/error_20210104.log")
+L 01/04/2021 - 09:54:09: [CSTRIKE] Invalid player 8 (not in-game)
+L 01/04/2021 - 09:54:09: [AMXX] Run time error 10 (plugin "miscstats.amxx") (native "cs_get_user_team") - debug not enabled!
+L 01/04/2021 - 09:54:09: [AMXX] To enable debug mode, add "debug" after the plugin name in plugins.ini (without quotes).
+L 01/04/2021 - 10:29:11: Start of error session.
+L 01/04/2021 - 10:29:11: Info (map "de_dust2") (file "addons/amxmodx/logs/error_20210104.log")
+L 01/04/2021 - 10:29:11: [CSTRIKE] Invalid player 15 (not in-game)
+L 01/04/2021 - 10:29:11: [AMXX] Run time error 10 (plugin "miscstats.amxx") (native "cs_get_user_team") - debug not enabled!
+L 01/04/2021 - 10:29:11: [AMXX] To enable debug mode, add "debug" after the plugin name in plugins.ini (without quotes).
+L 01/04/2021 - 10:29:11: [CSTRIKE] Invalid player 17 (not in-game)
+L 01/04/2021 - 10:29:11: [AMXX] Run time error 10 (plugin "miscstats.amxx") (native "cs_get_user_team") - debug not enabled!
+L 01/04/2021 - 10:29:11: [AMXX] To enable debug mode, add "debug" after the plugin name in plugins.ini (without quotes).
+L 01/04/2021 - 10:36:41: [CSTRIKE] Invalid player 9 (not in-game)
+L 01/04/2021 - 10:36:41: [AMXX] Run time error 10 (plugin "miscstats.amxx") (native "cs_get_user_team") - debug not enabled!
+L 01/04/2021 - 10:36:41: [AMXX] To enable debug mode, add "debug" after the plugin name in plugins.ini (without quotes).
+L 01/04/2021 - 10:50:17: [CSTRIKE] Invalid player 12 (not in-game)
+L 01/04/2021 - 10:50:17: [AMXX] Run time error 10 (plugin "miscstats.amxx") (native "cs_get_user_team") - debug not enabled!
+L 01/04/2021 - 10:50:17: [AMXX] To enable debug mode, add "debug" after the plugin name in plugins.ini (without quotes).
+L 01/04/2021 - 11:04:25: Start of error session.
+L 01/04/2021 - 11:04:25: Info (map "de_dust2") (file "addons/amxmodx/logs/error_20210104.log")
+L 01/04/2021 - 11:04:25: [CSTRIKE] Invalid player 15 (not in-game)
+L 01/04/2021 - 11:04:25: [AMXX] Run time error 10 (plugin "miscstats.amxx") (native "cs_get_user_team") - debug not enabled!
+L 01/04/2021 - 11:04:25: [AMXX] To enable debug mode, add "debug" after the plugin name in plugins.ini (without quotes).
+L 01/04/2021 - 11:12:33: [CSTRIKE] Invalid player 14 (not in-game)
+L 01/04/2021 - 11:12:33: [AMXX] Run time error 10 (plugin "miscstats.amxx") (native "cs_get_user_team") - debug not enabled!
+L 01/04/2021 - 11:12:33: [AMXX] To enable debug mode, add "debug" after the plugin name in plugins.ini (without quotes).
+L 01/04/2021 - 11:19:57: [CSTRIKE] Invalid player 21 (not in-game)
+L 01/04/2021 - 11:19:57: [AMXX] Run time error 10 (plugin "miscstats.amxx") (native "cs_get_user_team") - debug not enabled!
+L 01/04/2021 - 11:19:57: [AMXX] To enable debug mode, add "debug" after the plugin name in plugins.ini (without quotes).
+L 01/04/2021 - 11:27:27: [CSTRIKE] Invalid player 21 (not in-game)
+L 01/04/2021 - 11:27:27: [AMXX] Run time error 10 (plugin "miscstats.amxx") (native "cs_get_user_team") - debug not enabled!
+L 01/04/2021 - 11:27:27: [AMXX] To enable debug mode, add "debug" after the plugin name in plugins.ini (without quotes).
+L 01/04/2021 - 13:25:15: Start of error session.
+L 01/04/2021 - 13:25:15: Info (map "de_cbble") (file "addons/amxmodx/logs/error_20210104.log")
+L 01/04/2021 - 13:25:15: [CSTRIKE] Invalid player 7 (not in-game)
+L 01/04/2021 - 13:25:15: [AMXX] Run time error 10 (plugin "miscstats.amxx") (native "cs_get_user_team") - debug not enabled!
+L 01/04/2021 - 13:25:15: [AMXX] To enable debug mode, add "debug" after the plugin name in plugins.ini (without quotes).
+L 01/04/2021 - 13:37:14: Start of error session.
+L 01/04/2021 - 13:37:14: Info (map "de_train") (file "addons/amxmodx/logs/error_20210104.log")
+L 01/04/2021 - 13:37:14: [CSTRIKE] Invalid player 2 (not in-game)
+L 01/04/2021 - 13:37:14: [AMXX] Run time error 10 (plugin "miscstats.amxx") (native "cs_get_user_team") - debug not enabled!
+L 01/04/2021 - 13:37:14: [AMXX] To enable debug mode, add "debug" after the plugin name in plugins.ini (without quotes).
+L 01/04/2021 - 14:10:50: Start of error session.
+L 01/04/2021 - 14:10:50: Info (map "de_dust2") (file "addons/amxmodx/logs/error_20210104.log")
+L 01/04/2021 - 14:10:50: [CSTRIKE] Invalid player 4 (not in-game)
+L 01/04/2021 - 14:10:50: [AMXX] Run time error 10 (plugin "miscstats.amxx") (native "cs_get_user_team") - debug not enabled!
+L 01/04/2021 - 14:10:50: [AMXX] To enable debug mode, add "debug" after the plugin name in plugins.ini (without quotes).
+L 01/04/2021 - 14:13:11: [CSTRIKE] Invalid player 12 (not in-game)
+L 01/04/2021 - 14:13:11: [AMXX] Run time error 10 (plugin "miscstats.amxx") (native "cs_get_user_team") - debug not enabled!
+L 01/04/2021 - 14:13:11: [AMXX] To enable debug mode, add "debug" after the plugin name in plugins.ini (without quotes).
+L 01/04/2021 - 14:27:55: [CSTRIKE] Invalid player 24 (not in-game)
+L 01/04/2021 - 14:27:55: [AMXX] Run time error 10 (plugin "miscstats.amxx") (native "cs_get_user_team") - debug not enabled!
+L 01/04/2021 - 14:27:55: [AMXX] To enable debug mode, add "debug" after the plugin name in plugins.ini (without quotes).
+L 01/04/2021 - 14:28:17: [CSTRIKE] Invalid player 26 (not in-game)
+L 01/04/2021 - 14:28:17: [AMXX] Run time error 10 (plugin "miscstats.amxx") (native "cs_get_user_team") - debug not enabled!
+L 01/04/2021 - 14:28:17: [AMXX] To enable debug mode, add "debug" after the plugin name in plugins.ini (without quotes).
+L 01/04/2021 - 14:33:47: [CSTRIKE] Invalid player 28 (not in-game)
+L 01/04/2021 - 14:33:47: [AMXX] Run time error 10 (plugin "miscstats.amxx") (native "cs_get_user_team") - debug not enabled!
+L 01/04/2021 - 14:33:47: [AMXX] To enable debug mode, add "debug" after the plugin name in plugins.ini (without quotes).
+L 01/04/2021 - 15:11:25: Start of error session.
+L 01/04/2021 - 15:11:25: Info (map "cs_assault") (file "addons/amxmodx/logs/error_20210104.log")
+L 01/04/2021 - 15:11:25: [CSTRIKE] Invalid player 23 (not in-game)
+L 01/04/2021 - 15:11:25: [AMXX] Run time error 10 (plugin "miscstats.amxx") (native "cs_get_user_team") - debug not enabled!
+L 01/04/2021 - 15:11:25: [AMXX] To enable debug mode, add "debug" after the plugin name in plugins.ini (without quotes).
+L 01/04/2021 - 15:23:38: Start of error session.
+L 01/04/2021 - 15:23:38: Info (map "de_dust2") (file "addons/amxmodx/logs/error_20210104.log")
+L 01/04/2021 - 15:23:38: [CSTRIKE] Invalid player 17 (not in-game)
+L 01/04/2021 - 15:23:38: [AMXX] Run time error 10 (plugin "miscstats.amxx") (native "cs_get_user_team") - debug not enabled!
+L 01/04/2021 - 15:23:38: [AMXX] To enable debug mode, add "debug" after the plugin name in plugins.ini (without quotes).
+L 01/04/2021 - 15:29:00: [CSTRIKE] Invalid player 30 (not in-game)
+L 01/04/2021 - 15:29:00: [AMXX] Run time error 10 (plugin "miscstats.amxx") (native "cs_get_user_team") - debug not enabled!
+L 01/04/2021 - 15:29:00: [AMXX] To enable debug mode, add "debug" after the plugin name in plugins.ini (without quotes).
+L 01/04/2021 - 15:33:53: [CSTRIKE] Invalid player 31 (not in-game)
+L 01/04/2021 - 15:33:53: [AMXX] Run time error 10 (plugin "miscstats.amxx") (native "cs_get_user_team") - debug not enabled!
+L 01/04/2021 - 15:33:53: [AMXX] To enable debug mode, add "debug" after the plugin name in plugins.ini (without quotes).
+L 01/04/2021 - 16:16:52: Start of error session.
+L 01/04/2021 - 16:16:52: Info (map "de_train32") (file "addons/amxmodx/logs/error_20210104.log")
+L 01/04/2021 - 16:16:52: [CSTRIKE] Invalid player 17 (not in-game)
+L 01/04/2021 - 16:16:52: [AMXX] Run time error 10 (plugin "miscstats.amxx") (native "cs_get_user_team") - debug not enabled!
+L 01/04/2021 - 16:16:52: [AMXX] To enable debug mode, add "debug" after the plugin name in plugins.ini (without quotes).
+L 01/04/2021 - 16:20:02: [CSTRIKE] Invalid player 10 (not in-game)
+L 01/04/2021 - 16:20:02: [AMXX] Run time error 10 (plugin "miscstats.amxx") (native "cs_get_user_team") - debug not enabled!
+L 01/04/2021 - 16:20:02: [AMXX] To enable debug mode, add "debug" after the plugin name in plugins.ini (without quotes).
+L 01/04/2021 - 17:18:29: Start of error session.
+L 01/04/2021 - 17:18:29: Info (map "de_dust2") (file "addons/amxmodx/logs/error_20210104.log")
+L 01/04/2021 - 17:18:29: [CSTRIKE] Invalid player 8 (not in-game)
+L 01/04/2021 - 17:18:29: [AMXX] Run time error 10 (plugin "miscstats.amxx") (native "cs_get_user_team") - debug not enabled!
+L 01/04/2021 - 17:18:29: [AMXX] To enable debug mode, add "debug" after the plugin name in plugins.ini (without quotes).
+L 01/04/2021 - 17:52:59: Start of error session.
+L 01/04/2021 - 17:52:59: Info (map "de_dust4ever") (file "addons/amxmodx/logs/error_20210104.log")
+L 01/04/2021 - 17:52:59: [CSTRIKE] Invalid player 30 (not in-game)
+L 01/04/2021 - 17:52:59: [AMXX] Run time error 10 (plugin "miscstats.amxx") (native "cs_get_user_team") - debug not enabled!
+L 01/04/2021 - 17:52:59: [AMXX] To enable debug mode, add "debug" after the plugin name in plugins.ini (without quotes).
+L 01/04/2021 - 18:38:19: Start of error session.
+L 01/04/2021 - 18:38:19: Info (map "de_mjolby6") (file "addons/amxmodx/logs/error_20210104.log")
+L 01/04/2021 - 18:38:19: [CSTRIKE] Invalid player 7 (not in-game)
+L 01/04/2021 - 18:38:19: [AMXX] Run time error 10 (plugin "miscstats.amxx") (native "cs_get_user_team") - debug not enabled!
+L 01/04/2021 - 18:38:19: [AMXX] To enable debug mode, add "debug" after the plugin name in plugins.ini (without quotes).
+L 01/04/2021 - 18:45:19: [CSTRIKE] Invalid player 3 (not in-game)
+L 01/04/2021 - 18:45:19: [AMXX] Run time error 10 (plugin "miscstats.amxx") (native "cs_get_user_team") - debug not enabled!
+L 01/04/2021 - 18:45:19: [AMXX] To enable debug mode, add "debug" after the plugin name in plugins.ini (without quotes).
+L 01/04/2021 - 18:47:25: [CSTRIKE] Invalid player 1 (not in-game)
+L 01/04/2021 - 18:47:25: [AMXX] Run time error 10 (plugin "miscstats.amxx") (native "cs_get_user_team") - debug not enabled!
+L 01/04/2021 - 18:47:25: [AMXX] To enable debug mode, add "debug" after the plugin name in plugins.ini (without quotes).
+L 01/04/2021 - 19:09:02: Start of error session.
+L 01/04/2021 - 19:09:02: Info (map "de_westwood") (file "addons/amxmodx/logs/error_20210104.log")
+L 01/04/2021 - 19:09:02: [CSTRIKE] Invalid player 9 (not in-game)
+L 01/04/2021 - 19:09:02: [AMXX] Run time error 10 (plugin "miscstats.amxx") (native "cs_get_user_team") - debug not enabled!
+L 01/04/2021 - 19:09:02: [AMXX] To enable debug mode, add "debug" after the plugin name in plugins.ini (without quotes).
+L 01/04/2021 - 19:15:21: [CSTRIKE] Invalid player 31 (not in-game)
+L 01/04/2021 - 19:15:21: [AMXX] Run time error 10 (plugin "miscstats.amxx") (native "cs_get_user_team") - debug not enabled!
+L 01/04/2021 - 19:15:21: [AMXX] To enable debug mode, add "debug" after the plugin name in plugins.ini (without quotes).
+L 01/04/2021 - 19:37:57: Start of error session.
+L 01/04/2021 - 19:37:57: Info (map "de_industro") (file "addons/amxmodx/logs/error_20210104.log")
+L 01/04/2021 - 19:37:57: [CSTRIKE] Invalid player 26 (not in-game)
+L 01/04/2021 - 19:37:57: [AMXX] Run time error 10 (plugin "miscstats.amxx") (native "cs_get_user_team") - debug not enabled!
+L 01/04/2021 - 19:37:57: [AMXX] To enable debug mode, add "debug" after the plugin name in plugins.ini (without quotes).
+L 01/04/2021 - 19:40:11: [CSTRIKE] Invalid player 18 (not in-game)
+L 01/04/2021 - 19:40:11: [AMXX] Run time error 10 (plugin "miscstats.amxx") (native "cs_get_user_team") - debug not enabled!
+L 01/04/2021 - 19:40:11: [AMXX] To enable debug mode, add "debug" after the plugin name in plugins.ini (without quotes).
+L 01/04/2021 - 19:57:21: Start of error session.
+L 01/04/2021 - 19:57:21: Info (map "de_dust2") (file "addons/amxmodx/logs/error_20210104.log")
+L 01/04/2021 - 19:57:21: [CSTRIKE] Invalid player 9 (not in-game)
+L 01/04/2021 - 19:57:21: [AMXX] Run time error 10 (plugin "miscstats.amxx") (native "cs_get_user_team") - debug not enabled!
+L 01/04/2021 - 19:57:21: [AMXX] To enable debug mode, add "debug" after the plugin name in plugins.ini (without quotes).
+L 01/04/2021 - 20:02:25: [CSTRIKE] Invalid player 7 (not in-game)
+L 01/04/2021 - 20:02:25: [AMXX] Run time error 10 (plugin "miscstats.amxx") (native "cs_get_user_team") - debug not enabled!
+L 01/04/2021 - 20:02:25: [AMXX] To enable debug mode, add "debug" after the plugin name in plugins.ini (without quotes).
+L 01/04/2021 - 20:07:45: Start of error session.
+L 01/04/2021 - 20:07:45: Info (map "de_dustyaztec") (file "addons/amxmodx/logs/error_20210104.log")
+L 01/04/2021 - 20:07:45: [CSTRIKE] Invalid player 7 (not in-game)
+L 01/04/2021 - 20:07:45: [AMXX] Run time error 10 (plugin "miscstats.amxx") (native "cs_get_user_team") - debug not enabled!
+L 01/04/2021 - 20:07:45: [AMXX] To enable debug mode, add "debug" after the plugin name in plugins.ini (without quotes).
+L 01/04/2021 - 20:35:33: Start of error session.
+L 01/04/2021 - 20:35:33: Info (map "de_kabul_32") (file "addons/amxmodx/logs/error_20210104.log")
+L 01/04/2021 - 20:35:33: [CSTRIKE] Invalid player 27 (not in-game)
+L 01/04/2021 - 20:35:33: [AMXX] Run time error 10 (plugin "miscstats.amxx") (native "cs_get_user_team") - debug not enabled!
+L 01/04/2021 - 20:35:33: [AMXX] To enable debug mode, add "debug" after the plugin name in plugins.ini (without quotes).
+L 01/04/2021 - 20:41:55: [CSTRIKE] Invalid player 27 (not in-game)
+L 01/04/2021 - 20:41:55: [AMXX] Run time error 10 (plugin "miscstats.amxx") (native "cs_get_user_team") - debug not enabled!
+L 01/04/2021 - 20:41:55: [AMXX] To enable debug mode, add "debug" after the plugin name in plugins.ini (without quotes).
+L 01/04/2021 - 21:47:17: Start of error session.
+L 01/04/2021 - 21:47:17: Info (map "de_alexandra") (file "addons/amxmodx/logs/error_20210104.log")
+L 01/04/2021 - 21:47:17: [CSTRIKE] Invalid player 13 (not in-game)
+L 01/04/2021 - 21:47:17: [AMXX] Run time error 10 (plugin "miscstats.amxx") (native "cs_get_user_team") - debug not enabled!
+L 01/04/2021 - 21:47:17: [AMXX] To enable debug mode, add "debug" after the plugin name in plugins.ini (without quotes).
+L 01/04/2021 - 21:54:03: [CSTRIKE] Invalid player 1 (not in-game)
+L 01/04/2021 - 21:54:03: [AMXX] Run time error 10 (plugin "miscstats.amxx") (native "cs_get_user_team") - debug not enabled!
+L 01/04/2021 - 21:54:03: [AMXX] To enable debug mode, add "debug" after the plugin name in plugins.ini (without quotes).
+L 01/04/2021 - 22:45:37: Start of error session.
+L 01/04/2021 - 22:45:37: Info (map "de_dust2") (file "addons/amxmodx/logs/error_20210104.log")
+L 01/04/2021 - 22:45:37: [CSTRIKE] Invalid player 11 (not in-game)
+L 01/04/2021 - 22:45:37: [AMXX] Run time error 10 (plugin "miscstats.amxx") (native "cs_get_user_team") - debug not enabled!
+L 01/04/2021 - 22:45:37: [AMXX] To enable debug mode, add "debug" after the plugin name in plugins.ini (without quotes).
+L 01/04/2021 - 22:51:57: [CSTRIKE] Invalid player 16 (not in-game)
+L 01/04/2021 - 22:51:57: [AMXX] Run time error 10 (plugin "miscstats.amxx") (native "cs_get_user_team") - debug not enabled!
+L 01/04/2021 - 22:51:57: [AMXX] To enable debug mode, add "debug" after the plugin name in plugins.ini (without quotes).
+L 01/04/2021 - 22:56:07: [CSTRIKE] Invalid player 12 (not in-game)
+L 01/04/2021 - 22:56:07: [AMXX] Run time error 10 (plugin "miscstats.amxx") (native "cs_get_user_team") - debug not enabled!
+L 01/04/2021 - 22:56:07: [AMXX] To enable debug mode, add "debug" after the plugin name in plugins.ini (without quotes).
+L 01/04/2021 - 23:39:26: Start of error session.
+L 01/04/2021 - 23:39:26: Info (map "de_dust2") (file "addons/amxmodx/logs/error_20210104.log")
+L 01/04/2021 - 23:39:26: Invalid CVAR pointer
+L 01/04/2021 - 23:39:26: [AMXX] Run time error 10 (plugin "VIP.amxx") (native "get_pcvar_string") - debug not enabled!
+L 01/04/2021 - 23:39:26: [AMXX] To enable debug mode, add "debug" after the plugin name in plugins.ini (without quotes).
+L 01/04/2021 - 23:44:26: [MySQL] Invalid handle: 0
+L 01/04/2021 - 23:44:26: [AMXX] Run time error 10 (plugin "VIP.amxx") (native "SQL_FreeHandle") - debug not enabled!
+L 01/04/2021 - 23:44:26: [AMXX] To enable debug mode, add "debug" after the plugin name in plugins.ini (without quotes).
+L 01/04/2021 - 23:44:26: [AMXX] Run time error -1 (plugin "admincmd.amxx") - debug not enabled!
+L 01/04/2021 - 23:44:26: [AMXX] To enable debug mode, add "debug" after the plugin name in plugins.ini (without quotes).
+L 01/04/2021 - 23:46:33: [MySQL] Invalid handle: 0
+L 01/04/2021 - 23:46:33: [AMXX] Run time error 10 (plugin "VIP.amxx") (native "SQL_FreeHandle") - debug not enabled!
+L 01/04/2021 - 23:46:33: [AMXX] To enable debug mode, add "debug" after the plugin name in plugins.ini (without quotes).
+L 01/04/2021 - 23:46:33: [AMXX] Run time error -1 (plugin "admincmd.amxx") - debug not enabled!
+L 01/04/2021 - 23:46:33: [AMXX] To enable debug mode, add "debug" after the plugin name in plugins.ini (without quotes).
+L 01/04/2021 - 23:46:51: [MySQL] Invalid handle: 0
+L 01/04/2021 - 23:46:51: [AMXX] Run time error 10 (plugin "VIP.amxx") (native "SQL_FreeHandle") - debug not enabled!
+L 01/04/2021 - 23:46:51: [AMXX] To enable debug mode, add "debug" after the plugin name in plugins.ini (without quotes).
+L 01/04/2021 - 23:46:51: [AMXX] Run time error -1 (plugin "admincmd.amxx") - debug not enabled!
+L 01/04/2021 - 23:46:51: [AMXX] To enable debug mode, add "debug" after the plugin name in plugins.ini (without quotes).
+L 01/04/2021 - 23:47:12: Start of error session.
+L 01/04/2021 - 23:47:12: Info (map "de_dust2") (file "addons/amxmodx/logs/error_20210104.log")
+L 01/04/2021 - 23:47:12: Invalid CVAR pointer
+L 01/04/2021 - 23:47:12: [AMXX] Run time error 10 (plugin "VIP.amxx") (native "get_pcvar_string") - debug not enabled!
+L 01/04/2021 - 23:47:12: [AMXX] To enable debug mode, add "debug" after the plugin name in plugins.ini (without quotes).

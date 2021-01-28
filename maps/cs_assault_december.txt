@@ -1,0 +1,22 @@
+cs_assault_december - Hostage Rescue
+by Plaxic (Xfire username: plaxic)
+[This is my 9th map] - Created 11/24/07
+
+Based on cs_assault by CryptR (lmuur@dlc.fi)
+
+Changes from cs_assault:
+
+-Snow everywhere, snow falling
+-CT Tower connects to tower above backdoor
+-Backdoor tower connects to vent
+-Bridge has stairs on left side
+-Hostage room has door to bridge
+-Hostage room is larger, different shape
+-Hostage room has window overlooking front
+-Catwalk inside is extended
+-Vent has exit to blue box by back door
+-Extra container inside
+-2 windows on outside of warehouse
+-Backdoor area slightly altered
+-More crates inside
+-Some ambient sounds

@@ -1,0 +1,53 @@
+[en]
+KILL_MSG_1 = Objective Failed^nFailure Is Not An Option^nYou Die Now
+SLAY_MSG_2 = Die L0s3rs!!!
+SLAY_MSG_3 = Try to complete the mission....
+SLAY_MSG_4 = Die Die Die Die!!!^nLos3rs!
+
+[hu]
+KILL_MSG_1 = Feladat Sikertelen^nSikertelen Turhetetlen^nMost Meghalsz
+SLAY_MSG_2 = L0s3rs Dogoljetek Meg!!!
+SLAY_MSG_3 = Probald meg teljesiteni a feladatot....
+SLAY_MSG_4 = Halal, Halal, Halal!!!^nVesztesek!
+
+[de]
+KILL_MSG_1 = Ziel nicht erreicht.^nMi?erfolg war keine Zielvorgabe.^nDu wirst jetzt sterben!
+SLAY_MSG_2 = Sterbt Versager!!!
+SLAY_MSG_3 = Versuche die Mission zu erfuellen...
+SLAY_MSG_4 = Sterbt Sterbt Sterbt Sterbt!!!^nVersager!
+
+[FIN]
+KILL_MSG_1 = Kohde epaonnistui^nEpaonnistuminen ei ole valinta^nSina kuolet nyt!
+SLAY_MSG_2 = Kuolkaa luuserit!!!
+SLAY_MSG_3 = Yrita toteuttaa tehtava....
+SLAY_MSG_4 = Kuole Kuole Kuole Kuole!!!^nLuuseri!
+
+[SV]
+KILL_MSG_1 = Objektet misslyckades^nAtt misslyckas 'a'r inget alternativ^nNu d'o'r du.
+SLAY_MSG_2 = D'o' f'o'rlorare!
+SLAY_MSG_3 = F'o'rs'o'k klara ert uppdrag.
+SLAY_MSG_4 = D'O' D'O' D'O' D'O'!^n F'o'rlorare!
+
+[es]
+KILL_MSG_1 = Objetivo Fracasado^nFallar No Es Una Opcion^nAhora Moriras
+SLAY_MSG_2 = Mueran L0s3rs!!!
+SLAY_MSG_3 = Intenta completar la mision....
+SLAY_MSG_4 = Mueran Mueran Mueran Mueran!!!^nLos3rs!
+
+[nl]
+KILL_MSG_1 = Object gefaald^nFalen is geen optie^nJe gaat nu dood
+SLAY_MSG_2 = Sterf L0s3rs!!!
+SLAY_MSG_3 = Probeer om de missie te vervullen....
+SLAY_MSG_4 = Sterf Sterf Sterf Sterf!!!^nLos3rs!
+
+[RO]
+KILL_MSG_1 = Misiune neindeplinita.^nUn esec nu a fost prevazut.^nTu vei muri acuma!
+SLAY_MSG_2 = Mori neispravitule!!!
+SLAY_MSG_3 = Incearca sa indeplinesti misiunea...
+SLAY_MSG_4 = Mori mori mori mori!!!^nNeispravitule!
+
+[pl]
+KILL_MSG_1 = Zadanie Niewykonane!^nPrzegrana jest nie do przyjecia!^nJestes Juz Trupem!
+SLAY_MSG_2 = Smierc Przegranym!!!
+SLAY_MSG_3 = Sprobuj wykonac zadanie....
+SLAY_MSG_4 = Smierc Smierc Smierc Smierc!!!^nPrzegrani!
