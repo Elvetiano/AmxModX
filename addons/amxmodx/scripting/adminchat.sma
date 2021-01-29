@@ -257,18 +257,19 @@ public cmdSayAdmin(id)
 	get_user_name(id, name, 31);
 	userid = get_user_userid(id);
 	
+	new bool:mFound = false;
 	for(new i = 0; i < MAX_GROUPS; i++)
 	{
 		new flag = nCleanFlags(id);
 		if(flag == g_groupFlagsValue[i])
 		{
 			format(message, 191, "%s ^4%s ^1:  !y%s", g_groupNames[i], name, message[1]);
-		}else
-		{
-			if (get_user_flags(id) & SHOW_CHAT_ADMINS){
-				format(message, 191, "%s ^4%s ^1:  !y%s", "^1(^4UNKNOWN^1)", name, message[1]);
-			}
+			mFound = true;
 		}
+	}
+	if (!mFound && (get_user_flags(id) & SHOW_CHAT_ADMINS))
+	{
+		format(message, 191, "%s ^4%s ^1:  !y%s", "^1(^4UNKNOWN^1)", name, message[1]);
 	}
 	
 	if (said[0] != '@')
