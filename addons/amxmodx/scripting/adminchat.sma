@@ -79,7 +79,7 @@ new g_groupFlags[MAX_GROUPS][] =
 	"bcdefghijkmnopqrsu",   //manager
 	"bcdefhijkmnopqrs",   	  //owner
 	"bcdefhijkmnpqrs",      //co-owner
-	"bcdefhijmno",   //loyality
+	"bcdefhijmnp",   //loyality
 	"bcdefhijmn",   //Veteran
 	"bcdefhijm",    //Maresal
 	"bcdefhij",     //General
@@ -263,6 +263,11 @@ public cmdSayAdmin(id)
 		if(flag == g_groupFlagsValue[i])
 		{
 			format(message, 191, "%s ^4%s ^1:  !y%s", g_groupNames[i], name, message[1]);
+		}else
+		{
+			if (get_user_flags(id) & SHOW_CHAT_ADMINS){
+				format(message, 191, "%s ^4%s ^1:  !y%s", "^1(^4UNKNOWN^1)", name, message[1]);
+			}
 		}
 	}
 	
