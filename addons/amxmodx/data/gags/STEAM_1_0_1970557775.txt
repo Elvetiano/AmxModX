@@ -1,8 +1,0 @@
-Time data:
-1610706078
-Flags:
-_abcd_
-Player name:
-PLAYER_NEWNAME-5
-Reason:
-Unspecified

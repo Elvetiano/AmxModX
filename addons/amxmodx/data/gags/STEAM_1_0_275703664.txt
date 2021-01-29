@@ -1,8 +1,0 @@
-Time data:
-1610784848
-Flags:
-_abcd_
-Player name:
-nash
-Reason:
-Unspecified

@@ -1,8 +1,0 @@
-Time data:
-1610998424
-Flags:
-_ac_
-Player name:
-Beowolf_
-Reason:
-Unspecified

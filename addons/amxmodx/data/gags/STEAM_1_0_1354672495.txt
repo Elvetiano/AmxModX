@@ -1,8 +1,0 @@
-Time data:
-1610217424
-Flags:
-_abcd_
-Player name:
-Cpt.Nascimento
-Reason:
-Unspecified

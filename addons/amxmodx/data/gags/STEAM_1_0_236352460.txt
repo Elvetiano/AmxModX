@@ -1,8 +1,0 @@
-Time data:
-1610301622
-Flags:
-_abcd_
-Player name:
-ApoLLo
-Reason:
-Unspecified

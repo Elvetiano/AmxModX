@@ -1,8 +1,0 @@
-Time data:
-1610459088
-Flags:
-_abcd_
-Player name:
-iranian
-Reason:
-Unspecified

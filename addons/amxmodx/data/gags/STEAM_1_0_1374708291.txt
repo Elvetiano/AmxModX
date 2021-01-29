@@ -1,8 +1,0 @@
-Time data:
-1610039269
-Flags:
-_ac_
-Player name:
-(3)<Warrior> Player
-Reason:
-Unspecified
