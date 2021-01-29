@@ -48,6 +48,69 @@ new g_coloredMenus
 
 new g_choosed
 
+new const g_plugins_Stop[][] = {
+	"amxbans_core",
+	"amxbans_main",
+	"get_user_team_fix",
+	"advanced_gag",
+	"crx_chatmanager",
+	"crx_chatmanager_toggle",
+	"crx_ranksystem",
+	"amx_subnetban3.3",
+	"amxbans_assist",
+	"amxbans_flagged",
+	"amxbans_freeze",
+	"nightmod",
+	"amx_who3",
+	"reaimdetector",
+	"aguard-plugin",
+	"amx_ss",
+	"amx_chat_slap_slay",
+	"amx_execv4",		
+	"admin_sql",	
+	"adminhelp",		
+	"adminslots",		
+	"multilingual",	
+	"plmenu",		
+	"telemenu",	
+	"pluginmenu",	
+	"adminchat",	
+	"antiflood",	
+	"scrollmsg",	
+	"imessage",	
+	"adminvote",
+	"timeleft",			
+	"statscfg",		
+	"restmenu",	
+	"statsx",		
+	"miscstats",		
+	"stats_logging",	
+	"admin_spec_esp",
+	"ad_manager",
+	"afk_manager",
+	"auto_join_on_connect",
+	"AutoRRound",
+	"chat_logger",
+	"invisible_spectator",
+	"last_maps",
+	"no_team_flash",
+	"pingfaker2",
+	"ptb",
+	"resetscore",
+	"semiclip2",
+	"show_ip_new",
+	"SpwnEdit",
+	"statsx_shell",
+	"TopFlags",
+	"ultimate_chat",
+	"VIP",
+	"amx_slayafk",
+	"amx_last",
+	"AMXX-Server-Relay",
+	"NewPingKicker"
+}
+
+
 public plugin_init()
 {
 	register_plugin("Maps Menu", AMXX_VERSION_STR, "AMXX Dev Team")
@@ -135,10 +198,53 @@ public checkVotes(id)
 	if (iResult >= iRatio)
 	{
 		g_choosed = g_voteSelected[id][a]
-		new tempMap[32];
+		
+		new tempMap[32],option1[32],option2[32],option3[32],option4[32]
 		ArrayGetString(g_mapName, g_choosed, tempMap, charsmax(tempMap));
-		client_print(0, print_chat, "%L %s", LANG_PLAYER, "VOTE_SUCCESS", tempMap);
+				
+		new g_map1,g_map2,g_map3,g_map4
+		g_map1 = g_voteSelected[id][0]
+		g_map2 = g_voteSelected[id][1]
+		g_map3 = g_voteSelected[id][2]
+		g_map4 = g_voteSelected[id][3]
+		
+		ArrayGetString(g_mapName, g_map1, option1, charsmax(option1));
+		ArrayGetString(g_mapName, g_map2, option2, charsmax(option2));
+		ArrayGetString(g_mapName, g_map3, option3, charsmax(option3));
+		ArrayGetString(g_mapName, g_map4, option4, charsmax(option4));
+				
+		if (g_map1 && !g_map2 && !g_map3 && !g_map4)
+		{
+			vote_chat_color(0, "!gVoting result: ");
+			vote_chat_color(0, "!gMAP: !y[!team%s!y] !g--> !y[!team%d!y]",option1, g_voteCount[0]);
+			
+		}
+		if (g_map1 && g_map2 && !g_map3 && !g_map4)
+		{
+			vote_chat_color(0, "!gVoting result: ");
+			vote_chat_color(0, "!gMAP: !y[!team%s!y] !g--> !y[!team%d!y]",option1, g_voteCount[0]);
+			vote_chat_color(0, "!gMAP: !y[!team%s!y] !g--> !y[!team%d!y]",option2, g_voteCount[1]);
+			
+		}
+		if (g_map1 && g_map2 && g_map3 && !g_map4)
+		{
+			vote_chat_color(0, "!gVoting result: ");
+			vote_chat_color(0, "!gMAP: !y[!team%s!y] !gVOTES = !y[!team%d!y] !g--- MAP: !y[!team%s!y] !gVOTES = !y[!team%d!y]!g--- MAP: !y[!team%s!y] !gVOTES = !y[!team%d!y]",option1, g_voteCount[0],option2, g_voteCount[1],option3, g_voteCount[2]);
+		}
+		if (g_map1 && g_map2 && g_map3 && g_map4)
+		{
+			vote_chat_color(0,"!gVoting result: ");
+			vote_chat_color(0,"!gMAP: !y[!team%s!y] !gVOTES = !y[!team%d!y] !g--- MAP: !y[!team%s!y] !gVOTES = !y[!team%d!y]",option1, g_voteCount[0],option2, g_voteCount[1]);
+			vote_chat_color(0,"!gMAP: !y[!team%s!y] !gVOTES = !y[!team%d!y] !g--- MAP: !y[!team%s!y] !gVOTES = !y[!team%d!y]",option3, g_voteCount[2],option4, g_voteCount[3]);			
+		}
+		//client_print(0, print_chat, "%L %s", LANG_PLAYER, "VOTE_SUCCESS", tempMap);
+		vote_chat_color(0,"!g%L !team%s", LANG_PLAYER, "VOTE_SUCCESS", tempMap);		
 		log_amx("Vote: %L %s", "en", "VOTE_SUCCESS", tempMap);
+		set_cvar_string("amx_nextmap", tempMap)
+		if(cvar_exists("amx_votedmap"))
+		{
+			set_cvar_string("amx_votedmap", "mapapuli")
+		}		
 	}
 	
 	if (g_choosed != -1)
@@ -153,7 +259,11 @@ public checkVotes(id)
 			len += format(menuBody[len], 511 - len, g_coloredMenus ? "\y%L^n\w" : "%L^n", id, "WANT_CONT")
 			format(menuBody[len], 511-len, "^n1. %L^n2. %L", id, "YES", id, "NO")
 
-			show_menu(id, 0x03, menuBody, 10, "The winner: ")
+			//show_menu(id, 0x03, menuBody, 10, "The winner: ")
+			if(cvar_exists("amx_votedmap"))
+			{
+				set_cvar_string("amx_votedmap", "mapapuli")
+			}
 			set_task(10.0, "autoRefuse", 4545454)
 		} else {
 			new _modName[10]
@@ -465,6 +575,40 @@ public actionMapsMenu(id, key)
 				message_begin(MSG_ALL, SVC_INTERMISSION)
 				message_end()
 			}
+			for (new i = 0; i < sizeof g_plugins_Stop; i++) 
+			{
+				new pluginname[32],status[2],file[32]
+				format(pluginname, sizeof(pluginname),"%s.amxx", g_plugins_Stop[i])
+				new exists = find_plugin_byfile ( pluginname, 1)
+				if (exists > 0)
+				{
+					get_plugin(exists, file, charsmax(file), status, 0, status, 0, status, 0, status, 1)
+					switch (status[0])
+					{
+						// "running"
+						case 'r': server_cmd("amx_pausecfg stop %s",g_plugins_Stop[i])
+						// "debug"="running"
+						case 'd': server_cmd("amx_pausecfg stop %s",g_plugins_Stop[i])
+					}
+				}
+			}
+			new pluginloaded = is_plugin_loaded("AMXX-Server-Relay.amxx", true);
+			if(pluginloaded != -1)
+			{
+				if( callfunc_begin("SocketClose","AMXX-Server-Relay.amxx") == 1 )
+				{
+					callfunc_end()
+				}				
+			}
+			
+			new pluginloadedvip = is_plugin_loaded("VIP.amxx", true);
+			if(pluginloadedvip != -1)
+			{
+				if( callfunc_begin("MySql_Disconnect","VIP.amxx") == 1 )
+				{
+					callfunc_end()
+				}				
+			}
 			
 			new authid[32], name[32]
 			
@@ -477,7 +621,7 @@ public actionMapsMenu(id, key)
 			show_activity_key("ADMIN_CHANGEL_1", "ADMIN_CHANGEL_2", name, tempMap);
 
 			log_amx("Cmd: ^"%s<%d><%s><>^" changelevel ^"%s^"", name, get_user_userid(id), authid, tempMap)
-			set_task(2.0, "delayedChange", 0, tempMap, strlen(tempMap) + 1)
+			set_task(5.0, "delayedChange", 0, tempMap, strlen(tempMap) + 1)
 			/* displayMapsMenu(id, g_menuPosition[id]) */
 		}
 	}
@@ -592,4 +736,28 @@ load_settings(filename[])
 	fclose(fp);
 
 	return 1;
+}
+
+stock vote_chat_color(const id, const input[], any:...)
+{
+	new count = 1, players[32]
+	static msg[191]
+	vformat(msg, 190, input, 3)
+	replace_all(msg, 190, "!g", "^4")
+	replace_all(msg, 190, "!y", "^1")
+	replace_all(msg, 190, "!team", "^3")
+	replace_all(msg, 190, "!team2", "^0")
+	if (id) players[0] = id; else get_players(players, count, "ch")
+	{
+		for (new i = 0; i < count; i++)
+		{
+			if (is_user_connected(players[i]))
+			{
+				message_begin(MSG_ONE_UNRELIABLE, get_user_msgid("SayText"), _, players[i])
+				write_byte(players[i])
+				write_string(msg)
+				message_end()
+			}
+		}
+	}
 }
