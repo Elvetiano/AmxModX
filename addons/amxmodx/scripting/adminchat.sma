@@ -31,9 +31,64 @@
 *  you do not wish to do so, delete this exception statement from your
 *  version.
 */
+//"abcdefghijklmnopqrstuv",	//fondator 		biti = 4194303
+//"abcdefghijklmnopqrstu",  //manager 		biti = 2097151
+//"abcdefhijklmnopqrs",   	//owner 		biti = 524223
+//"abcdefhijklmnpqrs",    	//co-owner 		biti = 507839
+//"bcdefhijmnot",   		//loyality 		biti = 553918
+//"bcdefhijmn",   			//Veteran 		biti = 13246
+//"bcdefhijm",    			//Maresal 		biti =  5054
+//"bcdefhijr",    			//General 		biti = 132030
+//"bcdefhijx",    			//night staff 	biti = 8389566  -w = 4195262
+//"bcdefhij",     			//Colonel 		biti = 958
+//"bcdefij",      			//Maior 		biti = 830
+//"bit",          			// vip gold 	biti = 524546
+//"biw",          			// vip silver 	biti = 4194562
+//"b"            			// slot 		biti = 2
+
 
 #include <amxmodx>
 #include <amxmisc>
+#include <official_base>
+
+#define SHOW_CHAT_ADMINS ADMIN_CHAT
+#define SHOW_CHAT_SLOTS ADMIN_RESERVATION
+#define SHOW_CHAT_HIGHSTAFF ADMIN_LEVEL_D
+
+#define MAX_GROUPS 12
+
+new g_groupNames[MAX_GROUPS][] = 
+{
+	"^1(^4Founder^1)",
+	"^1(^4Manager^1)",
+	"^1(^4Owner^1)",
+	"^1(^4Co-Owner^1)",
+	"^1(^4Loyalty^1)",
+	"^1(^4Veteran^1)",
+	"^1(^4Maresal^1)",
+	"^1(^4General^1)",
+	"^1(^4Maior^1)",
+	"^1(^4V.I.P GOLD^1)",
+	"^1(^4V.I.P Silver^1)",
+	"^1(^4SLOT^1)"
+}
+
+new g_groupFlags[MAX_GROUPS][] = 
+{
+	"bcdefghijkmnopqrsuv",  //fondator
+	"bcdefghijkmnopqrsu",   //manager
+	"bcdefhijkmnopqrs",   	  //owner
+	"bcdefhijkmnpqrs",      //co-owner
+	"bcdefhijmno",   //loyality
+	"bcdefhijmn",   //Veteran
+	"bcdefhijm",    //Maresal
+	"bcdefhij",     //General
+	"bcdefij",      //Maior
+	"bit",          // vip gold
+	"biw",          // vip silver
+	"b"             // slot
+}
+
 
 new g_msgChannel
 
@@ -45,10 +100,13 @@ new Float:g_Pos[4][] = {{0.0, 0.0}, {0.05, 0.55}, {-1.0, 0.2}, {-1.0, 0.7}}
 
 new amx_show_activity;
 new g_AdminChatFlag = ADMIN_CHAT;
+new g_AdminHighStaff = ADMIN_LEVEL_D;
+
+new g_groupFlagsValue[MAX_GROUPS]
 
 public plugin_init()
 {
-	new admin_chat_id
+	new admin_chat_id,admin_chat_idhigh
 
 	register_plugin("Admin Chat", AMXX_VERSION_STR, "AMXX Dev Team")
 	register_dictionary("adminchat.txt")
@@ -57,6 +115,7 @@ public plugin_init()
 	register_clcmd("say_team", "cmdSayAdmin", 0, "@<text> - displays message to admins")
 	register_concmd("amx_say", "cmdSay", ADMIN_CHAT, "<message> - sends message to all players")
 	admin_chat_id = register_concmd("amx_chat", "cmdChat", ADMIN_CHAT, "<message> - sends message to admins")
+	admin_chat_idhigh = register_concmd("amx_highchat", "cmdChathigh", ADMIN_LEVEL_D, "<message> - sends message to High staff admins");
 	register_concmd("amx_psay", "cmdPsay", ADMIN_CHAT, "<name or #userid> <message> - sends private message")
 	register_concmd("amx_tsay", "cmdTsay", ADMIN_CHAT, "<color> <message> - sends left side hud message to all players")
 	register_concmd("amx_csay", "cmdTsay", ADMIN_CHAT, "<color> <message> - sends center hud message to all players")
@@ -67,9 +126,16 @@ public plugin_init()
 	{
 		amx_show_activity = register_cvar("amx_show_activity", "2");
 	}
+	
+	for(new i = 0; i < MAX_GROUPS; i++) 
+	{
+		g_groupFlagsValue[i] =
+		read_flags(g_groupFlags[i])
+	}
 
-	new str[1]
-	get_concmd(admin_chat_id, str, 0, g_AdminChatFlag, str, 0, -1)
+	new str[1],strhigh[1];
+	get_concmd(admin_chat_id, str, 0, g_AdminChatFlag, str, 0, -1);
+	get_concmd(admin_chat_idhigh, strhigh, 0, g_AdminHighStaff, strhigh, 0, -1);
 }
 
 public cmdSayChat(id)
@@ -177,41 +243,71 @@ public cmdSayChat(id)
 
 public cmdSayAdmin(id)
 {
-	new said[2]
-	read_argv(1, said, 1)
+	new said[2];
+	read_argv(1, said, 1);
+	new count = 1, players[32]
+	get_players(players, count, "ch")
 	
-	if (said[0] != '@')
-		return PLUGIN_CONTINUE
+	new message[192], authid[32], userid, name[32];
 	
-	new message[192], name[32], authid[32], userid
-	new players[32], inum
 	
-	read_args(message, 191)
-	remove_quotes(message)
-	get_user_authid(id, authid, 31)
-	get_user_name(id, name, 31)
-	userid = get_user_userid(id)
+	read_args(message, charsmax(message));
+	remove_quotes(message);
+	get_user_authid(id, authid, 31);
+	get_user_name(id, name, 31);
+	userid = get_user_userid(id);
 	
-	log_amx("Chat: ^"%s<%d><%s><>^" chat ^"%s^"", name, userid, authid, message[1])
-	log_message("^"%s<%d><%s><>^" triggered ^"amx_chat^" (text ^"%s^")", name, userid, authid, message[1])
-	
-	if (is_user_admin(id))
-		format(message, 191, "(%L) %s :  %s", id, "ADMIN", name, message[1])
-	else
-		format(message, 191, "(%L) %s :  %s", id, "PLAYER", name, message[1])
-
-	get_players(players, inum)
-	
-	for (new i = 0; i < inum; ++i)
+	for(new i = 0; i < MAX_GROUPS; i++)
 	{
-		// dont print the message to the client that used the cmd if he has ADMIN_CHAT to avoid double printing
-		if (players[i] != id && get_user_flags(players[i]) & g_AdminChatFlag)
-			client_print(players[i], print_chat, "%s", message)
+		new flag = nCleanFlags(id);
+		if(flag == g_groupFlagsValue[i])
+		{
+			format(message, 191, "%s ^4%s ^1:  !y%s", g_groupNames[i], name, message[1]);
+		}
 	}
 	
-	client_print(id, print_chat, "%s", message)
+	if (said[0] != '@')
+	{
+		if ((said[0] == '$') && (get_user_flags(id) & g_AdminHighStaff))
+		{
+			format(message, 191, "^1(^3High-STAFF^1) %s",message[1]);			
+			chat_color_highadmins(0, id, message[1]);
+			
+			//replace_all(message, 190, "!g", "")
+			//replace_all(message, 190, "!y", "")
+			//replace_all(message, 190, "!t", "")
+			//replace_all(message, 190, "!n", "")
+			//replace_all(message, 190, "^4", "")
+			//replace_all(message, 190, "^1", "")
+			//replace_all(message, 190, "^3", "")
+			//replace_all(message, 190, "^0", "")
+			message = remove_colors(0,message)
+			log_amx("Chat HIGH STAFF: ^"%s<%d><%s><>^" chat ^"%s^"", name, userid, authid, message[1])
+			log_message("^"%s<%d><%s><>^" triggered ^"amx_highchat^" (text ^"%s^")", name, userid, authid, message[1]);
+			return PLUGIN_HANDLED;
+		}
+		else
+		{
+			return PLUGIN_CONTINUE;
+		}
+	}	
 	
-	return PLUGIN_HANDLED
+	
+	if((get_user_flags(id) & SHOW_CHAT_SLOTS) && !(get_user_flags(id) & SHOW_CHAT_ADMINS))
+	{
+		chat_color_single(id, "!g%s", message);
+	}
+	if (!is_user_admin(id))
+	{
+		format(message, 191, "(%L) %s :  !y%s", id, "PLAYER", name, message[1]);
+		chat_color_single(id, "!g%s", message);
+	}	
+	chat_color_admins(0, "!g%s", message);
+	
+	message = remove_colors(0,message)
+	log_amx("Chat: ^"%s<%d><%s><>^" chat ^"%s^"", name, userid, authid, message[1]);
+	log_message("^"%s<%d><%s><>^" triggered ^"amx_chat^" (text ^"%s^")", name, userid, authid, message[1]);
+	return PLUGIN_HANDLED;
 }
 
 public cmdChat(id, level, cid)
@@ -219,27 +315,97 @@ public cmdChat(id, level, cid)
 	if (!cmd_access(id, level, cid, 2))
 		return PLUGIN_HANDLED
 
-	new message[192], name[32], players[32], inum, authid[32], userid
+	new message[192], name[32], authid[32], userid
 	
 	read_args(message, 191)
 	remove_quotes(message)
 	get_user_authid(id, authid, 31)
 	get_user_name(id, name, 31)
 	userid = get_user_userid(id)
-	get_players(players, inum)
 	
+	new count = 1, players[32]
+	get_players(players, count, "ch")
+	
+	
+	
+	/*if((get_user_flags(id) & SHOW_CHAT_HIGHSTAFF))
+	{		
+		for (new i = 0; i < count; i++)
+		{
+			if (is_user_connected(players[i]))
+			{
+				//len = get_user_name(players[i], name[1], charsmax(name)-1) + 1
+				//name[len] = sender == players[i] ? '^1' : '^3'
+				
+				if ((get_user_flags(players[i]) & SHOW_CHAT_ADMINS))
+				{
+					if (get_user_userid(id) < 1)
+						client_print_color(players[i], Red, "^1(^4ADMIN^1) ^3SERVER ^1: ^4%s", message)
+					else
+						client_print_color(players[i], Red, "^1(^3O^4W^3N^4E^3R^4S^1)^4 %s ^1: %s", name, message)
+
+				}
+			}
+		}
+	}
+	else	
+	{
+		format(message, 191, "!y(!gADMIN!y) !g%s :   !y%s", name, message)
+		if (get_user_userid(id) < 1)
+			format(message, 191, "!y(!gSERVER!y) :   !g%s", message)
+		console_print(id, "%s", message)
+		chat_color_admins(0, "!g%s", message)
+	}	*/
+	for(new i = 0; i < MAX_GROUPS; i++)
+	{
+		new flag = nCleanFlags(id);
+		if(flag == g_groupFlagsValue[i])
+		{
+			format(message, 191, "%s ^4%s ^1:  !y%s", g_groupNames[i], name, message);			
+		}
+	}
+	if (get_user_userid(id) < 1)
+		format(message, 191, "!y(!gSERVER!y) :   !g%s", message)
+	console_print(id, "%s", message)
+	chat_color_admins(0, "!g%s", message)
+	
+	message = remove_colors(0,message)
 	log_amx("Chat: ^"%s<%d><%s><>^" chat ^"%s^"", name, userid, authid, message)
 	log_message("^"%s<%d><%s><>^" triggered ^"amx_chat^" (text ^"%s^")", name, userid, authid, message)
+	return PLUGIN_HANDLED
+}
+
+public cmdChathigh(id, level, cid)
+{	
+	if (!cmd_access(id, level, cid, 2))
+		return PLUGIN_HANDLED
+
+	new message[192], numele[32], authid[32], userid 
 	
-	format(message, 191, "(ADMINS) %s :   %s", name, message)
+	read_args(message, charsmax(message))
+	remove_quotes(message)
+	get_user_authid(id, authid, charsmax(authid))
+	get_user_name(id, numele, charsmax(numele))
+	userid = get_user_userid(id)
+	
+	
+
+	//format(message, 191, "!y%s",  message)
+	for(new i = 0; i < MAX_GROUPS; i++)
+	{
+		new flag = nCleanFlags(id);
+		if(flag == g_groupFlagsValue[i])
+		{
+			format(message, 191, "^1(^3High-STAFF^1) %s ^4%s ^1: %s", g_groupNames[i], numele, message);			
+		}
+	}
 	console_print(id, "%s", message)
 	
-	for (new i = 0; i < inum; ++i)
-	{
-		if (access(players[i], g_AdminChatFlag))
-			client_print(players[i], print_chat, "%s", message)
-	}
+	chat_color_highadmins(0, id, message)
 	
+	message = remove_colors(0,message)
+	log_amx("Chat HIGH STAFF: ^"%s<%d><%s><>^" chat ^"%s^"", numele, userid, authid, message)
+	log_message("^"%s<%d><%s><>^" triggered ^"amx_highchat^" (text ^"%s^")", numele, userid, authid, message)
 	return PLUGIN_HANDLED
 }
 
@@ -298,9 +464,14 @@ public cmdPsay(id, level, cid)
 	get_user_name(priv, name, 31)
 	
 	if (id && id != priv)
-		client_print(id, print_chat, "(%s) %s :   %s", name, name2, message[length])
+		client_print_color(id, Grey, "^1(^4%s^1) ^4%s ^1:^4  %s", name, name2, message[length])
+		//client_print(id, print_chat, "(%s) %s :   %s", name, name2, message[length])
+
 	
-	client_print(priv, print_chat, "(%s) %s :   %s", name, name2, message[length])
+	//client_print(priv, print_chat, "(%s) %s :   %s", name, name2, message[length])
+	
+	client_print_color(priv, Grey, "^1(^4%s^1) ^4%s ^1:^4  %s", name, name2, message[length])
+	
 	console_print(id, "(%s) %s :   %s", name, name2, message[length])
 	get_user_authid(priv, authid2, 31)
 	userid2 = get_user_userid(priv)
@@ -399,4 +570,19 @@ public cmdTsay(id, level, cid)
 	log_message("^"%s<%d><%s><>^" triggered ^"%s^" (text ^"%s^") (color ^"%s^")", name, userid, authid, cmd, message[length], color2)
 
 	return PLUGIN_HANDLED
+}
+
+public remove_colors(id, const input[], any:...)
+{
+	static messagexy[191]
+	vformat(messagexy, 190, input, 3)
+	replace_all(messagexy, 190, "!g", "")
+	replace_all(messagexy, 190, "!y", "")
+	replace_all(messagexy, 190, "!t", "")
+	replace_all(messagexy, 190, "!n", "")
+	replace_all(messagexy, 190, "^4", "")
+	replace_all(messagexy, 190, "^1", "")
+	replace_all(messagexy, 190, "^3", "")
+	replace_all(messagexy, 190, "^0", "")
+	return messagexy
 }
