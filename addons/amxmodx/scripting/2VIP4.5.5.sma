@@ -1232,8 +1232,7 @@ public eWeapPickup( id )
 		return PLUGIN_CONTINUE
 	new iParam[2]; iParam[0] = read_data( 1 );
 	iParam[1] = id
-	set_task( 0.1, "DropWeaponawp", TASKIDDROPW + id, iParam, 2 );
-	fm_strip_user_gun(id, CSW_AWP);
+	set_task( 0.1, "DropWeaponawp", TASKIDDROPW + id, iParam, 2 );	
 	return PLUGIN_CONTINUE
 }
 
@@ -1250,9 +1249,12 @@ public DropWeaponawp( const i_Param[], id )
 	{
 		if (weapname[0])
 		{
-			cs_drop_user_weapon(id, weapname, 0)
+			cs_drop_user_weapon(id, weapname, 0);
+			fm_strip_user_gun(id, CSW_AWP);
 		}
-	}		
+		if(user_has_weapon(id, CSW_AWP))
+			fm_strip_user_gun(id, CSW_AWP);
+	}
 }
 
 GetWeaponName( i_Weaponid )
