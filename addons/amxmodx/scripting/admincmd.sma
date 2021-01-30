@@ -988,7 +988,7 @@ public cmdCvar(id, level, cid)
 		}
 	}
 
-	console_print(id, "[AMXX] %L", id, "CVAR_CHANGED", arg, arg2)
+	console_print(id, "[OFFICIAL] %L", id, "CVAR_CHANGED", arg, arg2)
 	
 	return PLUGIN_HANDLED
 }
