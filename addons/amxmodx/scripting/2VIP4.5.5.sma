@@ -1255,25 +1255,6 @@ public DropWeaponawp( const i_Param[], id )
 	}		
 }
 
-
-public RemoveWeaponawp( const i_Param[], id )
-{
-	if(id == (TASKIDDROPW + i_Param[1]))
-		id = i_Param[1];
-	
-	new weapname[50];
-	weapname = GetWeaponName( i_Param[0] )
-
-	if( is_user_alive( id ) )
-	{
-		if (weapname[0])
-		{
-			cs_drop_user_weapon(id, weapname, 0)
-		}
-	}		
-}
-
-
 GetWeaponName( i_Weaponid )
 {
 	new sWeapon[13];
