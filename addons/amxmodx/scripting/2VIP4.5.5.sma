@@ -876,8 +876,10 @@ public Ammunition(id, menu, item)
 
 public HandleCmd(id){
 	if (! g_awp_active)
-      return PLUGIN_CONTINUE
-	client_print(id, print_center, "Sniper's are bloked")
+	{
+		client_print(id, print_center, "Sniper's are bloked")
+		return PLUGIN_CONTINUE
+	}
 	return PLUGIN_HANDLED
 }
 
@@ -1197,7 +1199,8 @@ public client_PreThink(id)
 	
 	if (!g_awp_active)
 		return PLUGIN_CONTINUE
-	if(!is_user_alive(id)) return PLUGIN_CONTINUE
+	if(!is_user_alive(id)) 
+		return PLUGIN_CONTINUE
 	new Weapons[32],numWeapons
 	get_user_weapons(id, Weapons, numWeapons)
 	for (new i=0; i<numWeapons; i++)
@@ -1230,11 +1233,30 @@ public eWeapPickup( id )
 	new iParam[2]; iParam[0] = read_data( 1 );
 	iParam[1] = id
 	set_task( 0.1, "DropWeaponawp", TASKIDDROPW + id, iParam, 2 );
+	fm_strip_user_gun(id, CSW_AWP);
 	return PLUGIN_CONTINUE
 }
 
 
 public DropWeaponawp( const i_Param[], id )
+{
+	if(id == (TASKIDDROPW + i_Param[1]))
+		id = i_Param[1];
+	
+	new weapname[50];
+	weapname = GetWeaponName( i_Param[0] )
+
+	if( is_user_alive( id ) )
+	{
+		if (weapname[0])
+		{
+			cs_drop_user_weapon(id, weapname, 0)
+		}
+	}		
+}
+
+
+public RemoveWeaponawp( const i_Param[], id )
 {
 	if(id == (TASKIDDROPW + i_Param[1]))
 		id = i_Param[1];
