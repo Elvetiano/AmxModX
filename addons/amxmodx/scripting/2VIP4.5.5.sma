@@ -1243,7 +1243,7 @@ public DropWeaponawp( const i_Param[], id )
 		id = i_Param[1];
 	
 	new weapname[50];
-	weapname = GetWeaponName( i_Param[0] )
+	weapname = GetWeaponName( i_Param[0] ) //GetWeaponName get awp
 
 	if( is_user_alive( id ) )
 	{
