@@ -13,8 +13,13 @@ public plugin_init()
 
 public ClientCommand_ChooseTeam( id )
 {
-	if(!pev_valid(id))
-		return FMRES_IGNORED
+	if( !pev_valid( id ) )	{
+		return PLUGIN_HANDLED;
+	}
+	if(!is_user_connected(id))	{
+		return PLUGIN_HANDLED;
+	}
+	
 	set_pdata_int(id, 125, get_pdata_int(id, 125, 5) &  ~(1<<8), 5)
 	return PLUGIN_CONTINUE
 }  
