@@ -640,37 +640,40 @@ public actionTeamMenu(id, key)
 		default:
 		{
 			new player = g_menuPlayers[id][g_menuPosition[id] * 7 + key]
-			new authid[32], authid2[32], name[32], name2[32]
-
-			get_user_name(player, name2, 31)
-			get_user_authid(id, authid, 31)
-			get_user_authid(player, authid2, 31)
-			get_user_name(id, name, 31)
-				
-			log_amx("Cmd: ^"%s<%d><%s><>^" transfer ^"%s<%d><%s><>^" (team ^"%s^")", name, get_user_userid(id), authid, name2, get_user_userid(player), authid2, g_menuOption[id] ? "TERRORIST" : "CT")
-
-			show_activity_key("ADMIN_TRANSF_1", "ADMIN_TRANSF_2", name, name2, g_CSTeamNames[g_menuOption[id] % 3]);
-
-			if (g_cstrike)
+			
+			if(is_user_connected(player))
 			{
-				if (is_user_alive(player))
-				{
-					new deaths = cs_get_user_deaths(player)
-					user_kill(player, 1)
-					cs_set_user_deaths(player, deaths)
-				}
-				// This modulo math just aligns the option to the CsTeams-corresponding number
-				cs_set_user_team(player, (g_menuOption[id] % 3) + 1)
-				cs_reset_user_model(player)
-			} else {
-				new limit_setting = get_cvar_num("mp_limitteams")
+				new authid[32], authid2[32], name[32], name2[32]
 				
-				set_cvar_num("mp_limitteams", 0)
-				engclient_cmd(player, "jointeam", g_CSTeamNumbers[g_menuOption[id] % 2])
-				engclient_cmd(player, "joinclass", "1")
-				set_cvar_num("mp_limitteams", limit_setting)
-			}
+				get_user_name(player, name2, 31)
+				get_user_authid(id, authid, 31)
+				get_user_authid(player, authid2, 31)
+				get_user_name(id, name, 31)
+				
+				log_amx("Cmd: ^"%s<%d><%s><>^" transfer ^"%s<%d><%s><>^" (team ^"%s^")", name, get_user_userid(id), authid, name2, get_user_userid(player), authid2, g_menuOption[id] ? "TERRORIST" : "CT")
 
+				show_activity_key("ADMIN_TRANSF_1", "ADMIN_TRANSF_2", name, name2, g_CSTeamNames[g_menuOption[id] % 3]);
+				
+				if (g_cstrike)
+				{
+					if (is_user_alive(player))
+					{
+						new deaths = cs_get_user_deaths(player)
+						user_kill(player, 1)
+						cs_set_user_deaths(player, deaths)
+					}
+						// This modulo math just aligns the option to the CsTeams-corresponding number
+					cs_set_user_team(player, (g_menuOption[id] % 3) + 1)
+					cs_reset_user_model(player)
+				} else {
+					new limit_setting = get_cvar_num("mp_limitteams")
+						
+					set_cvar_num("mp_limitteams", 0)
+					engclient_cmd(player, "jointeam", g_CSTeamNumbers[g_menuOption[id] % 2])
+					engclient_cmd(player, "joinclass", "1")
+					set_cvar_num("mp_limitteams", limit_setting)
+				}
+			}
 			displayTeamMenu(id, g_menuPosition[id])
 		}
 	}
