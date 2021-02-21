@@ -48,7 +48,7 @@ public plugin_init()
 	g_msgsaytext = get_user_msgid( "SayText" );
 	//register_event("TextMsg", "rr_resettimer", "a", "2=#Game_will_restart_in");
 	//register_event( "TextMsg", "rr_resettimer", "a", "2=#Game_Commencing", "2=#Game_will_restart_in" ) 
-	register_event("TextMsg","rr_resettimer","a","2&#Game_w")
+	//register_event("TextMsg","rr_resettimer","a","2&#Game_w") // Resets timers when restarts round Game_will_restart_in
 	register_event("TextMsg","rr_resettimer","a","2&#Game_C")
 	register_concmd( "amx_resetgag", "reset_gag", ACCESSFLAG, "Resets gag params and ungags everyone" );
 	//new error[2];
@@ -718,6 +718,21 @@ public timecheck(id)
 	new idconsec = str_to_num(csec[id])
 	new resultx = (((numhrs * 3600) + (nummins * 60) + numsec) - ((idconhour * 3600) + (idconmin * 60) + idconsec))
 	/*              currenttimecheck                           -                        connect time
+	exemplu 1 ***********************************************************************************************
+	                   13:08:30                                                    13:08:05
+	                   46800 + 480 + 30                                           46800 + 480 + 5
+	                    47310                        -                             47285 = 25 secunde	
+	exemplu 2 ***********************************************************************************************
+	                   13:10:06                                                    13:08:05					   
+					   46800+600+6                                                 46800+ 480+5
+	                     47406                     -                                 47285 = 121 secunde
+	exemplu 3 ***********************************************************************************************
+	                  13:12:06                                                     13:08:05
+	                    46800+ 720+ 6                                              46800+ 480+5
+						  47526                  -                                 47285 = 241 secunde
+	
+	
+	
 	connect time 18:19:10
 	64800 + 1140 + 10 = 65950
 	
@@ -757,9 +772,9 @@ public client_connect(id)
 public client_putinserver( id )
 {
 		remove_task( id+123 )
-		get_time("%H", chours[id], 43)
-		get_time("%M", cmins[id], 43)
-		get_time("%S", csec[id], 43)
+		//get_time("%H", chours[id], 43)
+		//get_time("%M", cmins[id], 43)
+		//get_time("%S", csec[id], 43)
 		g_NameChanged[ id ] = false;
 		g_Gaged[ id ]  = false;
 		g_SwearGag[ id ] = false;
@@ -782,12 +797,13 @@ public client_disconnected(id)
 
 		remove_task( id+123 )
 	}
-	get_time("%H", chours[id], 43)
-	get_time("%M", cmins[id], 43)
-	get_time("%S", csec[id], 43)
+	
+	chours[id] = 0;
+	cmins[id] = 0;
+	csec[id] = 0;
 	
 	g_NameChanged[ id ] = false;
-	g_Gaged[ id ] = false
+	g_Gaged[ id ] = false;
 	g_SwearGag[ id ] = false
 	warned[id] = 0;
 	g_CmdGag[ id ] = false;	
