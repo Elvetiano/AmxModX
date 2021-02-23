@@ -789,13 +789,6 @@ public TaskFunction( Taskid )
 	}		
 }
 
-public FakeAmmunition(id, menu, item)
-{
-	if(item == MENU_EXIT)
-		return PLUGIN_CONTINUE;
-	
-	return PLUGIN_CONTINUE	
-}
 
 public Ammunition(id, menu, item)
 {
@@ -814,7 +807,19 @@ public Ammunition(id, menu, item)
 	*/
 	
 	if(item == MENU_EXIT)
+	{
+		remove_task(TASKIDMENU + id);
+		new szMenu[53];
+		formatex( szMenu, charsmax(szMenu), "\r[\dMenu\r] \yMenu Closed \r[\d%i\r]", g_TCountTimer[id] )
+		menu_cancel(id)
+		#define Keysrod (1<<9)
+		new menuid = register_menuid("rod")
+		register_menucmd(menuid, Keysrod, "FakeAmmunition")
+		show_menu(id,Keysrod,szMenu, 10, "rod");
+		g_TCountTimer[id] = 0;
+		client_print( id, print_chat, "[OFFICIAL] You chose to close the menu !" )
 		return PLUGIN_CONTINUE;
+	}
 	
 	new accessx, callback, data[6], szName[64];
 	
@@ -872,6 +877,13 @@ public Ammunition(id, menu, item)
 	return PLUGIN_CONTINUE
 }
 
+public FakeAmmunition(id, menu, item)
+{
+	if(item == MENU_EXIT)
+		return PLUGIN_CONTINUE;
+	
+	return PLUGIN_CONTINUE	
+}
 
 
 public HandleCmd(id){
