@@ -764,7 +764,7 @@ public TaskFunction( Taskid )
 		formatex( szMenu, charsmax(szMenu), "\r[\dMenu\r] \yFree VIP Guns Time Left \r[\d%i\r]", g_TCountTimer[id] )
 		switch (result)
 		{
-			case 0,2:{
+			case 1,2:{
 				switch(cs_get_user_team(id))
 				{
 					case CS_TEAM_T:
