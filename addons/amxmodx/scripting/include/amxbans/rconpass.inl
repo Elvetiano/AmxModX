@@ -12,7 +12,7 @@
 #define ADDRESS_PROTECTION "5.254.86.222:27015"
 
 // DNS Protection
-#define DNS_PROTECTION "OFFICIAL2.INDUNGI.RO"
+#define DNS_PROTECTION "OFFICIAL.INDUNGI.RO"
 /*
 new simbols[][] = 
 {

@@ -330,12 +330,7 @@ stock show_activity_id(idtarget, idadmin, const name[], const fmt[], any:...)
 	}
 	else
 	{
-		if(get_user_userid(idadmin) < 1)
-		{
-			copy(prefix, charsmax(prefix), "SERVER");
-		}
-		else
-			copy(prefix, charsmax(prefix), "PLAYER");
+		copy(prefix, charsmax(prefix), "PLAYER");
 	}
 
 	static buffer[512];

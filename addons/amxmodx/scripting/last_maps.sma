@@ -76,7 +76,7 @@ public plugin_cfg() {
 
 public HartiJucateCuSay(id) {
 	new HartiAnterioare[256], n
-	n += formatex(HartiAnterioare[n], 255-n, "%s [AMXX] Hartile jucate anterior sunt:",COLOR2)
+	n += formatex(HartiAnterioare[n], 255-n, "%s [OFFICIAL] Hartile jucate anterior sunt:",COLOR2)
 	for(new i; i<HartiMaxime; i++)
 	{
 		if(!NumeHarti[i][0])

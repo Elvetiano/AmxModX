@@ -764,7 +764,7 @@ public TaskFunction( Taskid )
 		formatex( szMenu, charsmax(szMenu), "\r[\dMenu\r] \yFree VIP Guns Time Left \r[\d%i\r]", g_TCountTimer[id] )
 		switch (result)
 		{
-			case 1,2:{
+			case 0,2:{
 				switch(cs_get_user_team(id))
 				{
 					case CS_TEAM_T:
@@ -808,7 +808,7 @@ public Ammunition(id, menu, item)
 	
 	if(item == MENU_EXIT)
 	{
-		remove_task(TASKIDMENU + id);
+		//remove_task(TASKIDMENU + id);
 		new szMenu[53];
 		formatex( szMenu, charsmax(szMenu), "\r[\dMenu\r] \yMenu Closed \r[\d%i\r]", g_TCountTimer[id] )
 		menu_cancel(id)
@@ -817,7 +817,7 @@ public Ammunition(id, menu, item)
 		register_menucmd(menuid, Keysrod, "FakeAmmunition")
 		show_menu(id,Keysrod,szMenu, 10, "rod");
 		g_TCountTimer[id] = 0;
-		client_print( id, print_chat, "[OFFICIAL] You chose to close the menu !" )
+		//client_print( id, print_chat, "[OFFICIAL] You chose to close the menu !" )
 		return PLUGIN_CONTINUE;
 	}
 	
