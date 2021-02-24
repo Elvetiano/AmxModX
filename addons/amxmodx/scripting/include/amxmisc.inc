@@ -231,7 +231,12 @@ stock show_activity(id, const name[], const fmt[], any:...)
 	}
 	else
 	{
-		copy(prefix, charsmax(prefix), "PLAYER");
+		if(get_user_userid(id) < 1)
+		{
+			copy(prefix, charsmax(prefix), "SERVER");
+		}
+		else
+			copy(prefix, charsmax(prefix), "PLAYER");
 	}
 	new buffer[512];
 	vformat(buffer, charsmax(buffer), fmt, 4);
@@ -330,7 +335,12 @@ stock show_activity_id(idtarget, idadmin, const name[], const fmt[], any:...)
 	}
 	else
 	{
-		copy(prefix, charsmax(prefix), "PLAYER");
+		if(get_user_userid(idadmin) < 1)
+		{
+			copy(prefix, charsmax(prefix), "SERVER");
+		}
+		else
+			copy(prefix, charsmax(prefix), "PLAYER");
 	}
 
 	static buffer[512];
