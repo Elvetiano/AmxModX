@@ -72,6 +72,9 @@
  -- Version 4.5.5 25-10-2020
  * La cerere ORB Added DubleJump
  
+ -- Version 4.5.6 25-10-2020
+ * Removed EXit from automatic menu and adde option to exit manualy as menu wasnt closing on exit !
+ 
 */
 
 
@@ -119,7 +122,7 @@ new bool:dojump[33] = false
 
 new const Plugin[] = "VIP plugin"
 new const Author[] = "Dunno & UNU"
-new const Version[]	= "4.5.3"
+new const Version[]	= "4.5.6"
 
 new g_pTime;
 
@@ -465,15 +468,15 @@ public Logevent_RoundEnd()
 }
 
 
-public playerSpawn(id)
+public playerSpawn(user)
 {
 	//new hpawp, hpknife
 	new hpmap = hpmapcheck()
-	if(!is_user_alive(id))
+	if(!is_user_alive(user))
 		return PLUGIN_HANDLED;
-	if(!is_valid_ent(id))
+	if(!is_valid_ent(user))
 		return PLUGIN_HANDLED;		
-	new result = vip_check(id)
+	new result = vip_check(user)
 	//hpawp =  100 //get_pcvar_num(hpawpadvatage)
 	//hpknife = 35 //get_pcvar_num(hpknifeadvatage)
 			
@@ -485,45 +488,45 @@ public playerSpawn(id)
 		case 0:{
 			switch (result){
 				case 0:{
-					set_task(1.0, "setscoreboarbvip" ,TASKIDSCORE + id)				
+					set_task(1.0, "setscoreboarbvip" ,TASKIDSCORE + user)				
 					
-					nadecheck(id);				
+					nadecheck(user);				
 
-					rg_give_item(id, "item_assaultsuit", GT_REPLACE);
-					rg_give_item(id, "item_thighpack", GT_REPLACE);
-					rg_give_item(id, "weapon_deagle", GT_REPLACE);
+					rg_give_item(user, "item_assaultsuit", GT_REPLACE);
+					rg_give_item(user, "item_thighpack", GT_REPLACE);
+					rg_give_item(user, "weapon_deagle", GT_REPLACE);
 					
 					if (!g_menu_active)
 						return PLUGIN_CONTINUE
 					if(CurrentRound >= 3)
 					{
-						g_TCountTimer[id] = get_cvar_num("amx_menu_timeout");
-						//Showrod(id)
-						set_task( 1.0, "TaskFunction", TASKIDMENU + id, _, _,"b");
+						g_TCountTimer[user] = get_cvar_num("amx_menu_timeout");
+						//Showrod(user)
+						set_task( 1.0, "TaskFunction", TASKIDMENU + user, _, _,"b");
 					}
 				}
 				case 1:{
-					nadecheck(id);
-					rg_give_item(id, "weapon_deagle", GT_REPLACE);					
+					nadecheck(user);
+					rg_give_item(user, "weapon_deagle", GT_REPLACE);					
 				}
 				case 2:{
-					set_task(1.0, "setscoreboarbvip" ,TASKIDSCORE + id)
-					nadecheck(id);					
-					rg_give_item(id, "item_assaultsuit", GT_REPLACE);
-					rg_give_item(id, "item_thighpack", GT_REPLACE);
-					rg_give_item(id, "weapon_deagle", GT_REPLACE);
+					set_task(1.0, "setscoreboarbvip" ,TASKIDSCORE + user)
+					nadecheck(user);					
+					rg_give_item(user, "item_assaultsuit", GT_REPLACE);
+					rg_give_item(user, "item_thighpack", GT_REPLACE);
+					rg_give_item(user, "weapon_deagle", GT_REPLACE);
 					if (!g_menu_active)
 						return PLUGIN_CONTINUE
 					if(CurrentRound >= 3)
 					{
-						g_TCountTimer[id] = get_cvar_num("amx_menu_timeout");
-						//Showrod(id)
-						set_task( 1.0, "TaskFunction", TASKIDMENU + id, _, _,"b");
+						g_TCountTimer[user] = get_cvar_num("amx_menu_timeout");
+						//Showrod(user)
+						set_task( 1.0, "TaskFunction", TASKIDMENU + user, _, _,"b");
 					}
 				}
 				case 3:{
-					nadecheck(id);
-					rg_give_item(id, "weapon_deagle", GT_REPLACE);					
+					nadecheck(user);
+					rg_give_item(user, "weapon_deagle", GT_REPLACE);					
 				}
 				
 			}			
@@ -532,8 +535,8 @@ public playerSpawn(id)
 			switch (result)
 			{
 				case 0,2:{
-					// delayed_Hp_set(id, hpknife)
-					rg_give_item(id, "item_assaultsuit", GT_REPLACE);
+					// delayed_Hp_set(user, hpknife)
+					rg_give_item(user, "item_assaultsuit", GT_REPLACE);
 				}
 			}
 		}
@@ -541,10 +544,10 @@ public playerSpawn(id)
 			switch (result)
 			{
 				case 0,2:{
-					// delayed_Hp_set(id, hpawp)
-					rg_give_item(id, "item_assaultsuit", GT_REPLACE);
-					rg_give_item(id, "weapon_deagle", GT_REPLACE);
-					rg_give_item(id, "weapon_awp", GT_REPLACE);	
+					// delayed_Hp_set(user, hpawp)
+					rg_give_item(user, "item_assaultsuit", GT_REPLACE);
+					rg_give_item(user, "weapon_deagle", GT_REPLACE);
+					rg_give_item(user, "weapon_awp", GT_REPLACE);	
 				}		
 			}
 		}
@@ -552,8 +555,8 @@ public playerSpawn(id)
 			switch (result)
 			{
 				case 0,2:{
-					rg_give_item(id, "item_assaultsuit", GT_REPLACE);
-					rg_give_item(id, "weapon_deagle", GT_REPLACE);					
+					rg_give_item(user, "item_assaultsuit", GT_REPLACE);
+					rg_give_item(user, "weapon_deagle", GT_REPLACE);					
 				}				
 			}
 		}
@@ -561,7 +564,7 @@ public playerSpawn(id)
 	new Weapons[32] 
 	new numWeapons, i, weapon
 	new weapname[50];
-	get_user_weapons(id, Weapons, numWeapons)
+	get_user_weapons(user, Weapons, numWeapons)
 	
 	for (i=0; i<numWeapons; i++) 
 	{
@@ -569,14 +572,14 @@ public playerSpawn(id)
 		if (!(( 1 << weapon ) & NOAMMO_BITSSUM )){
 			new weaponRgName[50]			
 			rg_get_weapon_info(weapon, WI_NAME, weaponRgName, 49);			
-			rg_set_user_bpammo(id, WeaponIdType:get_weaponid(weaponRgName), rg_get_weapon_info(weapon, WI_MAX_ROUNDS))
+			rg_set_user_bpammo(user, WeaponIdType:get_weaponid(weaponRgName), rg_get_weapon_info(weapon, WI_MAX_ROUNDS))
 		}
 		// result 1=vip silevr, 0=vip gold, -1= normal player 2= free gold 3=free vip
 		switch (result){
 			case 0,1,2,3:{
 				if( ( 1 << weapon ) & REMOVE_PISTOLS ){
 					get_weaponname(weapon, weapname, 49);
-					rg_drop_item(id, weapname)
+					rg_drop_item(user, weapname)
 				}
 			}
 		}		
@@ -719,7 +722,7 @@ public Showrod(id)
 				}
 			}	
 			menu_display( id, menu, 0);
-			menu_setprop( menu, MPROP_EXIT, MEXIT_ALL )			
+			menu_setprop( menu, MPROP_EXIT, MEXIT_FORCE)			
 		}
 	}
 	if(!task_exists(TASKIDMENU + id))
@@ -735,37 +738,35 @@ public Showrod(id)
 
 public TaskFunction( Taskid )
 {
-	new id = Taskid - TASKIDMENU
+	new plr = Taskid - TASKIDMENU;
 	new menu, keys;
-	g_TCountTimer[id]-- ;
-	
-	new result = vip_check(id)
-	
-	new szMenu[53];
-	
-	if( g_TCountTimer[id] <= 0 ) // if for some reason it glitches and gets below zero
+	g_TCountTimer[plr]-- ;
+	new result = vip_check(plr)	
+	new szMenu[53];	
+	if( g_TCountTimer[plr] <= 0 ) // if for some reason it glitches and gets below zero
 	{
-		if(get_user_menu(id, menu, keys) > 0)
+		if(get_user_menu(plr, menu, keys) > 0)
 		{
-			formatex( szMenu, charsmax(szMenu), "\r[\dMenu\r] \yMenu Closed \r[\d%i\r]", g_TCountTimer[id] )
-			menu_cancel(id)
+			formatex( szMenu, charsmax(szMenu), "\r[\dMenu\r] \yMenu Closed \r[\d%i\r]", g_TCountTimer[plr] )
+			menu_cancel(plr)
 			#define Keysrod (1<<9)
 			new menuid = register_menuid("rod")
 			register_menucmd(menuid, Keysrod, "FakeAmmunition")
-			show_menu(id,Keysrod,szMenu, 10, "rod");
+			show_menu(plr,Keysrod,szMenu, 3, "rod");
 
-			g_TCountTimer[id] = 0;
-			client_print( id, print_chat, "The timer has reached 0! Vip Menu Closed!" )
+			g_TCountTimer[plr] = 0;
+			client_print( plr, print_chat, "The timer has reached 0! Vip Menu Closed!" )
 		}
-		remove_task(TASKIDMENU + id);
+		remove_task(Taskid);
+		
 	}
 	else
 	{
-		formatex( szMenu, charsmax(szMenu), "\r[\dMenu\r] \yFree VIP Guns Time Left \r[\d%i\r]", g_TCountTimer[id] )
+		formatex( szMenu, charsmax(szMenu), "\r[\dMenu\r] \yFree VIP Guns Time Left \r[\d%i\r]", g_TCountTimer[plr] )
 		switch (result)
 		{
 			case 0,2:{
-				switch(cs_get_user_team(id))
+				switch(cs_get_user_team(plr))
 				{
 					case CS_TEAM_T:
 					{
@@ -773,24 +774,39 @@ public TaskFunction( Taskid )
 						menu_additem menu, "M4A1+Deagle+Set grenade", "0";
 						menu_additem menu, "AK47+Deagle+Set grenade", "1";
 						//menu_additem menu, "Awp+Deagle+Set grenade", "2";
+						menu_addblank2( menu );
+						menu_addblank2( menu );
+						menu_addblank2( menu );
+						menu_addblank2( menu );
+						menu_addblank2( menu );
+						menu_addblank2( menu );
+						menu_additem menu, "EXIT", "3..9";
 					}
 					case CS_TEAM_CT:
 					{
 						menu = menu_create(szMenu, "Ammunition");
 						menu_additem menu, "M4a1+Deagle+Set grenade", "0";
 						menu_additem menu, "AK47+Deagle+Set grenade", "1";
+						menu_addblank2( menu );
+						menu_addblank2( menu );
+						menu_addblank2( menu );
+						menu_addblank2( menu );
+						menu_addblank2( menu );
+						menu_addblank2( menu );
 						//menu_additem menu, "Awp+Deagle+Set grenade", "2";
+						menu_additem menu, "\r \wExit", "3..9";
 					}
-				}	
-				menu_display( id, menu, 0);
-				menu_setprop( menu, MPROP_EXIT, MEXIT_ALL )	
+				}
+				//menu_setprop(menu, MPROP_EXIT, MEXIT_ALL);
+				//menu_setprop(menu, MPROP_EXITNAME, "RETURN ^n/\rE0. \wExit")
+				menu_setprop(menu, MPROP_PERPAGE, 0);
+				//menu_setprop(menu, MPROP_PERPAGE, 7);
+				menu_display(plr, menu, 0);
 			}
 		}
 	}		
 }
-
-
-public Ammunition(id, menu, item)
+public Ammunition(plr, menu, item)
 {
 	/* Menu:
 	* VIP Menu GolD
@@ -808,18 +824,15 @@ public Ammunition(id, menu, item)
 	
 	if(item == MENU_EXIT)
 	{
-		//remove_task(TASKIDMENU + id);
-		new szMenu[53];
-		formatex( szMenu, charsmax(szMenu), "\r[\dMenu\r] \yMenu Closed \r[\d%i\r]", g_TCountTimer[id] )
-		menu_cancel(id)
-		#define Keysrod (1<<9)
-		new menuid = register_menuid("rod")
-		register_menucmd(menuid, Keysrod, "FakeAmmunition")
-		show_menu(id,Keysrod,szMenu, 10, "rod");
-		g_TCountTimer[id] = 0;
-		//client_print( id, print_chat, "[OFFICIAL] You chose to close the menu !" )
+		if(item == MENU_EXIT &&  get_user_button(plr) & IN_USE)
+		{
+			return PLUGIN_HANDLED;
+			remove_task(TASKIDMENU + plr);
+		}
 		return PLUGIN_CONTINUE;
 	}
+
+	
 	
 	new accessx, callback, data[6], szName[64];
 	
@@ -827,32 +840,35 @@ public Ammunition(id, menu, item)
 	new key = str_to_num(data);
 	
 	//DropWeapon(id);	
-	new result = vip_check(id)	
+	new result = vip_check(plr)	
 	
 	switch (result) {
 		//Gold VIP + Free GOLD
 		case 0,2: {
-			switch (key) {
+			switch (key) {				
 				case 0: {					
-					nadecheck(id)
-					set_task(0.3, "casem4a1ak47" ,MENUGETTASK + id)							
-					client_print(id, print_center, "You Taked Free M4A1 and Deagle")
-					remove_task(TASKIDMENU + id);				
-				}
-				
+					nadecheck(plr)
+					set_task(0.3, "casem4a1ak47" ,MENUGETTASK + plr)							
+					client_print(plr, print_center, "You Taked Free M4A1 and Deagle")
+					remove_task(TASKIDMENU + plr);				
+				}				
 				case 1: {					
-					nadecheck(id)
-					set_task(0.3, "caseak47awp" ,MENUGETTASK + id)
-					client_print(id, print_center, "You Taked Free AK47 and Deagle")
-					remove_task(TASKIDMENU + id);
+					nadecheck(plr)
+					set_task(0.3, "caseak47awp" ,MENUGETTASK + plr)
+					client_print(plr, print_center, "You Taked Free AK47 and Deagle")
+					remove_task(TASKIDMENU + plr);
 				}/*
 				case 1: {					
 					nadecheck(id)	
 					set_task(0.3, "casem4a1awp" ,MENUGETTASK + id)					
 					client_print(id, print_center, "You Taked Free AWP and Deagle")
 					remove_task(TASKIDMENU + id);
-				}*/	
-				case 9: { 	
+				*/
+				case 3..9:
+				{
+					client_print( plr, print_chat, "You exited the menu... what a bummer!" );
+					remove_task(TASKIDMENU + plr);
+					return PLUGIN_HANDLED;					
 				}
 			}
 		}
@@ -860,22 +876,49 @@ public Ammunition(id, menu, item)
 		case 3: {
 			switch (key) {
 				case 0: {					
-					give_item(id, "weapon_flashbang")
-					give_user_weapon(id , CSW_DEAGLE , 7 , 35 );
-					give_user_weapon(id , CSW_M4A1 , 30 , 90 );
-					client_print(id, print_center, "You Taked Free M4A1 and Deagle")
+					give_item(plr, "weapon_flashbang")
+					give_user_weapon(plr , CSW_DEAGLE , 7 , 35 );
+					give_user_weapon(plr , CSW_M4A1 , 30 , 90 );
+					client_print(plr, print_center, "You Taked Free M4A1 and Deagle")
+					remove_task(TASKIDMENU + plr);
 					}				
 				case 1: {	
-					give_item(id, "weapon_flashbang")
-					give_user_weapon(id , CSW_DEAGLE , 7 , 35 );
-					give_user_weapon(id , CSW_AK47 , 30 , 90 );
-					client_print(id, print_center, "You Taked Free Ak47 and Deagle")
+					give_item(plr, "weapon_flashbang")
+					give_user_weapon(plr , CSW_DEAGLE , 7 , 35 );
+					give_user_weapon(plr , CSW_AK47 , 30 , 90 );
+					client_print(plr, print_center, "You Taked Free Ak47 and Deagle")
+					remove_task(TASKIDMENU + plr);
 				}
-			}				
+				case 3..9:
+				{
+					client_print( plr, print_chat, "You exited the menu... what a bummer!" );
+					remove_task(TASKIDMENU + plr);
+					return PLUGIN_HANDLED;					
+				}
+			}
 		}
 	}
 	return PLUGIN_CONTINUE
 }
+
+public menu_remove(plr)
+{
+	new szMenu[53];
+	formatex( szMenu, charsmax(szMenu), "\r[\dMenu\r] \yMenu Closed \r[\d%i\r]", g_TCountTimer[plr] )
+	menu_cancel(plr)
+	
+	#define Keysrod (1<<9)
+	new menuid = register_menuid("rod")
+	register_menucmd(menuid, Keysrod, "FakeAmmunition")
+	show_menu(plr,Keysrod,szMenu, 3, "rod");
+	g_TCountTimer[plr] = 0;	
+	if(!task_exists(TASKIDMENU + plr))
+	{
+		set_task( 1.0, "TaskFunction", TASKIDMENU + plr, _, _,"b");
+		//log_amx("[VIP Menu TASK] Setting task id : %d ",TASKIDMENU + id)		
+	}else
+		remove_task(TASKIDMENU + plr);
+} 
 
 public FakeAmmunition(id, menu, item)
 {
