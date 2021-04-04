@@ -47,7 +47,7 @@ Age=1317187962
 [imessage.sma]
 Age=1347313408
 [invisible_spectator.sma]
-Age=1378061349
+Age=1384405299
 [mapchooser.sma]
 Age=1379773665
 [mapsmenu.sma]
@@ -61,7 +61,7 @@ Age=1347313408
 [nextmap.sma]
 Age=1347313408
 [nightmod.sma]
-Age=1378137493
+Age=1384402443
 [pausecfg.sma]
 Age=1347313408
 [plmenu.sma]
@@ -71,7 +71,7 @@ Age=1378138552
 [pluginmenu.sma]
 Age=1312719143
 [ptb_ro.sma]
-Age=1379556250
+Age=1384298184
 [restmenu.sma]
 Age=1347313408
 [scrollmsg.sma]
@@ -86,3 +86,5 @@ Age=1347313408
 Age=1347313408
 [TopFlags.sma]
 Age=1380099343
+[reaimdetector.sma]
+Age=1384426759

@@ -68,6 +68,8 @@ new const DEFAULT_MODELINDEX_CT[] = "models/player/urban/urban.mdl"
 
 new const PTB_VERSION[] = "1.9"
 
+new g_invisible[MAX_PLAYERS+1];
+
 // Uncomment to activate log debug messages.
 //#define PTB_DEBUG
 
@@ -281,6 +283,19 @@ public plugin_cfg()
 	}else
 	{
 		set_task(2.0, "call_function")
+	}
+}
+
+public plugin_pause()
+{
+	new playerCount, players[32]
+	new player
+	get_players(players, playerCount)
+	for (new i=0; i < playerCount; i++)
+	{
+		player = players[i]
+		g_invisible[player] = 0;
+			
 	}
 }
 
@@ -526,6 +541,8 @@ createValidTargets(theTeam, bool:deadonly) {
 		
 		// Protection for admins if ptb_switch_immunity 1
 		if (get_user_flags(sortedTeams[theTeam][i])&ADMIN_PROTECT_PTB && (get_cvar_num("ptb_switch_immunity") == 1)) continue
+		// Invizible spec
+		if (g_invisible[sortedTeams[theTeam][i]] == 0) continue
 		// Dead only condition
 		if ( deadonly && is_user_alive(sortedTeams[theTeam][i]) ) continue
 		// Already switched or in PTB_PLAYERFREQ time condition
@@ -883,7 +900,9 @@ checkTeamSwitch(id,iNewTeam) {
 	if (!PTB_LIMITJOIN) return PLUGIN_CONTINUE
 	// Protection for admins if ptb_limitjoin_immunity 1
 	if (get_user_flags(id)&ADMIN_PROTECT_PTB && (get_cvar_num("ptb_limitjoin_immunity") == 1)) return PLUGIN_CONTINUE
-	// players is transfered so don't care with rest
+	// Invizible spec
+	if (g_invisible[id] == 1) return PLUGIN_CONTINUE
+	// players is transfered so don't care with rest	
 	if (isBeingTransfered[id]) {
 		//say("TRANSFER")
 		isBeingTransfered[id] = false
@@ -902,13 +921,16 @@ checkTeamSwitch(id,iNewTeam) {
 		iNewTeam = AUTO_TEAM
 		
 	// prevent unwanted rejoining of the same team ...
-	if (iNewTeam == iOldTeam) {
-		//say("Preventing rejoining of the same team.")
-		client_print(id,print_chat,"PTB: Intrarea in aceasi echipa este interzisa...")
+	if(!access(id,ACCESS_PTB))
+	{
+		if (iNewTeam == iOldTeam) {
+			//say("Preventing rejoining of the same team.")
+			client_print(id,print_chat,"PTB: Intrarea in aceasi echipa este interzisa...")
 #if !defined MANUAL_SWITCH
-		engclient_cmd(id,"chooseteam") // display menu again
+			engclient_cmd(id,"chooseteam") // display menu again
 #endif
-		return PLUGIN_HANDLED
+			return PLUGIN_HANDLED
+		}
 	}
 	
 	checkTeamBalance()
@@ -1048,11 +1070,14 @@ checkTeamSwitch(id,iNewTeam) {
 	if (iNewTeam==AUTO_TEAM&&(iOldTeam==CTS||iOldTeam==TS)) {
 		//say("Changing team automatically.")
 		new opposingTeam = (iOldTeam==CTS) ? TS : CTS
-		if (teamCounts[opposingTeam] && ( (teamCounts[opposingTeam]>=PTB_MAXSIZE)
-				|| (iOldTeam==loserTeam) || (!loserTeam&&teamCounts[iOldTeam]<=teamCounts[opposingTeam])
-				|| (teamCounts[opposingTeam]+1-teamCounts[iOldTeam]>=PTB_MAXDIFF)) ) {
-			client_print(id,print_chat,"PTB: Ai face bine sa stai in echipa curenta...")
-			return PLUGIN_HANDLED
+		if(!access(id, ACCESS_PTB))
+		{
+			if (teamCounts[opposingTeam] && ( (teamCounts[opposingTeam]>=PTB_MAXSIZE)
+					|| (iOldTeam==loserTeam) || (!loserTeam&&teamCounts[iOldTeam]<=teamCounts[opposingTeam])
+					|| (teamCounts[opposingTeam]+1-teamCounts[iOldTeam]>=PTB_MAXDIFF)) ) {
+				client_print(id,print_chat,"PTB: Ai face bine sa stai in echipa curenta...")
+				return PLUGIN_HANDLED
+			}
 		}
 		client_print(id,print_chat,"PTB: Ai fost auto-repartizat...")
 		engclient_cmd(id,"jointeam",(opposingTeam==CTS)?"2":"1")
@@ -1548,6 +1573,8 @@ public client_disconnected(id) {
 	teamCounts[UNASSIGNED] = 0
 	teamCounts[CTS] = 0
 	teamCounts[TS] = 0
+	
+	g_invisible[id] = 0;
 
 	new a = get_maxplayers()
 	for (new i = 1; i <= a; ++i)
@@ -1562,6 +1589,10 @@ public client_disconnected(id) {
 	return PLUGIN_CONTINUE
 }
 
+public handle_afkadmin(id, param)
+{
+	g_invisible[id] = param;
+}
 
 stock CsTeams:fm_cs_get_user_team(id)
 {

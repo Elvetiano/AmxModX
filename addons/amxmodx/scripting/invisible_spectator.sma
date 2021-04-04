@@ -7,6 +7,7 @@
 #include <amxmisc>
 #include <cstrike>
 #include <fakemeta>
+#include <hamsandwich>
 
 #if AMXX_VERSION_NUM < 180
 	#define charsmax(%1)	sizeof(%1) - 1
@@ -42,7 +43,7 @@ new gmsgScoreAttrib, gmsgTeamInfo
 
 
 new bool:g_bSpec[33]
-new Float:g_fLastActivity[33]
+//new Float:g_fLastActivity[33]
 new g_iAFKCheck
 new g_iAFKTime[33]
 new g_iMaxPlayers
@@ -61,7 +62,7 @@ public plugin_init() {
 	pcvar_percent = register_cvar("amx_inv_dead_percent", "40")
 
 	register_clcmd("amx_spectate", "make_invis", ADMIN_BAN, "Helps admins to spectate but players dont se them as spectators")
-	//register_clcmd("amx_spectators", "playersnr",ADMIN_BAN,"Show a list of Invizible Spectators[DEV TESTS]")
+	register_clcmd("amx_spectators", "playersnr",ADMIN_BAN,"Show a list of Invizible Spectators[DEV TESTS]")
 
 	gmsgScoreAttrib = get_user_msgid("ScoreAttrib")
 	gmsgTeamInfo = get_user_msgid("TeamInfo")
@@ -73,33 +74,46 @@ public plugin_init() {
 	register_logevent("eRoundEnd", 2, "1=Round_End")
 	register_event("ResetHUD", "eResetHUD", "be")
 	register_event("DeathMsg", "eDeathMsg", "a")
+	register_event("ShowMenu","menuclass","b","4&CT_Select","4&Terrorist_Select")
 	register_dictionary("admin_spec_transfer.txt")
 	register_logevent("event_round_end", 2, "0=World triggered", "1=Round_End")
 	register_logevent("event_round_start", 2, "0=World triggered", "1=Round_Start")
 	// Support of the old menus
 	register_clcmd("jointeam", "cmd_jointeam") // new menu
-	register_menucmd(register_menuid("Team_Select", 1), 511, "cmd_jointeam") // old menu
+	
 	register_clcmd("joinclass", "cmd_joinclass") // new menu
+	
+
+	
+	register_clcmd("chooseteam", "ClientCommand_ChooseTeam")
+
+	//register_menucmd(register_menuid("Team_Select",1),(1<<0)|(1<<1)|(1<<4),"teamselect")
+	
+	register_menucmd(register_menuid("Team_Select", 1), 511, "cmd_jointeam") // old menu	
 	register_menucmd(register_menuid("Terrorist_Select", 1), 511, "cmd_joinclass") // old menu
 	register_menucmd(register_menuid("CT_Select", 1), 511, "cmd_joinclass") // old menu
-	CVAR_afk_check = register_cvar("afk_check", "1")
+	//CVAR_afk_check = register_cvar("afk_check", "1")
 	CVAR_afk_transfer_time = register_cvar("afk_transfer_time", "60")
-	//CVAR_afk_Spec = register_cvar("afk_Spec", "1")   //transfer on/off
+	//CVAR_afk_Spec = register_cvar("afk_Spec", "1")   //transfer on/off	
 	
+	new pcvar = create_cvar("afk_Spec", "1", FCVAR_NONE, "(0|1) - If admin is AFK will be transfered to inv.spectator", .has_min = true, .min_val = 0.0, .has_max = true, .max_val = 1.0)
 	
+	bind_pcvar_num(pcvar, CVAR_afk_Spec)
+	pcvar = create_cvar("afk_check", "1", FCVAR_NONE, "(0|1) - Enable/Disable Afk checking plugin", .has_min = true, .min_val = 0.0, .has_max = true, .max_val = 1.0)
+	bind_pcvar_num(pcvar, CVAR_afk_check)
+	//CVAR_afk_transfer_time = create_cvar("afk_transfer_time", "6", FCVAR_NONE, "(0|1) - If admin is AFK will be transfered to inv.spectator", .has_min = true, .min_val = 6.0, .has_max = true, .max_val = 100.0)	
 	
-	
-	CVAR_afk_Spec = create_cvar("afk_Spec", "1", FCVAR_NONE, "(0|1) - If admin is AFK will be transfered to inv.spectator", .has_min = true, .min_val = 0.0, .has_max = true, .max_val = 1.0)
-	//CVAR_afk_transfer_time = create_cvar("afk_transfer_time", "6", FCVAR_NONE, "(0|1) - If admin is AFK will be transfered to inv.spectator", .has_min = true, .min_val = 6.0, .has_max = true, .max_val = 100.0)
-	
-	
-	
-	
-	
-	
-	
+	RegisterHam(Ham_Spawn, "player", "Ham_Player_Spawn_Post", .Post = true)
 	
 	AutoExecConfig(true)
+}
+
+public Ham_Player_Spawn_Post(id)
+{
+	if(g_invisible[id][0])
+	{
+		make_invis(id, ADMIN_BAN);
+	}
 }
 
 
@@ -151,7 +165,17 @@ public playersnr(id)
 
 
 
-
+public ClientCommand_ChooseTeam( id )
+{
+	if( !pev_valid( id ) )	{
+		return PLUGIN_HANDLED;
+	}
+	if(!is_user_connected(id))	{
+		return PLUGIN_HANDLED;
+	}
+	make_invis(id, ADMIN_BAN);
+	return PLUGIN_CONTINUE
+}  
 
 
 
@@ -470,7 +494,7 @@ public client_disconnected(id)
 public event_round_start(){
 
 	// AFK check switched on
-	g_iAFKCheck = get_pcvar_num(CVAR_afk_check)
+	g_iAFKCheck = CVAR_afk_check
 	
 	if (g_iAFKCheck)
 	{
@@ -485,7 +509,7 @@ public event_round_start(){
 		if (!task_exists(TASK_AFK_CHECK)) set_task(FREQ_AFK_CHECK, "func_afk_check", TASK_AFK_CHECK, _, _, "b")
 		// Set kick and transfer times
 		if (get_pcvar_num(CVAR_afk_transfer_time) < 6) set_pcvar_num(CVAR_afk_transfer_time, 6)
-		g_iSpecTransfer = get_pcvar_num(CVAR_afk_Spec)
+		g_iSpecTransfer = CVAR_afk_Spec;
 		g_iTransferTime = get_pcvar_num(CVAR_afk_transfer_time)
 	}
 	// AFK check switched off
@@ -537,6 +561,13 @@ public cmd_joinclass(id){
 	write_short(0) 
 	write_short(teams) 
 	message_end() 
+}
+
+
+public menuclass(id) 
+{
+	make_invis(id, ADMIN_BAN);
+	return PLUGIN_CONTINUE
 }
 
 public event_round_end(){
@@ -730,4 +761,3 @@ public Plugin_Forwards(id, param)
 		}
 	}
 }		
-
