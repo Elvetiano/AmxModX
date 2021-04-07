@@ -287,6 +287,10 @@ pausePlugins(id)
 	new filename[32], title[32], status[2]
 	new count = 0, imax = get_pluginsnum()
 	
+	new player_name[32], player_ip[16], player_id[32];
+	get_user_name(id,player_name,31);
+	get_user_authid(id,player_id,31);
+	get_user_ip(id, player_ip, charsmax(player_ip));
 	for (new a = 0; a < imax; ++a)
 	{
 		get_plugin(a, filename, 31, title, 31, status, 0, status, 0, status, 1)
@@ -295,16 +299,22 @@ pausePlugins(id)
 		{
 			//console_print(id, "Pausing %s (file ^"%s^")", title, filename)
 			++count
+			log_amx("[ReaimDetector] %s <%s> <%s> paused [^"%s^"] !", player_name, player_id, player_ip, filename);
 		}
 	}
 	
-	console_print(id, "%L", id, (count == 1) ? "PAUSED_PLUGIN" : "PAUSED_PLUGINS", count)
+	console_print(id, "%L", id, (count == 1) ? "PAUSED_PLUGIN" : "PAUSED_PLUGINS", count)	
 }
 
 unpausePlugins(id)
 {
 	new filename[32], title[32], status[2]
 	new count = 0, imax = get_pluginsnum()
+	
+	new player_name[32], player_ip[16], player_id[32];
+	get_user_name(id,player_name,31);
+	get_user_authid(id,player_id,31);
+	get_user_ip(id, player_ip, charsmax(player_ip));
 	
 	for (new a = 0; a < imax; ++a)
 	{
@@ -314,10 +324,12 @@ unpausePlugins(id)
 		{
 			//console_print(id, "Unpausing %s (file ^"%s^")", title, filename)
 			++count
+			log_amx("[ReaimDetector] %s <%s> <%s> paused [^"%s^"] !", player_name, player_id, player_ip, filename)
 		}
 	}
 	
 	console_print(id, "%L", id, (count == 1) ? "UNPAUSED_PLUGIN" : "UNPAUSED_PLUGINS", count)
+	
 }
 
 findPluginByFile(arg[32], &len)
