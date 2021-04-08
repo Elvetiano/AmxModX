@@ -85,7 +85,7 @@ public plugin_init() {
 	
 
 	
-	register_clcmd("chooseteam", "ClientCommand_ChooseTeam")
+	//register_clcmd("chooseteam", "ClientCommand_ChooseTeam")
 
 	//register_menucmd(register_menuid("Team_Select",1),(1<<0)|(1<<1)|(1<<4),"teamselect")
 	
@@ -164,7 +164,7 @@ public playersnr(id)
 
 
 
-
+/*
 public ClientCommand_ChooseTeam( id )
 {
 	if( !pev_valid( id ) )	{
@@ -176,7 +176,7 @@ public ClientCommand_ChooseTeam( id )
 	make_invis(id, ADMIN_BAN);
 	return PLUGIN_CONTINUE
 }  
-
+*/
 
 
 

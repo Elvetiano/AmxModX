@@ -43,10 +43,12 @@ enum CfgType
 new Trie:g_tAimBotSteamWarns, Trie:g_tAimBotIpWarns;
 new Trie:g_tNoSpreadSteamWarns, Trie:g_tNoSpreadIpWarns;
 
-new g_iAimSens, g_iAimMultiWarn, g_iAimNotify, g_iAimMaxWarns, g_iAimShotsReset, g_iAimKillsReset, g_iAimTimeReset;
+new g_iAimDetection, g_iAimSens, g_iAimMultiWarn, g_iAimNotify, g_iAimMaxWarns, g_iAimShotsReset, g_iAimKillsReset, g_iAimTimeReset;
 new g_iSaveType, g_iAimSaveWarns, g_iSpreadSaveWarns;
-new g_iSpreadNotify, g_iSpreadMaxWarns;
+new g_iSpreadDetection, g_iSpreadNotify, g_iSpreadMaxWarns;
 new g_iAlertFlag;
+new g_iSendProtectionWeapon;
+new g_iCrashCheat;
 new g_iBanTime[PunishType];
 new g_szBanReason[PunishType][64];
 new g_szBanString[PunishType][128];
@@ -60,6 +62,7 @@ public plugin_init()
 	register_plugin("ReAimDetector API", REAIMDETECTOR_VERSION, "ReHLDS Team");
 
 	register_concmd("reaim_reloadcfg", "ReloadCfg", RELOAD_CMD);
+	register_concmd("amx_reaimtest", "TestNot", RELOAD_CMD," TESTARE WANINGS OUTPUT");
 
 	register_clcmd("say /aim", "AimMenu", MENU_CMD);
 	register_clcmd("say_team /aim", "AimMenu", MENU_CMD);
@@ -100,8 +103,7 @@ public client_putinserver(id)
 			get_user_ip(id, szAddress, charsmax(szAddress), 1);
 			get_user_name(id, szName, charsmax(szName));
 #endif
-			new p, l;
-			get_user_ping( id , p , l );
+
 			if(TrieKeyExists(g_tAimBotSteamWarns, szSteam))
 			{
 				TrieGetCell(g_tAimBotSteamWarns, szSteam, iWarns);
@@ -110,10 +112,9 @@ public client_putinserver(id)
 				ad_set_client(id, AimWarn, iWarns);
 
 #if defined ENABLE_LOG_FILE
-				formatex(szBufLog, charsmax(szBufLog), "Aim Warn Recovered (Steam): ID [%d] Name [%s] Steam [%s] IP [%s] Warn [%d] PING [%d]", id, szName, szSteam, szAddress, iWarns, p);
+				formatex(szBufLog, charsmax(szBufLog), "Aim Warn Recovered (Steam): ID [%d] Name [%s] Steam [%s] IP [%s] Warn [%d]", id, szName, szSteam, szAddress, iWarns);
 				SaveLogFile(szBufLog);
 #endif
-
 			}
 
 			if(TrieKeyExists(g_tNoSpreadSteamWarns, szSteam))
@@ -124,7 +125,7 @@ public client_putinserver(id)
 				ad_set_client(id, NoSpreadWarn, iWarns);
 
 #if defined ENABLE_LOG_FILE
-				formatex(szBufLog, charsmax(szBufLog), "NoSpread Warn Recovered (Steam): ID [%d] Name [%s] Steam [%s] IP [%s] Warn [%d] PING [%d]", id, szName, szSteam, szAddress, iWarns, p);
+				formatex(szBufLog, charsmax(szBufLog), "NoSpread Warn Recovered (Steam): ID [%d] Name [%s] Steam [%s] IP [%s] Warn [%d]", id, szName, szSteam, szAddress, iWarns);
 				SaveLogFile(szBufLog);
 #endif
 
@@ -140,9 +141,7 @@ public client_putinserver(id)
 			get_user_authid(id, szSteam, charsmax(szSteam));
 			get_user_name(id, szName, charsmax(szName));
 #endif
-			new p, l;
-			get_user_ping( id , p , l );
-			
+
 			if(TrieKeyExists(g_tAimBotIpWarns, szAddress))
 			{
 				TrieGetCell(g_tAimBotIpWarns, szAddress, iWarns);
@@ -151,7 +150,7 @@ public client_putinserver(id)
 				ad_set_client(id, AimWarn, iWarns);
 
 #if defined ENABLE_LOG_FILE
-				formatex(szBufLog, charsmax(szBufLog), "Aim Warn Recovered (IP): ID [%d] Name [%s] Steam [%s] IP [%s] Warn [%d] PING [%d]", id, szName, szSteam, szAddress, iWarns, p);
+				formatex(szBufLog, charsmax(szBufLog), "Aim Warn Recovered (IP): ID [%d] Name [%s] Steam [%s] IP [%s] Warn [%d]", id, szName, szSteam, szAddress, iWarns);
 				SaveLogFile(szBufLog);
 #endif
 
@@ -165,7 +164,7 @@ public client_putinserver(id)
 				ad_set_client(id, NoSpreadWarn, iWarns);
 
 #if defined ENABLE_LOG_FILE
-				formatex(szBufLog, charsmax(szBufLog), "NoSpread Warn Recovered (IP): ID [%d] Name [%s] Steam [%s] IP [%s] Warn [%d] PING [%d]", id, szName, szSteam, szAddress, iWarns, p);
+				formatex(szBufLog, charsmax(szBufLog), "NoSpread Warn Recovered (IP): ID [%d] Name [%s] Steam [%s] IP [%s] Warn [%d]", id, szName, szSteam, szAddress, iWarns);
 				SaveLogFile(szBufLog);
 #endif
 
@@ -181,9 +180,7 @@ public client_putinserver(id)
 			new szBufLog[190], szName[32];
 			get_user_name(id, szName, charsmax(szName));
 #endif
-			new p, l;
-			get_user_ping( id , p , l );
-			
+
 			new bool:IsExistsAim = false;
 			new bool:IsExistsSpread = false;
 
@@ -197,7 +194,7 @@ public client_putinserver(id)
 				ad_set_client(id, AimWarn, iWarns);
 
 #if defined ENABLE_LOG_FILE
-				formatex(szBufLog, charsmax(szBufLog), "Aim Warn Recovered (Steam): ID [%d] Name [%s] Steam [%s] IP [%s] Warn [%d] PING [%d]", id, szName, szSteam, szAddress, iWarns, p);
+				formatex(szBufLog, charsmax(szBufLog), "Aim Warn Recovered (Steam): ID [%d] Name [%s] Steam [%s] IP [%s] Warn [%d]", id, szName, szSteam, szAddress, iWarns);
 				SaveLogFile(szBufLog);
 #endif
 
@@ -217,7 +214,7 @@ public client_putinserver(id)
 					ad_set_client(id, AimWarn, iWarns);
 
 #if defined ENABLE_LOG_FILE
-					formatex(szBufLog, charsmax(szBufLog), "Aim Warn Recovered (IP): ID [%d] Name [%s] Steam [%s] IP [%s] Warn [%d] PING [%d]", id, szName, szSteam, szAddress, iWarns, p);
+					formatex(szBufLog, charsmax(szBufLog), "Aim Warn Recovered (IP): ID [%d] Name [%s] Steam [%s] IP [%s] Warn [%d]", id, szName, szSteam, szAddress, iWarns);
 					SaveLogFile(szBufLog);
 #endif
 
@@ -234,7 +231,7 @@ public client_putinserver(id)
 				ad_set_client(id, NoSpreadWarn, iWarns);
 
 #if defined ENABLE_LOG_FILE
-				formatex(szBufLog, charsmax(szBufLog), "NoSpread Warn Recovered (Steam): ID [%d] Name [%s] Steam [%s] IP [%s] Warn [%d] PING [%d]", id, szName, szSteam, szAddress, iWarns, p);
+				formatex(szBufLog, charsmax(szBufLog), "NoSpread Warn Recovered (Steam): ID [%d] Name [%s] Steam [%s] IP [%s] Warn [%d]", id, szName, szSteam, szAddress, iWarns);
 				SaveLogFile(szBufLog);
 #endif
 
@@ -254,7 +251,7 @@ public client_putinserver(id)
 					ad_set_client(id, NoSpreadWarn, iWarns);
 
 #if defined ENABLE_LOG_FILE
-					formatex(szBufLog, charsmax(szBufLog), "NoSpread Warn Recovered (IP): ID [%d] Name [%s] Steam [%s] IP [%s] Warn [%d] PING [%d]", id, szName, szSteam, szAddress, iWarns, p);
+					formatex(szBufLog, charsmax(szBufLog), "NoSpread Warn Recovered (IP): ID [%d] Name [%s] Steam [%s] IP [%s] Warn [%d]", id, szName, szSteam, szAddress, iWarns);
 					SaveLogFile(szBufLog);
 #endif
 
@@ -351,7 +348,7 @@ public AimMenu(id, level)
 	get_players(iPlayers, iNum, "ch");
 
 	new szName[32], szInfo[3], szTempString[96];
-	new iMenu = menu_create("\wAim Detector Меню", "AimMenuHandler");
+	new iMenu = menu_create("\wAim Detector Menu", "AimMenuHandler");
 
 	new bool:bFindPlayer = false;
 
@@ -389,7 +386,7 @@ public AimMenu(id, level)
 	else
 	{
 		new szBufNotify[190];
-		formatex(szBufNotify, charsmax(szBufNotify), "^1[^4Aim Detector^1] ^3Menu ^1list ^4is ^3empty ^1.");
+		formatex(szBufNotify, charsmax(szBufNotify), "^1 [^4Aim Detector ^1] ^3List ^1in ^4menu ^3empty ^1.");
 		client_print_color(id, print_team_default, szBufNotify);
 	}
 
@@ -446,6 +443,15 @@ public ad_init(const Version[], const Map[])
 
 }
 
+public TestNot(id, level) 
+{
+	if( ~get_user_flags(id) & level ){
+		return PLUGIN_CONTINUE;
+	}
+	
+	ad_notify(id, PunishType:AIMBOT, NotifyType:WARNING, 5, 5, 1);
+	return PLUGIN_CONTINUE;
+}
 public ad_notify(const index, const PunishType:pType, const NotifyType:nType, const Kills, const Shots, const Warn)
 {
 	new szBufNotify[190], szName[32];
@@ -458,12 +464,14 @@ public ad_notify(const index, const PunishType:pType, const NotifyType:nType, co
 #endif
 
 	get_user_name(index, szName, charsmax(szName));
+	new ping[MAX_PLAYERS+1], loss;
+	get_user_ping(index, ping[index], loss);
 
 	if(pType == AIMBOT)
 	{
-		if(nType == WARNING)
+		if(nType == WARNING && Warn > g_iAimNotify)
 		{
-			formatex(szBufNotify, charsmax(szBufNotify), "^1[^4Aim Detector^1] ^3Name ^1[^4 %s ^1] ^3Warn ^1[^4 %d ^1] ^3MaxWarn ^1[^4 %d ^1]", szName, Warn, g_iAimMaxWarns);
+			formatex(szBufNotify, charsmax(szBufNotify), "^1[^4Aim Detector^1] ^3Name ^1[^4 %s ^1] ^3Warn ^1[^4 %d ^1] ^3MaxWarn ^1[^4 %d ^1] ^3PING ^1[^4 %d ^1]", szName, Warn, g_iAimMaxWarns, ping[index]);
 			Send_Notify_Admins(index, szBufNotify);
 
 #if defined ENABLE_LOG_FILE
@@ -489,9 +497,9 @@ public ad_notify(const index, const PunishType:pType, const NotifyType:nType, co
 	}
 	else if(pType == NOSPREAD)
 	{
-		if(nType == WARNING)
+		if(nType == WARNING && Warn > g_iSpreadNotify)
 		{
-			formatex(szBufNotify, charsmax(szBufNotify), "^1[^4NoSpread Detector^1] ^3Name ^1[^4 %s ^1] ^3Warn ^1[^4 %d ^1]", szName, Warn, g_iSpreadMaxWarns);
+			formatex(szBufNotify, charsmax(szBufNotify), "^1[^4NoSpread Detector^1] ^3Name ^1[^4 %s ^1] ^3Warn ^1[^4 %d ^1] ^3PING ^1[^4 %d ^1]", szName, Warn, g_iSpreadMaxWarns, ping[index]);
 			Send_Notify_Admins(index, szBufNotify);
 
 #if defined ENABLE_LOG_FILE
@@ -585,7 +593,10 @@ stock ReadCfg()
 		{
 			case AIM:
 			{
-				if(equal(szKey, "SENS"))
+				if(equal(szKey, "AIM_DETECTION"))
+					g_iAimDetection = str_to_num(szValue);
+
+				else if(equal(szKey, "SENS"))
 					g_iAimSens = str_to_num(szValue);
 
 				else if(equal(szKey, "MULTI_WARN"))
@@ -608,7 +619,10 @@ stock ReadCfg()
 			}
 			case SPREAD:
 			{
-				if(equal(szKey, "NOTIFY_WARNS"))
+				if(equal(szKey, "NOSPREAD_DETECTION"))
+					g_iSpreadDetection = str_to_num(szValue);
+
+				else if(equal(szKey, "NOTIFY_WARNS"))
 					g_iSpreadNotify = str_to_num(szValue);
 
 				else if(equal(szKey, "MAX_WARNS"))
@@ -655,6 +669,12 @@ stock ReadCfg()
 
 					g_iAlertFlag = read_flags(szFlags);
 				}
+
+				else if(equal(szKey, "SEND_PROTECTION_WEAPON"))
+					g_iSendProtectionWeapon = str_to_num(szValue);
+
+				else if(equal(szKey, "CRASH_CHEAT"))
+					g_iCrashCheat = str_to_num(szValue);
 			}
 		}
 	}
@@ -668,6 +688,7 @@ stock ReadCfg()
 
 stock SetCfg()
 {
+	ad_set_cfg(AimDetection, g_iAimDetection);
 	ad_set_cfg(AimSens, g_iAimSens);
 	ad_set_cfg(AimMultiWarns, g_iAimMultiWarn);
 	ad_set_cfg(AimNotifyWarns, g_iAimNotify);
@@ -675,8 +696,11 @@ stock SetCfg()
 	ad_set_cfg(AimShotsReset, g_iAimShotsReset);
 	ad_set_cfg(AimKillsReset, g_iAimKillsReset);
 	ad_set_cfg(AimTimeReset, g_iAimTimeReset);
+	ad_set_cfg(NoSpreadDetection, g_iSpreadDetection);
 	ad_set_cfg(NoSpreadNotifyWarns, g_iSpreadNotify);
 	ad_set_cfg(NoSpreadMaxWarns, g_iSpreadMaxWarns);
+	ad_set_cfg(SendProtectionWeapon, g_iSendProtectionWeapon);
+	ad_set_cfg(CrashCheat, g_iCrashCheat);
 }
 
 stock PunishPlayer(id, PunishType:iType)
