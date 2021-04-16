@@ -29,6 +29,7 @@ new const g_szNatives[][] =
 #define PLUGIN_VERSION "2.1.4"
 #define DEFAULT_V "models/v_awp.mdl"
 #define DEFAULT_P "models/p_awp.mdl"
+#define DEFAULT_W "models/w_awp.mdl"
 #define MAX_SOUND_LENGTH 128
 
 #if !defined MAX_AUTHID_LENGTH
@@ -48,6 +49,7 @@ enum _:AWP
 	NAME[MAX_NAME_LENGTH],
 	V_MODEL[MAX_SOUND_LENGTH],
 	P_MODEL[MAX_SOUND_LENGTH],
+	W_MODEL[MAX_SOUND_LENGTH],
 	SELECT_SOUND[MAX_SOUND_LENGTH],
 	FLAG,
 	LEVEL,
@@ -171,6 +173,7 @@ ReadFile()
 						
 						eAWP[V_MODEL][0] = EOS
 						eAWP[P_MODEL][0] = EOS
+						eAWP[W_MODEL][0] = EOS
 						eAWP[SELECT_SOUND][0] = EOS
 						eAWP[FLAG] = ADMIN_ALL
 						
@@ -224,6 +227,16 @@ ReadFile()
 						{
 							precache_model(szValue)
 							copy(eAWP[P_MODEL], charsmax(eAWP[P_MODEL]), szValue)
+						}
+					}
+					else if(equal(szKey, "W_MODEL"))
+					{
+						if(!file_exists(szValue))
+							log_amx("ERROR: model ^"%s^" not found!", szValue)
+						else
+						{
+							precache_model(szValue)
+							copy(eAWP[W_MODEL], charsmax(eAWP[W_MODEL]), szValue)
 						}
 					}
 					else if(equal(szKey, "SELECT_SOUND"))
@@ -363,15 +376,17 @@ RefreshAWPModel(const id)
 {
 	set_pev(id, pev_viewmodel2, g_eAWP[id][V_MODEL])
 	set_pev(id, pev_weaponmodel2, g_eAWP[id][P_MODEL])
+	set_pev(id, pev_weaponmodel2, g_eAWP[id][W_MODEL])
 }
 
 PushAWP(eAWP[AWP])
 {
 	if(!eAWP[V_MODEL][0])
-		copy(eAWP[V_MODEL], charsmax(eAWP[V_MODEL]), DEFAULT_V)
-		
+		copy(eAWP[V_MODEL], charsmax(eAWP[V_MODEL]), DEFAULT_V)		
 	if(!eAWP[P_MODEL][0])
 		copy(eAWP[P_MODEL], charsmax(eAWP[P_MODEL]), DEFAULT_P)
+	if(!eAWP[W_MODEL][0])
+		copy(eAWP[W_MODEL], charsmax(eAWP[W_MODEL]), DEFAULT_W)
 		
 	ArrayPushArray(g_aAWP, eAWP)
 }
