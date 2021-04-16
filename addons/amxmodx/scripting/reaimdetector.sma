@@ -465,12 +465,14 @@ public ad_notify(const index, const PunishType:pType, const NotifyType:nType, co
 
 	get_user_name(index, szName, charsmax(szName));
 	new ping[MAX_PLAYERS+1], loss;
+	
 	get_user_ping(index, ping[index], loss);
 
 	if(pType == AIMBOT)
 	{
 		if(nType == WARNING && Warn > g_iAimNotify)
 		{
+			get_user_ping(index, ping[index], loss);
 			formatex(szBufNotify, charsmax(szBufNotify), "^1[^4Aim Detector^1] ^3Name ^1[^4 %s ^1] ^3Warn ^1[^4 %d ^1] ^3MaxWarn ^1[^4 %d ^1] ^3PING ^1[^4 %d ^1]", szName, Warn, g_iAimMaxWarns, ping[index]);
 			Send_Notify_Admins(index, szBufNotify);
 
@@ -499,6 +501,7 @@ public ad_notify(const index, const PunishType:pType, const NotifyType:nType, co
 	{
 		if(nType == WARNING && Warn > g_iSpreadNotify)
 		{
+			get_user_ping(index, ping[index], loss);
 			formatex(szBufNotify, charsmax(szBufNotify), "^1[^4NoSpread Detector^1] ^3Name ^1[^4 %s ^1] ^3Warn ^1[^4 %d ^1] ^3PING ^1[^4 %d ^1]", szName, Warn, g_iSpreadMaxWarns, ping[index]);
 			Send_Notify_Admins(index, szBufNotify);
 

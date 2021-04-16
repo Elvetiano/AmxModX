@@ -46,7 +46,7 @@
 #define SHOW_IN_HLSW
 
 // Change admin protection flag here
-#define ADMIN_PROTECT_PTB ADMIN_LEVEL_C // admin flag o
+#define ADMIN_PROTECT_PTB ADMIN_LEVEL_G // admin flag o
 
 // Change admin access flag here
 #define ACCESS_PTB ADMIN_BAN
@@ -542,7 +542,7 @@ createValidTargets(theTeam, bool:deadonly) {
 		// Protection for admins if ptb_switch_immunity 1
 		if (get_user_flags(sortedTeams[theTeam][i])&ADMIN_PROTECT_PTB && (get_cvar_num("ptb_switch_immunity") == 1)) continue
 		// Invizible spec
-		if (g_invisible[sortedTeams[theTeam][i]] == 0) continue
+		//if (g_invisible[sortedTeams[theTeam][i]] == 0) continue
 		// Dead only condition
 		if ( deadonly && is_user_alive(sortedTeams[theTeam][i]) ) continue
 		// Already switched or in PTB_PLAYERFREQ time condition
