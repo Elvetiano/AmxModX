@@ -49,6 +49,8 @@ new const list [][] =
 new const sTochangeFix[][] = 
 {
 	"TOP-B | ",
+	"MegaB | ",
+	"TOP-BOOST",
 	""
 }
 new const sTochange[][] = 
@@ -376,8 +378,7 @@ public namechange(params[],idfunc)
 	else
 	{
 		for(new i = 0; i < sizeof(sTochangeFix)-1; i++)
-		{	
-				new nametoworkwith[33],	sTochangeFixWork[33]
+		{new nametoworkwith[33],	sTochangeFixWork[33]
 				copy(sTochangeFixWork,charsmax(sTochangeFixWork),sTochangeFix[i])
 				copy(nametoworkwith,charsmax(nametoworkwith), name);				
 				
@@ -405,9 +406,9 @@ public namechange(params[],idfunc)
 					set_user_info(id, "name", nameformated)	
 					client_cmd(id, "setinfo name ^"%s^"",nameformated)
 					
-					chat_color_admins(0, "!g[!n:::!tOFFICIAL!n:::!g] !nAm schimbat numele lui !t%s !nin nume: !g%s",name,nameformated)	
+					//chat_color_admins(0, "!g[!n:::!tOFFICIAL!n:::!g] !nAm schimbat numele lui !t%s !nin nume: !g%s",name,nameformated)	
 					//log_amx("Numele %s este DETECTAT numele formatate sunt nametoworkwith = %s  si sTochangeFixWork = %s si nameformated = %s",name, nametoworkwith, sTochangeFixWork, nameformated)					
-				}else
+				}//else
 					//log_amx("Numele %s nu este detectat cu %s, numele formatate sunt nametoworkwith = %s  si sTochangeFixWork = %s",name, sTochangeFix[i], nametoworkwith, sTochangeFixWork)
 								
 		}
