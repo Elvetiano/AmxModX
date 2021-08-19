@@ -376,35 +376,40 @@ public namechange(params[],idfunc)
 	else
 	{
 		for(new i = 0; i < sizeof(sTochangeFix)-1; i++)
-		{
-		
-			
+		{	
+				new nametoworkwith[33],	sTochangeFixWork[33]
+				copy(sTochangeFixWork,charsmax(sTochangeFixWork),sTochangeFix[i])
+				copy(nametoworkwith,charsmax(nametoworkwith), name);				
 				
+				while( replace(nametoworkwith, charsmax(nametoworkwith), "  ", " ") ) {}
+				while( replace(nametoworkwith, charsmax(nametoworkwith), " ", "_"))	{}				
+				while( replace(sTochangeFixWork, charsmax(sTochangeFixWork), " ", "_")) {}
 				
-				new nametoworkwith[33]
-				copy(nametoworkwith,charsmax(nametoworkwith), name);
+				//"TOP-B |  MA-TA"  ==> "TOP-B_|__MA-TA"				
+				new lentofix = strlen(sTochangeFixWork);
 				
-				replace_all(nametoworkwith, charsmax(nametoworkwith), " ", "_")
-				replace_all(sTochangeFix[i], charsmax(sTochangeFix), " ", "_")
-				//"TOP-B |  MA-TA"  ==> "TOP-B_|__MA-TA"
-				new lentofix = strlen(sTochangeFix[i]);
-				
-				if (containi(nametoworkwith,sTochangeFix[i])!=-1)
+				if (containi(nametoworkwith,sTochangeFixWork)!=-1)
 				{
 					new garbage[33];
 					new newname[33]
-					argbreak(nametoworkwith, garbage, lentofix, newname, charsmax(newname));	
-				
-				
-				
-				
-					new nameformated[33]
+					
+					new nameformated[33]					
+					//split(const szInput[], szLeft[], pL_Max, szRight[], pR_Max, const szDelim[])					
+					split(nametoworkwith, garbage, lentofix, newname, charsmax(newname), garbage)
+					
+					while( replace(newname, charsmax(newname), "_", " ") ) {}
+					
 					format( nameformated , sizeof(nameformated)-1 , "%s" , newname)			
 					chat_color_single(id, "!g[!n:::!tOFFICIAL!n:::!g] !n Your name !t%s !nwas replaced with !g%s !nbecause is not allowed",name,nameformated)
 					client_cmd(id, "name ^"%s^"",nameformated)
 					set_user_info(id, "name", nameformated)	
-					client_cmd(id, "setinfo name ^"%s^"",nameformated)			
-				}					
+					client_cmd(id, "setinfo name ^"%s^"",nameformated)
+					
+					chat_color_admins(0, "!g[!n:::!tOFFICIAL!n:::!g] !nAm schimbat numele lui !t%s !nin nume: !g%s",name,nameformated)	
+					//log_amx("Numele %s este DETECTAT numele formatate sunt nametoworkwith = %s  si sTochangeFixWork = %s si nameformated = %s",name, nametoworkwith, sTochangeFixWork, nameformated)					
+				}else
+					//log_amx("Numele %s nu este detectat cu %s, numele formatate sunt nametoworkwith = %s  si sTochangeFixWork = %s",name, sTochangeFix[i], nametoworkwith, sTochangeFixWork)
+								
 		}
 
 		if (cheknamespaces > 0)
