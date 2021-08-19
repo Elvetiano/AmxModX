@@ -48,7 +48,7 @@ new const list [][] =
 
 new const sTochangeFix[][] = 
 {
-	"TOP-B |",
+	"TOP-B | ",
 	""
 }
 new const sTochange[][] = 
@@ -380,10 +380,23 @@ public namechange(params[],idfunc)
 		
 			if (containi(name,sTochangeFix[i])!=-1)
 			{
+				
+				
+				new nametoworkwith[33]
+				copy(nametoworkwith,charsmax(nametoworkwith), name);
+				
+				replace_all(nametoworkwith, charsmax(nametoworkwith), " ", "_")
+				replace_all(sTochangeFix[i], charsmax(sTochangeFix), " ", "_")
+				//"TOP-B |  MA-TA"  ==> "TOP-B_|__MA-TA"
 				new lentofix = strlen(sTochangeFix[i]);
+				
 				new garbage[33];
 				new newname[33]
-				argbreak(name, garbage, lentofix, newname, charsmax(newname));	
+				argbreak(nametoworkwith, garbage, lentofix, newname, charsmax(newname));	
+				
+				
+				
+				
 				new nameformated[33]
 				format( nameformated , sizeof(nameformated)-1 , "%s" , newname)			
 				chat_color_single(id, "!g[!n:::!tOFFICIAL!n:::!g] !n Your name !t%s !nwas replaced with !g%s !nbecause is not allowed",name,nameformated)
