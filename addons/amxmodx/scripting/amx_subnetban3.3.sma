@@ -378,8 +378,7 @@ public namechange(params[],idfunc)
 		for(new i = 0; i < sizeof(sTochangeFix)-1; i++)
 		{
 		
-			if (containi(name,sTochangeFix[i])!=-1)
-			{
+			
 				
 				
 				new nametoworkwith[33]
@@ -390,20 +389,22 @@ public namechange(params[],idfunc)
 				//"TOP-B |  MA-TA"  ==> "TOP-B_|__MA-TA"
 				new lentofix = strlen(sTochangeFix[i]);
 				
-				new garbage[33];
-				new newname[33]
-				argbreak(nametoworkwith, garbage, lentofix, newname, charsmax(newname));	
+				if (containi(nametoworkwith,sTochangeFix[i])!=-1)
+				{
+					new garbage[33];
+					new newname[33]
+					argbreak(nametoworkwith, garbage, lentofix, newname, charsmax(newname));	
 				
 				
 				
 				
-				new nameformated[33]
-				format( nameformated , sizeof(nameformated)-1 , "%s" , newname)			
-				chat_color_single(id, "!g[!n:::!tOFFICIAL!n:::!g] !n Your name !t%s !nwas replaced with !g%s !nbecause is not allowed",name,nameformated)
-				client_cmd(id, "name ^"%s^"",nameformated)
-				set_user_info(id, "name", nameformated)	
-				client_cmd(id, "setinfo name ^"%s^"",nameformated)			
-			}					
+					new nameformated[33]
+					format( nameformated , sizeof(nameformated)-1 , "%s" , newname)			
+					chat_color_single(id, "!g[!n:::!tOFFICIAL!n:::!g] !n Your name !t%s !nwas replaced with !g%s !nbecause is not allowed",name,nameformated)
+					client_cmd(id, "name ^"%s^"",nameformated)
+					set_user_info(id, "name", nameformated)	
+					client_cmd(id, "setinfo name ^"%s^"",nameformated)			
+				}					
 		}
 
 		if (cheknamespaces > 0)
