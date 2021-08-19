@@ -87,11 +87,6 @@ new const sTochange[][] =
 }
 
 
-new const sTochange[][] = 
-{
-	""
-}
-
 new pcvar_namecheck
 new pcvar_namespaces
 
