@@ -34,6 +34,11 @@
 	#define m_Shield_hEntToIgnoreTouchesFrom m_Shield_EntToIgnoreTouchesFrom
 	#define RG_CBasePlayer_RemoveSpawnProtection RG_CBasePlayer_RemoveProtection
 	#define RG_CBasePlayer_SetSpawnProtection RG_CBasePlayer_SetProtection
+	#define RG_CBasePlayerWeapon_DefaultDeploy RG_CBaseWeapon_DefDeploy
+	#define RG_CBasePlayerWeapon_DefaultReload RG_CBaseWeapon_DefReload
+	#define RG_CBasePlayerWeapon_DefaultShotgunReload RG_CBaseWeapon_DefShotgunReload
+	#define RG_CBasePlayer_Observer_SetMode RG_CBasePlayer_Observer_SetMod
+	#define RG_CBasePlayer_Observer_FindNextPlayer RG_CBasePlayer_Observer_FindNxt
 #endif
 
 /**
@@ -300,7 +305,7 @@ enum GamedllFunc
 
 	/*
 	* Description:      -
-	* Params:           (const PlayerMove:ppmove, const server)
+	* Params:           (const playerIndex)
 	*/
 	RG_PM_Move,
 
@@ -375,13 +380,26 @@ enum GamedllFunc
 	* Params:           (const index, Float:vecStart[3], Float:vecVelocity[3])
 	*/
 	RG_PlantBomb,
-	
+
 	/*
 	* Description:      Called when a player hit to entity.
 	* Return type:      bool
 	* Params:           (Float:vecSrc[3], Float:vecEnd[3], index, entity)
 	*/
 	RG_IsPenetrableEntity,
+
+	/*
+	* Description:      -
+	* Return type:      CGib * (Entity index of gib)
+	* Params:           (pevVictim)
+	*/
+	RG_SpawnHeadGib,
+
+	/*
+	* Description:      -
+	* Params:           (pevVictim, cGibs, human)
+	*/
+	RG_SpawnRandomGibs,
 };
 
 /**
@@ -729,24 +747,166 @@ enum GamedllFunc_CBasePlayer
 
 	/*
 	* Description:      Called when a player throws the grenade.
-	* Return type:      CGrenade * (Entity index of hegrenade)
+	* Return type:      CGrenade * (Entity index of grenade)
 	* Params:           (const this, const grenade, Float:vecSrc[3], Float:vecThrow[3], Float:time, const usEvent)
 	*/
 	RG_CBasePlayer_ThrowGrenade,
-	
+
 	/*
 	* Description:      Called when a player's set protection.
 	* Return type:      void
 	* Params:           (const this, Float:time)
 	*/
 	RG_CBasePlayer_SetSpawnProtection,
-	
+
 	/*
 	* Description:      Called when a player's remove protection.
 	* Return type:      void
 	* Params:           (const this)
 	*/
 	RG_CBasePlayer_RemoveSpawnProtection,
+
+	/*
+	* Description:      Called when the game prints hint message into DHUD.
+	* Return type:      bool
+	* Params:           (const this, const message[], Float:duration, bool:bDisplayIfPlayerDead, bool:bOverride)
+	*/
+	RG_CBasePlayer_HintMessageEx,
+
+	/*
+	* Description:      Called when a player press use and if a suitable candidate is not found.
+	* Return type:      void
+	* Params:           (const this)
+	*/
+	RG_CBasePlayer_UseEmpty,
+
+	/*
+	* Description:      Called when a idle player is removed from server.
+	* Return type:      void
+	* Params:           (const this, const reason[])
+	*/
+	RG_CBasePlayer_DropIdlePlayer,
+
+	/*
+	* Description:      Called when a client attempt to change the observer mode.
+	* Params:           (const this, iMode)
+	*/
+	RG_CBasePlayer_Observer_SetMode,
+
+	/*
+	* Description:      Called when a client attempt to find the next observer.
+	* Return type:      void
+	* Params:           (const this, bool bReverse, name[])
+	*/
+	RG_CBasePlayer_Observer_FindNextPlayer,
+
+	/*
+	* Description:      Called when a client emits a "pain sound" after received damage.
+	* Return type:      void
+	* Params:           (const this)
+	*/
+	RG_CBasePlayer_Pain,
+	
+	/*
+	* Description:      Called when a client emits a "death sound" after death.
+	* Return type:      void
+	* Params:           (const this, lastHitGroup, bool:hasArmour)
+	*/
+	RG_CBasePlayer_DeathSound,
+	
+	/*
+	* Description:      Called when a client "thinks for the join status".
+	*                   (permanently called on each call of "CBasePlayer::PreThink", and only when he is not assigned as specatator or not playing)
+	* Return type:      void
+	* Params:           (const this)
+	*/
+	RG_CBasePlayer_JoiningThink,
+};
+
+/**
+* GamedllFunc CBasePlayer
+*/
+enum GamedllFunc_CBasePlayerWeapon
+{
+	/*
+	* Description:      -
+	* Return type:      BOOL
+	* Params:           (const this)
+	*/
+	RG_CBasePlayerWeapon_CanDeploy = BEGIN_FUNC_REGION(weapon),
+
+	/*
+	* Description:      -
+	* Return type:      BOOL
+	* Params:           (const this, szViewModel[], szWeaponModel[], iAnim, szAnimExt[], skiplocal)
+	*/
+	RG_CBasePlayerWeapon_DefaultDeploy,
+
+	/*
+	* Description:      -
+	* Return type:      int
+	* Params:           (const this, iClipSize, iAnim, Float:fDelay)
+	*/
+	RG_CBasePlayerWeapon_DefaultReload,
+
+	/*
+	* Description:      -
+	* Return type:      bool
+	* Params:           (const this, iAnim, iStartAnim, Float:fDelay, Float:fStartDelay, const pszReloadSound1[], const pszReloadSound2[])
+	*/
+	RG_CBasePlayerWeapon_DefaultShotgunReload,
+};
+
+/**
+* GamedllFunc CGib
+*/
+enum GamedllFunc_CGib
+{
+	/*
+	* Description:      -
+	* Params:           (const this, const szGibModel[])
+	*/
+	RG_CGib_Spawn = BEGIN_FUNC_REGION(gib),
+
+	/*
+	* Description:      -
+	* Params:           (const this, pOther)
+	*/
+	RG_CGib_BounceGibTouch,
+
+	/*
+	* Description:      -
+	* Params:           (const this)
+	*/
+	RG_CGib_WaitTillLand,
+};
+
+/**
+* GamedllFunc CBaseEntity
+*/
+enum GamedllFunc_CBaseEntity
+{
+	/*
+	* Description:      -
+	* Return type:      void
+	* Params:           (pEntity, cShots, Float:vecSrc[3], Float:vecDirShooting[3], Float:vecSpread[3], Float:flDistance, iBulletType, iTracerFreq, iDamage, pevAttacker)
+
+	*/
+	RG_CBaseEntity_FireBullets = BEGIN_FUNC_REGION(cbaseentity),
+
+	/*
+	* Description:      -
+	* Return type:      void
+	* Params:           (pEntity, cShots, Float:vecSrc[3], Float:vecDirShooting[3], Float:vecSpread[3], Float:flDistance, iTracerFreq, iDamage, pevAttacker)
+	*/
+	RG_CBaseEntity_FireBuckshots,
+
+	/*
+	* Description:      -
+	* Return type:      Vector [3]
+	* Params:           (pEntity, Float:vecSrc[3], Float:vecDirShooting[3], Float:vecSpread, Float:flDistance, iPenetration, iBulletType, iDamage, Float:flRangeModifier, pevAttacker, bool:bPistol, shared_rand)
+	*/
+	RG_CBaseEntity_FireBullets3,
 };
 
 /**
@@ -1905,9 +2065,9 @@ enum CBaseMonster_Members
 
 	/*
 	* Description:      -
-	* Member type:      usigned char [5]
-	* Get params:       get_member_game(member);
-	* Set params:       set_member_game(member, value, element);
+	* Member type:      byte [8]
+	* Get params:       get_member(index, member, TimeBasedDamage:element);
+	* Set params:       set_member(index, member, value, TimeBasedDamage:element);
 	*/
 	m_rgbTimeBasedDamage,
 
@@ -2486,7 +2646,8 @@ enum CBasePlayer_Members
 	m_iMapVote,
 
 	/*
-	* Description:      -
+	* Description:      The player can't shoot for freezetime period or during defuse bomb
+	* @note             This member isn't flexible, you can't override it for other behavior, so for this purpose use m_bCanShootOverride
 	* Member type:      bool
 	* Get params:       get_member(index, member);
 	* Set params:       set_member(index, member, bool:value);
@@ -3499,7 +3660,31 @@ enum CBasePlayer_Members
 	* Get params:       Float:get_member(index, member, element);
 	* Set params:       set_member(index, member, Float:value, element);
 	*/
-	m_flLastCommandTime
+	m_flLastCommandTime,
+
+	/*
+	* Description:      The amount of money sent to the client last time.
+	* Member type:      int
+	* Get params:       get_member(index, member);
+	* Set params:       set_member(index, member, value);
+	*/
+	m_iLastAccount,
+
+	/*
+	* Description:      The amount of health sent to the client last time.
+	* Member type:      int
+	* Get params:       get_member(index, member);
+	* Set params:       set_member(index, member, Float:value);
+	*/
+	m_iLastClientHealth,
+
+	/*
+	* Description:      Waiting time for update fields into scoreboard.
+	* Member type:      float
+	* Get params:       Float:get_member(index, member);
+	* Set params:       set_member(index, member, Float:value);
+	*/
+	m_tmNextAccountHealthUpdate,
 };
 
 /**
@@ -4402,6 +4587,38 @@ enum CCSPlayer_Members
 	* Set params:       set_member(index, member, Float:value);
 	*/
 	m_flSpawnProtectionEndTime,
+
+	/*
+	* Description:      -
+	* Member type:      class Vector
+	* Get params:       get_member(index, member, Float:output[3]);
+	* Set params:       set_member(index, member, Float:dest[3]);
+	*/
+	m_vecOldvAngle,
+
+	/*
+	* Description:      -
+	* Member type:      int
+	* Get params:       get_member(index, member);
+	* Set params:       set_member(index, member, value);
+	*/
+	m_iWeaponInfiniteAmmo,
+
+	/*
+	* Description:      -
+	* Member type:      int
+	* Get params:       get_member(index, member);
+	* Set params:       set_member(index, member, value);
+	*/
+	m_iWeaponInfiniteIds,
+
+	/*
+	* Description:      Forcing override for CBasePlayer::m_bCanShoot
+	* Member type:      bool
+	* Get params:       get_member(index, member);
+	* Set params:       set_member(index, member, bool:value);
+	*/
+	m_bCanShootOverride,
 };
 
 /**
@@ -5694,6 +5911,46 @@ enum CKnife_Members
 	* Set params:       set_member(index, member, value);
 	*/
 	m_Knife_usKnife,
+
+	/*
+	* Description:      -
+	* Member type:      float
+	* Get params:       get_member(index, member);
+	* Set params:       set_member(index, member, value);
+	*/
+	m_Knife_flStabBaseDamage,
+
+	/*
+	* Description:      -
+	* Member type:      float
+	* Get params:       get_member(index, member);
+	* Set params:       set_member(index, member, value);
+	*/
+	m_Knife_flSwingBaseDamage,
+
+	/*
+	* Description:      -
+	* Member type:      float
+	* Get params:       get_member(index, member);
+	* Set params:       set_member(index, member, value);
+	*/
+	m_Knife_flSwingBaseDamage_Fast,
+
+	/*
+	* Description:      -
+	* Member type:      float
+	* Get params:       get_member(index, member);
+	* Set params:       set_member(index, member, value);
+	*/
+	m_Knife_flStabDistance,
+
+	/*
+	* Description:      -
+	* Member type:      float
+	* Get params:       get_member(index, member);
+	* Set params:       set_member(index, member, value);
+	*/
+	m_Knife_flSwingDistance,
 };
 
 /**
@@ -5790,4 +6047,42 @@ enum CCSPlayerWeapon_Members
 	* Set params:       set_member(index, member, Float:value);
 	*/
 	m_Weapon_flBaseDamage,
+};
+
+/**
+* CGib Members
+*/
+enum CGib_Members
+{
+	/*
+	* Description:      -
+	* Member type:      int
+	* Get params:       get_member(index, member);
+	* Set params:       set_member(index, member, value);
+	*/
+	m_Gib_bloodColor = BEGIN_MEMBER_REGION(gib),
+
+	/*
+	* Description:      -
+	* Member type:      int
+	* Get params:       get_member(index, member);
+	* Set params:       set_member(index, member, value);
+	*/
+	m_Gib_cBloodDecals,
+
+	/*
+	* Description:      -
+	* Member type:      int
+	* Get params:       get_member(index, member);
+	* Set params:       set_member(index, member, value);
+	*/
+	m_Gib_material,
+
+	/*
+	* Description:      -
+	* Member type:      float
+	* Get params:       Float:get_member(index, member);
+	* Set params:       set_member(index, member, Float:value);
+	*/
+	m_Gib_lifeTime,
 };

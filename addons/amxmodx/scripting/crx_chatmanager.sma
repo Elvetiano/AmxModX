@@ -1,34 +1,53 @@
 #include <amxmodx>
 #include <amxmisc>
-#include <cromchat>
 #include <cstrike>
 #include <fakemeta>
 
-const PDATA_SAFE = 2
-const OFFSET_CSTEAMS = 114
-const OFFSET_LINUX = 5
+#tryinclude <cromchat>
 
-enum
-{
-    FM_CS_TEAM_UNASSIGNED = 0,
-    FM_CS_TEAM_T,
-    FM_CS_TEAM_CT,
-    FM_CS_TEAM_SPECTATOR
-}
+#if !defined _cromchat_included
+	#error "cromchat.inc" is missing in your "scripting/include" folder. Download it from: "https://amxx-bg.info/inc/"
+#endif
 
-new const PLUGIN_VERSION[] = "4.5.1"
+#if !defined CC_RemoveExploits
+	#error Your "cromchat.inc" is outdated. Please replace it with the one attached in the archive.
+#endif
+
+new const PLUGIN_VERSION[] = "4.8"
 const Float:DELAY_ON_REGISTER = 1.0
 const Float:DELAY_ON_CONNECT = 1.0
 const Float:DELAY_ON_CHANGE = 0.1
+const MAX_VALUE_LENGTH = 32
 const PLACEHOLDER_LENGTH = 64
-const WRITTEN_MESSAGE_SIZE = 120
-const FULL_MESSAGE_SIZE = 180
+const MAX_PREFIX_LENGTH = 64
 new const ERROR_FILE[] = "chatmanager_errors.log"
 
-new g_Gaged[ 33 ]
+#if !defined replace_string
+	#define replace_string replace_all
+#endif
 
-#if defined replace_string
-	#define replace_all replace_string
+#if !defined MAX_PLAYERS
+const MAX_PLAYERS = 32
+#endif
+
+#if !defined MAX_NAME_LENGTH
+const MAX_NAME_LENGTH = 32
+#endif
+
+#if !defined MAX_IP_LENGTH
+const MAX_IP_LENGTH = 16
+#endif
+
+#if !defined MAX_AUTHID_LENGTH
+const MAX_AUTHID_LENGTH = 64
+#endif
+
+#if !defined MAX_RESOURCE_PATH_LENGTH
+const MAX_RESOURCE_PATH_LENGTH = 64
+#endif
+
+#if !defined PLATFORM_MAX_PATH
+const PLATFORM_MAX_PATH = 256
 #endif
 
 /*
@@ -36,7 +55,6 @@ new g_Gaged[ 33 ]
 	You can also activate the additional ones if you want to use them.
 	Feel free to experiment in making your custom ones as well.
 */
-
 
 #define ARG_ADMIN_PREFIX        "$admin_prefix$"
 #define ARG_DEAD_PREFIX         "$dead_prefix$"
@@ -50,20 +68,20 @@ new g_Gaged[ 33 ]
 #define ARG_MESSAGE             "$message$"
 #define ARG_TIME                "$time$"
 #define ARG_RANK                "$rank$"
-#define ARG_CURRENT_XP        "$current_xp$"
-#define ARG_NEXT_XP           "$next_xp$"
-#define ARG_LEVEL             "$level$"
-#define ARG_NEXT_LEVEL        "$next_level$"
-#define ARG_NEXT_RANK         "$next_rank$"
-#define ARG_HEALTH            "$health$"
-#define ARG_ARMOR             "$armor$"
-#define ARG_FRAGS             "$frags$"
-#define ARG_DEATHS            "$deaths$"
-#define ARG_CITY              "$city$"
-#define ARG_COUNTRY           "$country$"
-#define ARG_COUNTRY_CODE      "$country_code$"
-#define ARG_CONTINENT         "$continent$"
-#define ARG_CONTINENT_CODE    "$continent_code$"
+//#define ARG_CURRENT_XP        "$current_xp$"
+//#define ARG_NEXT_XP           "$next_xp$"
+//#define ARG_LEVEL             "$level$"
+//#define ARG_NEXT_LEVEL        "$next_level$"
+//#define ARG_NEXT_RANK         "$next_rank$"
+//#define ARG_HEALTH            "$health$"
+//#define ARG_ARMOR             "$armor$"
+//#define ARG_FRAGS             "$frags$"
+//#define ARG_DEATHS            "$deaths$"
+//#define ARG_CITY              "$city$"
+//#define ARG_COUNTRY           "$country$"
+//#define ARG_COUNTRY_CODE      "$country_code$"
+//#define ARG_CONTINENT         "$continent$"
+//#define ARG_CONTINENT_CODE    "$continent_code$"
 
 /*	The settings end here. Don't modify anything below this if you don't know what you're doing. */
 
@@ -126,6 +144,12 @@ enum
 
 enum
 {
+	SAYMETHOD_HOOK_SAY_CMD,
+	SAYMETHOD_HOOK_SAY_MSG
+}
+
+enum
+{
 	EDB_IGNORE = 0,
 	EDB_COMMENT,
 	EDB_REMOVE
@@ -134,53 +158,60 @@ enum
 enum _:PlayerInfo
 {
 	INFO_TYPE,
-	INFO[35],
-	DATA[32],
-	DATA2[32],
-	EXPIRATION_DATE[32]
+	INFO[MAX_AUTHID_LENGTH],
+	DATA[MAX_PREFIX_LENGTH],
+	DATA2[MAX_VALUE_LENGTH],
+	EXPIRATION_DATE[MAX_VALUE_LENGTH]
 }
 
 enum _:Settings
 {
 	ALL_CHAT,
-	ADMIN_LISTEN_FLAGS[32],
-	DEAD_PREFIX[32],
-	ALIVE_PREFIX[32],
-	SPEC_PREFIX[32],
-	TEAM_PREFIX_T[32],
-	TEAM_PREFIX_CT[32],
-	TEAM_PREFIX_SPEC[32],
-	ERROR_TEXT[32],
-	FORMAT_TIME[32],
-	CHAT_LOG_FILE[64],
-	CHAT_LOG_SAY_FORMAT[32],
-	CHAT_LOG_TEAM_FORMAT[32],
-	SAY_SOUND[128],
-	SAY_TEAM_SOUND[128],
-	EXPIRATION_DATE_FORMAT[32],
-	EXPIRATION_DATE_BEHAVIOR
+	bool:ADMIN_LISTEN_TEAM_CHAT,
+	ADMIN_LISTEN_FLAGS[MAX_VALUE_LENGTH],
+	ADMIN_LISTEN_FLAGS_BIT,
+	GLOBAL_CHAT_FLAG,
+	GLOBAL_CHAT_TEAM,
+	DEAD_PREFIX[MAX_PREFIX_LENGTH],
+	ALIVE_PREFIX[MAX_PREFIX_LENGTH],
+	SPEC_PREFIX[MAX_PREFIX_LENGTH],
+	TEAM_PREFIX_T[MAX_PREFIX_LENGTH],
+	TEAM_PREFIX_CT[MAX_PREFIX_LENGTH],
+	TEAM_PREFIX_SPEC[MAX_PREFIX_LENGTH],
+	ERROR_TEXT[MAX_VALUE_LENGTH],
+	FORMAT_TIME[MAX_VALUE_LENGTH],
+	CHAT_LOG_FILE[MAX_RESOURCE_PATH_LENGTH],
+	CHAT_LOG_SAY_FORMAT[MAX_VALUE_LENGTH],
+	CHAT_LOG_TEAM_FORMAT[MAX_VALUE_LENGTH],
+	SAY_SOUND[MAX_RESOURCE_PATH_LENGTH],
+	SAY_TEAM_SOUND[MAX_RESOURCE_PATH_LENGTH],
+	EXPIRATION_DATE_FORMAT[MAX_VALUE_LENGTH],
+	EXPIRATION_DATE_BEHAVIOR,
+	COLORCHAT_FLAG,
+	SAY_METHOD
 }
 
 enum _:PlayerData
 {
-	PDATA_NAME[32],
-	PDATA_CUSTOM_NAME[32],
-	PDATA_IP[16],
-	PDATA_STEAM[35],
+	PDATA_NAME[MAX_NAME_LENGTH],
+	PDATA_CUSTOM_NAME[MAX_PREFIX_LENGTH],
+	PDATA_IP[MAX_IP_LENGTH],
+	PDATA_STEAM[MAX_AUTHID_LENGTH],
 	PDATA_USERID[10],
-	PDATA_PREFIX[32],
+	PDATA_PREFIX[MAX_PREFIX_LENGTH],
 	PDATA_CHAT_COLOR[6],
-	PDATA_SAY_FORMAT[32],
-	PDATA_SAY_TEAM_FORMAT[32],
+	PDATA_SAY_FORMAT[MAX_VALUE_LENGTH],
+	PDATA_SAY_TEAM_FORMAT[MAX_VALUE_LENGTH],
 	PDATA_ADMIN_FLAGS,
 	bool:PDATA_ADMIN_LISTEN,
 	bool:PDATA_PREFIX_ENABLED,
 	bool:PDATA_CHAT_COLOR_ENABLED,
-	bool:PDATA_CUSTOM_NAME_ENABLED
+	bool:PDATA_CUSTOM_NAME_ENABLED,
+	bool:PDATA_GLOBAL_CHAT
 }
 
 new g_eSettings[Settings],
-	g_ePlayerData[33][PlayerData],
+	g_ePlayerData[MAX_PLAYERS + 1][PlayerData],
 	Array:g_aAdminPrefixes,
 	Array:g_aChatColors,
 	Array:g_aNameCustomization,
@@ -188,13 +219,12 @@ new g_eSettings[Settings],
 	Array:g_aFileContents,
 	Trie:g_tBlockFirst,
 	Trie:g_tFormatDefinitions,
+	Trie:g_tSettings,
 	bool:g_bFileWasRead,
 	bool:g_bRankSystem,
 	bool:g_bSomethingExpired,
-	g_szConfigsName[256],
-	g_szFilename[256],
+	g_szFilename[PLATFORM_MAX_PATH],
 	g_fwdUserNameChanged,
-	g_fwdOnPlayerDataUpdated,
 	g_iAdminPrefixes,
 	g_iChatColors,
 	g_iNameCustomization,
@@ -202,14 +232,30 @@ new g_eSettings[Settings],
 	g_iFileContents = -1,
 	g_iToday
 
+new _cm_on_player_data_updated,
+	_cm_on_file_read
+
 public plugin_init()
 {
 	register_plugin("Chat Manager", PLUGIN_VERSION, "OciXCrom")
 	register_cvar("CRXChatManager", PLUGIN_VERSION, FCVAR_SERVER|FCVAR_SPONLY|FCVAR_UNLOGGED)
 	register_event("SayText", "OnSayTextNameChange", "a", "2=#Cstrike_Name_Change")
 
-	set_task(DELAY_ON_REGISTER, "RegisterCommands")
-	g_fwdOnPlayerDataUpdated = CreateMultiForward("cm_on_player_data_updated", ET_IGNORE, FP_CELL)
+	switch(g_eSettings[SAY_METHOD])
+	{
+		case SAYMETHOD_HOOK_SAY_CMD:
+		{
+			state SAYMETHOD_HOOK_SAY_CMD
+			set_task(DELAY_ON_REGISTER, "RegisterCommands")
+		}
+		case SAYMETHOD_HOOK_SAY_MSG:
+		{
+			state SAYMETHOD_HOOK_SAY_MSG
+			register_message(get_user_msgid("SayText"), "OnSay")
+		}
+	}
+
+	_cm_on_player_data_updated = CreateMultiForward("cm_on_player_data_updated", ET_IGNORE, FP_CELL)
 }
 
 public plugin_end()
@@ -221,6 +267,7 @@ public plugin_end()
 	ArrayDestroy(g_aFileContents)
 	TrieDestroy(g_tBlockFirst)
 	TrieDestroy(g_tFormatDefinitions)
+	TrieDestroy(g_tSettings)
 }
 
 public plugin_precache()
@@ -232,21 +279,24 @@ public plugin_precache()
 	g_aFileContents = ArrayCreate(192)
 	g_tBlockFirst = TrieCreate()
 	g_tFormatDefinitions = TrieCreate()
-	get_configsdir(g_szConfigsName, charsmax(g_szConfigsName))
-	formatex(g_szFilename, charsmax(g_szFilename), "%s/ChatManager.ini", g_szConfigsName)
+	g_tSettings = TrieCreate()
+
+	get_configsdir(g_szFilename, charsmax(g_szFilename))
+	add(g_szFilename, charsmax(g_szFilename), "/ChatManager.ini")
 
 	if(LibraryExists("crxranks", LibType_Library))
 	{
 		g_bRankSystem = true
 	}
 
+	_cm_on_file_read = CreateMultiForward("cm_on_file_read", ET_IGNORE, FP_CELL)
 	ReadFile()
 }
 
 public RegisterCommands()
 {
-	register_clcmd("say", "Hook_Say")
-	register_clcmd("say_team", "Hook_Say")
+	register_clcmd("say", "OnSay")
+	register_clcmd("say_team", "OnSay")
 	register_concmd("cm_reload", "Cmd_Reload", ADMIN_RCON, "-- reloads the configuration file")
 }
 
@@ -257,15 +307,12 @@ public client_putinserver(id)
 	get_user_ip(id, g_ePlayerData[id][PDATA_IP], charsmax(g_ePlayerData[][PDATA_IP]), 1)
 	get_user_authid(id, g_ePlayerData[id][PDATA_STEAM], charsmax(g_ePlayerData[][PDATA_STEAM]))
 	num_to_str(get_user_userid(id), g_ePlayerData[id][PDATA_USERID], charsmax(g_ePlayerData[][PDATA_USERID]))
+
 	g_ePlayerData[id][PDATA_PREFIX_ENABLED] = true
 	g_ePlayerData[id][PDATA_CHAT_COLOR_ENABLED] = true
 	g_ePlayerData[id][PDATA_CUSTOM_NAME_ENABLED] = true
-	set_task(DELAY_ON_CONNECT, "UpdateData", id)
-}
 
-public handle_Gaged(id, Gaged)
-{
-	g_Gaged[id] = Gaged;
+	set_task(DELAY_ON_CONNECT, "UpdateData", id)
 }
 
 public OnSayTextNameChange(iMsg, iDestination, iEntity)
@@ -295,12 +342,16 @@ public crxranks_user_level_updated(id, iLevel)
 public UpdateData(id)
 {
 	static eItem[PlayerInfo], i
+
 	g_ePlayerData[id][PDATA_PREFIX][0] = EOS
 	g_ePlayerData[id][PDATA_CHAT_COLOR][0] = EOS
 	g_ePlayerData[id][PDATA_SAY_FORMAT][0] = EOS
 	g_ePlayerData[id][PDATA_SAY_TEAM_FORMAT][0] = EOS
 	g_ePlayerData[id][PDATA_ADMIN_FLAGS] = get_user_flags(id)
-	g_ePlayerData[id][PDATA_ADMIN_LISTEN] = g_eSettings[ADMIN_LISTEN_FLAGS][0] ? (bool:(g_ePlayerData[id][PDATA_ADMIN_FLAGS] & read_flags(g_eSettings[ADMIN_LISTEN_FLAGS])) ? true : false) : false
+	g_ePlayerData[id][PDATA_ADMIN_LISTEN] = g_eSettings[ADMIN_LISTEN_FLAGS_BIT] != ADMIN_ALL ? (g_ePlayerData[id][PDATA_ADMIN_FLAGS] & g_eSettings[ADMIN_LISTEN_FLAGS_BIT] != 0 ? true : false) : false
+	g_ePlayerData[id][PDATA_GLOBAL_CHAT] = g_eSettings[GLOBAL_CHAT_FLAG] != ADMIN_ALL ? (g_ePlayerData[id][PDATA_ADMIN_FLAGS] & g_eSettings[GLOBAL_CHAT_FLAG] != 0 ? true : false) : false
+
+	get_user_name(id, g_ePlayerData[id][PDATA_NAME], charsmax(g_ePlayerData[][PDATA_NAME]))
 	copy(g_ePlayerData[id][PDATA_CUSTOM_NAME], charsmax(g_ePlayerData[][PDATA_CUSTOM_NAME]), g_ePlayerData[id][PDATA_NAME])
 
 	if(g_iAdminPrefixes)
@@ -361,7 +412,7 @@ public UpdateData(id)
 	}
 
 	new iReturn
-	ExecuteForward(g_fwdOnPlayerDataUpdated, iReturn, id)
+	ExecuteForward(_cm_on_player_data_updated, iReturn, id)
 }
 
 ReadFile()
@@ -385,9 +436,14 @@ ReadFile()
 
 	new iFilePointer = fopen(g_szFilename, "rt")
 
+	if(!iFilePointer)
+	{
+		set_fail_state("Error opening configuration file.")
+	}
+
 	if(iFilePointer)
 	{
-		new szData[192], szValue[160], szKey[32], eItem[PlayerInfo], iSection = SECTION_NONE, iChatLogSayLine, iChatLogTeamLine, iSize, iLine
+		new szData[192], szValue[160], szKey[MAX_VALUE_LENGTH], eItem[PlayerInfo], iSection = SECTION_NONE, iChatLogSayLine, iChatLogTeamLine, iSize, iLine
 
 		while(!feof(iFilePointer))
 		{
@@ -435,11 +491,16 @@ ReadFile()
 				{
 					switch(iSection)
 					{
-						case SECTION_NONE: log_config_error(iLine, "Data is not in any section: %s", szData)
+						case SECTION_NONE:
+						{
+							log_config_error(iLine, "Data is not in any section: %s", szData)
+						}
 						case SECTION_MAIN_SETTINGS:
 						{
 							strtok(szData, szKey, charsmax(szKey), szValue, charsmax(szValue), '=')
 							trim(szKey); trim(szValue)
+
+							TrieSetString(g_tSettings, szKey, szValue)
 
 							if(!szValue[0])
 							{
@@ -450,9 +511,22 @@ ReadFile()
 							{
 								g_eSettings[ALL_CHAT] = clamp(str_to_num(szValue), ALLCHAT_NONE, ALLCHAT_SEE_TEAM)
 							}
+							else if(equal(szKey, "ADMIN_LISTEN_TEAM_CHAT"))
+							{
+								g_eSettings[ADMIN_LISTEN_TEAM_CHAT] = _:clamp(str_to_num(szValue), false, true)
+							}
 							else if(equal(szKey, "ADMIN_LISTEN_FLAGS"))
 							{
 								copy(g_eSettings[ADMIN_LISTEN_FLAGS], charsmax(g_eSettings[ADMIN_LISTEN_FLAGS]), szValue)
+								g_eSettings[ADMIN_LISTEN_FLAGS_BIT] = read_flags(szValue)
+							}
+							else if(equal(szKey, "GLOBAL_CHAT_FLAG"))
+							{
+								g_eSettings[GLOBAL_CHAT_FLAG] = read_flags(szValue)
+							}
+							else if(equal(szKey, "GLOBAL_CHAT_TEAM"))
+							{
+								g_eSettings[GLOBAL_CHAT_TEAM] = _:clamp(str_to_num(szValue), false, true)
 							}
 							else if(equal(szKey, "BLOCK_FIRST_SYMBOLS"))
 							{
@@ -497,6 +571,7 @@ ReadFile()
 							else if(equal(szKey, "CHAT_LOG_FILE"))
 							{
 								copy(g_eSettings[CHAT_LOG_FILE], charsmax(g_eSettings[CHAT_LOG_FILE]), szValue)
+								format_time(g_eSettings[CHAT_LOG_FILE], charsmax(g_eSettings[CHAT_LOG_FILE]), g_eSettings[CHAT_LOG_FILE])
 							}
 							else if(equal(szKey, "CHAT_LOG_SAY_FORMAT"))
 							{
@@ -510,12 +585,12 @@ ReadFile()
 							}
 							else if(equal(szKey, "SAY_SOUND") && !g_bFileWasRead)
 							{
-								precache_sound(szValue)
+								precache_generic(szValue)
 								copy(g_eSettings[SAY_SOUND], charsmax(g_eSettings[SAY_SOUND]), szValue)
 							}
 							else if(equal(szKey, "SAY_TEAM_SOUND") && !g_bFileWasRead)
 							{
-								precache_sound(szValue)
+								precache_generic(szValue)
 								copy(g_eSettings[SAY_TEAM_SOUND], charsmax(g_eSettings[SAY_TEAM_SOUND]), szValue)
 							}
 							else if(equal(szKey, "EXPIRATION_DATE_FORMAT"))
@@ -526,6 +601,17 @@ ReadFile()
 							else if(equal(szKey, "EXPIRATION_DATE_BEHAVIOR"))
 							{
 								g_eSettings[EXPIRATION_DATE_BEHAVIOR] = clamp(str_to_num(szValue), EDB_IGNORE, EDB_REMOVE)
+							}
+							else if(equal(szKey, "COLORCHAT_FLAG"))
+							{
+								g_eSettings[COLORCHAT_FLAG] = read_flags(szValue)
+							}
+							else if(equal(szKey, "SAY_METHOD"))
+							{
+								if(!g_bFileWasRead)
+								{
+									g_eSettings[SAY_METHOD] = clamp(str_to_num(szValue), SAYMETHOD_HOOK_SAY_CMD, SAYMETHOD_HOOK_SAY_MSG)
+								}
 							}
 						}
 						case SECTION_FORMAT_DEFINITIONS:
@@ -650,7 +736,7 @@ ReadFile()
 
 		if(g_bFileWasRead)
 		{
-			new iPlayers[32], iPnum
+			new iPlayers[MAX_PLAYERS], iPnum
 			get_players(iPlayers, iPnum)
 
 			for(new i; i < iPnum; i++)
@@ -658,6 +744,9 @@ ReadFile()
 				UpdateData(iPlayers[i])
 			}
 		}
+
+		new iReturn
+		ExecuteForward(_cm_on_file_read, iReturn, !g_bFileWasRead)
 
 		g_bFileWasRead = true
 
@@ -692,53 +781,80 @@ public Cmd_Reload(id, iLevel, iCid)
 
 	if(is_user_connected(id))
 	{
-		// log_amx("%s [ %s | %s ] has reloaded the configuration file.", g_ePlayerData[id][PDATA_NAME], g_ePlayerData[id][PDATA_IP], g_ePlayerData[id][PDATA_STEAM])
+		log_amx("%s [ %s | %s ] has reloaded the configuration file.", g_ePlayerData[id][PDATA_NAME], g_ePlayerData[id][PDATA_IP], g_ePlayerData[id][PDATA_STEAM])
 	}
+
 	return PLUGIN_HANDLED
 }
 
-public Hook_Say(id)
+public OnSay(id) <SAYMETHOD_HOOK_SAY_CMD>
 {
 	if(!is_user_connected(id))
 	{
 		return PLUGIN_HANDLED
 	}
-	if(g_Gaged[id] == 1)
+
+	static szArgs[CC_MAX_MESSAGE_SIZE]
+	read_args(szArgs, charsmax(szArgs)); remove_quotes(szArgs)
+
+	static szCommand[5]
+	read_argv(0, szCommand, charsmax(szCommand))
+
+	return Handle_Message(id, szArgs, szCommand[3] == '_')
+}
+
+public OnSay() <SAYMETHOD_HOOK_SAY_MSG>
+{
+	new id = get_msg_arg_int(1)
+
+	if(!is_user_connected(id))
 	{
-		// log_amx("[CRX_Chattmanager] Hook_Say function blocked gageg = %d", g_Gaged[id])
-		return PLUGIN_HANDLED
+		return PLUGIN_CONTINUE
 	}
 
-	static szArgs[WRITTEN_MESSAGE_SIZE]
-	read_args(szArgs, charsmax(szArgs)); remove_quotes(szArgs)
-	CC_RemoveColors(szArgs, charsmax(szArgs))
+	static const SAY_MSG_PART[] = "#Cstrike_Chat_"
 
+	static szMessage[sizeof(SAY_MSG_PART) + 1]
+	get_msg_arg_string(2, szMessage, charsmax(szMessage))
+
+	if(!has_argument(szMessage, SAY_MSG_PART))
+	{
+		return PLUGIN_CONTINUE
+	}
+
+	static szArgs[CC_MAX_MESSAGE_SIZE]
+	get_msg_arg_string(4, szArgs, charsmax(szArgs))
+
+	return min(Handle_Message(id, szArgs, szMessage[14] != 'A'), PLUGIN_HANDLED)
+}
+
+Handle_Message(id, szArgs[CC_MAX_MESSAGE_SIZE], bool:bTeam)
+{
 	static szFirstChar[2]
 	szFirstChar[0] = szArgs[0]
 
 	if(!szArgs[0] || TrieKeyExists(g_tBlockFirst, szFirstChar))
 	{
-		return PLUGIN_HANDLED
+		return PLUGIN_HANDLED_MAIN
 	}
 
-	static iFlags
-	iFlags = get_user_flags(id)
-
-	if(g_ePlayerData[id][PDATA_ADMIN_FLAGS] != iFlags)
+	// Until we get a client_flags_updated() forward...
+	if(g_ePlayerData[id][PDATA_ADMIN_FLAGS] != get_user_flags(id))
 	{
 		UpdateData(id)
-		g_ePlayerData[id][PDATA_ADMIN_FLAGS] = iFlags
 	}
 
-	static szCommand[5]
-	read_argv(0, szCommand, charsmax(szCommand))
+	if(!(g_ePlayerData[id][PDATA_ADMIN_FLAGS] & g_eSettings[COLORCHAT_FLAG]))
+	{
+		CC_RemoveColors(szArgs, charsmax(szArgs))
+	}
 
-	static szMessage[FULL_MESSAGE_SIZE + 32], szSound[128], iPlayers[32], iPnum, bool:bTeam, iAlive, iTeam
-	bTeam = szCommand[3] == '_'
-	iAlive = is_user_alive(id)
-	
-	iTeam = fm_cs_get_user_team(id)
-	set_pev(id, pev_team, iTeam)
+	CC_RemoveExploits(szArgs, charsmax(szArgs))
+
+	static szMessage[CC_MAX_MESSAGE_SIZE], szSound[MAX_RESOURCE_PATH_LENGTH], iPlayers[MAX_PLAYERS]
+
+	new CsTeams:iTeam = cs_get_user_team(id)
+	new iAlive = is_user_alive(id)
 
 	if(bTeam && g_eSettings[SAY_TEAM_SOUND][0])
 	{
@@ -754,33 +870,48 @@ public Hook_Say(id)
 	}
 
 	apply_replacements(g_ePlayerData[id][bTeam ? PDATA_SAY_TEAM_FORMAT : PDATA_SAY_FORMAT], id, iAlive, iTeam, szArgs, szMessage, charsmax(szMessage))
+
+	new iPnum
 	get_players(iPlayers, iPnum, "ch")
 
-	if(g_eSettings[ALL_CHAT] == ALLCHAT_SEE_TEAM)
+	if(g_eSettings[ALL_CHAT] == ALLCHAT_SEE_TEAM || (g_ePlayerData[id][PDATA_GLOBAL_CHAT] && !(bTeam && !g_eSettings[GLOBAL_CHAT_TEAM])))
 	{
-		CC_SendMatched(0, id, szMessage)
-
-		if(szSound[0])
-		{
-			client_cmd(0, "spk ^"%s^"", szSound)
-		}
+		send_chat_message(0, id, szMessage, szSound)
 	}
 	else
 	{
-		static iPlayer, i
-
-		for(i = 0; i < iPnum; i++)
+		for(new bool:bSend, CsTeams:iPlayerTeam, iPlayer, i; i < iPnum; i++)
 		{
+			bSend = false
 			iPlayer = iPlayers[i]
 
-			if(g_ePlayerData[iPlayer][PDATA_ADMIN_LISTEN] || (bTeam && iTeam == fm_cs_get_user_team(iPlayer) && iAlive == is_user_alive(iPlayer)) || (!bTeam && (g_eSettings[ALL_CHAT] == 1 || iAlive == is_user_alive(iPlayer))))
-			{
-				CC_SendMatched(iPlayer, id, szMessage)
+			iPlayerTeam = cs_get_user_team(iPlayer)
 
-				if(szSound[0])
+			if(g_ePlayerData[iPlayer][PDATA_ADMIN_LISTEN])
+			{
+				if(!(!g_eSettings[ADMIN_LISTEN_TEAM_CHAT] && bTeam && iTeam != iPlayerTeam))
 				{
-					client_cmd(iPlayer, "spk ^"%s^"", szSound)
+					bSend = true
 				}
+			}
+			else if(bTeam)
+			{
+				if(iTeam == iPlayerTeam && (g_eSettings[ALL_CHAT] == ALLCHAT_NO_TEAM || iAlive == is_user_alive(iPlayer)))
+				{
+					bSend = true
+				}
+			}
+			else
+			{
+				if(g_eSettings[ALL_CHAT] == ALLCHAT_NO_TEAM || iAlive == is_user_alive(iPlayer))
+				{
+					bSend = true
+				}
+			}
+
+			if(bSend)
+			{
+				send_chat_message(iPlayer, id, szMessage, szSound)
 			}
 		}
 	}
@@ -788,14 +919,23 @@ public Hook_Say(id)
 	if(g_eSettings[CHAT_LOG_FILE][0])
 	{
 		apply_replacements(g_eSettings[bTeam ? CHAT_LOG_TEAM_FORMAT : CHAT_LOG_SAY_FORMAT], id, iAlive, iTeam, szArgs, szMessage, charsmax(szMessage))
-		SaveLogFile(szMessage)
-		//log_to_file(g_eSettings[CHAT_LOG_FILE], szMessage)
+		log_to_file(g_eSettings[CHAT_LOG_FILE], szMessage, szSound)
 	}
 
-	return PLUGIN_HANDLED
+	return PLUGIN_HANDLED_MAIN
 }
 
-apply_replacements(const szFormat[], const id, const iAlive, const iTeam, const szArgs[], szMessage[], const iLen)
+send_chat_message(iIdTo, iIdFrom, const szMessage[], const szSound[])
+{
+	CC_SendMatched(iIdTo, iIdFrom, szMessage)
+
+	if(szSound[0])
+	{
+		client_cmd(iIdTo, "spk ^"%s^"", szSound)
+	}
+}
+
+apply_replacements(const szFormat[], id, iAlive, CsTeams:iTeam, const szArgs[], szMessage[], iLen)
 {
 	static szPlaceHolder[PLACEHOLDER_LENGTH]
 	TrieGetString(g_tFormatDefinitions, szFormat, szMessage, iLen)
@@ -803,50 +943,50 @@ apply_replacements(const szFormat[], const id, const iAlive, const iTeam, const 
 	#if defined ARG_ADMIN_PREFIX
 	if(g_ePlayerData[id][PDATA_PREFIX_ENABLED])
 	{
-		replace_all(szMessage, iLen, ARG_ADMIN_PREFIX, g_ePlayerData[id][PDATA_PREFIX])
+		replace_string(szMessage, iLen, ARG_ADMIN_PREFIX, g_ePlayerData[id][PDATA_PREFIX])
 	}
 	else
 	{
-		replace_all(szMessage, iLen, ARG_ADMIN_PREFIX, "")
+		replace_string(szMessage, iLen, ARG_ADMIN_PREFIX, "")
 	}
 	#endif
 
 	#if defined ARG_DEAD_PREFIX
-	replace_all(szMessage, iLen, ARG_DEAD_PREFIX, g_eSettings[iAlive ? ALIVE_PREFIX : iTeam == FM_CS_TEAM_SPECTATOR ? SPEC_PREFIX : DEAD_PREFIX])
+	replace_string(szMessage, iLen, ARG_DEAD_PREFIX, g_eSettings[iAlive ? ALIVE_PREFIX : iTeam == CS_TEAM_SPECTATOR ? SPEC_PREFIX : DEAD_PREFIX])
 	#endif
 
 	#if defined ARG_TEAM
-	replace_all(szMessage, iLen, ARG_TEAM, g_eSettings[iTeam == FM_CS_TEAM_CT ? TEAM_PREFIX_CT : iTeam == FM_CS_TEAM_T ? TEAM_PREFIX_T : TEAM_PREFIX_SPEC])
+	replace_string(szMessage, iLen, ARG_TEAM, g_eSettings[iTeam == CS_TEAM_CT ? TEAM_PREFIX_CT : iTeam == CS_TEAM_T ? TEAM_PREFIX_T : TEAM_PREFIX_SPEC])
 	#endif
 
 	#if defined ARG_NAME
-	replace_all(szMessage, iLen, ARG_NAME, g_ePlayerData[id][PDATA_NAME])
+	replace_string(szMessage, iLen, ARG_NAME, g_ePlayerData[id][PDATA_NAME])
 	#endif
 
 	#if defined ARG_CUSTOM_NAME
-	replace_all(szMessage, iLen, ARG_CUSTOM_NAME, g_ePlayerData[id][g_ePlayerData[id][PDATA_CUSTOM_NAME_ENABLED] ? PDATA_CUSTOM_NAME : PDATA_NAME])
+	replace_string(szMessage, iLen, ARG_CUSTOM_NAME, g_ePlayerData[id][g_ePlayerData[id][PDATA_CUSTOM_NAME_ENABLED] ? PDATA_CUSTOM_NAME : PDATA_NAME])
 	#endif
 
 	#if defined ARG_IP
-	replace_all(szMessage, iLen, ARG_IP, g_ePlayerData[id][PDATA_IP])
+	replace_string(szMessage, iLen, ARG_IP, g_ePlayerData[id][PDATA_IP])
 	#endif
 
 	#if defined ARG_STEAM
-	replace_all(szMessage, iLen, ARG_STEAM, g_ePlayerData[id][PDATA_STEAM])
+	replace_string(szMessage, iLen, ARG_STEAM, g_ePlayerData[id][PDATA_STEAM])
 	#endif
 
 	#if defined ARG_USERID
-	replace_all(szMessage, iLen, ARG_USERID, g_ePlayerData[id][PDATA_USERID])
+	replace_string(szMessage, iLen, ARG_USERID, g_ePlayerData[id][PDATA_USERID])
 	#endif
 
 	#if defined ARG_CHAT_COLOR
 	if(g_ePlayerData[id][PDATA_CHAT_COLOR_ENABLED])
 	{
-		replace_all(szMessage, iLen, ARG_CHAT_COLOR, g_ePlayerData[id][PDATA_CHAT_COLOR])
+		replace_string(szMessage, iLen, ARG_CHAT_COLOR, g_ePlayerData[id][PDATA_CHAT_COLOR])
 	}
 	else
 	{
-		replace_all(szMessage, iLen, ARG_CHAT_COLOR, "")
+		replace_string(szMessage, iLen, ARG_CHAT_COLOR, "")
 	}
 	#endif
 
@@ -854,7 +994,7 @@ apply_replacements(const szFormat[], const id, const iAlive, const iTeam, const 
 	if(has_argument(szMessage, ARG_TIME))
 	{
 		get_time(g_eSettings[FORMAT_TIME], szPlaceHolder, charsmax(szPlaceHolder))
-		replace_all(szMessage, iLen, ARG_TIME, szPlaceHolder)
+		replace_string(szMessage, iLen, ARG_TIME, szPlaceHolder)
 	}
 	#endif
 
@@ -862,7 +1002,7 @@ apply_replacements(const szFormat[], const id, const iAlive, const iTeam, const 
 	if(g_bRankSystem && has_argument(szMessage, ARG_CURRENT_XP))
 	{
 		num_to_str(crxranks_get_user_xp(id), szPlaceHolder, charsmax(szPlaceHolder))
-		replace_all(szMessage, iLen, ARG_CURRENT_XP, szPlaceHolder)
+		replace_string(szMessage, iLen, ARG_CURRENT_XP, szPlaceHolder)
 	}
 	#endif
 
@@ -870,7 +1010,7 @@ apply_replacements(const szFormat[], const id, const iAlive, const iTeam, const 
 	if(g_bRankSystem && has_argument(szMessage, ARG_NEXT_XP))
 	{
 		num_to_str(crxranks_get_user_next_xp(id), szPlaceHolder, charsmax(szPlaceHolder))
-		replace_all(szMessage, iLen, ARG_NEXT_XP, szPlaceHolder)
+		replace_string(szMessage, iLen, ARG_NEXT_XP, szPlaceHolder)
 	}
 	#endif
 
@@ -878,7 +1018,7 @@ apply_replacements(const szFormat[], const id, const iAlive, const iTeam, const 
 	if(g_bRankSystem && has_argument(szMessage, ARG_LEVEL))
 	{
 		num_to_str(crxranks_get_user_level(id), szPlaceHolder, charsmax(szPlaceHolder))
-		replace_all(szMessage, iLen, ARG_LEVEL, szPlaceHolder)
+		replace_string(szMessage, iLen, ARG_LEVEL, szPlaceHolder)
 	}
 	#endif
 
@@ -886,7 +1026,7 @@ apply_replacements(const szFormat[], const id, const iAlive, const iTeam, const 
 	if(g_bRankSystem && has_argument(szMessage, ARG_NEXT_LEVEL))
 	{
 		num_to_str(crxranks_get_user_next_level(id), szPlaceHolder, charsmax(szPlaceHolder))
-		replace_all(szMessage, iLen, ARG_NEXT_LEVEL, szPlaceHolder)
+		replace_string(szMessage, iLen, ARG_NEXT_LEVEL, szPlaceHolder)
 	}
 	#endif
 
@@ -894,7 +1034,7 @@ apply_replacements(const szFormat[], const id, const iAlive, const iTeam, const 
 	if(g_bRankSystem && has_argument(szMessage, ARG_RANK))
 	{
 		crxranks_get_user_rank(id, szPlaceHolder, charsmax(szPlaceHolder))
-		replace_all(szMessage, iLen, ARG_RANK, szPlaceHolder)
+		replace_string(szMessage, iLen, ARG_RANK, szPlaceHolder)
 	}
 	#endif
 
@@ -902,7 +1042,7 @@ apply_replacements(const szFormat[], const id, const iAlive, const iTeam, const 
 	if(g_bRankSystem && has_argument(szMessage, ARG_NEXT_RANK))
 	{
 		crxranks_get_user_next_rank(id, szPlaceHolder, charsmax(szPlaceHolder))
-		replace_all(szMessage, iLen, ARG_NEXT_RANK, szPlaceHolder)
+		replace_string(szMessage, iLen, ARG_NEXT_RANK, szPlaceHolder)
 	}
 	#endif
 
@@ -910,7 +1050,7 @@ apply_replacements(const szFormat[], const id, const iAlive, const iTeam, const 
 	if(has_argument(szMessage, ARG_HEALTH))
 	{
 		num_to_str(iAlive ? get_user_health(id) : 0, szPlaceHolder, charsmax(szPlaceHolder))
-		replace_all(szMessage, iLen, ARG_HEALTH, szPlaceHolder)
+		replace_string(szMessage, iLen, ARG_HEALTH, szPlaceHolder)
 	}
 	#endif
 
@@ -918,7 +1058,7 @@ apply_replacements(const szFormat[], const id, const iAlive, const iTeam, const 
 	if(has_argument(szMessage, ARG_ARMOR))
 	{
 		num_to_str(iAlive ? get_user_armor(id) : 0, szPlaceHolder, charsmax(szPlaceHolder))
-		replace_all(szMessage, iLen, ARG_ARMOR, szPlaceHolder)
+		replace_string(szMessage, iLen, ARG_ARMOR, szPlaceHolder)
 	}
 	#endif
 
@@ -926,7 +1066,7 @@ apply_replacements(const szFormat[], const id, const iAlive, const iTeam, const 
 	if(has_argument(szMessage, ARG_FRAGS))
 	{
 		num_to_str(get_user_frags(id), szPlaceHolder, charsmax(szPlaceHolder))
-		replace_all(szMessage, iLen, ARG_FRAGS, szPlaceHolder)
+		replace_string(szMessage, iLen, ARG_FRAGS, szPlaceHolder)
 	}
 	#endif
 
@@ -934,7 +1074,7 @@ apply_replacements(const szFormat[], const id, const iAlive, const iTeam, const 
 	if(has_argument(szMessage, ARG_DEATHS))
 	{
 		num_to_str(cs_get_user_deaths(id), szPlaceHolder, charsmax(szPlaceHolder))
-		replace_all(szMessage, iLen, ARG_DEATHS, szPlaceHolder)
+		replace_string(szMessage, iLen, ARG_DEATHS, szPlaceHolder)
 	}
 	#endif
 
@@ -943,7 +1083,7 @@ apply_replacements(const szFormat[], const id, const iAlive, const iTeam, const 
 	{
 		geoip_city(g_ePlayerData[id][PDATA_IP], szPlaceHolder, charsmax(szPlaceHolder))
 		check_validity(szPlaceHolder, charsmax(szPlaceHolder))
-		replace_all(szMessage, iLen, ARG_CITY, szPlaceHolder)
+		replace_string(szMessage, iLen, ARG_CITY, szPlaceHolder)
 	}
 	#endif
 
@@ -957,7 +1097,7 @@ apply_replacements(const szFormat[], const id, const iAlive, const iTeam, const 
 		#endif
 
 		check_validity(szPlaceHolder, charsmax(szPlaceHolder))
-		replace_all(szMessage, iLen, ARG_COUNTRY, szPlaceHolder)
+		replace_string(szMessage, iLen, ARG_COUNTRY, szPlaceHolder)
 	}
 	#endif
 
@@ -973,7 +1113,7 @@ apply_replacements(const szFormat[], const id, const iAlive, const iTeam, const 
 		#endif
 
 		check_validity(szCountryCode, charsmax(szCountryCode))
-		replace_all(szMessage, iLen, ARG_COUNTRY_CODE, szCountryCode)
+		replace_string(szMessage, iLen, ARG_COUNTRY_CODE, szCountryCode)
 	}
 	#endif
 
@@ -982,7 +1122,7 @@ apply_replacements(const szFormat[], const id, const iAlive, const iTeam, const 
 	{
 		geoip_continent_name(g_ePlayerData[id][PDATA_IP], szPlaceHolder, charsmax(szPlaceHolder))
 		check_validity(szPlaceHolder, charsmax(szPlaceHolder))
-		replace_all(szMessage, iLen, ARG_CONTINENT, szPlaceHolder)
+		replace_string(szMessage, iLen, ARG_CONTINENT, szPlaceHolder)
 	}
 	#endif
 
@@ -992,14 +1132,14 @@ apply_replacements(const szFormat[], const id, const iAlive, const iTeam, const 
 		new szContinentCode[3]
 		geoip_continent_code(g_ePlayerData[id][PDATA_IP], szContinentCode)
 		check_validity(szContinentCode, charsmax(szContinentCode))
-		replace_all(szMessage, iLen, ARG_CONTINENT_CODE, szContinentCode)
+		replace_string(szMessage, iLen, ARG_CONTINENT_CODE, szContinentCode)
 	}
 	#endif
 
-	replace_all(szMessage, iLen, "  ", " ")
+	replace_string(szMessage, iLen, "  ", " ")
 
 	#if defined ARG_MESSAGE
-	replace_all(szMessage, iLen, ARG_MESSAGE, szArgs)
+	replace_string(szMessage, iLen, ARG_MESSAGE, szArgs)
 	#endif
 
 	trim(szMessage)
@@ -1172,8 +1312,11 @@ get_info_type(const szText[])
 public plugin_natives()
 {
 	register_library("chatmanager")
+	set_native_filter("native_filter")
+
 	register_native("cm_get_admin_listen_flags", 		"_cm_get_admin_listen_flags")
 	register_native("cm_get_chat_color_by_num", 		"_cm_get_chat_color_by_num")
+	register_native("cm_get_plugin_setting", 			"_cm_get_plugin_setting")
 	register_native("cm_get_prefix_by_num", 			"_cm_get_prefix_by_num")
 	register_native("cm_get_user_chat_color", 			"_cm_get_user_chat_color")
 	register_native("cm_get_user_chat_color_status", 	"_cm_get_user_chat_color_status")
@@ -1193,7 +1336,6 @@ public plugin_natives()
 	register_native("cm_total_prefixes", 				"_cm_total_chat_colors")
 	register_native("cm_total_say_formats", 			"_cm_total_say_formats")
 	register_native("cm_update_player_data", 			"_cm_update_player_data")
-	set_native_filter("native_filter")
 }
 
 public native_filter(const szNative[], id, iTrap)
@@ -1247,6 +1389,7 @@ public native_filter(const szNative[], id, iTrap)
 public _cm_get_admin_listen_flags(iPlugin, iParams)
 {
 	set_string(1, g_eSettings[ADMIN_LISTEN_FLAGS], get_param(2))
+	return g_eSettings[ADMIN_LISTEN_FLAGS_BIT]
 }
 
 public _cm_get_chat_color_by_num(iPlugin, iParams)
@@ -1261,6 +1404,20 @@ public _cm_get_chat_color_by_num(iPlugin, iParams)
 	new szColor[32]
 	ArrayGetString(g_aChatColors, iNum, szColor, charsmax(szColor))
 	set_string(2, szColor, get_param(3))
+	return 1
+}
+
+public _cm_get_plugin_setting(iPlugin, iParams)
+{
+	new szKey[32], szValue[160]
+	get_string(1, szKey, charsmax(szKey))
+
+	if(!TrieGetString(g_tSettings, szKey, szValue, charsmax(szValue)))
+	{
+		return 0
+	}
+
+	set_string(2, szValue, get_param(3))
 	return 1
 }
 
@@ -1398,36 +1555,4 @@ public _cm_total_say_formats(iPlugin, iParams)
 public _cm_update_player_data(iPlugin, iParams)
 {
 	UpdateData(get_param(1))
-}
-
-new g_FilePath[64], g_LogDir[128];
-
-stock SaveLogFile(const LogText[])
-{
-	get_localinfo("amxx_logs", g_FilePath, charsmax(g_FilePath));
-	formatex(g_LogDir, charsmax(g_LogDir), "%s/%s", g_FilePath, g_eSettings[CHAT_LOG_FILE]);
-
-	if(!dir_exists(g_LogDir))
-	{
-		mkdir(g_LogDir);
-	}
-	
-	new LogFileTime[32], LogTime[32], LogFile[128], LogMsg[190];
-	get_time("20%y.%m.%d", LogFileTime, charsmax(LogFileTime));
-	get_time("%H:%M:%S", LogTime, charsmax(LogTime));
-
-	formatex(LogFile, charsmax(LogFile), "%s/%s.log", g_LogDir, LogFileTime);
-	formatex(LogMsg, charsmax(LogMsg), "[%s] [%s] %s", LogFileTime, LogTime, LogText);
-	write_file(LogFile, LogMsg, -1);
-}
-
-public fm_cs_get_user_team(id)
-{
-
-    if (pev_valid(id) != PDATA_SAFE)
-
-        return FM_CS_TEAM_UNASSIGNED;     
-
-    return get_pdata_int(id, OFFSET_CSTEAMS, OFFSET_LINUX);
-
 }

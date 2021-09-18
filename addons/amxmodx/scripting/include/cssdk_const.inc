@@ -122,14 +122,17 @@
 /**
 * get_entvar(entity, var_effects) values
 */
-#define EF_BRIGHTFIELD                  1   // Swirling cloud of particles
-#define EF_MUZZLEFLASH                  2   // Single frame ELIGHT on entity attachment 0
-#define EF_BRIGHTLIGHT                  4   // DLIGHT centered at entity origin
-#define EF_DIMLIGHT                     8   // Player flashlight
-#define EF_INVLIGHT                     16  // Get lighting from ceiling
-#define EF_NOINTERP                     32  // Don't interpolate the next frame
-#define EF_LIGHT                        64  // Rocket flare glow sprite
-#define EF_NODRAW                       128 // Don't draw entity
+#define EF_BRIGHTFIELD                  1    // Swirling cloud of particles
+#define EF_MUZZLEFLASH                  2    // Single frame ELIGHT on entity attachment 0
+#define EF_BRIGHTLIGHT                  4    // DLIGHT centered at entity origin
+#define EF_DIMLIGHT                     8    // Player flashlight
+#define EF_INVLIGHT                     16   // Get lighting from ceiling
+#define EF_NOINTERP                     32   // Don't interpolate the next frame
+#define EF_LIGHT                        64   // Rocket flare glow sprite
+#define EF_NODRAW                       128  // Don't draw entity
+#define EF_FORCEVISIBILITY              2048 // force visibility
+#define EF_OWNER_VISIBILITY             4096 // visibility for owner
+#define EF_OWNER_NO_VISIBILITY          8192 // no visibility for owner
 
 /**
 * Break Model Defines
@@ -189,6 +192,7 @@
 #define PLAYER_HOLDING_SHIELD           (1<<3)
 #define PLAYER_PREVENT_DUCK             (1<<4)
 #define PLAYER_PREVENT_CLIMB            (1<<5) // The player can't climb ladder
+#define PLAYER_PREVENT_JUMP             (1<<6)
 
 /**
 * Instant damage values for use with the 3rd parameter of the "Damage" client
@@ -287,7 +291,7 @@
 #define SF_WALL_TOOGLE_NOTSOLID         0x0008
 
 /**
-* func_converyor
+* func_conveyor
 */
 #define SF_CONVEYOR_VISUAL              0x0001
 #define SF_CONVEYOR_NOTSOLID            0x0002
@@ -1317,3 +1321,30 @@ enum InfoMapBuyParam
 #define USE_ON                          1
 #define USE_SET                         2
 #define USE_TOGGLE                      3
+
+/**
+* For CBasePlayer:m_iWeaponVolume
+*/
+#define LOUD_GUN_VOLUME                 1000
+#define NORMAL_GUN_VOLUME               600
+#define QUIET_GUN_VOLUME                200
+#define BIG_EXPLOSION_VOLUME            2048
+#define NORMAL_EXPLOSION_VOLUME         1024
+#define SMALL_EXPLOSION_VOLUME          512
+
+/**
+* For CBasePlayer:m_iWeaponFlash
+*/
+#define BRIGHT_GUN_FLASH                512
+#define NORMAL_GUN_FLASH                256
+#define DIM_GUN_FLASH                   128
+
+/**
+* Player zoom constants
+* For m_iFOV
+*/
+#define DEFAULT_LARGE_AWP_ZOOM            10
+#define DEFAULT_LARGE_OTHER_SNIPERS_ZOOM  15
+#define DEFAULT_SMALL_SNIPERS_ZOOM        40
+#define DEFAULT_AUG_SG552_ZOOM            55
+#define DEFAULT_NO_ZOOM                   90

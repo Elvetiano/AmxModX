@@ -25,7 +25,7 @@ native any:get_entvar(const index, const EntVars:var, any:...);
 native set_ucmd(const ucmd, const UCmd:var, any:...);
 
 /*
-* Returns entvar data from an entity.
+* Returns usercmd data from an entity.
 * Use the ucmd_* UCmd enum
 */
 native any:get_ucmd(const ucmd, const UCmd:var, any:...);
@@ -137,3 +137,14 @@ native bool:rh_emit_sound2(const entity, const recipient, const channel, const s
 * @noreturn
 */
 native rh_update_user_info(playerEntIndex);
+
+/*
+* Kicks a client from server with message
+*
+* @param index     Client index
+* @param message   Message that will be sent to client when it is deleted from server
+*
+* @noreturn
+*
+*/
+native rh_drop_client(const index, const message[] = "");

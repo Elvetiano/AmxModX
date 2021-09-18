@@ -19,21 +19,8 @@ public plugin_init()
 	register_clcmd("say_team /cm", "Menu_Display")
 }
 
-new g_Gaged[ 33 ]
-
-public handle_Gaged(id, Gaged)
-{
-	g_Gaged[id] = Gaged;
-}
-
-
 public Menu_Display(id)
 {
-	if(g_Gaged[id] == 1)
-	{
-		//log_amx("[CRX_Chattmanager] Menu Display blocked gageg = %d", g_Gaged[id])
-		return PLUGIN_HANDLED
-	}
 	new szText[128], szItem[128]
 	formatex(szText, charsmax(szText), "%L", id, "CM_MENU_TITLE")
 	

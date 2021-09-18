@@ -121,6 +121,28 @@ native set_member(const index, any:member, any:...);
 native any:get_member(const index, any:member, any:...);
 
 /*
+* Sets a value to an entity's member.
+* Safe version, can guarantee that the present member is refers to derived class of the entity.
+*
+* @param index      Entity index
+* @param member     The specified member, look at the enums with name *_Members
+*
+* @return           1 on success.
+*/
+native set_member_s(const index, any:member, any:...);
+
+/*
+* Returns a value from an entity's member.
+* Safe version, can guarantee that the present member is refers to derived class of the entity.
+*
+* @param index      Entity index
+* @param member     The specified member, look at the enums with name *_Members
+*
+* @return           If an integer or boolean or one byte, array or everything else is passed via the 3rd argument and more, look at the argument list for the specified member
+*/
+native any:get_member_s(const index, any:member, any:...);
+
+/*
 * Sets playermove var.
 *
 * @param var        The specified playermove, look at the enum PlayerMove
@@ -181,7 +203,7 @@ native any:get_pmtrace(const tracehandle, const PMTrace:var, any:...);
 *
 * @return           1 on success.
 */
-native set_rebuy(const RebuyHandle:rebuyhandle, const RebuyStruct:member, value);
+native set_rebuy(const RebuyHandle:rebuyhandle, const RebuyStruct:member, any:value);
 
 /*
 * Returns a RebuyStruct member
@@ -190,7 +212,7 @@ native set_rebuy(const RebuyHandle:rebuyhandle, const RebuyStruct:member, value)
 *
 * @return           If an integer or boolean or one byte, array or everything else is passed via the 3rd argument and more, look at the argument list for the specified RebuyStruct
 */
-native get_rebuy(const RebuyHandle:rebuyhandle, RebuyStruct:member);
+native any:get_rebuy(const RebuyHandle:rebuyhandle, RebuyStruct:member);
 
 /*
 * Assign the number of the player's animation.
@@ -306,7 +328,7 @@ native rg_multidmg_add(const inflictor, const victim, const Float:flDamage, cons
 * Fires bullets from entity.
 *
 * @param inflictor          Inflictor is the entity that caused the damage (such as a gun)
-* @param attacker           Attacker is the entity that tirggered the damage (such as the gun's owner)
+* @param attacker           Attacker is the entity that triggered the damage (such as the gun's owner)
 * @param shots              The number of shots
 * @param vecSrc             The source position of the barrel
 * @param vecDirShooting     Shooting direction
@@ -321,10 +343,27 @@ native rg_multidmg_add(const inflictor, const victim, const Float:flDamage, cons
 native rg_fire_bullets(const inflictor, const attacker, const shots, Float:vecSrc[3], Float:vecDirShooting[3], Float:vecSpread[3], const Float:flDistance, const Bullet:iBulletType, const iTracerFreq, const iDamage);
 
 /*
+* Fires buckshots from entity.
+*
+* @param inflictor          Inflictor is the entity that caused the damage (such as a gun)
+* @param attacker           Attacker is the entity that triggered the damage (such as the gun's owner)
+* @param shots              The number of shots
+* @param vecSrc             The source position of the barrel
+* @param vecDirShooting     Shooting direction
+* @param vecSpread          Spread
+* @param flDistance         Max shot distance
+* @param iTracerFreq        Tracer frequency
+* @param iDamage            Damage amount
+*
+* @noreturn
+*/
+native rg_fire_buckshots(const inflictor, const attacker, const shots, Float:vecSrc[3], Float:vecDirShooting[3], Float:vecSpread[3], const Float:flDistance, const iTracerFreq, const iDamage);
+
+/*
 * Fires bullets from player's weapon.
 *
 * @param inflictor          Inflictor is the entity that caused the damage (such as a gun)
-* @param attacker           Attacker is the entity that tirggered the damage (such as the gun's owner)
+* @param attacker           Attacker is the entity that triggered the damage (such as the gun's owner)
 * @param vecSrc             The source position of the barrel
 * @param vecDirShooting     Shooting direction
 * @param vecSpread          Spread
@@ -590,11 +629,12 @@ native rg_set_user_armor(const index, armorvalue, ArmorType:armortype);
 * @param team           Team id
 * @param model          Internal model, use MODEL_AUTO for a random appearance or MODEL_UNASSIGNED to not update it
 *
-* @param send_teaminfo  If true, a TeamInfo message will be sent
+* @param send_teaminfo          If true, a TeamInfo message will be sent
+* @param check_win_conditions   If true, a CheckWinConditions will be call
 *
 * @return               1 on success, 0 otherwise
 */
-native rg_set_user_team(const index, {TeamName,_}:team, {ModelName,_}:model = MODEL_AUTO, const bool:send_teaminfo = true);
+native rg_set_user_team(const index, {TeamName,_}:team, {ModelName,_}:model = MODEL_AUTO, const bool:send_teaminfo = true, const bool:check_win_conditions = false);
 
 /*
 * Sets the client's player model.
@@ -655,6 +695,17 @@ native rg_transfer_c4(const index, const receiver = 0);
 * @return           1 on success, 0 otherwise
 */
 native rg_instant_reload_weapons(const index, const weapon = 0);
+
+/*
+* Plant a bomb.
+*
+* @param index      Owner index or 0 for worldspawn.
+* @param origin     The origin of the bomb where it will be planted.
+* @param angles     The angles of the planted bomb.
+*
+* @return           Index of bomb entity or AMX_NULLENT (-1) otherwise
+*/
+native rg_plant_bomb(const index, Float:vecOrigin[3], Float:vecAngles[3] = {0.0,0.0,0.0});
 
 /*
 * Sets the amount of reward in the game account for all players.
@@ -740,9 +791,18 @@ native TeamName:rg_get_join_team_priority();
 * @param index      Client index
 * @param attacker   Attacker index
 *
-* @return           true if he can take damage, false otherwise
+* @return           true if player can take damage, false otherwise
 */
 native bool:rg_is_player_can_takedamage(const index, const attacker);
+
+/*
+* Checks whether the player can respawn.
+*
+* @param index      Client index
+*
+* @return           true if player can respawn, false otherwise
+*/
+native bool:rg_is_player_can_respawn(const index);
 
 /*
 * Gets WeaponIdType from weaponbox
@@ -823,3 +883,91 @@ native rg_set_iteminfo(const entity, ItemInfo:type, any:...);
 *
 */
 native rg_get_iteminfo(const ent, ItemInfo:type, any:...);
+
+/*
+* Adds hint message to the queue.
+*
+* @param index                 Client index
+* @param message               The message hint
+* @param duration              The time duration in seconds stays on screen
+* @param bDisplayIfPlayerDead  Whether to print hint for dead players?
+* @param bOverride             Whether to override previous messages?
+*
+* @return                      true if prints, false otherwise
+*/
+native bool:rg_hint_message(const index, const message[], Float:duration = 6.0, bool:bDisplayIfPlayerDead = false, bool:bOverride = false);
+
+/*
+* Instantly restart round.
+*
+* @noreturn
+*/
+native rg_restart_round();
+
+/*
+* Instantly check win conditions.
+*
+* @noreturn
+*/
+native rg_check_win_conditions();
+
+/*
+* Instantly initialize player counts.
+*
+* @param num_alive_terrorist   Count alive terrorists
+* @param num_alive_ct          Count alive counter-terrorists
+* @param num_dead_terrorist    Count dead terrorists
+* @param num_dead_ct           Count dead counter-terrorists
+*
+* @noreturn
+*/
+native rg_initialize_player_counts(&num_alive_terrorist = 0, &num_alive_ct = 0, &num_dead_terrorist = 0, &num_dead_ct = 0);
+
+/*
+* Reset if player can hear another player.
+*
+* @param index                 Player id
+* @noreturn
+*/
+native rg_reset_can_hear_player(const index);
+
+/*
+* Set if player can hear another player
+*
+* @param listener              Listener player id
+* @param sender                Sender player id
+* @param can_hear              Can listener hear sender
+*
+* @noreturn
+*/
+native rg_set_can_hear_player(const listener, const sender, const bool:can_hear);
+
+/*
+* Get if player can hear another player
+*
+* @param listener              Listener player id
+* @param sender                Sender player id
+*
+* @return boolean
+*/
+native bool:rg_get_can_hear_player(const listener, const sender);
+
+/*
+* Spawn a head gib
+*
+* @param index                 Entity id
+*
+* @return                      Index of head gib entity or AMX_NULLENT (-1) otherwise
+*/
+native rg_spawn_head_gib(const index);
+
+/*
+* Spawn random gibs
+*
+* @param index                 Entity id
+* @param cGibs                 Count gibs
+* @param bHuman                Set gibs of a human or alien
+*
+* @noreturn
+*/
+native rg_spawn_random_gibs(const index, const cGibs, const bool:bHuman = true);
