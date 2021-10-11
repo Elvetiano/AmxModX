@@ -29,7 +29,7 @@
 */
 
 #define PLUGIN	"Nightmod"
-#define VERSION	"2.0.1"
+#define VERSION	"2.0.2"
 #define AUTHOR	"S3ekEr & UNU"
 
 
@@ -64,10 +64,6 @@ public plugin_init()
 	create_cvar("amx_night_start", "22", FCVAR_NONE, "Sets plugin cvar start night time to apply settings for the night", .has_min = true, .min_val = 0.0, .has_max = true, .max_val = 23.0)
 	create_cvar("amx_night_end", "11", FCVAR_NONE, "Sets plugin cvar end night time and apply day settings", .has_min = true, .min_val = 0.0, .has_max = true, .max_val = 23.0)
 	
-	//register_cvar("amx_restart_maxrounds", "30")	
-	//register_cvar("amx_night_start", "22")
-	//register_cvar("amx_night_end", "11")
-		
 	get_time("%H:%M:", a, 5)
 	get_time("%S", b, 3)
 	get_time("%M", minutes, 2)
@@ -145,9 +141,6 @@ public task_check_time()
 	get_time("%S", b, 3)
 	get_time("%M", minutes, 2)
 	get_time("%H", hours, 2)
-	
-	//new themapname[33]	
-	//get_mapname(themapname,32)
 
 	if ( str_to_num(hours) == get_cvar_num("amx_night_start") && str_to_num(b) < 5 && str_to_num(minutes) < 1)
 	{
@@ -161,57 +154,6 @@ public task_check_time()
 
 		log_amx("[:::OFFICIAL:::] Este ora !t%s serverul trece pe setarile de noapte.(de_dust2 only)",a)
 	}
-
-     //amx_night_start 21
-     //amx_night_end 9
-  /*
-	if ((str_to_num(hours) >= get_cvar_num("amx_night_start")))
-	{
-		set_task(10.0, "setsetting_Night")
-	}
-	else
-	{
-		if (( str_to_num(hours) < get_cvar_num("amx_night_end")))
-		{
-			set_task(10.0, "setsetting_Night")
-		}
-	}
-	
-	
-	
-	if (( str_to_num(hours) >= get_cvar_num("amx_night_end")) && ( str_to_num(hours) < get_cvar_num("amx_night_start")))
-	{
-		set_task(10.0, "setsetting_Day")
-		setsetting_unpause();
-	}
-
-
-
-
-	
-	 
-	if ((str_to_num(hours) >= get_cvar_num("amx_night_start")) && (str_to_num(b) < 5) && (str_to_num(minutes) < 1))
-	{
-		set_task(10.0, "setsetting_Night")
-	}
-	if (( str_to_num(hours) < get_cvar_num("amx_night_end")) && (str_to_num(b) < 5) && (str_to_num(minutes) < 1))
-	{
-		set_task(10.0, "setsetting_Night")
-	}	
-	
-	
-	
-	if (( str_to_num(hours) >= get_cvar_num("amx_night_end")) && (str_to_num(b) < 5) && (str_to_num(minutes) < 1))
-	{
-		set_task(10.0, "setsetting_Day")
-		setsetting_unpause();
-	}
-	if (( str_to_num(hours) < get_cvar_num("amx_night_start")) && (str_to_num(b) < 5) && (str_to_num(minutes) < 1))
-	{
-		set_task(10.0, "setsetting_Day")
-		setsetting_unpause();
-	}*/
-	
 	
 	if ( str_to_num(hours) == get_cvar_num("amx_night_end") && str_to_num(b) < 5 && str_to_num(minutes) < 1)
 	{
@@ -265,7 +207,6 @@ public Changemap(const Taskmap[])
 public setsetting_Night()
 {
 	server_cmd("amx_cvar amx_vipgold_everyone 1")
-	//server_cmd("amx_cvar vip_free 1")  //Jică Măcelaru' Vip Cvar
 	server_cmd("amx_cvar sv_timeout 999")	
 	server_cmd("amx_cvar sv_unlag 1")	
 	server_cmd("amx_cvar sv_maxunlag 1")	
@@ -273,14 +214,12 @@ public setsetting_Night()
 	server_cmd("amx_cvar mp_autoteambalance 0")	
 	server_cmd("amx_cvar mp_timelimit 0")	
 	server_cmd("exec serverhostnamefreevip.cfg")	
-	//server_cmd("amx_cvar afk_kick_players 31")
 }
 
 public setsetting_Day()
 {
 	server_cmd("amx_cvar amx_vipgold_everyone 0")
 	server_cmd("amx_cvar amx_vipfree_everyone 0")	
-	//server_cmd("amx_cvar vip_free 0")  //Jică Măcelaru' Vip Cvar
 	server_cmd("amx_cvar sv_timeout 300")	
 	server_cmd("amx_cvar sv_unlag 1")	
 	server_cmd("amx_cvar sv_maxunlag 1")	
@@ -301,7 +240,7 @@ new const g_plugins_pause[][] = {
 	"imessage",
 	"nextmap",
 	"mapchooser",
-	"timeleft",
+//	"timeleft",
 	"pausecfg",
 	"statscfg",
 	"auto_join_on_connect",
