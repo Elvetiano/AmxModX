@@ -1,0 +1,11 @@
+{
+    "name"       : "SV_ConnectClient",
+	"library"    : "engine",
+    "identifiers":
+    [
+        {
+            "os"    : "linux",
+            "value" : 0x3F170
+        }
+    ]
+}
