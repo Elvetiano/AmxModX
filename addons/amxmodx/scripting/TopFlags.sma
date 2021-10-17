@@ -1,120 +1,144 @@
 #include <amxmodx>
 #include <amxmisc>
-#include <csstats>
 #include <nvault>
+#include <csstats>
 
 #if AMXX_VERSION_NUM < 190
     #assert "This plugin requires AMXX 1.9 or above"
 #endif
 
-//#define SKIPADMINS // Coment if you wanna count admins on topX list
+// We define a taskid and a simple 1 hour calculation in seconds
+#define TASK_RESET		100
+#define HOURINSECONDS 		3600.0
+#define DAYINSECONDS 		86400
 
-new VarRank, VarFlags[MAX_NAME_LENGTH], VarRestrict[MAX_NAME_LENGTH], VarDaysToReset, VarReset
+// We create the enum of cvars
+enum cVars 
+{
+	VarRankRange,
+	VarDaysToReset,
+	VarFlags[MAX_NAME_LENGTH],
+	VarRestrictedFlags[MAX_NAME_LENGTH],
+	Float:VarUpdateTime,
+	bool:VarRankReset,
+	bool:VarSkipAdmins
+}
 
-new bool:isTop[MAX_PLAYERS + 1]
+new gCvars[cVars]
+
+// And a global boolean to save top players
+new bool:isInTop[MAX_PLAYERS + 1]
 
 public plugin_init()
 {
-	register_plugin( "Top Flags", "1.8", "iceeedR" )
-	register_cvar("TopFlags", "1.8", FCVAR_SERVER | FCVAR_SPONLY)
+	register_plugin( "Top Flags", "3.3", "iceeedR" )
+	register_cvar("TopFlags", "3.3", FCVAR_SERVER | FCVAR_SPONLY)
+	register_dictionary("TopFlags.txt")
+	
+	bind_pcvar_num(create_cvar("tf_ranks", "10", .description = "Range of players that will receive the flags^nbased on rank. (Top 1, 2, 5, 10, 15 etc"), gCvars[VarRankRange])
+	bind_pcvar_string(create_cvar("tf_flags", "a", .description = "The flags that TOP players will receive."), gCvars[VarFlags], charsmax(gCvars[VarFlags]))
+	bind_pcvar_string(create_cvar("tf_restricted_flags", "bcdefghijkltuv", .description = "Players with any of the flags set there will be ignored."), gCvars[VarRestrictedFlags], charsmax(gCvars[VarRestrictedFlags]))
+	bind_pcvar_float(create_cvar("tf_update_rank_time", "120", .description = "Time interval to update ranks", .has_min = true, .min_val = 40.0), gCvars[VarUpdateTime])
+	bind_pcvar_num(create_cvar("tf_rank_reset", "1", .description = "A simple way to choose if you wanna reset^nyour rank or not", .has_min = true, .min_val = 0.0, .has_max = true, .max_val = 1.0), gCvars[VarRankReset])
+	bind_pcvar_num(create_cvar("tf_days_to_reset", "30", .description = "Set an interval in days for resetting cs stats.", .has_min = true, .min_val = 1.0), gCvars[VarDaysToReset])
+	bind_pcvar_num(create_cvar("tf_skip_admins", "1", .description = "SkipAdmins to count topX ?", .has_min = true, .min_val = 0.0, .has_max = true, .max_val = 1.0), gCvars[VarSkipAdmins])
 
-	bind_pcvar_num(create_cvar("tf_ranks", "5", .description = "Range of players that will receive the flags^nbased on rank. (Top 1, 2, 5, 10, 15 etc"), VarRank)
-	bind_pcvar_string(create_cvar("tf_flags", "t", .description = "The flags that TOP players will receive."), VarFlags, charsmax(VarFlags ))
-	bind_pcvar_string(create_cvar("tf_restricted", "y", .description = "Players with any of the flags set there will be ignored."), VarRestrict, charsmax(VarRestrict))
-	bind_pcvar_num(create_cvar("tf_days_toreset", "31", .description = "Set an interval in days for resetting cs stats.", .has_min = true, .min_val = 1.0), VarDaysToReset)
-	bind_pcvar_num(create_cvar("tf_rank_reset", "0", .description = "A simple way to choose if you wanna reset^nyour rank or not", .has_min = true, .min_val = 0.0, .has_max = true, .max_val = 1.0), VarReset)
+	set_task_ex(gCvars[VarUpdateTime], "UpdateTopPlayers", .flags = SetTask_Repeat)
 
-	set_task_ex(120.0, "UpdateRanks", .flags = SetTask_Repeat)
-
-	AutoExecConfig(.autoCreate = true, .name = "TopFlags")
+	AutoExecConfig()
 }
 
 public plugin_cfg()
 {
-	if(VarReset)
-		CheckDate()
+	// If the reset rank cvar is active, let's check if it's time to reset rank
+	if(gCvars[VarRankReset])
+		set_task_ex(0.1, "CheckDate", TASK_RESET, .flags = SetTask_Repeat)
 }
-
-public UpdateRanks()
-{
-	new flags = read_flags(VarFlags), iRankPos
-
-	new izStats[STATSX_MAX_STATS] = {0, ...}, izBody[MAX_BODYHITS], iPlayers[MAX_PLAYERS], iNum, id
-
-	get_players_ex(iPlayers, iNum, GetPlayers_ExcludeBots | GetPlayers_ExcludeHLTV)
-
-	for(new i; i < iNum; i++)
-	{
-		id = iPlayers[i]
-
-		iRankPos = get_user_stats(id, izStats, izBody)
-
-		if(has_flag(id, VarRestrict))
-		      continue
-
-		#if defined SKIPADMINS
-		if(iRankPos && iRankPos <= VarRank + getAdminCount())
-		#else
-		if(iRankPos && iRankPos <= VarRank)
-		#endif
-		{
-			if(!isTop[id])
-			{
-				client_print_color(id, print_team_red, "^x04[OFFICIAL]^x03: You are on^x04 TOP%d^x03 and have won the^x04 VIP flags.", VarRank)
-				client_print_color(0, print_team_red,"^x04[OFFICIAL]^x03: %n is in^x04 TOP%d^x03 and won the^x04 VIP flags.", id, VarRank)   
-				remove_user_flags(id, ADMIN_USER)
-				set_user_flags(id, flags)
-				isTop[id] = true
-				return PLUGIN_HANDLED
-			}
-		}
-		else
-		{
-			if(isTop[id])
-			{
-				client_print_color(id, print_team_red,"^x04[OFFICIAL]^x03: You left the^x04 TOP%d^x03 and lost the^x04 VIP flags.", VarRank)
-				client_print_color(0, print_team_red,"^x04[OFFICIAL]^x03: %n left the^x04 TOP%d^x03 and lost the^x04 VIP flags.", id, VarRank)
-				remove_user_flags(id, flags)
-				set_user_flags(id, ADMIN_USER)
-				isTop[id] = false
-				return PLUGIN_HANDLED
-			}
-		}
-	}
-	return PLUGIN_HANDLED
-}
-public client_infochanged(id)
-{
-	if (!is_user_connected(id))
-	{
-		isTop[id] = false
-		UpdateRanks();
-	}
-	return PLUGIN_CONTINUE
-}
-
-public client_putinserver(id)
-	isTop[id] = false
 
 public CheckDate()
 {
 	new iVault , iTimeStamp , iRecordExists
-	    
-	iVault = nvault_open( "TopFlags" )
-	    
-	iRecordExists = nvault_lookup( iVault , "StatsReset" , "" , 0 , iTimeStamp )
-	    
-	if ( !iRecordExists || ( iRecordExists && ( ( get_systime() - iTimeStamp ) >= ( VarDaysToReset * 86400 ) ) ) )
+
+	// We open the Vault
+	iVault = nvault_open("TopFlags")
+	
+	// And check if there is already a recording in the vault
+	iRecordExists = nvault_lookup(iVault , "StatsReset" , "" , 0 , iTimeStamp)
+	
+	// If there is no data in the vault or if there is data but it is time to reset, we will reset this rank.
+	if (!iRecordExists || (iRecordExists && ((get_systime() - iTimeStamp) >= (gCvars[VarDaysToReset] * DAYINSECONDS))))
 	{
 		server_cmd( "amx_cvar csstats_reset 1" )
 		nvault_set( iVault , "StatsReset" , "" )
 	}
-	    
-	nvault_close( iVault )
-}  
 
-#if defined SKIPADMINS
-getAdminCount()
+	// We closed the Vault as we won't be using it for now
+	nvault_close( iVault )
+	
+	// We changed the task from 0.1 seconds previously to perform the 1st check to 1 hour (to deal with servers that don't change maps)
+	change_task(TASK_RESET, HOURINSECONDS)
+}
+
+public client_disconnected(id)
+{
+	// reset variable id
+	isInTop[id] = false
+}
+
+public UpdateTopPlayers()
+{
+	new izStats[STATSX_MAX_STATS], izBody[MAX_BODYHITS], iPlayers[MAX_PLAYERS], iNum, id, iRankPos, MaxRange
+
+	// If the cvar that ignores topX admins is active, add the amount relative to the admins to the maximum range, if not, just take the value of the cvar
+	if(gCvars[VarSkipAdmins])
+		MaxRange = (gCvars[VarRankRange] + GetAdminsInTopCount())
+	else
+		MaxRange = gCvars[VarRankRange]
+
+	get_players_ex(iPlayers, iNum, GetPlayers_ExcludeBots | GetPlayers_ExcludeHLTV)
+	for(new i = 0; i < iNum; i++)
+	{
+		id = iPlayers[i]
+
+		// Loop through all players, if the player has restricted flags (it's already admin/vip) ignore it, remembering that we don't ignore TopFlagPlayers here
+		if(has_flag(id, gCvars[VarRestrictedFlags]))
+		      continue
+
+		// Take the rank position of each
+		iRankPos = get_user_stats(id, izStats, izBody)
+		
+		// If the rank exists and is less than/equal to the one configured in cvar
+		if(iRankPos && iRankPos <= MaxRange)
+		{
+			// We check if it is not a TopFlagPlayer yet, if not, we give the benefit
+			if(!isInTop[id])
+			{
+				client_print_color(0, print_team_default,"%L", 0, "ONTOP", id, gCvars[VarRankRange])
+				remove_user_flags(id, ADMIN_USER)
+				set_user_flags(id, read_flags(gCvars[VarFlags]))
+				isInTop[id] = true
+				return PLUGIN_HANDLED
+			}
+		}
+		// If the player is not inside TopX, but is a TopFlagPlayer, we remove its benefit
+		else
+		{
+			if(isInTop[id])
+			{
+				client_print_color(0, print_team_default,"%L", 0, "TOPOUT", id, gCvars[VarRankRange])
+				remove_user_flags(id, read_flags(gCvars[VarFlags]))
+				set_user_flags(id, ADMIN_USER)
+				isInTop[id] = false
+				return PLUGIN_HANDLED
+			}
+		}
+	}
+	
+	return PLUGIN_HANDLED
+}
+
+// We loop through all players, we check among them which ones are admins and among them which ones are inside TopX, returning the value
+public GetAdminsInTopCount()
 {
         new AdminCount = 0
         new izStats[STATSX_MAX_STATS], izBody[MAX_BODYHITS], iRankPos
@@ -126,7 +150,7 @@ getAdminCount()
         {
                 iRankPos = get_user_stats(iPlayers[i], izStats, izBody)
 
-                if(has_flag(iPlayers[i], VarRestrict) && 1 < iRankPos <= VarRank)
+                if(has_flag(iPlayers[i], gCvars[VarRestrictedFlags]) && iRankPos && iRankPos <= gCvars[VarRankRange])
                 {
                         AdminCount ++
                 }
@@ -134,4 +158,3 @@ getAdminCount()
 
         return AdminCount
 }
-#endif

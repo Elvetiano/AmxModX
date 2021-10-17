@@ -1,0 +1,9 @@
+[en]
+ONTOP = ^4[TopFlags]^3: %n is in^4 TOP%d^3 and won the^4 VIP flags.
+TOPOUT = ^4[TopFlags]^3: %n left the^4 TOP%d^3 and lost the^4 VIP flags.
+
+[bp]
+ONTOP = ^4[TopFlags]^3: %n esta no^4 TOP%d^3 e ganhou as^4 flags VIPS.
+TOPOUT = ^4[TopFlags]^3: %n saiu do^4 TOP%d^3 e perdeu as^4 flags VIPS.
+
+
