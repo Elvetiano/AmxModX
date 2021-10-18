@@ -1,5 +1,6 @@
 //3.2 - Added Voxility net range ban 
 //3.3 - Added name spaces and bug fix special chars function
+//3.4 - Added rename cvar check
 
 #include <amxmodx>
 #include <amxmisc>
@@ -11,7 +12,7 @@
 new gmsgScoreInfo
 
 new const PLUGIN[]   = "Block Networks & Name Cheker"
-new const VERSION[]  = "3.3"
+new const VERSION[]  = "3.4"
 new const AUTHOR[]   = "UNU"
 
 #define subnetmsg2 "Your network is banned, You can contact catalin1bingo@yahoo.com for any abuse and unban"
@@ -91,12 +92,14 @@ new const sTochange[][] =
 
 new pcvar_namecheck
 new pcvar_namespaces
+new pcvar_nameToChange
 
 public plugin_init()
 {	
 	register_plugin(PLUGIN, VERSION, AUTHOR)	
 	pcvar_namecheck = create_cvar("amx_connect_namecheck", "0.0", FCVAR_NONE, "This cvar controls names and change them!", true, 0.0, true, 1.0);
-	pcvar_namespaces = create_cvar("amx_no_namespaces", "0.0", FCVAR_NONE, "This is the cvar that controsl names for spaces", true, 0.0, true, 1.0);	
+	pcvar_namespaces = create_cvar("amx_no_namespaces", "0.0", FCVAR_NONE, "This is the cvar that controsl names for spaces", true, 0.0, true, 1.0);
+	pcvar_nameToChange = create_cvar("amx_rename", "0.0", FCVAR_NONE, "This is the cvar that controsl names and changes them is matches the list", true, 0.0, true, 1.0);
 	register_concmd("amx_bansubnet", "cmdAddSubnet", ADMIN_BAN, " - Ban range ip ^"IP_start IP_end^"")
 	register_concmd("amx_addexcept", "cmdAddException", ADMIN_BAN, "Adauga un ip/steam in lista cu ipuri fara restrictie pentru a se poate conecta, Usage: amx_addexcept ^"127.0.0.0 UNU ^"")
 	register_concmd("amx_remexcept", "cmdRemoveException", ADMIN_BAN, "Sterge un ip din lista celor cu excepti,Usage: amx_remexcept 127.0.0.0 sau amx_remexcept UNU")
@@ -343,8 +346,9 @@ public namechange(params[],idfunc)
 	format( formated , sizeof(formated)-1 , "%s - %s]" , list[rand], formateddeci)
 		
 	new namesafed[128],nospaces[128]	
-	new has_result = get_user_name_safe(name,namesafed,charsmax(name))	
+	new has_result = get_user_name_safe(name,namesafed,charsmax(name))
 	new Float:cheknamespaces = get_pcvar_float(pcvar_namespaces)
+	new Float:cheknameToChange = get_pcvar_float(pcvar_nameToChange)
 	if (has_result > 0)
 	{	
 		if (cheknamespaces > 0)
@@ -377,8 +381,10 @@ public namechange(params[],idfunc)
 	}
 	else
 	{
-		for(new i = 0; i < sizeof(sTochangeFix)-1; i++)
-		{new nametoworkwith[33],	sTochangeFixWork[33]
+		if (cheknameToChange > 0)
+		{
+			for(new i = 0; i < sizeof(sTochangeFix)-1; i++)
+			{	new nametoworkwith[33],	sTochangeFixWork[33]
 				copy(sTochangeFixWork,charsmax(sTochangeFixWork),sTochangeFix[i])
 				copy(nametoworkwith,charsmax(nametoworkwith), name);				
 				
@@ -411,8 +417,8 @@ public namechange(params[],idfunc)
 				}//else
 					//log_amx("Numele %s nu este detectat cu %s, numele formatate sunt nametoworkwith = %s  si sTochangeFixWork = %s",name, sTochangeFix[i], nametoworkwith, sTochangeFixWork)
 								
+			}
 		}
-
 		if (cheknamespaces > 0)
 		{
 			new has_space = get_name_nospaces(name,nospaces,charsmax(name))
