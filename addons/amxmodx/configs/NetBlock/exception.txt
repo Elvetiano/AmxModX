@@ -1,0 +1,162 @@
+;IP LIST of players you want to exclude from ban 
+; Add here only ips if you want them not to be banned
+79.112.23.34 rabbit
+79.119.132.165  bursucu
+79.119.135.131 bursucu
+STEAM_0:0:1500655697 bursucu
+93.115.208.34 supremu
+STEAM_0:0:60151318 Supremu
+86.104.139.126 ALexandra
+86.160.62.219 Mentor
+STEAM_0:1:230343997 Mentor
+84.117.214.132 Limonada*
+STEAM_0:1:244050547 Limonada*
+;
+;===========================================================
+;Mai sus adaugati numai ipuri statice si steamuri
+;Toti cere sunt mai jos de linia asta vor fi stersi periodic
+;===========================================================
+;=========== Steam ID;s ==================
+STEAM_0:0:122768150 paTch
+STEAM_0:0:902189421 lowest
+STEAM_0:0:239326652  NejY ___forte.
+STEAM_0:1:63615078 zuzy
+STEAM_0:1:173459995 dorindanila
+STEAM_0:0:11386069 grotesque
+STEAM_0:0:12747765 mezo
+STEAM_0:0:139251721 oana
+STEAM_0:0:239326652 nej
+STEAM_0:1:111958810 elena
+STEAM_0:0:104883503 jaguar
+STEAM_0:0:31126721 v1b
+STEAM_0:0:168877892 kenny
+STEAM_0:0:71654425 emeli
+STEAM_0:0:55156365 rikky
+STEAM_0:1:89634318 rumd
+STEAM_0:0:884902603 4life
+STEAM_0:0:18728205 zbarci
+STEAM_0:1:168852637 simo
+STEAM_0:1:64781708 *Mw|AnDrEy*
+STEAM_0:0:57667319 oly
+STEAM_0:0:102236409 Anca
+STEAM_0:1:41593566 fane
+STEAM_0:0:899532744 juuzou
+STEAM_0:0:69897496 YMCMB
+STEAM_0:0:193022324 Punisher
+STEAM_0:0:144450085 RMD
+STEAM_0:0:137214124 balack
+STEAM_0:0:1823891094 LeX
+STEAM_3:0:1954290473 Nicu
+STEAM_0:0:120796727 MaNo
+STEAM_0:0:1024268623 Nicu
+STEAM_0:0:51396907 myCro
+STEAM_0:0:184755112 test
+Steam_0:0:1641970197 Shadow
+STEAM_0:1:205596930 Ubic
+STEAM_2:1:35595420 vasto lorde
+STEAM_2:0:204547444 keep
+STEAM_0:0:27123983 bun banat
+STEAM_0:1:28885900 semakka
+
+
+;=========== End of List Steam ID's ==================
+;=========== Static IP'S ==================
+82.17.206.30 andrei. @ official
+35.14.38.72 kenny
+82.77.126.172 Nicu
+86.107.249.120 Shadow
+185.129.38.128 Ubic
+84.117.202.202 bun banat
+
+;=========== End of List Static IP's ==================
+
+;-========== List AUTO ADDED ip's =========
+
+149.200.143.186
+185.67.177.84 dgLstar93.44.84.137 peru al mundial ctm - luca mell
+89.123.177.240 ady sgp
+94.110.96.220 focus
+86.121.166.79 roselin
+82.77.69.70 p4airsoft_craiova
+79.116.161.127 jsn!
+188.24.143.79 _spp_*_*
+46.20.212.92 islam_abed (king-ak47)
+89.253.162.30 mici_pro
+82.177.70.2 default-tb [705]
+79.116.165.168 hunter head
+46.97.34.142 10lei
+82.77.237.208 gaflo
+80.104.15.237 unu
+113.162.161.210 drdarkhero
+49.151.176.193 strong-boost-user
+109.98.192.248 `pika
+92.54.247.196 kezzwik
+124.121.197.189 p@akung
+109.99.238.30 igr - big1
+95.76.1.78 *tot_eu*
+79.115.86.192 [dey]^[slx]
+92.115.110.200 ebola
+194.67.211.6 fox
+180.191.78.242 glinogo
+82.79.55.183 calutzu
+178.23.71.180 (1)denisa
+89.149.89.135 gionys
+88.227.54.246 kentoki
+109.104.32.235 abiott
+84.232.227.100 [cs].[play-arena].[ro] [23]
+82.114.73.66 egjeli
+79.112.182.145 // gnk *
+79.116.2280.53.117.41 official - [52851]
+185.129.37.44 mr.heineken
+176.221.218.141 mufasa
+102.157.237.153 carrrrrrrrrrr
+85.204.111.211 poteras
+109.102.200.32 xhunter
+188.173.182.155 pruna
+178.138.33.225 sakalu
+185.129.37.120 69wow
+46.107.160.119 o1g
+41.111.106.215 algerie
+109.69.4.219 drakula
+5.12.151.89 ixtrem
+103.84.149.84 eminem
+62.121.80.241 fyzt1c
+31.5.31.39 tyukasz
+201.29.34.192 gp-player [5]
+86.124.143.66 beleaua
+79.101.158.228 the godfather
+86.127.56.76 drago
+110.54.246.162 gp-player [999999
+80.97.233.18 vierme
+151.33.78.22 dga
+79.112.170.165 jnp.
+92.86.49.32 fratiipetarda1.0
+62.121.84.64 fant3zy3
+89.43.209.104 fratipetarda2.0
+86.120.137.169 sander
+188.241.249.106 7357
+92.54.231.254 broevaaa
+95.105.171.106 bman
+151.36.228.220 d3vyl
+86.127.84.201 danyyyyyy
+79.116.206.146 p@s@re
+79.113.191.247 321
+188.26.154.179 b3nq
+86.121.144.188 tibikeeeeeee
+85.186.189.56 anak1n
+93.116.18.44 dima_89c
+86.120.132.111 mkv11
+88.212.37.159 lisiak z mosadu/fallen_angel
+46.100.73.99 official - [20378]
+88.185.0.52 fullserver
+151.36.222.232 kiss
+185.190.132.97 official - [14255]
+130.226.165.170 beeebang!3e/.
+188.237.16.216 aoe
+188.25.141.217 finesst^
+82.193.71.229 *playe
+37.55.78.90 eagaro
+89.43.27.208 catalin. | *kyller*
+79.119.176.148 d15z1
+94.158.35.22 3a jihp
+37.63.159.54 hector
